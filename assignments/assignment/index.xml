@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignments | PSQF 6250</title>
+    <link>/assignments/assignment/</link>
+      <atom:link href="/assignments/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <description>Assignments</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/blue-balloon.jpg</url>
+      <title>Assignments</title>
+      <link>/assignments/assignment/</link>
+    </image>
+    
+    <item>
+      <title>Assignment 1</title>
+      <link>/assignments/assignment/assignment1/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/assignments/assignment/assignment1/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Reproducible Rmarkdown Document&lt;/strong&gt;: &lt;em&gt;20 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For this assignment, you will create your first reproducible R Markdown document. The source file (the .Rmd) file will be turned in as well as the compiled version (html). The general form of the R code to be included in the document will be given to you. You may be asked to manipulate simple R commands.&lt;/p&gt;
+&lt;div id=&#34;r-markdown-setup&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown Setup&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Using RStudio, open up a new template for an R Markdown file. To do this, go to File &amp;gt; New File &amp;gt; R Markdown.&lt;/li&gt;
+&lt;li&gt;A new window should open up, type in the details, and ensure that HTML Output is clicked. When finished entering in details, click the ‘okay’ button.&lt;/li&gt;
+&lt;li&gt;Upon hitting the ‘okay’ button, a document template should show up. Read the elements in the template, then once comfortable with its contents, you can delete it and continue to the questions below.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Using Markdown syntax, create a header that says Question 1. Note, you can pick any level of header you wish. Create subsequent headers for each question below. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create an unordered list that lists your research interests (please list at least 2 interests here). &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a hyperlink (link to a webpage) that links to the main R project website. Add the link in two ways, one that show the actual link and two, one that has the link embedded within text. You can pick whatever you wish for the link text. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a R code chunk to the document. Within this code chunk add the following R code: &lt;code&gt;summary(iris)&lt;/code&gt;. Ensure to give the chunk a unique name. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a line break/horizontal line here now. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using output from the R command used in the code chunk above, create a table that summarizes the first four variables from the output. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a new R code chunk. Inside this code chunk add the following R code: &lt;code&gt;hist(iris$Sepal.Length)&lt;/code&gt;. Ensure to give the chunk a unique name and also add the chunk option to omit the code from being shown in the output. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create an ordered list with Markdown that ranks your top vacations you have taken. Within each of your top vacations, add a nested item (e.g. &lt;a href=&#34;https://commonmark.org/help/tutorial/10-nestedLists.html&#34; class=&#34;uri&#34;&gt;https://commonmark.org/help/tutorial/10-nestedLists.html&lt;/a&gt;) to each of your vacations that states the top activities you did while on vaction. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write some text that specifies the correlation between the continuous variables from the &lt;code&gt;iris&lt;/code&gt; data. Place the following two bits of code inline in their relavent positions. The two correlations can be calculated with the following bit of code: &lt;code&gt;round(cor(iris$Sepal.Length, iris$Sepal.Width), 2)&lt;/code&gt; and &lt;code&gt;round(cor(iris$Petal.Length, iris$Petal.Width), 2)&lt;/code&gt; &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Let’s now create another figure with the following R code, &lt;code&gt;plot(iris$Sepal.Length, iris$Sepal.Width)&lt;/code&gt;. Similar to above, give the chunk a unique name and also add the chunk option to omit the code from being shown in the output. For this figure, explore the knitr chunk options (&lt;a href=&#34;https://yihui.name/knitr/options/&#34; class=&#34;uri&#34;&gt;https://yihui.name/knitr/options/&lt;/a&gt;) to add a figure caption to the figure. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add one last code chunk (ensure this chunk has a unique name). Ensure through chunk options that the code is not evaluated, but the code is returned. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- rnorm(100)
+y &amp;lt;- runif(100, min = 3, max = 8)
+mean(x)
+mean(y)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

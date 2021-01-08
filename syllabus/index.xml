@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Syllabus | PSQF 6250</title>
+    <link>/syllabus/</link>
+      <atom:link href="/syllabus/index.xml" rel="self" type="application/rss+xml" />
+    <description>Syllabus</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/blue-balloon.jpg</url>
+      <title>Syllabus</title>
+      <link>/syllabus/</link>
+    </image>
+    
+  </channel>
+</rss>

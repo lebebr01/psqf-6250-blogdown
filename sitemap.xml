@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/assignments/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/schedule/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/syllabus/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignments/assignment/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignments/assignment/assignment1/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignments/quizzes/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignments/quizzes/quiz1/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/12-wrap/</loc>
+    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/11-ways/</loc>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/07-site/</loc>
+    <lastmod>2018-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/06-rmd/</loc>
+    <lastmod>2018-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/05-better/</loc>
+    <lastmod>2018-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/04-tidy/</loc>
+    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/03-colors/</loc>
+    <lastmod>2018-04-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/02-working-in-tidyverse/</loc>
+    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/01-working-in-r/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/00-intro/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/brandon/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>
