@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assignments | PSQF 6250</title>
-    <link>/assignments/assignment/</link>
-      <atom:link href="/assignments/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/assignment/</link>
+      <atom:link href="https://lebebr01.github.io/psqf-6250-blogdown/assignments/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>Assignments</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/blue-balloon.jpg</url>
+      <url>https://lebebr01.github.io/psqf-6250-blogdown/media/blue-balloon.jpg</url>
       <title>Assignments</title>
-      <link>/assignments/assignment/</link>
+      <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/assignment/</link>
     </image>
     
     <item>
       <title>Assignment 1</title>
-      <link>/assignments/assignment/assignment1/</link>
+      <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/assignment/assignment1/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/assignments/assignment/assignment1/</guid>
+      <guid>https://lebebr01.github.io/psqf-6250-blogdown/assignments/assignment/assignment1/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://lebebr01.github.io/psqf-6250-blogdown/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;strong&gt;Reproducible Rmarkdown Document&lt;/strong&gt;: &lt;em&gt;20 pts&lt;/em&gt;&lt;/p&gt;

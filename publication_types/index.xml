@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types | PSQF 6250</title>
-    <link>/publication_types/</link>
-      <atom:link href="/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lebebr01.github.io/psqf-6250-blogdown/publication_types/</link>
+      <atom:link href="https://lebebr01.github.io/psqf-6250-blogdown/publication_types/index.xml" rel="self" type="application/rss+xml" />
     <description>Publication_types</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>/media/blue-balloon.jpg</url>
+      <url>https://lebebr01.github.io/psqf-6250-blogdown/media/blue-balloon.jpg</url>
       <title>Publication_types</title>
-      <link>/publication_types/</link>
+      <link>https://lebebr01.github.io/psqf-6250-blogdown/publication_types/</link>
     </image>
     
   </channel>
