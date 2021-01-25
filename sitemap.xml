@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/content/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lebebr01.github.io/psqf-6250-blogdown/assignments/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
   </url>
@@ -15,6 +20,26 @@
   <url>
     <loc>https://lebebr01.github.io/psqf-6250-blogdown/syllabus/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/courses/resources/books/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/courses/resources/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/courses/resources/readings/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/courses/resources/websites/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -39,7 +64,72 @@
   
   <url>
     <loc>https://lebebr01.github.io/psqf-6250-blogdown/</loc>
-    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/content/00-getting-started/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/12-wrap/</loc>
+    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/</loc>
+    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/11-ways/</loc>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/07-site/</loc>
+    <lastmod>2018-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/06-rmd/</loc>
+    <lastmod>2018-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/05-better/</loc>
+    <lastmod>2018-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/04-tidy/</loc>
+    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/03-colors/</loc>
+    <lastmod>2018-04-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/02-working-in-tidyverse/</loc>
+    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/01-working-in-r/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lebebr01.github.io/psqf-6250-blogdown/post/00-intro/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
