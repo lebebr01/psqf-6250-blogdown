@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | PSQF 6250</title>
-    <link>https://lebebr01.github.io/psqf-6250-blogdown/categories/</link>
-      <atom:link href="https://lebebr01.github.io/psqf-6250-blogdown/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://psqf6250.brandonlebeau.org/categories/</link>
+      <atom:link href="https://psqf6250.brandonlebeau.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://lebebr01.github.io/psqf-6250-blogdown/media/blue-balloon.jpg</url>
+      <url>https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
       <title>Categories</title>
-      <link>https://lebebr01.github.io/psqf-6250-blogdown/categories/</link>
+      <link>https://psqf6250.brandonlebeau.org/categories/</link>
     </image>
     
   </channel>
