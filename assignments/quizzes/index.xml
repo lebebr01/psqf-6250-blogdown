@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quizzes | PSQF 6250</title>
-    <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/quizzes/</link>
-      <atom:link href="https://lebebr01.github.io/psqf-6250-blogdown/assignments/quizzes/index.xml" rel="self" type="application/rss+xml" />
+    <link>psqf6250.brandonlebeau.org/assignments/quizzes/</link>
+      <atom:link href="psqf6250.brandonlebeau.org/assignments/quizzes/index.xml" rel="self" type="application/rss+xml" />
     <description>Quizzes</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://lebebr01.github.io/psqf-6250-blogdown/media/blue-balloon.jpg</url>
+      <url>psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
       <title>Quizzes</title>
-      <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/quizzes/</link>
+      <link>psqf6250.brandonlebeau.org/assignments/quizzes/</link>
     </image>
     
     <item>
       <title>Quiz 1</title>
-      <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/quizzes/quiz1/</link>
+      <link>psqf6250.brandonlebeau.org/assignments/quizzes/quiz1/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://lebebr01.github.io/psqf-6250-blogdown/assignments/quizzes/quiz1/</guid>
+      <guid>psqf6250.brandonlebeau.org/assignments/quizzes/quiz1/</guid>
       <description>&lt;p&gt;Quiz 1 can be taken on ICON, due &amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://icon.uiowa.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Quiz 1 Link&lt;/a&gt;&lt;/p&gt;
 </description>
