@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Requirements | PSQF 6250</title>
-    <link>https://psqf6250.brandonlebeau.org/assignments/</link>
-      <atom:link href="https://psqf6250.brandonlebeau.org/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/</link>
+      <atom:link href="https://lebebr01.github.io/psqf-6250-blogdown/assignments/index.xml" rel="self" type="application/rss+xml" />
     <description>Course Requirements</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
+      <url>https://lebebr01.github.io/psqf-6250-blogdown/media/blue-balloon.jpg</url>
       <title>Course Requirements</title>
-      <link>https://psqf6250.brandonlebeau.org/assignments/</link>
+      <link>https://lebebr01.github.io/psqf-6250-blogdown/assignments/</link>
     </image>
     
   </channel>
