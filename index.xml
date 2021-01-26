@@ -13,6 +13,75 @@
     </image>
     
     <item>
+      <title>Welcome</title>
+      <link>https://psqf6250.brandonlebeau.org/content/00-getting-started/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/00-getting-started/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/00-getting-started/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;getting-started&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Review the syllabus&lt;/li&gt;
+&lt;li&gt;Review the schedule&lt;/li&gt;
+&lt;li&gt;Install R (or use the RStudio Cloud link) - &lt;a href=&#34;https://notebooks.hpc.uiowa.edu/psqf62500exw&#34;&gt;RStudio Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optionally, install RSTudio&lt;/li&gt;
+&lt;li&gt;Optionally, complete the &lt;a href=&#34;https://forms.office.com/Pages/ResponsePage.aspx?id=lUXEG7qaw0-47HuUpVhv3F6BhfUHbvpKq3g5-YqONptUM09TWExZSDlWWTIwOFhERlM2TVRDT1RZQy4u&#34;&gt;course survey&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 1</title>
+      <link>https://psqf6250.brandonlebeau.org/content/01-week1/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/01-week1/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/01-week1/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week will introduce you to Rmarkdown documents, markdown syntax, and discussion of installing R/RStudio.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define reproducible research&lt;/li&gt;
+&lt;li&gt;Demonstrate code and markdown chunks&lt;/li&gt;
+&lt;li&gt;Create a reproducible document template&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;activities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Read R for Data Science Textbook - &lt;a href=&#34;https://r4ds.had.co.nz/r-markdown.html&#34;&gt;chapter 27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional reading, Reproducible Research in Education - &lt;a href=&#34;https://iro.uiowa.edu/permalink/01IOWA_INST/1dlne5o/alma9984002060102771&#34;&gt;LeBeau, Ellison &amp;amp; Aloe, in press&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Introduction to Reproducible Research
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7709a583-bf08-47af-b99a-467dd3d3f166&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dynamic Documents (part 1)
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=bc76ea6f-9a08-45db-888c-a2b1f1c8414a&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dynamic Documents (part 2)
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=9b38cca1-66d7-4ec6-ad39-ce721fa2ed5d&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;None this week.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Assignment 1</title>
       <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment1/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
@@ -76,30 +145,6 @@ mean(y)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;course-project---25-pts&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course Project - &lt;strong&gt;25 pts&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Details to come …&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome</title>
-      <link>https://psqf6250.brandonlebeau.org/content/00-getting-started/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://psqf6250.brandonlebeau.org/content/00-getting-started/</guid>
-      <description>
-&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/00-getting-started/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Objectives&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Weekly Videos&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;weekly-resources&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Weekly Resources&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;misc&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Misc&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
