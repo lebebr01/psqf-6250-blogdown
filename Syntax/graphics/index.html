@@ -1,0 +1,1257 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="using ggplot2">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/syntax/graphics/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/syntax/graphics/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/syntax/graphics/">
+  <meta property="og:title" content="Graphics | PSQF 6250">
+  <meta property="og:description" content="using ggplot2"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-02-01T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-02-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Graphics | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/Syntax/"><span>Syntax</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/syntax/">R Syntax</a></li>
+    
+      
+
+
+  <li class="active"><a href="/syntax/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/syntax/r-basics/">R Basics</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Graphics</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>We are going to start by exploring graphics with R using the <code>midwest</code> data. To access this data, run the following commands:</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<p>Suppose we were interested in exploring the question: How does population density influence the percentage of the population with at least a college degree? Let’s explore these data closer.</p>
+<pre class="r"><code>midwest</code></pre>
+<pre><code>## # A tibble: 437 x 28
+##      PID county state  area poptotal popdensity popwhite popblack popamerindian
+##    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;         &lt;int&gt;
+##  1   561 ADAMS  IL    0.052    66090      1271.    63917     1702            98
+##  2   562 ALEXA… IL    0.014    10626       759      7054     3496            19
+##  3   563 BOND   IL    0.022    14991       681.    14477      429            35
+##  4   564 BOONE  IL    0.017    30806      1812.    29344      127            46
+##  5   565 BROWN  IL    0.018     5836       324.     5264      547            14
+##  6   566 BUREAU IL    0.05     35688       714.    35157       50            65
+##  7   567 CALHO… IL    0.017     5322       313.     5298        1             8
+##  8   568 CARRO… IL    0.027    16805       622.    16519      111            30
+##  9   569 CASS   IL    0.024    13437       560.    13384       16             8
+## 10   570 CHAMP… IL    0.058   173025      2983.   146506    16559           331
+## # … with 427 more rows, and 19 more variables: popasian &lt;int&gt;, popother &lt;int&gt;,
+## #   percwhite &lt;dbl&gt;, percblack &lt;dbl&gt;, percamerindan &lt;dbl&gt;, percasian &lt;dbl&gt;,
+## #   percother &lt;dbl&gt;, popadults &lt;int&gt;, perchsd &lt;dbl&gt;, percollege &lt;dbl&gt;,
+## #   percprof &lt;dbl&gt;, poppovertyknown &lt;int&gt;, percpovertyknown &lt;dbl&gt;,
+## #   percbelowpoverty &lt;dbl&gt;, percchildbelowpovert &lt;dbl&gt;, percadultpoverty &lt;dbl&gt;,
+## #   percelderlypoverty &lt;dbl&gt;, inmetro &lt;int&gt;, category &lt;chr&gt;</code></pre>
+<p>This will bring up the first 10 rows of the data (hiding the additional 8,592) rows. A first common step to explore our research question is to plot the data. To do this we are going to use the R package, <code>ggplot2</code>, which was installed when running the <code>install.packages</code> command above. You can explore the <code>midwest</code> data by calling up the help file as well with <code>?midwest</code>.</p>
+<div id="create-a-ggplot" class="section level2">
+<h2>Create a ggplot</h2>
+<p>To plot these two variables from the <code>midwest</code> data, we will use the function <code>ggplot</code> and <code>geom_point</code> to add a layer of points. We will treat <code>popdensity</code> as the x variable and <code>percollege</code> as the y variable.</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(mapping = aes(x = popdensity, y = percollege))</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/plot1-1.png" width="672" /></p>
+<div id="examples" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li>Try plotting <code>popdensity</code> by <code>state</code>.</li>
+<li>Try plotting <code>county</code> by <code>state</code>. Does this plot work?</li>
+<li>Bonus: Try just using the <code>ggplot(data = midwest)</code> from above. What do you get? Does this make sense?</li>
+</ol>
+<p>Note: You should be able to modify the structure of the code above to do this.</p>
+</div>
+</div>
+<div id="add-aesthetics" class="section level2">
+<h2>Add Aesthetics</h2>
+<p>Aesthetics are a way to explore more complex interactions within the data. Particularly, from the above example, lets add in the state variable to the plot via an aesthetic.</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(mapping = aes(x = popdensity, y = percollege, color = state))</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/aesthetic-1.png" width="672" /></p>
+<p>As you can see, we simply colored the points by the state they belong in. Does there appear to be a trend?</p>
+<div id="examples-1" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li>Using the same aesthetic structure as above, instead of using colors, make the shape of the points different for each state.</li>
+<li>Instead of color, use <code>alpha</code> instead. What does this do to the plot?</li>
+</ol>
+</div>
+</div>
+<div id="global-aesthetics" class="section level2">
+<h2>Global Aesthetics</h2>
+<p>Above, we specified a variable to an aesthetic, which is a common use of aesthetics. However, the aesthetics can also be assigned globally. Here are two examples using the first scatterplot created.</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(mapping = aes(x = popdensity, y = percollege), color = &#39;pink&#39;)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/global_aes-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(mapping = aes(x = popdensity, y = percollege), shape = 15)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/global_aes2-1.png" width="672" /></p>
+<p>These two plots changed the aesthetics for all of the points. Notice, the suttle difference between the code for these plots and that for the plot above. The placement of the aesthetic is crucial, if it is within the parentheses for <code>aes()</code> then it should be assigned a variable. If it is outside, as in the last two examples, it will define the aesthetic for all the data.</p>
+<div id="examples-2" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li>Try the following command: <code>colors()</code>. This will print a vector of all the color names within R, try a few to find your favorites.</li>
+<li>What happens if you use the following code:</li>
+</ol>
+<pre class="r"><code>ggplot(data = midwest) + 
+  geom_point(mapping = aes(x = popdensity, y = percollege, color = &#39;green&#39;))</code></pre>
+<p>What is the problem?</p>
+</div>
+</div>
+<div id="facets" class="section level2">
+<h2>Facets</h2>
+<p>Instead of defining an aesthetic to change the color or shape of points by a third variable, we can also plot each groups data in a single plot and combine them. The process is easy with <code>ggplot2</code> by using facets.</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(mapping = aes(x = popdensity, y = percollege)) + 
+  facet_grid(. ~ state)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/facets-1.png" width="672" /></p>
+<p>You can also use <code>facet_wrap</code>.</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(mapping = aes(x = popdensity, y = percollege)) + 
+  facet_wrap(~ state)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/facet_wrap-1.png" width="672" /></p>
+<div id="examples-3" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li>Can you facet with a continuous variable? Try it!</li>
+</ol>
+</div>
+</div>
+<div id="geoms" class="section level2">
+<h2>Geoms</h2>
+<p><code>ggplot2</code> uses a grammar of graphics which makes it easy to switch different plot types (called geoms) once you are comfortable with the basic syntax. For example, how does the following plot differ from the scatterplot first generated above? What is similar?</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_smooth(mapping = aes(x = popdensity, y = percollege))</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/smooth-1.png" width="672" /></p>
+<p>We can also do this plot by states</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_smooth(mapping = aes(x = popdensity, y = percollege, linetype = state), 
+              se = FALSE)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/smooth_states-1.png" width="672" /></p>
+<p>What about the code above gave me the different lines for each state? Note, I also removed the standard error shading from the plot as well.</p>
+<div id="examples-4" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li>It is possible to combine geoms, which we will do next, but try it first. Try to recreate this plot.
+<img src="/syntax/graphics_files/figure-html/combine-1.png" width="672" /></li>
+</ol>
+</div>
+</div>
+<div id="combining-multiple-geoms" class="section level2">
+<h2>Combining multiple geoms</h2>
+<p>Combining more than one geom into a single plot is relatively straightforward, but a few considerations are important. Essentially to do the task, we just simply need to combine the two geoms we have used:</p>
+<pre class="r"><code>ggplot(data = midwest) +
+  geom_point(aes(x = popdensity, y = percollege, color = state)) +
+  geom_smooth(mapping = aes(x = popdensity, y = percollege, color = state), 
+              se = FALSE)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/combine_geoms-1.png" width="672" /></p>
+<p>A couple points about combining geoms, first, the order matters. In the above example, we called <code>geom_point</code> first, then <code>geom_smooth</code>. When plotting these data, the points will then be plotted first followed by the lines. Try flipping the order of the two geoms to see how the plot differs.</p>
+<p>We can also simplify this code to not duplicate typing:</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() +
+  geom_smooth(se = FALSE)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/two_geoms-1.png" width="672" /></p>
+<div id="examples-5" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li>Can you recreate the following figure?
+<img src="/syntax/graphics_files/figure-html/differ_aes-1.png" width="672" /></li>
+</ol>
+</div>
+</div>
+<div id="other-geom-examples" class="section level2">
+<h2>Other geom examples</h2>
+<p>There are many other geoms available to use. To see them all, visit <a href="http://docs.ggplot2.org/current/index.html" class="uri">http://docs.ggplot2.org/current/index.html</a> which gives examples of all the possibilities. This is a handy resource that I keep going back to.</p>
+<div id="geoms-for-single-variables" class="section level3">
+<h3>Geoms for single variables</h3>
+<p>The introduction to plotting has been with two variables, but lets take a step back and focus on one variable with a bar chart.</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
+  geom_bar()</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/bar-1.png" width="672" /></p>
+<p>You can also easily add aesthetics this base plot as shown before.</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
+  geom_bar(aes(fill = factor(inmetro)))</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/bar_fill-1.png" width="672" /></p>
+<p>A few additions can help interpretation of this plot:</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
+  geom_bar(aes(fill = factor(inmetro)), position = &#39;fill&#39;)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/bar_fill2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
+  geom_bar(aes(fill = factor(inmetro)), position = &#39;dodge&#39;)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>It is also possible to do a histrogram of a quantitative variable:</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity)) + 
+  geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/histogram-1.png" width="672" /></p>
+<p>You can adjust the binwidth directly:</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity)) + 
+  geom_histogram(binwidth = 1000)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/binwidth-1.png" width="672" /></p>
+</div>
+<div id="examples-6" class="section level3">
+<h3>Examples</h3>
+<ol style="list-style-type: decimal">
+<li><p>With more than two groups, histograms are difficult to interpret due to overlap. Instead, use the <code>geom_density</code> to create a density plot for <code>popdensity</code> for each state. The final plot should look similar to this:
+<img src="/syntax/graphics_files/figure-html/density-1.png" width="672" /></p></li>
+<li><p>Using <code>geom_boxplot</code>, create boxplots with <code>popdensity</code> as the y variable and <code>state</code> as the x variable. Bonus: facet this plot by the variable <code>inmetro</code>.
+<img src="/syntax/graphics_files/figure-html/boxplot-1.png" width="672" /></p></li>
+</ol>
+</div>
+</div>
+<div id="plot-customization" class="section level2">
+<h2>Plot Customization</h2>
+<p>There are many many ways to adjust the look of the plot, I will discuss a few that are common.</p>
+<div id="change-axes" class="section level3">
+<h3>Change axes</h3>
+<p>Axes are something that are commonly altered, particularly to give them a good name and also to alter the values shown on the axes. These are generally done with <code>scale_x_*</code> and <code>scale_y_*</code> where <code>*</code> is a filler based on the type of variable on the axes.</p>
+<p>For example:</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() + 
+  scale_x_continuous(&quot;Population Density&quot;) + 
+  scale_y_continuous(&quot;Percent College Graduates&quot;)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/axes_labels-1.png" width="672" /></p>
+<p>To change the legend title, the <code>scale_color_discrete</code> command can be used to adjust the color aesthetic and the variable is discrete.</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() + 
+  scale_x_continuous(&quot;Population Density&quot;) + 
+  scale_y_continuous(&quot;Percent College Graduates&quot;) + 
+  scale_color_discrete(&quot;State&quot;)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/aes_labels-1.png" width="672" /></p>
+<p>we can also alter the breaks showing on the x-axis.</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() + 
+  scale_x_continuous(&quot;Population Density&quot;, breaks = seq(0, 80000, 20000)) + 
+  scale_y_continuous(&quot;Percent College Graduates&quot;) + 
+  scale_color_discrete(&quot;State&quot;)</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/breaks_x-1.png" width="672" /></p>
+</div>
+</div>
+<div id="zoom-in-on-plot" class="section level2">
+<h2>Zoom in on plot</h2>
+<p>You’ll notice that there are outliers in this scatterplot due to larger population density values for some counties. It may be of interest to zoom in on the plot. The plot can be zoomed in by using the <code>coord_cartesian</code> command as follows.</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() + 
+  scale_x_continuous(&quot;Population Density&quot;) + 
+  scale_y_continuous(&quot;Percent College Graduates&quot;) + 
+  scale_color_discrete(&quot;State&quot;) + 
+  coord_cartesian(xlim = c(0, 15000))</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/zoom-1.png" width="672" /></p>
+<p>Note: This can also be achieved using the <code>xlim</code> argument to <code>scale_x_continuous</code> above, however this will cause some points to not be plotted. In this case it would not be a huge deal, however, if we plotted the smooth lines from before you can see the difference.</p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() + 
+  geom_smooth(se = FALSE) +
+  scale_x_continuous(&quot;Population Density&quot;) + 
+  scale_y_continuous(&quot;Percent College Graduates&quot;) + 
+  scale_color_discrete(&quot;State&quot;) + 
+  coord_cartesian(xlim = c(0, 15000))</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/zoom2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
+  geom_point() + 
+  geom_smooth(se = FALSE) +
+  scale_x_continuous(&quot;Population Density&quot;, limits = c(0, 15000)) + 
+  scale_y_continuous(&quot;Percent College Graduates&quot;) + 
+  scale_color_discrete(&quot;State&quot;)</code></pre>
+<pre><code>## Warning: Removed 16 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 16 rows containing missing values (geom_point).</code></pre>
+<p><img src="/syntax/graphics_files/figure-html/zoom3-1.png" width="672" /></p>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/syntax/r-basics/" rel="prev">R Basics</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 1, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
