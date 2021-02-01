@@ -20,6 +20,9 @@
       <description>
 &lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Reproducible Rmarkdown Document&lt;/strong&gt;: &lt;em&gt;20 pts&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For this assignment, you will create your first reproducible R Markdown document. The source file (the .Rmd) file will be turned in as well as the compiled version (html). The general form of the R code to be included in the document will be given to you. You may be asked to manipulate simple R commands.&lt;/p&gt;
