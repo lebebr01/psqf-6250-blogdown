@@ -25,7 +25,9 @@
 &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Reproducible Rmarkdown Document&lt;/strong&gt;: &lt;em&gt;20 pts&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;For this assignment, you will create your first reproducible R Markdown document. The source file (the .Rmd) file will be turned in as well as the compiled version (html). The general form of the R code to be included in the document will be given to you. You may be asked to manipulate simple R commands.&lt;/p&gt;
+&lt;p&gt;Due: &lt;em&gt;February 14th, 2021&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 7th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;For this assignment, you will create your first reproducible R Markdown document. The source file (the .Rmd) file will be turned in as well as the compiled version (html). The general form of the R code to be included in the document will be given to you. You may be asked to manipulate simple R commands. Submit completed assignment, including Rmd and html to &lt;a href=&#34;https://uiowa.instructure.com/courses/160427/assignments/1375235?module_item_id=4290671&#34;&gt;ICON&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;r-markdown-setup&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R Markdown Setup&lt;/h1&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
