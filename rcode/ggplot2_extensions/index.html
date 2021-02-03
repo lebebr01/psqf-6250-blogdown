@@ -1,0 +1,1237 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="ggplot2 extensions">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/">
+  <meta property="og:title" content="ggplot2 extensions | PSQF 6250">
+  <meta property="og:description" content="ggplot2 extensions"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-02-03T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-02-03T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>ggplot2 extensions | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  <li class=""><a href="/rcode/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/r-basics/">R Basics</a></li>
+
+
+
+  <li class="active"><a href="/rcode/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>ggplot2 extensions</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>The <em>ggplot2</em> package has a robust ecosystem of many other packages that extend the functionality of <em>ggplot2</em>. This week, we are going to explore some of these packages in more detail, highlighting a few packages that give you additional ways to create stunning visualizations. You can see all of the extensions packages in the following <a href="https://exts.ggplot2.tidyverse.org/gallery/"><em>ggplot2</em> extension website</a>.</p>
+<p>We are going to spend some time with the following packages:</p>
+<ul>
+<li><a href="https://ggrepel.slowkow.com/"><em>ggrepel</em></a></li>
+<li><a href="https://ggforce.data-imaginist.com/"><em>ggforce</em></a></li>
+<li><a href="https://patchwork.data-imaginist.com/"><em>patchwork</em></a></li>
+</ul>
+<p>I also plan to discuss, <a href="https://gganimate.com/"><em>gganimate</em></a>, but we are going to come back to this later in the course when talking about interactive graphics.</p>
+<p>All of these packages are on CRAN and you can install with the following command:</p>
+<pre class="r"><code>install.packages(c(&quot;ggrepel&quot;, &quot;ggforce&quot;, &quot;patchwork&quot;))</code></pre>
+<div id="ggrepel" class="section level1">
+<h1><em>ggrepel</em></h1>
+<p>Let’s start by exploring the <em>ggrepel</em> package. This package is particularly useful when working with text labels and provides some algorithms to help with text label placement automatically. One challenge when placing text labels in a figure is that they often overlap and they also often are placed on top of the data too. <em>ggrepel</em> helps to solve this problem.</p>
+<p>To show a motivating example, we are going to use data in this section based on penguins. To do this, we first need to install this data package.</p>
+<pre class="r"><code>install.packages(&quot;palmerpenguins&quot;)</code></pre>
+<p>The data include three different species of penguins originally collected by Dr. Kristen Gorman at the Palmer Station in Antarctica. There are a total of 344 penguins collected from 3 islands in Antarctica and include information about the species, which island, penguin measurements, and the sex of the penguin. More information about the data including artwork about the species and penguin measurements are on this <a href="https://github.com/allisonhorst/palmerpenguins">page</a>.</p>
+<p>Here are the penguin <a href="https://github.com/allisonhorst/palmerpenguins/blob/master/man/figures/lter_penguins.png">species</a> and what the <a href="https://github.com/allisonhorst/palmerpenguins/blob/master/man/figures/culmen_depth.png">measurements mean</a>, “artwork by <span class="citation">@allison_horst</span>”.</p>
+<pre class="r"><code>library(palmerpenguins)
+library(ggplot2)
+
+penguins</code></pre>
+<pre><code>## # A tibble: 344 x 8
+##    species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
+##    &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt;
+##  1 Adelie  Torge…           39.1          18.7              181        3750
+##  2 Adelie  Torge…           39.5          17.4              186        3800
+##  3 Adelie  Torge…           40.3          18                195        3250
+##  4 Adelie  Torge…           NA            NA                 NA          NA
+##  5 Adelie  Torge…           36.7          19.3              193        3450
+##  6 Adelie  Torge…           39.3          20.6              190        3650
+##  7 Adelie  Torge…           38.9          17.8              181        3625
+##  8 Adelie  Torge…           39.2          19.6              195        4675
+##  9 Adelie  Torge…           34.1          18.1              193        3475
+## 10 Adelie  Torge…           42            20.2              190        4250
+## # … with 334 more rows, and 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+<p>Suppose we wanted to explore the bill length and flipper length with a scatter plot. We can do that with <em>ggplot2</em> using the <code>geom_point()</code> function. I’m also using the <code>theme_set()</code> function to set the theme to be <code>theme_bw()</code> for the remainder of the notebook. I’ve also altered the theme settings by increasing the base font size from 12 to 16 so hopefully it is a bit easier to read the figure.</p>
+<pre class="r"><code>theme_set(theme_bw(base_size = 16))
+
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/length-depth-1.png" width="672" /></p>
+<p>Suppose we wished to add the species to this figure. More specifically, we want to add the species information to the points in the figure to label which points below to each penguin species. There are a few ways we could do this, we could do this by color, shape, or both.</p>
+<pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/penguin-color-1.png" width="672" /></p>
+<p>Another potential option would be to add the text labels directly to the figure and not use color. Adding text to a figure is typically done with the <code>geom_text()</code> function.</p>
+<pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(shape = species)) + 
+  geom_text(aes(label = species)) +
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/text-labels-1.png" width="672" /></p>
+<p>Notice how the text labels overlap and the word is centered with the data point? This makes the plot unusable. We could fiddle with some settings to the <code>geom_text()</code> function, but the <em>ggrepel</em> package helps to fix this issue for us without having to guess and test. The primary difference in the code below is to use <code>geom_text_repel()</code> instead of <code>geom_text()</code>. Note, I shrunk the data point slightly in the following figure.</p>
+<pre class="r"><code>library(ggrepel)
+
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text_repel(aes(label = species)) +
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggrepel-1.png" width="672" /></p>
+<p>This isn’t actually better, but you can see the points were moved away. The issue here is that there are too many text labels to show in a single plot. I’m going to plot only 30 points, 10 from each species.</p>
+<pre class="r"><code>library(dplyr)
+set.seed(100)
+
+penguins %&gt;% 
+  group_by(species) %&gt;% 
+  sample_n(10) %&gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text_repel(aes(label = species)) +
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggrepel-one-1.png" width="672" /></p>
+<p>To see exactly what was done, I’m going to generate the same figure using <code>geom_text()</code>.</p>
+<pre class="r"><code>set.seed(100)
+
+penguins %&gt;% 
+  group_by(species) %&gt;% 
+  sample_n(10) %&gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text(aes(label = species)) +
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/text-1.png" width="672" /></p>
+<div id="geom_label_repel" class="section level3">
+<h3><code>geom_label_repel()</code></h3>
+<p>The <em>ggrepel</em> package only has two functions, the first we saw, <code>geom_text_repel()</code>. The second is <code>geom_label_repel()</code>. This works the same as <code>geom_text_repel()</code>, but creates a box around the text attribute.</p>
+<pre class="r"><code>set.seed(100)
+
+penguins %&gt;% 
+  group_by(species) %&gt;% 
+  sample_n(10) %&gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_label_repel(aes(label = species)) +
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/label-repel-1.png" width="672" /></p>
+</div>
+<div id="ggforce" class="section level3">
+<h3><em>ggforce</em></h3>
+<p>The <em>ggforce</em> package has a few powerful additions. One of these helps to solve the problem of too many text labels when using the entire penguin data and is the problem I’d like to start with.</p>
+<pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text_repel(aes(label = species)) +
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggrepel-toomany-1.png" width="672" /></p>
+<p>Way too many text labels and for this example, there would be too many duplicate text labels. Since there are only three species, other ways of showing the text and groups would be helpful. <em>ggforce</em> helps with this problem using a series of functions that enclose data within different shapes. These functions are <code>geom_mark_rect()</code>, <code>geom_mark_circle()</code>, <code>geom_mark_ellipse()</code>, and <code>geom_mark_hull()</code> for rectangle, circle, ellipse, and hulls respectively. For an example, let’s try <code>geom_mark_ellipse()</code> instead of the text labels.</p>
+<pre class="r"><code>library(ggforce)
+library(tidyr)
+
+penguins %&gt;%
+  drop_na(flipper_length_mm, bill_length_mm) %&gt;%
+ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_mark_ellipse(aes(fill = species)) +
+  geom_point(size = 3, aes(shape = species)) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggforce-1.png" width="672" /></p>
+<p>To take this one step further, we can add a text label to this figure by setting a label aesthetic to <code>geom_mark_ellipse()</code>.</p>
+<pre class="r"><code>penguins %&gt;%
+  drop_na(flipper_length_mm, bill_length_mm) %&gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_mark_ellipse(aes(fill = species, label = species)) +
+  geom_point(size = 3, aes(shape = species)) + 
+  scale_x_continuous(&quot;Penguin Flipper Length (in mm)&quot;) +
+  scale_y_continuous(&quot;Penguin Bill Length (in mm)&quot;, 
+                     limits = c(25, 70))</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggforce-label-1.png" width="672" /></p>
+<p>Another cool feature of <em>ggforce</em> is the ability to use something called facet zoom. Essentially, this will create a zoomed in element of a portion of your figure. For example, suppose we wanted to zoom in on the Gentoo penguins to explore their relationship between bill length and flipper length. This creates a picture in picture plotting effect.</p>
+<pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species, color = species)) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;) + 
+  facet_zoom(x = species == &#39;Gentoo&#39;)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/facet-zoom-1.png" width="672" /></p>
+</div>
+</div>
+<div id="patchwork" class="section level1">
+<h1><em>patchwork</em></h1>
+<p>The <em>patchwork</em> package is particularly helpful to combine multiple <em>ggplot2</em> figures into a single figure, but you don’t want to facet. This can be useful to show multiple different relationships of attributes and combine these into a single figure element to include in a document to share.</p>
+<p>To combine figure elements, basic math notation is used, including <code>+</code>, <code>/</code>, or <code>|</code>. There are other operators as well, but these are the primary ones we will explore and will also use parentheses to group plots together.</p>
+<p>First, let’s create a few plots that we may want to combine.</p>
+<pre class="r"><code>p1 &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;)
+
+p1 </code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-plots-1.png" width="672" /></p>
+<pre class="r"><code>p2 &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Depth (in mm)&quot;)
+p2</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork2-1.png" width="672" /></p>
+<p>Now, we will start by using the <code>+</code> operator to combine plots.</p>
+<pre class="r"><code>library(patchwork)
+
+p1 + p2</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-combine-1.png" width="672" /></p>
+<p>As you can see, the plots are combined directly as generated. In the above example, we’d likely want to only have one legend instead of two. We can do this by modifying the first figure to remove the legend.</p>
+<pre class="r"><code>p1 &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
+  ylab(&quot;Penguin Bill Length (in mm)&quot;) + 
+  theme(legend.position = &#39;none&#39;)
+
+p1 </code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/no-legend-1.png" width="672" /></p>
+<pre class="r"><code>p1 + p2</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/combine-nolegend-1.png" width="672" /></p>
+<p>We can use the <code>/</code> operator to stack plots into multiple rows.</p>
+<pre class="r"><code>p1 / p2</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-ontop-1.png" width="672" /></p>
+<p>The <code>+</code> operator has one issue with it, it tries to keep things in a square grid, similar to how <code>facet_wrap()</code> works. For more advanced layout, the <code>|</code> operator separates columns whereas we saw above that the <code>/</code> operator will stack plots. Combined with parentheses, you can get more advanced layouts. First, let’s add one more figure.</p>
+<pre class="r"><code>p3 &lt;- ggplot(drop_na(penguins, sex), 
+             aes(x = sex, y = body_mass_g)) + 
+  geom_violin(aes(fill = species), draw_quantiles = c(0.1, .5, 0.9)) + 
+  xlab(&quot;Penguin Sex&quot;) + 
+  ylab(&quot;Penguin Body Mass (in g)&quot;) + 
+  theme(legend.position = &#39;none&#39;)
+
+p3</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patch-box-1.png" width="672" /></p>
+<pre class="r"><code>p3 | (p1 / p2)</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-combined-1.png" width="672" /></p>
+<p>Note, without parentheses, the figures may not turn out as you want.</p>
+<pre class="r"><code>p1 | p2 / p3</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-error-1.png" width="672" /></p>
+<pre class="r"><code>(p1 + p2) / p3</code></pre>
+<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-correct-1.png" width="672" /></p>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/r-basics/" rel="next">R Basics</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/graphics-tips/" rel="prev">Graphics Tips</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 3, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
