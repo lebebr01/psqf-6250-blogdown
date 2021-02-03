@@ -5,7 +5,7 @@
     <link>https://psqf6250.brandonlebeau.org/</link>
       <atom:link href="https://psqf6250.brandonlebeau.org/index.xml" rel="self" type="application/rss+xml" />
     <description>PSQF 6250</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
       <title>PSQF 6250</title>
@@ -432,6 +432,221 @@ norm_values &amp;lt;- rnorm(n = 10, mean = 0, sd = 1)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>ggplot2 extensions</title>
+      <link>https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;em&gt;ggplot2&lt;/em&gt; package has a robust ecosystem of many other packages that extend the functionality of &lt;em&gt;ggplot2&lt;/em&gt;. This week, we are going to explore some of these packages in more detail, highlighting a few packages that give you additional ways to create stunning visualizations. You can see all of the extensions packages in the following &lt;a href=&#34;https://exts.ggplot2.tidyverse.org/gallery/&#34;&gt;&lt;em&gt;ggplot2&lt;/em&gt; extension website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are going to spend some time with the following packages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ggrepel.slowkow.com/&#34;&gt;&lt;em&gt;ggrepel&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ggforce.data-imaginist.com/&#34;&gt;&lt;em&gt;ggforce&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://patchwork.data-imaginist.com/&#34;&gt;&lt;em&gt;patchwork&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also plan to discuss, &lt;a href=&#34;https://gganimate.com/&#34;&gt;&lt;em&gt;gganimate&lt;/em&gt;&lt;/a&gt;, but we are going to come back to this later in the course when talking about interactive graphics.&lt;/p&gt;
+&lt;p&gt;All of these packages are on CRAN and you can install with the following command:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;ggrepel&amp;quot;, &amp;quot;ggforce&amp;quot;, &amp;quot;patchwork&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;ggrepel&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;em&gt;ggrepel&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Let’s start by exploring the &lt;em&gt;ggrepel&lt;/em&gt; package. This package is particularly useful when working with text labels and provides some algorithms to help with text label placement automatically. One challenge when placing text labels in a figure is that they often overlap and they also often are placed on top of the data too. &lt;em&gt;ggrepel&lt;/em&gt; helps to solve this problem.&lt;/p&gt;
+&lt;p&gt;To show a motivating example, we are going to use data in this section based on penguins. To do this, we first need to install this data package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;palmerpenguins&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The data include three different species of penguins originally collected by Dr. Kristen Gorman at the Palmer Station in Antarctica. There are a total of 344 penguins collected from 3 islands in Antarctica and include information about the species, which island, penguin measurements, and the sex of the penguin. More information about the data including artwork about the species and penguin measurements are on this &lt;a href=&#34;https://github.com/allisonhorst/palmerpenguins&#34;&gt;page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are the penguin &lt;a href=&#34;https://github.com/allisonhorst/palmerpenguins/blob/master/man/figures/lter_penguins.png&#34;&gt;species&lt;/a&gt; and what the &lt;a href=&#34;https://github.com/allisonhorst/palmerpenguins/blob/master/man/figures/culmen_depth.png&#34;&gt;measurements mean&lt;/a&gt;, “artwork by &lt;span class=&#34;citation&#34;&gt;@allison_horst&lt;/span&gt;”.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
+library(ggplot2)
+
+penguins&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 344 x 8
+##    species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
+##    &amp;lt;fct&amp;gt;   &amp;lt;fct&amp;gt;           &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;int&amp;gt;       &amp;lt;int&amp;gt;
+##  1 Adelie  Torge…           39.1          18.7              181        3750
+##  2 Adelie  Torge…           39.5          17.4              186        3800
+##  3 Adelie  Torge…           40.3          18                195        3250
+##  4 Adelie  Torge…           NA            NA                 NA          NA
+##  5 Adelie  Torge…           36.7          19.3              193        3450
+##  6 Adelie  Torge…           39.3          20.6              190        3650
+##  7 Adelie  Torge…           38.9          17.8              181        3625
+##  8 Adelie  Torge…           39.2          19.6              195        4675
+##  9 Adelie  Torge…           34.1          18.1              193        3475
+## 10 Adelie  Torge…           42            20.2              190        4250
+## # … with 334 more rows, and 2 more variables: sex &amp;lt;fct&amp;gt;, year &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Suppose we wanted to explore the bill length and flipper length with a scatter plot. We can do that with &lt;em&gt;ggplot2&lt;/em&gt; using the &lt;code&gt;geom_point()&lt;/code&gt; function. I’m also using the &lt;code&gt;theme_set()&lt;/code&gt; function to set the theme to be &lt;code&gt;theme_bw()&lt;/code&gt; for the remainder of the notebook. I’ve also altered the theme settings by increasing the base font size from 12 to 16 so hopefully it is a bit easier to read the figure.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_set(theme_bw(base_size = 16))
+
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/length-depth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Suppose we wished to add the species to this figure. More specifically, we want to add the species information to the points in the figure to label which points below to each penguin species. There are a few ways we could do this, we could do this by color, shape, or both.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/penguin-color-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another potential option would be to add the text labels directly to the figure and not use color. Adding text to a figure is typically done with the &lt;code&gt;geom_text()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(shape = species)) + 
+  geom_text(aes(label = species)) +
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/text-labels-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice how the text labels overlap and the word is centered with the data point? This makes the plot unusable. We could fiddle with some settings to the &lt;code&gt;geom_text()&lt;/code&gt; function, but the &lt;em&gt;ggrepel&lt;/em&gt; package helps to fix this issue for us without having to guess and test. The primary difference in the code below is to use &lt;code&gt;geom_text_repel()&lt;/code&gt; instead of &lt;code&gt;geom_text()&lt;/code&gt;. Note, I shrunk the data point slightly in the following figure.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggrepel)
+
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text_repel(aes(label = species)) +
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/ggrepel-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This isn’t actually better, but you can see the points were moved away. The issue here is that there are too many text labels to show in a single plot. I’m going to plot only 30 points, 10 from each species.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+set.seed(100)
+
+penguins %&amp;gt;% 
+  group_by(species) %&amp;gt;% 
+  sample_n(10) %&amp;gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text_repel(aes(label = species)) +
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/ggrepel-one-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To see exactly what was done, I’m going to generate the same figure using &lt;code&gt;geom_text()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(100)
+
+penguins %&amp;gt;% 
+  group_by(species) %&amp;gt;% 
+  sample_n(10) %&amp;gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text(aes(label = species)) +
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/text-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;geom_label_repel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;geom_label_repel()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;ggrepel&lt;/em&gt; package only has two functions, the first we saw, &lt;code&gt;geom_text_repel()&lt;/code&gt;. The second is &lt;code&gt;geom_label_repel()&lt;/code&gt;. This works the same as &lt;code&gt;geom_text_repel()&lt;/code&gt;, but creates a box around the text attribute.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(100)
+
+penguins %&amp;gt;% 
+  group_by(species) %&amp;gt;% 
+  sample_n(10) %&amp;gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_label_repel(aes(label = species)) +
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/label-repel-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ggforce&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;em&gt;ggforce&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;ggforce&lt;/em&gt; package has a few powerful additions. One of these helps to solve the problem of too many text labels when using the entire penguin data and is the problem I’d like to start with.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species)) + 
+  geom_text_repel(aes(label = species)) +
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/ggrepel-toomany-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Way too many text labels and for this example, there would be too many duplicate text labels. Since there are only three species, other ways of showing the text and groups would be helpful. &lt;em&gt;ggforce&lt;/em&gt; helps with this problem using a series of functions that enclose data within different shapes. These functions are &lt;code&gt;geom_mark_rect()&lt;/code&gt;, &lt;code&gt;geom_mark_circle()&lt;/code&gt;, &lt;code&gt;geom_mark_ellipse()&lt;/code&gt;, and &lt;code&gt;geom_mark_hull()&lt;/code&gt; for rectangle, circle, ellipse, and hulls respectively. For an example, let’s try &lt;code&gt;geom_mark_ellipse()&lt;/code&gt; instead of the text labels.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggforce)
+library(tidyr)
+
+penguins %&amp;gt;%
+  drop_na(flipper_length_mm, bill_length_mm) %&amp;gt;%
+ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_mark_ellipse(aes(fill = species)) +
+  geom_point(size = 3, aes(shape = species)) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/ggforce-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To take this one step further, we can add a text label to this figure by setting a label aesthetic to &lt;code&gt;geom_mark_ellipse()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;penguins %&amp;gt;%
+  drop_na(flipper_length_mm, bill_length_mm) %&amp;gt;%
+  ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_mark_ellipse(aes(fill = species, label = species)) +
+  geom_point(size = 3, aes(shape = species)) + 
+  scale_x_continuous(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  scale_y_continuous(&amp;quot;Penguin Bill Length (in mm)&amp;quot;, 
+                     limits = c(25, 70))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/ggforce-label-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another cool feature of &lt;em&gt;ggforce&lt;/em&gt; is the ability to use something called facet zoom. Essentially, this will create a zoomed in element of a portion of your figure. For example, suppose we wanted to zoom in on the Gentoo penguins to explore their relationship between bill length and flipper length. This creates a picture in picture plotting effect.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 3, aes(shape = species, color = species)) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;) + 
+  facet_zoom(x = species == &amp;#39;Gentoo&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/facet-zoom-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;patchwork&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;em&gt;patchwork&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;The &lt;em&gt;patchwork&lt;/em&gt; package is particularly helpful to combine multiple &lt;em&gt;ggplot2&lt;/em&gt; figures into a single figure, but you don’t want to facet. This can be useful to show multiple different relationships of attributes and combine these into a single figure element to include in a document to share.&lt;/p&gt;
+&lt;p&gt;To combine figure elements, basic math notation is used, including &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, or &lt;code&gt;|&lt;/code&gt;. There are other operators as well, but these are the primary ones we will explore and will also use parentheses to group plots together.&lt;/p&gt;
+&lt;p&gt;First, let’s create a few plots that we may want to combine.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;)
+
+p1 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork-plots-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p2 &amp;lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Depth (in mm)&amp;quot;)
+p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, we will start by using the &lt;code&gt;+&lt;/code&gt; operator to combine plots.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(patchwork)
+
+p1 + p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork-combine-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the plots are combined directly as generated. In the above example, we’d likely want to only have one legend instead of two. We can do this by modifying the first figure to remove the legend.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(size = 4, aes(color = species, shape = species)) + 
+  xlab(&amp;quot;Penguin Flipper Length (in mm)&amp;quot;) +
+  ylab(&amp;quot;Penguin Bill Length (in mm)&amp;quot;) + 
+  theme(legend.position = &amp;#39;none&amp;#39;)
+
+p1 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/no-legend-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 + p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/combine-nolegend-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can use the &lt;code&gt;/&lt;/code&gt; operator to stack plots into multiple rows.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 / p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork-ontop-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;+&lt;/code&gt; operator has one issue with it, it tries to keep things in a square grid, similar to how &lt;code&gt;facet_wrap()&lt;/code&gt; works. For more advanced layout, the &lt;code&gt;|&lt;/code&gt; operator separates columns whereas we saw above that the &lt;code&gt;/&lt;/code&gt; operator will stack plots. Combined with parentheses, you can get more advanced layouts. First, let’s add one more figure.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3 &amp;lt;- ggplot(drop_na(penguins, sex), 
+             aes(x = sex, y = body_mass_g)) + 
+  geom_violin(aes(fill = species), draw_quantiles = c(0.1, .5, 0.9)) + 
+  xlab(&amp;quot;Penguin Sex&amp;quot;) + 
+  ylab(&amp;quot;Penguin Body Mass (in g)&amp;quot;) + 
+  theme(legend.position = &amp;#39;none&amp;#39;)
+
+p3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patch-box-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3 | (p1 / p2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork-combined-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note, without parentheses, the figures may not turn out as you want.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 | p2 / p3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork-error-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;(p1 + p2) / p3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions_files/figure-html/patchwork-correct-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Week 2</title>
       <link>https://psqf6250.brandonlebeau.org/content/02-week2/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
@@ -489,6 +704,135 @@ norm_values &amp;lt;- rnorm(n = 10, mean = 0, sd = 1)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Assignments&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://uiowa.instructure.com/courses/160427/quizzes/242627&#34;&gt;Quiz 1&lt;/a&gt; - Due February 7th, 2021&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Graphics Tips</title>
+      <link>https://psqf6250.brandonlebeau.org/rcode/graphics-tips/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/rcode/graphics-tips/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;graphics-basics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Graphics Basics&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;What is the story you want to tell?&lt;/li&gt;
+&lt;li&gt;Is the figure misleading?&lt;/li&gt;
+&lt;li&gt;Could other figure types be more effective?&lt;/li&gt;
+&lt;li&gt;Does the figure show variation?&lt;/li&gt;
+&lt;li&gt;Is the figure self-contained?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;misleading-graphs&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Misleading Graphs&lt;/h1&gt;
+&lt;p&gt;Data visualization is hard and it is easy to mislead, intentionally or unintentionally.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/mislead-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;better-approach&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Better Approach&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/better-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;axis-labels&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Axis Labels&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Axis labels are often placed on the x-axis, but for long labels this can be less effective.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/Axis-labels-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;axis-labels-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Axis Labels 2&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Often, the labels are rotated. Works, but is ugly and difficult to read in my opinion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/labels-rotate-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;axis-labels-3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Axis Labels 3&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The solution, flip x and y axis using &lt;code&gt;coord_flip()&lt;/code&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/flip-axes-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;showing-variation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Showing Variation&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Figures depicting statistics, should show variation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/mean-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;showing-variation-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Showing Variation 2&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;There are multiple values for each major category, the mean is useful, but simplifies too much and could mislead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips_files/figure-html/violin-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 3</title>
+      <link>https://psqf6250.brandonlebeau.org/content/03-week3/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/03-week3/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/03-week3/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The following week the course will continue discussing data visualization using ggplot2 by exploring a handful of useful extension packages that allows new functionality to be implemented. In addition to the new extension packages, some graphical creation tips will be shared.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Engage with the ggplot2 extension packages&lt;/li&gt;
+&lt;li&gt;Create new figures using the ggplot2 extension packages&lt;/li&gt;
+&lt;li&gt;Evaluate and implement appropriate data visualization standards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;activities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fundamentals of Data Visualization - &lt;a href=&#34;https://clauswilke.com/dataviz/proportional-ink.html&#34;&gt;chapters 17 – 26&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ggrepel
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0743a168-dd6e-4f9a-aa28-ac3000188697&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ggforce
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=97eb6cbd-ff10-4905-97f6-ac30001ca5a7&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;patchwork
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=9cd7cdaf-dc31-4d60-9b9d-ac30001fed89&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Graphics Tips
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8acace65-abcc-4c5a-ad86-ac330112ba2b&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-syntax&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/&#34;&gt;ggplot2 extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips/&#34;&gt;R Basics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://uiowa.instructure.com/courses/160427/quizzes/242631&#34;&gt;Quiz 2&lt;/a&gt; - Due February 14th, 2021&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
