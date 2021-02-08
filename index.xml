@@ -5,7 +5,7 @@
     <link>https://psqf6250.brandonlebeau.org/</link>
       <atom:link href="https://psqf6250.brandonlebeau.org/index.xml" rel="self" type="application/rss+xml" />
     <description>PSQF 6250</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
       <title>PSQF 6250</title>
@@ -894,6 +894,16 @@ mean(y)&lt;/code&gt;&lt;/pre&gt;
       <guid>https://psqf6250.brandonlebeau.org/assignments/quizzes/quiz1/</guid>
       <description>&lt;p&gt;Quiz 1 can be taken on ICON, due February 7th, 2021. The quiz covers content from &lt;a href=&#34;https://psqf6250.brandonlebeau.org/content/01-week1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Week 1&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://uiowa.instructure.com/courses/160427/quizzes/242627?module_item_id=4326724&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Quiz 1 Link&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quiz 2</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/quizzes/quiz2/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/quizzes/quiz2/</guid>
+      <description>&lt;p&gt;Quiz 2 can be taken on ICON, due February 14th, 2021. The quiz covers content from &lt;a href=&#34;https://psqf6250.brandonlebeau.org/content/02-week2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Week 2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://uiowa.instructure.com/courses/160427/quizzes/242631&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Quiz 2 Link&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
