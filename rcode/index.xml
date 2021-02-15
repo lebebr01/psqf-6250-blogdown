@@ -1700,7 +1700,7 @@ flights %&amp;gt;%
 &lt;h2&gt;Project Structure&lt;/h2&gt;
 &lt;p&gt;The last aspect I want to share is a common project directory structure. Everyone can have slightly different versions, but I want to share what I have come to commonly use. The following structure is how I tend to structure most or my projects.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;img/project_structure.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://psqf6250.brandonlebeau.org/img/project_structure.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Project Structure&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Another way to visualize this structure is as follows:&lt;/p&gt;
@@ -1708,7 +1708,7 @@ flights %&amp;gt;%
 &lt;li&gt;Project Root:
 &lt;ul&gt;
 &lt;li&gt;Data&lt;/li&gt;
-&lt;li&gt;examp&lt;/li&gt;
+&lt;li&gt;example&lt;/li&gt;
 &lt;li&gt;paper&lt;/li&gt;
 &lt;li&gt;R&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
