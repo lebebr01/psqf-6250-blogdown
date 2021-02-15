@@ -285,5 +285,66 @@
 </description>
     </item>
     
+    <item>
+      <title>Week 5</title>
+      <link>https://psqf6250.brandonlebeau.org/content/05-week5/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/05-week5/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/05-week5/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This module will give some tools to use when performing exploratory data analysis, a framework that helps you to better understand your data prior to doing any more formal analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluate exploratory figures&lt;/li&gt;
+&lt;li&gt;Define exploratory data analysis&lt;/li&gt;
+&lt;li&gt;Interpret exploratory data analysis output&lt;/li&gt;
+&lt;li&gt;Create exploratory data analysis code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;activities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R for Data Science - &lt;a href=&#34;https://r4ds.had.co.nz/exploratory-data-analysis.html&#34;&gt;chapter 7&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;EDA - Missing Data
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a1f1af26-3448-4d3f-8c28-9a028401b314&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EDA - Variation
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d87528ef-0d74-4b94-b115-093bbd6d1ef6&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EDA - Covariation
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=90b4f216-e064-489a-8b8a-7c3bd0d5e048&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EDA - Rare/Common Cases
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=519d03cf-6ac8-4003-8484-ed0d8e97b43c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R Projects
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c9526abc-b9eb-4730-859b-2b5894b777f2&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-syntax&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_munging/&#34;&gt;Exploratory Data Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/r_scripts/&#34;&gt;R Projects - RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come …&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
