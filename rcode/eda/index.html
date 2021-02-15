@@ -1,0 +1,1480 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Exploratory Data Analysis">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/eda/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/eda/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/eda/">
+  <meta property="og:title" content="Exploratory Data Analysis | PSQF 6250">
+  <meta property="og:description" content="Exploratory Data Analysis"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-02-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-02-15T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Exploratory Data Analysis | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  <li class=""><a href="/rcode/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class="active"><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Exploratory Data Analysis</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>Exploratory data analysis (EDA) is an important step in exploring and understanding your data. In addition, EDA does not suffer from problems with inferential statistics related to multiple (correlated) models on the same data. Instead, EDA is a great way to visualize, summarize, and prod your data without any consequences.</p>
+<p>For this set of notes, we are going to use the following packages:</p>
+<pre class="r"><code>library(nycflights13)
+library(tidyverse)</code></pre>
+<p>We will use a few different data sets, but the one we are going to start with is the <code>flights</code> data from the <code>nycflights13</code> package. Below is the first 10 rows of the data.</p>
+<pre class="r"><code>flights</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      542            540         2      923            850
+##  4  2013     1     1      544            545        -1     1004           1022
+##  5  2013     1     1      554            600        -6      812            837
+##  6  2013     1     1      554            558        -4      740            728
+##  7  2013     1     1      555            600        -5      913            854
+##  8  2013     1     1      557            600        -3      709            723
+##  9  2013     1     1      557            600        -3      838            846
+## 10  2013     1     1      558            600        -2      753            745
+## # … with 336,766 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>This data contains information on all flights that departed from the three airports in NYC in 2013. As you can see, the data has a total of 336776 rows and 19. For additional information use <code>?flights</code>.</p>
+<div id="exploratory-data-analysis" class="section level2">
+<h2>Exploratory Data Analysis</h2>
+<p>The general process for proceeding with exploratory data analysis as summarized in the R for Data Science text are:</p>
+<ol style="list-style-type: decimal">
+<li>Ask questions about your data</li>
+<li>Search for answers</li>
+<li>Refine or ask new questions about the data.</li>
+</ol>
+<p>There are no bad questions when performing EDA, but some common questions worth exploring are:</p>
+<ul>
+<li>Missing Data</li>
+<li>Variation</li>
+<li>Covariation</li>
+<li>Rare cases</li>
+<li>Common cases</li>
+<li>Distributions</li>
+</ul>
+<div id="missing-data" class="section level3">
+<h3>Missing Data</h3>
+<p>A first step in exploring the data is to explore if there are any missing data present in the data (likely). This is not an easy step, but determining the amount of missing data and, if possible, why these values are missing are important first steps. One quick way to get a view of this information for the entire data is to use the <code>summary</code> command. An example is given with the <code>flights</code> data below.</p>
+<pre class="r"><code>summary(flights)</code></pre>
+<pre><code>##       year          month             day           dep_time    sched_dep_time
+##  Min.   :2013   Min.   : 1.000   Min.   : 1.00   Min.   :   1   Min.   : 106  
+##  1st Qu.:2013   1st Qu.: 4.000   1st Qu.: 8.00   1st Qu.: 907   1st Qu.: 906  
+##  Median :2013   Median : 7.000   Median :16.00   Median :1401   Median :1359  
+##  Mean   :2013   Mean   : 6.549   Mean   :15.71   Mean   :1349   Mean   :1344  
+##  3rd Qu.:2013   3rd Qu.:10.000   3rd Qu.:23.00   3rd Qu.:1744   3rd Qu.:1729  
+##  Max.   :2013   Max.   :12.000   Max.   :31.00   Max.   :2400   Max.   :2359  
+##                                                  NA&#39;s   :8255                 
+##    dep_delay          arr_time    sched_arr_time   arr_delay       
+##  Min.   : -43.00   Min.   :   1   Min.   :   1   Min.   : -86.000  
+##  1st Qu.:  -5.00   1st Qu.:1104   1st Qu.:1124   1st Qu.: -17.000  
+##  Median :  -2.00   Median :1535   Median :1556   Median :  -5.000  
+##  Mean   :  12.64   Mean   :1502   Mean   :1536   Mean   :   6.895  
+##  3rd Qu.:  11.00   3rd Qu.:1940   3rd Qu.:1945   3rd Qu.:  14.000  
+##  Max.   :1301.00   Max.   :2400   Max.   :2359   Max.   :1272.000  
+##  NA&#39;s   :8255      NA&#39;s   :8713                  NA&#39;s   :9430      
+##    carrier              flight       tailnum             origin         
+##  Length:336776      Min.   :   1   Length:336776      Length:336776     
+##  Class :character   1st Qu.: 553   Class :character   Class :character  
+##  Mode  :character   Median :1496   Mode  :character   Mode  :character  
+##                     Mean   :1972                                        
+##                     3rd Qu.:3465                                        
+##                     Max.   :8500                                        
+##                                                                         
+##      dest              air_time        distance         hour      
+##  Length:336776      Min.   : 20.0   Min.   :  17   Min.   : 1.00  
+##  Class :character   1st Qu.: 82.0   1st Qu.: 502   1st Qu.: 9.00  
+##  Mode  :character   Median :129.0   Median : 872   Median :13.00  
+##                     Mean   :150.7   Mean   :1040   Mean   :13.18  
+##                     3rd Qu.:192.0   3rd Qu.:1389   3rd Qu.:17.00  
+##                     Max.   :695.0   Max.   :4983   Max.   :23.00  
+##                     NA&#39;s   :9430                                  
+##      minute        time_hour                  
+##  Min.   : 0.00   Min.   :2013-01-01 05:00:00  
+##  1st Qu.: 8.00   1st Qu.:2013-04-04 13:00:00  
+##  Median :29.00   Median :2013-07-03 10:00:00  
+##  Mean   :26.23   Mean   :2013-07-03 05:22:54  
+##  3rd Qu.:44.00   3rd Qu.:2013-10-01 07:00:00  
+##  Max.   :59.00   Max.   :2013-12-31 23:00:00  
+## </code></pre>
+<p>This summary can be a bit difficult to digest at first, but can give some useful insight into the variables, including the amount of missing data for each variable.</p>
+<p>You can dive into looking at specific rows that are missing with the <code>filter</code> command and the <code>is.na</code> function. An example pulling out rows with a missing dep_time values is illustrated:</p>
+<pre class="r"><code>filter(flights, is.na(dep_time))</code></pre>
+<pre><code>## # A tibble: 8,255 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013     1     1       NA           1630        NA       NA           1815
+##  2  2013     1     1       NA           1935        NA       NA           2240
+##  3  2013     1     1       NA           1500        NA       NA           1825
+##  4  2013     1     1       NA            600        NA       NA            901
+##  5  2013     1     2       NA           1540        NA       NA           1747
+##  6  2013     1     2       NA           1620        NA       NA           1746
+##  7  2013     1     2       NA           1355        NA       NA           1459
+##  8  2013     1     2       NA           1420        NA       NA           1644
+##  9  2013     1     2       NA           1321        NA       NA           1536
+## 10  2013     1     2       NA           1545        NA       NA           1910
+## # … with 8,245 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>We can also build more complex operations to look at data that is missing for one variable, but not another. For instance, if you look at the summary information above, you may notice there are more missing values for the arr_delay variable compared to the arr_time variable. To look at these values you can use the following command:</p>
+<pre class="r"><code>filter(flights, is.na(arr_delay) &amp; !is.na(arr_time))</code></pre>
+<pre><code>## # A tibble: 717 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013     1     1     1525           1530        -5     1934           1805
+##  2  2013     1     1     1528           1459        29     2002           1647
+##  3  2013     1     1     1740           1745        -5     2158           2020
+##  4  2013     1     1     1807           1738        29     2251           2103
+##  5  2013     1     1     1939           1840        59       29           2151
+##  6  2013     1     1     1952           1930        22     2358           2207
+##  7  2013     1     2      905            822        43     1313           1045
+##  8  2013     1     2     1125            925       120     1445           1146
+##  9  2013     1     2     1848           1840         8     2333           2151
+## 10  2013     1     2     1849           1724        85     2235           1938
+## # … with 707 more rows, and 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;,
+## #   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>This may actually be a data error, as there is an arr_time value, a scheduled_arr_time value, but no arr_delay value. This could then be calculated manually to reduce the number of missing values with this variable.</p>
+<div id="viewing-missing-data-graphically" class="section level4">
+<h4>Viewing missing data graphically</h4>
+<p>It may be useful to view missing data graphically. This may be useful to see if there are specific trends in the data in relation to the missing values. A few ways to plot these data may be useful.</p>
+<p>First, it is always a good rule to explore missing data in relation to other variables in the data. If there is evidence that another variable is influencing whether a value is missing, additional statistical controls are needed to adjust for these concerns.</p>
+<p>For example, we could explore if the scheduled arrival time is related to whether the actual arrival flight time is missing.</p>
+<pre class="r"><code>flights %&gt;%
+  mutate(
+    miss_arrival = is.na(arr_time)
+  ) %&gt;%
+  ggplot(mapping = aes(sched_arr_time)) + 
+  geom_freqpoly(aes(color = miss_arrival)) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/arrival_missing-1.png" width="672" /></p>
+<p>Notice that the count metric masks much of what is being visualized here as there are many more flights that arrived compared to those with missing times. To adjust this, we simply need to change the y-axis from counts to density.</p>
+<pre class="r"><code>flights %&gt;%
+  mutate(
+    miss_arrival = is.na(arr_time)
+  ) %&gt;%
+  ggplot(mapping = aes(x = sched_arr_time, y = ..density..)) + 
+  geom_freqpoly(aes(color = miss_arrival)) +
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/miss_density-1.png" width="672" /></p>
+<p>The two curves are now standardized so that the area under each curve equals 1, which in turn makes comparison between the two groups easier.</p>
+<p>One other special note, for EDA internally, there is no need to spend much time worrying about formatting of the graphics. However, if this plot above would be included in a report or manuscript, this figure would need additional polish to be included.</p>
+</div>
+</div>
+<div id="variation" class="section level3">
+<h3>Variation</h3>
+<p>Another common EDA question is related to variation. Variation is important for statistics, without variation there is no need to do statistics. The best way to explore variation of any type of variable is through visulization. This section will be broken into two sub areas, one that explores qualitative and another that explores quantitative.</p>
+<div id="qualitative-variables" class="section level4">
+<h4>Qualitative Variables</h4>
+<p>Bar graphs (frequency tables) are commonly used to explore variation in qualitative variables. For example, if we wished to explore the number of flights that took off for each month of the year from NYC:</p>
+<pre class="r"><code>ggplot(flights, aes(factor(month))) + 
+  geom_bar() + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/count_flights-1.png" width="672" /></p>
+<p>One special note about the above code, I used the <code>factor()</code> function so that ggplot specifically added all the values of the variable to the x-axis. By default since the month variable is being treated as an integer (a number), it would not show all the values for month.</p>
+<p>These counts could be calculated manually with the use of dplyr using the <code>count</code> function. The <code>count</code> function basically creates a frequency table. More complex tables can be created by passing additional variables to the <code>count</code> function.</p>
+<pre class="r"><code>flights %&gt;%
+  count(month)</code></pre>
+<pre><code>## # A tibble: 12 x 2
+##    month     n
+##  * &lt;int&gt; &lt;int&gt;
+##  1     1 27004
+##  2     2 24951
+##  3     3 28834
+##  4     4 28330
+##  5     5 28796
+##  6     6 28243
+##  7     7 29425
+##  8     8 29327
+##  9     9 27574
+## 10    10 28889
+## 11    11 27268
+## 12    12 28135</code></pre>
+</div>
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Copy the code from the bar graph above, but instead of wrapping the month variable in factor, try it without it. What is different? Extra, using the <code>scale_x_continuous</code> function, can you manually add each of the 12 numeric month values to the plot?</li>
+<li>Using dplyr, manually calculate the number of flights that took off for every day of every month. In other words, how many flights took off everyday of the year. Which day had the most flights?</li>
+</ol>
+</div>
+<div id="quantitative-variables" class="section level4">
+<h4>Quantitative Variables</h4>
+<p>Histrograms, frequency polygons, or density curves are three common options to explore variation with quantitative variables. Within the flights data, suppose we were interested in exploring the variation in the distance traveled, this could easily be done with a histrogram.</p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_histogram() + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_hist-1.png" width="672" /></p>
+<p>We could also use a frequency polygon:</p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_freqpoly() + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_freqpoly-1.png" width="672" /></p>
+<p>We could also use a density curve:</p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_density() + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_density-1.png" width="672" /></p>
+<p>When exploring the variation for a single variable overall, I tend to use histograms. However, when attempting to see if the variation changes across values of a categorical variable, histograms are difficult as the groups likely overlap. These are instances when using the frequency polygon or density curves are useful. Here are examples of both when exploring variation differences by month.</p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_freqpoly(aes(color = factor(month))) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_month-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_density(aes(color = factor(month))) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_month-2.png" width="672" /></p>
+<p>You can also calculate the counts plotted in the histograms and frequency polygons using the <code>count</code> as with qualitative variables. We just now need to use the <code>cut_width</code> function to specify bins.</p>
+<pre class="r"><code>flights %&gt;%
+  count(cut_width(distance, 100))</code></pre>
+<pre><code>## # A tibble: 28 x 2
+##    `cut_width(distance, 100)`     n
+##  * &lt;fct&gt;                      &lt;int&gt;
+##  1 [-50,50]                       1
+##  2 (50,150]                    2514
+##  3 (150,250]                  36839
+##  4 (250,350]                  18442
+##  5 (350,450]                  15233
+##  6 (450,550]                  29149
+##  7 (550,650]                  11688
+##  8 (650,750]                  33482
+##  9 (750,850]                  19482
+## 10 (850,950]                  19644
+## # … with 18 more rows</code></pre>
+<p>Note, these counts may differ from above as the binwidth was not specifically stated when creating the histrogram or frequency polygon.</p>
+<p>It may also be useful to calculate the variance, standard deviation, or the range. These can be calculated using the <code>summarize</code> function.</p>
+<pre class="r"><code>flights %&gt;%
+  summarize(
+    var_dist = var(distance, na.rm = TRUE),
+    sd_dist = sd(distance, na.rm = TRUE),
+    min_dist = min(distance, na.rm = TRUE),
+    max_dist = max(distance, na.rm = TRUE)
+  )</code></pre>
+<pre><code>## # A tibble: 1 x 4
+##   var_dist sd_dist min_dist max_dist
+##      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+## 1  537631.    733.       17     4983</code></pre>
+<p>You could pair this with the <code>group_by</code> function to calculate these values for different groups (e.g. by month).</p>
+</div>
+<div id="exercises-1" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Explore variation in the air_time variable.</li>
+<li>Does the variation in the air_time variable differ by month?</li>
+</ol>
+</div>
+</div>
+<div id="distributions" class="section level3">
+<h3>Distributions</h3>
+<p>Exploring distributions for variables is a very similar process to exploring the variation, the question is just different. Most often we are interested in exploring if the shape of the distribution is approximately normal. This will become more interesting when we start fitting models to explore potential assumption violations in the residuals. We leave these discussions until then.</p>
+</div>
+<div id="covariation" class="section level3">
+<h3>Covariation</h3>
+<p>Covariation is the process of comparing how two (or more) variables are related. The most common method for exploring covariation is through scatterplots. However, these are most natural for two continuous variables. Other plots are useful for a mixture of variable types or for two qualitative variables. We will explore each in turn.</p>
+<div id="two-qualitative-variables" class="section level4">
+<h4>Two Qualitative Variables</h4>
+<p>Covariation in two qualitative variables is more difficult to view visually due to the restricted possible values in each variable. Suppose for example, we wished to explore covariation in the origin of the flight and the carrier.</p>
+<pre class="r"><code>ggplot(flights, aes(origin, carrier)) + 
+  geom_count()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/carrier_origin-1.png" width="672" /></p>
+<p>This plot is okay, however, I think a more useful plot is to use a tile plot to explore these differences with color.</p>
+<pre class="r"><code>flights %&gt;%
+  count(origin, carrier) %&gt;%
+  ggplot(aes(origin, carrier)) + 
+  geom_tile(aes(fill = n)) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/origin_carrier_tile-1.png" width="672" /></p>
+<p>Note, that holes mean missing values (i.e. no flights from that airport from that carrier).</p>
+</div>
+<div id="exercises-2" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Explore the covariation between the month and day variables. Note, these are treated as continuous in the data, but in reality they are likely best represented as qualitative.</li>
+</ol>
+</div>
+<div id="two-quantitative-variables" class="section level4">
+<h4>Two Quantitative Variables</h4>
+<p>Scatterplots are useful for two quantitative variables. Suppose for example that we wish to explore the relationship between the air_time variable and the arr_delay variable. This could be done with a scatterplot.</p>
+<pre class="r"><code>ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_point() + 
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (geom_point).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/quant_cov-1.png" width="672" /></p>
+<p>One problem with the plot above, is overplotting. There are two fixes for this, one is to use transparent points using the <code>alpha</code> argument to the <code>geom_point</code> function.</p>
+<pre class="r"><code>ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_point(alpha = .05) + 
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (geom_point).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/transparency-1.png" width="672" /></p>
+<p>Another approach that will simplify the exploration is to use boxplots. This will involve grouping the air_time variable into “bins.”</p>
+<pre class="r"><code>ggplot(flights, aes(x = air_time, y = arr_delay)) + 
+  geom_boxplot(aes(group = cut_width(air_time, 50))) + 
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (stat_boxplot).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/boxplot_twoquant-1.png" width="672" /></p>
+<p>Even another more sophisticated graphic is to do the quantitative alternative to <code>geom_tile</code>. Note, the code below uses the hexbin package, but a similar function is <code>geom_bin2d</code>.</p>
+<pre class="r"><code># install.packages(&quot;hexbin&quot;)
+library(hexbin)
+ggplot(flights, aes(x = air_time, y = arr_delay)) + 
+  geom_hex()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing non-finite values (stat_binhex).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/hex_twoquant-1.png" width="672" /></p>
+</div>
+<div id="adding-a-third-variable" class="section level4">
+<h4>Adding a Third Variable</h4>
+<p>Adding a third variable is often useful, but can be difficult to think about procedurally. The type of plot that is useful depends on the type the third variable is. For example, if the third variable is also quantitative, the visualization is more difficult, however, if the third variable is qualitative, there are two main options. These will be explored in more detail below.</p>
+<p>The main two approaches for adding a third variable when it is qualitative is to use a different color/shape for the values of this variable or to facet the plot. Suppose we wished to explore the covariation between the following three variables: air_time, arr_delay, and origin. The two different options are shown below.</p>
+<pre class="r"><code>ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_hex() + 
+  facet_grid(. ~ origin) + 
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing non-finite values (stat_binhex).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/three_vars-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_point(aes(color = origin), alpha = .05) + 
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (geom_point).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/three_vars-2.png" width="672" /></p>
+<p>Plotting three quantitative variables commonly involves binning one one the variables to turn it into an ordinal variable with different levels. For example, see the example with two variables and the boxplot, a similar approach could be used to facet by this third variable. Below is a simple example:</p>
+<pre class="r"><code>ggplot(flights, aes(x = air_time, y = arr_delay)) + 
+  geom_hex() + 
+  theme_bw() + 
+  facet_wrap(~ cut_width(dep_time, 250))</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing non-finite values (stat_binhex).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/three_quant-1.png" width="672" /></p>
+</div>
+<div id="one-quantitative-one-qualitative" class="section level4">
+<h4>One Quantitative, One Qualitative</h4>
+<p>This was actually already discussed in the discussion of variation by exploring differences in variation for different levels of a qualitative variable (see above). If the variation differs by groups, there is then evidence of covariation.</p>
+</div>
+<div id="correlations" class="section level4">
+<h4>Correlations</h4>
+<p>It is also useful to calculate and visualize raw correlations. To calculate raw correlations (assuming only quantitative variables), the <code>cor</code> function is useful.</p>
+<pre class="r"><code>flights %&gt;%
+  select(air_time, arr_delay, dep_time) %&gt;%
+  cor(use = &#39;pairwise.complete.obs&#39;)</code></pre>
+<pre><code>##              air_time   arr_delay    dep_time
+## air_time   1.00000000 -0.03529709 -0.01461948
+## arr_delay -0.03529709  1.00000000  0.23230573
+## dep_time  -0.01461948  0.23230573  1.00000000</code></pre>
+<p>To visualize a correlation matrix, the GGally package is useful. Note, the <code>ggpairs</code> function can take some time to run.</p>
+<pre class="r"><code># install.package(&quot;GGally&quot;)
+library(GGally)
+flights %&gt;%
+  select(air_time, arr_delay, dep_time) %&gt;%
+  na.omit() %&gt;%
+  sample_n(1000) %&gt;%
+  ggpairs()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/ggally-1.png" width="672" /></p>
+</div>
+<div id="exercises-3" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Explore covariation in the dep_delay and arr_delay variables. What type of relationship, if any, appears to be present?</li>
+<li>Explore the relationship between dep_delay, arr_delay, and origin. What type of relationship is present. Does the relationship between dep_delay and arr_delay differ by origin?</li>
+<li>Finally, calculate the correlation matrix for dep_delay, arr_delay, and dep_time.</li>
+</ol>
+</div>
+</div>
+<div id="rarecommon-cases" class="section level3">
+<h3>Rare/Common Cases</h3>
+<p>The last question of use to explore when performing EDA is looking for the presence of rare or common cases. In other words, an exploration of any outliers and the central tendency of the distribution.</p>
+<p>When we explored variation in the distance variable earlier, there may have been extreme values we’d want to explore in more detail.</p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_histogram() +
+  theme_bw()</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_extreme-1.png" width="672" /></p>
+<p>Notice the large distance value, to get a better view of how many there are here, we can use <code>coord_cartesian</code> to zoom in.</p>
+<pre class="r"><code>ggplot(flights, aes(distance)) + 
+  geom_histogram() + 
+  theme_bw() + 
+  coord_cartesian(ylim = c(0, 5000))</code></pre>
+<p><img src="/rcode/eda_files/figure-html/distance_coord-1.png" width="672" /></p>
+<p>Note, that in the above plot, <code>coord_cartesian</code> does not remove any points, simply changes the coordinates that are plotted. We could also pull these out using filter as well.</p>
+<pre class="r"><code>flights %&gt;%
+  filter(distance &gt; 3000) %&gt;%
+  arrange(distance)</code></pre>
+<pre><code>## # A tibble: 715 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013     7     6     1629           1615        14     1954           1953
+##  2  2013     7    13     1618           1615         3     1955           1953
+##  3  2013     7    20     1618           1615         3     2003           1953
+##  4  2013     7    27     1617           1615         2     1906           1953
+##  5  2013     8     3     1615           1615         0     2003           1953
+##  6  2013     8    10     1613           1615        -2     1922           1953
+##  7  2013     8    17     1740           1625        75     2042           2003
+##  8  2013     8    24     1633           1625         8     1959           2003
+##  9  2013     1     1     1344           1344         0     2005           1944
+## 10  2013     1     2     1344           1344         0     1940           1944
+## # … with 705 more rows, and 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;,
+## #   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<div id="measures-of-central-tendency" class="section level4">
+<h4>Measures of Central Tendency</h4>
+<p>Exploring measures of central tendency or simply common values/repeated of common values can also be important.</p>
+<pre class="r"><code>ggplot(flights, aes(arr_time)) +
+  geom_histogram(binwidth = 50) +
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 8713 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/rcode/eda_files/figure-html/common_values-1.png" width="672" /></p>
+<p>Measures of central tendency can be directly calculated using the <code>summarise</code> function. For example, exploring central tendency of the arr_delay variable.</p>
+<pre class="r"><code>flights %&gt;%
+  summarise(
+    avg_arrdelay = mean(arr_delay, na.rm = TRUE),
+    med_arrdelay = median(arr_delay, na.rm = TRUE)
+  )</code></pre>
+<pre><code>## # A tibble: 1 x 2
+##   avg_arrdelay med_arrdelay
+##          &lt;dbl&gt;        &lt;dbl&gt;
+## 1         6.90           -5</code></pre>
+<p>More interesting computations can be performed by using adding in the <code>group_by</code> function.</p>
+</div>
+<div id="exercises-4" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Using the <code>txhousing</code> data, explore rare/common cases in the median sale price for the following 3 cities: Austin, Dallas, and Houston.</li>
+<li>Using the data from #1, explore measures of central tendency in the median sale price of these three cities. How have these changed over time (year)?</li>
+<li>Create an effective visualization that explores differences in the median sale price over time for these three cities.</li>
+</ol>
+</div>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/r_scripts/" rel="next">R Scripts</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/projects/" rel="prev">R Projects -  RStudio</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 15, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -34,10 +34,10 @@
   
     
   
-  <meta name="description" content="Graphics Tips">
+  <meta name="description" content="R Projects -  RStudio">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/graphics-tips/">
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/projects/">
 
   
 
@@ -263,7 +263,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/graphics-tips/">
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/projects/">
 
   
   
@@ -278,15 +278,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="PSQF 6250">
-  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/graphics-tips/">
-  <meta property="og:title" content="Graphics Tips | PSQF 6250">
-  <meta property="og:description" content="Graphics Tips"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/projects/">
+  <meta property="og:title" content="R Projects -  RStudio | PSQF 6250">
+  <meta property="og:description" content="R Projects -  RStudio"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
   <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-02-03T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-02-15T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-02-03T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-02-15T00:00:00&#43;00:00">
   
 
   
@@ -305,7 +305,7 @@
 
 
 
-  <title>Graphics Tips | PSQF 6250</title>
+  <title>R Projects -  RStudio | PSQF 6250</title>
 
 </head>
 
@@ -750,7 +750,7 @@
 
 
 
-  <li class="active"><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
 
 
 
@@ -766,7 +766,7 @@
 
 
 
-  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
+  <li class="active"><a href="/rcode/projects/">R Projects -  RStudio</a></li>
 
       
     
@@ -800,7 +800,7 @@
         <div class="docs-article-container">
           
 
-          <h1>Graphics Tips</h1>
+          <h1>R Projects -  RStudio</h1>
 
           <div class="article-style">
             
@@ -810,59 +810,28 @@
 
 </div>
 
-<div id="graphics-basics" class="section level1">
-<h1>Graphics Basics</h1>
-<ol style="list-style-type: decimal">
-<li>What is the story you want to tell?</li>
-<li>Is the figure misleading?</li>
-<li>Could other figure types be more effective?</li>
-<li>Does the figure show variation?</li>
-<li>Is the figure self-contained?</li>
-</ol>
+<p>I want to talk briefly about RStudio projects. These are a great way to structure each individual project. Chapter 8 in the R for Data Science text will provide a more thorough discussion of RStudio projects: <a href="http://r4ds.had.co.nz/workflow-projects.html" class="uri">http://r4ds.had.co.nz/workflow-projects.html</a></p>
+<div id="working-directory" class="section level2">
+<h2>Working Directory</h2>
+<p>As we move into reading in data files, the idea of a working directory will become even more important. RStudio projects makes this discussion much easier as the root of the project directory is treated as the working directory. The nice aspect of this is that all paths to data files are in reference to this root project directory (more on this coming soon).</p>
 </div>
-<div id="misleading-graphs" class="section level1">
-<h1>Misleading Graphs</h1>
-<p>Data visualization is hard and it is easy to mislead, intentionally or unintentionally.</p>
-<p><img src="/rcode/graphics-tips_files/figure-html/mislead-1.png" width="672" /></p>
+<div id="project-structure" class="section level2">
+<h2>Project Structure</h2>
+<p>The last aspect I want to share is a common project directory structure. Everyone can have slightly different versions, but I want to share what I have come to commonly use. The following structure is how I tend to structure most or my projects.</p>
+<div class="figure">
+<img src="img/project_structure.png" alt="" />
+<p class="caption">Project Structure</p>
 </div>
-<div id="better-approach" class="section level1">
-<h1>Better Approach</h1>
-<p><img src="/rcode/graphics-tips_files/figure-html/better-1.png" width="672" /></p>
-</div>
-<div id="axis-labels" class="section level1">
-<h1>Axis Labels</h1>
+<p>Another way to visualize this structure is as follows:</p>
 <ul>
-<li>Axis labels are often placed on the x-axis, but for long labels this can be less effective.</li>
-</ul>
-<p><img src="/rcode/graphics-tips_files/figure-html/Axis-labels-1.png" width="672" /></p>
-</div>
-<div id="axis-labels-2" class="section level1">
-<h1>Axis Labels 2</h1>
+<li>Project Root:
 <ul>
-<li>Often, the labels are rotated. Works, but is ugly and difficult to read in my opinion.</li>
+<li>Data</li>
+<li>examp</li>
+<li>paper</li>
+<li>R</li>
+</ul></li>
 </ul>
-<p><img src="/rcode/graphics-tips_files/figure-html/labels-rotate-1.png" width="672" /></p>
-</div>
-<div id="axis-labels-3" class="section level1">
-<h1>Axis Labels 3</h1>
-<ul>
-<li>The solution, flip x and y axis using <code>coord_flip()</code>!</li>
-</ul>
-<p><img src="/rcode/graphics-tips_files/figure-html/flip-axes-1.png" width="672" /></p>
-</div>
-<div id="showing-variation" class="section level1">
-<h1>Showing Variation</h1>
-<ul>
-<li>Figures depicting statistics, should show variation.</li>
-</ul>
-<p><img src="/rcode/graphics-tips_files/figure-html/mean-plot-1.png" width="672" /></p>
-</div>
-<div id="showing-variation-2" class="section level1">
-<h1>Showing Variation 2</h1>
-<ul>
-<li>There are multiple values for each major category, the mean is useful, but simplifies too much and could mislead.</li>
-</ul>
-<p><img src="/rcode/graphics-tips_files/figure-html/violin-plot-1.png" width="672" /></p>
 </div>
 
           </div>
@@ -881,15 +850,9 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/rcode/ggplot2_extensions/" rel="next">ggplot2 extensions</a>
+    <a href="/rcode/eda/" rel="next">Exploratory Data Analysis</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/rcode/data_munging/" rel="prev">Data Manipulation</a>
-  </div>
   
 </div>
 
@@ -898,7 +861,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Feb 3, 2021</p>
+          <p>Last updated on Feb 15, 2021</p>
 
           
 
