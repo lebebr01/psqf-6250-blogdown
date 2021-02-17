@@ -5,7 +5,7 @@
     <link>https://psqf6250.brandonlebeau.org/</link>
       <atom:link href="https://psqf6250.brandonlebeau.org/index.xml" rel="self" type="application/rss+xml" />
     <description>PSQF 6250</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
       <title>PSQF 6250</title>
@@ -2094,6 +2094,50 @@ flights %&amp;gt;%
 y &amp;lt;- runif(100, min = 3, max = 8)
 mean(x)
 mean(y)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assignment 2</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment2/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment2/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Graphics and Data Munging Practice&lt;/strong&gt;: &lt;em&gt;20 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Due: &lt;em&gt;March 7th, 2021&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 7th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;For this assignment, you will build upon the skills you learned in the first reproducible R Markdown document created in the first assignment. In this assignment, you will explore some data graphically to inform a few research questions using data from the &lt;code&gt;fivethirtyeight&lt;/code&gt; package. The source file (the .Rmd) file will be turned in as well as the compiled version (html). Note, please create a new Rmd document for this assignment rather than continue the one from the first assignment.&lt;/p&gt;
+&lt;p&gt;All graphics should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply over and above any item-specific reductions.&lt;/p&gt;
+&lt;div id=&#34;research-questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Research Questions&lt;/h1&gt;
+&lt;p&gt;The following research questions will be used to guide the assignment, but you do not need to answer these directly. The questions below will reference these questions.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Using the &lt;code&gt;college_recent_grads&lt;/code&gt; data from the &lt;code&gt;fivethirtyeight&lt;/code&gt; package, which majors are the most popular?&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;college_recent_grads&lt;/code&gt; data from the &lt;code&gt;fivethirtyeight&lt;/code&gt; package, which major categories (not individual majors, but bigger major categories, &lt;code&gt;major_category&lt;/code&gt;) are most unisex (i.e., have an equal number of males/females in them.)?&lt;/li&gt;
+&lt;li&gt;Related to #2, which major categories have the most disproportionate number of males or females with that major category?&lt;/li&gt;
+&lt;li&gt;Is there any evidence of a relationship between unemployment rate and the popularity of a major? What about median salary (shown by &lt;code&gt;median&lt;/code&gt;) and the popularity of a major?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Using an appropriate verb from &lt;code&gt;dplyr&lt;/code&gt;, which majors are the most popular? Don’t print all the data in the output file to answer this question, keep this summary concise. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which majors are the least popular? Don’t print all the data in the output file to answer this question, keep this summary concise. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Explore the distribution of the variable/attribute &lt;code&gt;sharewomen&lt;/code&gt; visually. Summarize characteristics of this variable in a few sentences. Be sure to include any figure(s) or statistics as evidence to support your description. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which major categories are the most unisex and which major categories are the most disproportionate? Similar to #1 and #2, please don’t print all of the majors, just highlight a few in each category. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a figure that effectively shows which major categories are the most unisex and disproportionate in a single figure. Discuss briefly why this figure is effective at answering research question 2 and 3. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a figure that explores if there is a relationship between the popularity of a major and the unemployment rate. Discuss how you defined popularity and why this figure helps to show the relationship between the two attributes. Be sure in your discussion to also state your interpretation of the figure. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Building off of #6, create a figure that explores if there is a relationship between the popularity of a major and the median salary (shown with the &lt;code&gt;median&lt;/code&gt; attribute). Discuss how you defined popularity and why this figure helps to show the relationship between the two attributes. Be sure in your discussion to also state your interpretation of the figure. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a figure that explores if there is a relationship between the popularity of a &lt;strong&gt;major category&lt;/strong&gt; and the unemployment rate. Discuss why this figure helps to show the relationship between the two attributes and also discuss how this figure may differ from the one created in #6. What additional features did you need to consider to make an effective visualization of this relationship given the data structure. Be sure in your discussion to also state your interpretation of the figure. Note, you may wish to use &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;ggplot2&lt;/code&gt; to help with this question. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a figure that explores if there is a relationship between the popularity of a &lt;strong&gt;major category&lt;/strong&gt; and the median salary (shown with the &lt;code&gt;median&lt;/code&gt; attribute). Discuss why this figure helps to show the relationship between the two attributes and also discuss how this figure may differ from the one created in #6. What additional features did you need to consider to make an effective visualization of this relationship given the data structure. Be sure in your discussion to also state your interpretation of the figure. Note, you may wish to use &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;ggplot2&lt;/code&gt; to help with this question. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
