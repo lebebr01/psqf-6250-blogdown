@@ -103,5 +103,90 @@ mean(y)&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
+    <item>
+      <title>Assignment 3</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment3/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment3/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Exploratory Data Analysis&lt;/strong&gt;: &lt;em&gt;11 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Due: &lt;em&gt;March 21st, 2021&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 7th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;In this assignment, you will perform exploratory data analysis using the &lt;code&gt;gss_cat&lt;/code&gt; data from the &lt;code&gt;forcats&lt;/code&gt; package. The source file (the .Rmd) file will be turned in as well as the compiled version (html). Create a new .Rmd file for this assignment. You also do not need to explicitly answer the research question, rather this is used to guide the first part of the assignment.&lt;/p&gt;
+&lt;p&gt;You also do not need to include the code for most questions in the compiled (html) version since the Rmd will be turned in as well. If a question asks for code or there is particular elements of code you’d like to share, you can definitely include those in the final compiled version, but please limit those sections to specific elements rather than long chunks of code. Long chunks of code are best left for the Rmd document.&lt;/p&gt;
+&lt;p&gt;All graphics should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply over and above any item-specific reductions.&lt;/p&gt;
+&lt;div id=&#34;research-questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Research Questions&lt;/h1&gt;
+&lt;p&gt;The following research questions will be used to guide the assignment, but you do not need to answer these directly. The questions below will reference these questions.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;How is age related to the amount of television a person reports watching?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;How is the primary dependent variable (i.e. &lt;code&gt;tvhours&lt;/code&gt;) defined (i.e. what is the &lt;code&gt;tvhours&lt;/code&gt; variable attempting to measure? How many years of data are present here? Hint, looking at help page for the data may be helpful here, be sure to note anything notable about the definition of the attribute. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Explore the distribution of the &lt;code&gt;tvhours&lt;/code&gt; variable. Provide a summary of the distribution in terms of shape, rare/common cases, and variation. Include justification for your discussion of this distribution. This justification may include figures or descriptive statistics. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How much of the data is missing in the dependent variable (i.e. &lt;code&gt;tvhours&lt;/code&gt;)? &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Does there appear to be patterns in the missing data from the variable &lt;code&gt;tvhours&lt;/code&gt; by different income levels? Provide evidence for your reasoning. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Does there appear to be patterns in the missing data from the variable &lt;code&gt;tvhours&lt;/code&gt; by different age levels? Provide evidence for your reasoning. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What impact do you feel this missing data will have when exploring the research question above? &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Provide a descriptive analysis exploring the research question above. Does age appear to be related to the amount of time a person spends watching television? Ensure in your discussion you provide justification for why you feel one way or the other and be as descriptive as possible. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Data Import, Restructuring, Joining&lt;/strong&gt;: &lt;em&gt;9 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In this part of the assignment, you will import data and perform data manipulations on this data file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Read in the “ECLS_6250.csv” data file from the &lt;a href=&#34;https://psqf6250.brandonlebeau.org/data/&#34;&gt;course website&lt;/a&gt;.
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the data. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Verify that the data that are indeed missing are read in as missing values. Use the “ECLS_6250.pdf” codebook (found on the &lt;a href=&#34;https://psqf6250.brandonlebeau.org/data/&#34;&gt;course website&lt;/a&gt;) to confirm values of missing data for each variable, these are listed for each variable directly in the codebook.
+&lt;ul&gt;
+&lt;li&gt;Compute the mean of the following two variables: “C4R4MSCL” and “W3SESL”. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;tidyr&lt;/code&gt; package, convert this data into an extra long format where the variables CHILDID, KURBAN_R, GENDER, and RACE are the id variables. The other data attributes would all represent data values to be restructured.
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the data. Note, you should have 6 columns when you are done with this step. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Using the restructured data from #3 above, create three new variables that represent the type of variable (S = School, C = Child, W = family), the wave number, and remaining information. The type of variable and the wave number are the first and second characters of the variable names that were restructured (i.e. stacked) in #3. Hint, using the &lt;code&gt;separate()&lt;/code&gt; function would be useful for this step and exploring some random rows of the data may be helpful using &lt;code&gt;head()&lt;/code&gt; or &lt;code&gt;tail()&lt;/code&gt; or &lt;code&gt;sample_n()&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the data. Note, you should have 8 columns when you are done with this step. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Using the restructured data from #4, combine the variable type (i.e., the attribute that is either S, C, or W) and left-over names. This new variable should be similar to the original variable names from when reading in the data from #1, but should not include the wave information in it. Hint, the &lt;code&gt;unite()&lt;/code&gt; function should be helpful for this step.
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the data. Note, you should have 7 columns when you are done with this step. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Finally, using the restructured data from #5, widen the data set to create a variable for each unique value from the newly created variable from #5.
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the data. Note, you should have 9 columns and fewer rows than #5 when you are done with this step. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Read in the “ECLS_6250_school.csv” data file found on the &lt;a href=&#34;https://psqf6250.brandonlebeau.org/data/&#34;&gt;course website&lt;/a&gt;. Using the restructured data created in #6, merge the school data imported in question #7 into the child level data. Use the type of join where the number of rows for the child level data are not changed. More specifically, the final data should have the same number of rows as #6, but will add 5 new columns.
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the merged data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the merged data. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;This question has a number of steps which are highlighted below in more detail.
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Identify the 25 schools at wave 1 that have the highest proportion of female students and create a new data file that has has the school ID and proportion of female students in the school. Note: Use the codebook to identify which code represents males and females. It may also be helpful, although not necessary, to create a new variable for gender.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Perform a filtering join that returns only the rows from the child level data (i.e., the final data from #7) at wave 1 that belong to the 25 schools that had the highest proportion of females at wave 1 (from step one of this question).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Using the &lt;code&gt;head()&lt;/code&gt; function, print the first few rows of the data and using the &lt;code&gt;dim()&lt;/code&gt; function, print out the dimensions of the data. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
