@@ -391,8 +391,9 @@
 &lt;div id=&#34;r-syntax&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;R Syntax&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/eda/&#34;&gt;Exploratory Data Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/projects/&#34;&gt;R Projects - RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_import/&#34;&gt;Data Import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_restructuring/&#34;&gt;Data Restructuring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_joins/&#34;&gt;Data Joins&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
