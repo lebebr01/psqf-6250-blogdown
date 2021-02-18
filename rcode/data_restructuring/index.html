@@ -1,0 +1,1222 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Data Restructuring">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/data_restructuring/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/data_restructuring/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/data_restructuring/">
+  <meta property="og:title" content="Data Restructuring | PSQF 6250">
+  <meta property="og:description" content="Data Restructuring"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-02-18T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-02-18T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Data Restructuring | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  <li class=""><a href="/rcode/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
+
+
+
+  <li class="active"><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Data Restructuring</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>Data restructuring is often a useful tool to have. By data restructuring, I mean transforming data from long to wide format or vice versa. For the most part, long format is much easier to use when plotting and computing summary statistics. A related topic, called tidy data, can be read about in more detail here: <a href="http://www.jstatsoft.org/v59/i10/paper" class="uri">http://www.jstatsoft.org/v59/i10/paper</a>.</p>
+<p>The data we are going to use for this section of notes is called “LongitudinalEx.csv” and can be found on the <a href="https://psqf6250.brandonlebeau.org/data/">course website</a>. The data are loaded directly from the web, but these could be loaded from a downloaded data file (see )</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
+## ✓ tibble  3.0.5     ✓ dplyr   1.0.3
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>long_data &lt;- read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/LongitudinalEx.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   id = col_double(),
+##   wave = col_double(),
+##   agegrp = col_double(),
+##   age = col_double(),
+##   piat = col_double(),
+##   agegrp.c = col_double(),
+##   age.c = col_double()
+## )</code></pre>
+<div id="longstacked-data" class="section level2">
+<h2>Long/Stacked Data</h2>
+<p>The data read in above is in a format that is commonly referred to as long or stacked data.</p>
+<pre class="r"><code>long_data</code></pre>
+<pre><code>## # A tibble: 27 x 7
+##       id  wave agegrp   age  piat agegrp.c  age.c
+##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+##  1     4     1    6.5  6       18        0 -0.5  
+##  2     4     2    8.5  8.5     31        2  2    
+##  3     4     3   10.5 10.7     50        4  4.17 
+##  4    27     1    6.5  6.25    19        0 -0.25 
+##  5    27     2    8.5  9.17    36        2  2.67 
+##  6    27     3   10.5 10.9     57        4  4.42 
+##  7    31     1    6.5  6.33    18        0 -0.167
+##  8    31     2    8.5  8.83    31        2  2.33 
+##  9    31     3   10.5 10.9     51        4  4.42 
+## 10    33     1    6.5  6.33    18        0 -0.167
+## # … with 17 more rows</code></pre>
+<p>These data do not have one individual per row, instead each row is a individual by wave combination and are stacked for each individual (notice the three rows for id = 4). The variables in this case each have there own column in the data and all of them are time varying (change for each wave of data within an individual). This is also an example of “tidy data” from the paper linked to above, where each row is a unique observation (id, wave pair), variables are in the columns, and each cell of the data is a value.</p>
+<p>The primary functions within the tidyr package are the following:</p>
+<ul>
+<li><code>pivot_longer()</code>: for making the data longer, this replaces the <code>gather()</code> function from tidyr.</li>
+<li><code>pivot_wider()</code>: for making the data wider, this replaces the <code>spread()</code> function from tidyr.</li>
+</ul>
+<p>These two functions are relatively new and they still may change as they continue to be developed. I believe the old functions will be deprecated, but not removed entirely. This means they will not be actively developed any longer, but will remain in the tidyr package for the forseeable future.</p>
+<p>It should also be noted there are mutiple R packages for data restructuring, including reshape and reshape2. The syntax for these has always been difficult for me to fully process and internalize, but they are incredibly powerful. I believe almost every data restructuring task can be accomplished by <code>pivot_longer()</code> and <code>pivot_wider()</code> (with some companion functions), but it may take a few extra steps to get to the desired structure.</p>
+</div>
+<div id="extra-long-data" class="section level2">
+<h2>Extra Long Data</h2>
+<p>To progress through data restructuring, we first need to transform this data is extra long format. This format is not entirely useful by itself, however it will help use show the use of a few functions from the <code>tidyr</code> package. To go to extra long data, we will make use of the <code>pivot_longer()</code> and <code>unite</code> functions.</p>
+<pre class="r"><code>extra_long &lt;- long_data %&gt;%
+  pivot_longer(agegrp:age.c, names_to = &#39;variable&#39;, values_to = &#39;value&#39;) %&gt;%
+  unite(var_wave, variable, wave)
+extra_long </code></pre>
+<pre><code>## # A tibble: 135 x 3
+##       id var_wave   value
+##    &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
+##  1     4 agegrp_1     6.5
+##  2     4 age_1        6  
+##  3     4 piat_1      18  
+##  4     4 agegrp.c_1   0  
+##  5     4 age.c_1     -0.5
+##  6     4 agegrp_2     8.5
+##  7     4 age_2        8.5
+##  8     4 piat_2      31  
+##  9     4 agegrp.c_2   2  
+## 10     4 age.c_2      2  
+## # … with 125 more rows</code></pre>
+<p>You’ll notice now that there are only three columns in the data and that there are now 135 rows in data. This extra long data format gathered all of the variables into two columns, one that identify the variable and wave and the other that simply lists the value.</p>
+</div>
+<div id="wide-data" class="section level2">
+<h2>Wide Data</h2>
+<p>We can now take the extra long data and turn this into wide data. Wide data is characterized by one row per individual with columns representing the variable and wave combinations.</p>
+<pre class="r"><code>wide &lt;- extra_long %&gt;% 
+  pivot_wider(names_from = var_wave, values_from = value)
+wide</code></pre>
+<pre><code>## # A tibble: 9 x 16
+##      id agegrp_1 age_1 piat_1 agegrp.c_1 age.c_1 agegrp_2 age_2 piat_2
+##   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1     4      6.5  6        18          0  -0.5        8.5  8.5      31
+## 2    27      6.5  6.25     19          0  -0.25       8.5  9.17     36
+## 3    31      6.5  6.33     18          0  -0.167      8.5  8.83     31
+## 4    33      6.5  6.33     18          0  -0.167      8.5  8.92     34
+## 5    41      6.5  6.33     18          0  -0.167      8.5  8.75     28
+## 6    49      6.5  6.5      19          0   0          8.5  8.75     32
+## 7    69      6.5  6.67     26          0   0.167      8.5  9.17     47
+## 8    77      6.5  6.83     17          0   0.333      8.5  8.08     19
+## 9    87      6.5  6.92     22          0   0.417      8.5  9.42     49
+## # … with 7 more variables: agegrp.c_2 &lt;dbl&gt;, age.c_2 &lt;dbl&gt;, agegrp_3 &lt;dbl&gt;,
+## #   age_3 &lt;dbl&gt;, piat_3 &lt;dbl&gt;, agegrp.c_3 &lt;dbl&gt;, age.c_3 &lt;dbl&gt;</code></pre>
+<p>You’ll notice from the data above, there are now only 9 rows, but now 16 columns in the data. Each variable except for id now also has a number appended to it to represent the wave of the data.</p>
+<p>This data structure is common, particularly for users of SPSS or Excel for data entry or processing. Unfortunately, when working with data in R (and in general), data in wide format is often difficult to work with. Therefore it is common to need to restructure the data from wide to long format.</p>
+</div>
+<div id="back-to-long-format" class="section level2">
+<h2>Back to Long Format</h2>
+<p>Fortunately, we can use the same functions as we used above, but now in inverse to get from wide to long format.</p>
+<pre class="r"><code>wide %&gt;% 
+  pivot_longer(-id, names_to = &quot;variable&quot;, values_to = &quot;value&quot;) %&gt;%
+  separate(variable, into = c(&#39;variable&#39;, &#39;wave&#39;), 
+           sep = &quot;_&quot;) %&gt;%
+  arrange(id, wave) %&gt;%
+  pivot_wider(names_from = variable, values_from = value)</code></pre>
+<pre><code>## # A tibble: 27 x 7
+##       id wave  agegrp   age  piat agegrp.c  age.c
+##    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+##  1     4 1        6.5  6       18        0 -0.5  
+##  2     4 2        8.5  8.5     31        2  2    
+##  3     4 3       10.5 10.7     50        4  4.17 
+##  4    27 1        6.5  6.25    19        0 -0.25 
+##  5    27 2        8.5  9.17    36        2  2.67 
+##  6    27 3       10.5 10.9     57        4  4.42 
+##  7    31 1        6.5  6.33    18        0 -0.167
+##  8    31 2        8.5  8.83    31        2  2.33 
+##  9    31 3       10.5 10.9     51        4  4.42 
+## 10    33 1        6.5  6.33    18        0 -0.167
+## # … with 17 more rows</code></pre>
+<p>This now is identical to the first data that we had. I would recommend working through the steps above to see what the data structure looks like in each intermediate step along the way. In addition, it is often not of interest to save the extra long data format, below is the code that would go directly from long to wide.</p>
+<pre class="r"><code>long_data %&gt;%
+  pivot_longer(agegrp:age.c, names_to = &#39;variable&#39;, values_to = &#39;value&#39;) %&gt;%
+  unite(var_wave, variable, wave) %&gt;%
+  pivot_wider(names_from = var_wave, values_from = value)</code></pre>
+<pre><code>## # A tibble: 9 x 16
+##      id agegrp_1 age_1 piat_1 agegrp.c_1 age.c_1 agegrp_2 age_2 piat_2
+##   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1     4      6.5  6        18          0  -0.5        8.5  8.5      31
+## 2    27      6.5  6.25     19          0  -0.25       8.5  9.17     36
+## 3    31      6.5  6.33     18          0  -0.167      8.5  8.83     31
+## 4    33      6.5  6.33     18          0  -0.167      8.5  8.92     34
+## 5    41      6.5  6.33     18          0  -0.167      8.5  8.75     28
+## 6    49      6.5  6.5      19          0   0          8.5  8.75     32
+## 7    69      6.5  6.67     26          0   0.167      8.5  9.17     47
+## 8    77      6.5  6.83     17          0   0.333      8.5  8.08     19
+## 9    87      6.5  6.92     22          0   0.417      8.5  9.42     49
+## # … with 7 more variables: agegrp.c_2 &lt;dbl&gt;, age.c_2 &lt;dbl&gt;, agegrp_3 &lt;dbl&gt;,
+## #   age_3 &lt;dbl&gt;, piat_3 &lt;dbl&gt;, agegrp.c_3 &lt;dbl&gt;, age.c_3 &lt;dbl&gt;</code></pre>
+<div id="exercises" class="section level3">
+<h3>Exercises</h3>
+<ol style="list-style-type: decimal">
+<li>Using the following data generation code, convert these data to long format.</li>
+</ol>
+<pre class="r"><code>set.seed(10)
+messy &lt;- data.frame(
+  id = 1:4,
+  trt = sample(rep(c(&#39;control&#39;, &#39;treatment&#39;), each = 2)),
+  work.T1 = runif(4),
+  home.T1 = runif(4),
+  work.T2 = runif(4),
+  home.T2 = runif(4)
+)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Once successfully converted to long format, convert back to wide format.</li>
+</ol>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/data_import/" rel="next">Data Import</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/data_joins/" rel="prev">Joining Data</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 18, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

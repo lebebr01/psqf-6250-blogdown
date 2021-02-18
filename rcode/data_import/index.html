@@ -1,0 +1,1360 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Data Import">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/data_import/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/data_import/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/data_import/">
+  <meta property="og:title" content="Data Import | PSQF 6250">
+  <meta property="og:description" content="Data Import"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-02-18T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-02-18T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Data Import | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  <li class=""><a href="/rcode/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class="active"><a href="/rcode/data_import/">Data Import</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Data Import</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>So far we have solely used data that is already found within R by way of packages. Obviously, we will want to use our own data and this involves importing data directly into R. We are going to focus on two types of data structures to read in, text files and excel files.</p>
+<p>The following two packages will be used in this section.</p>
+<pre class="r"><code>library(tidyverse)
+# install.packages(&quot;readxl&quot;)
+library(readxl)</code></pre>
+<div id="text-files" class="section level2">
+<h2>Text Files</h2>
+<p>Through the use of the <code>readr</code> package, we are going to read in flat text files. In many cases, these text files are saved as csv files. The csv stands for comma separated values files meaning that columns in the data are separated by columns. As a side note, this is the most common way that I save data and read in data. The nice aspect of csv files is that if needed, they can be opened in programs like Excel for viewing, but are still just text files which are simple and lightweight.</p>
+<p>To read in a csv file, we are going to use the <code>read_csv</code> function from the <code>readr</code> package. We are going to read in some UFO data (the data can be found on the <a href="https://psqf6250.brandonlebeau.org/data/">course website</a>). The code below is going to read the data directly from the GitHub where the data are currently being stored.</p>
+<pre class="r"><code>ufo &lt;- read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   `Date / Time` = col_character(),
+##   City = col_character(),
+##   State = col_character(),
+##   Shape = col_character(),
+##   Duration = col_character(),
+##   Summary = col_character(),
+##   Posted = col_character()
+## )</code></pre>
+<p>A special note here, if you downloaded the data, I recommend putting the downloaded data within an RStudio project in a folder named “Data” or “data”. The updated code (not run here), would look like (assuming the data are in the “data” folder within an RStudio project):</p>
+<pre class="r"><code>ufo &lt;- read_csv(&#39;data/ufo.csv&#39;)</code></pre>
+<p>Note again, similar to dplyr, when saving the data to an object, it will not be printed. We can now view the first 10 rows by typing the object name.</p>
+<pre class="r"><code>ufo</code></pre>
+<pre><code>## # A tibble: 8,031 x 7
+##    `Date / Time`  City       State Shape  Duration Summary                Posted
+##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
+##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
+##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
+##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
+##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
+##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
+##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
+##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
+## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+## # … with 8,021 more rows</code></pre>
+<p>By default, the <code>read_csv</code> function uses the first row of the data file as the names of the variables. To override this behavior, set <code>col_names = FALSE</code> or better yet, specify the names with the <code>col_names</code> argument. In addition, if the file has header metadata, rows of the data can be skipped with the <code>skip</code> argument. For example, reading in the same data as above, but skipping the first row and specifying the names manually would look as follows:</p>
+<pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, skip = 1, 
+         col_names = c(&#39;Date/Time&#39;, &#39;City&#39;, &#39;State&#39;, 
+                       &#39;Shape&#39;, &#39;Duration&#39;, &#39;Summary&#39;,
+                       &#39;Posted&#39;))</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   `Date/Time` = col_character(),
+##   City = col_character(),
+##   State = col_character(),
+##   Shape = col_character(),
+##   Duration = col_character(),
+##   Summary = col_character(),
+##   Posted = col_character()
+## )</code></pre>
+<pre><code>## # A tibble: 8,031 x 7
+##    `Date/Time`  City       State Shape  Duration  Summary                 Posted
+##    &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt; 
+##  1 12/12/14 17… North Wal… PA    Trian… 5 minutes &quot;I heard an extremely … &lt;NA&gt;  
+##  2 12/12/14 12… Cartersvi… GA    Unkno… 3.6 minu… &quot;Looking up towards th… 12/12…
+##  3 12/12/14 06… Isle of M… &lt;NA&gt;  Light  2 seconds &quot;Over the Isle of Man,… 12/12…
+##  4 12/12/14 01… Miamisburg OH    Chang… &lt;NA&gt;      &quot;Bright color changing… 12/12…
+##  5 12/12/14 00… Spotsylva… VA    Unkno… 1 minute  &quot;White then orange orb… 12/12…
+##  6 12/11/14 23… Kenner     LA    Chevr… ~1 minute &quot;Strange, chevron-shap… 12/12…
+##  7 12/11/14 23… Eugene     OR    Disk   2 minutes &quot;Dual orange orbs in E… 12/12…
+##  8 12/11/14 20… Phoenix    AZ    Chevr… 3 minutes &quot;4 Orange Lights Spott… 12/12…
+##  9 12/11/14 20… Franklin   NC    Disk   5 minutes &quot;There were 5 or 6 lig… 12/12…
+## 10 12/11/14 18… Longview   WA    Cylin… 10 secon… &quot;Two cylinder shaped o… 12/12…
+## # … with 8,021 more rows</code></pre>
+<div id="manually-specifying-column-types" class="section level3">
+<h3>Manually Specifying Column Types</h3>
+<p>You may have noticed above that we just needed to give the <code>read_csv</code> function the path to the data file, we did not need to tell the function the types of columns. Instead, the function guessed the type from the first 1000 rows. This can be useful for interactive work, but for truly reproducible code, it is best to specify these manually. There are two ways to specify the column types, one is verbose and the other is simpler, but both use the argument <code>col_types</code>.</p>
+<p>First the verbose solution:</p>
+<pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, 
+         col_types = c(
+           &#39;Date/Time&#39; = col_character(),
+           City = col_character(),
+           State = col_character(),
+           Shape = col_character(),
+           Duration = col_character(),
+           Summary = col_character(),
+           Posted = col_character()
+         ))</code></pre>
+<pre><code>## # A tibble: 8,031 x 7
+##    `Date / Time`  City       State Shape  Duration Summary                Posted
+##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
+##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
+##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
+##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
+##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
+##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
+##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
+##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
+## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+## # … with 8,021 more rows</code></pre>
+<p>As all variables are being read in as characters, there is a simple shortcut to use.</p>
+<pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, 
+         col_types = c(&#39;ccccccc&#39;))</code></pre>
+<pre><code>## # A tibble: 8,031 x 7
+##    `Date / Time`  City       State Shape  Duration Summary                Posted
+##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
+##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
+##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
+##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
+##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
+##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
+##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
+##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
+## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+## # … with 8,021 more rows</code></pre>
+<p>To show the reason the more verbose is useful, suppose we wished to convert the ‘Data/Time’ variable to the correct type, a date time variable.</p>
+<pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, 
+         col_types = c(
+           &#39;Date / Time&#39; = col_datetime(),
+           City = col_character(),
+           State = col_character(),
+           Shape = col_character(),
+           Duration = col_character(),
+           Summary = col_character(),
+           Posted = col_character()
+         ))</code></pre>
+<pre><code>## Error: Unknown shortcut:</code></pre>
+<p>Here we get an error, which is caused by the fact that the date time variable specification needs a format statement. We can directly specify this.</p>
+<pre class="r"><code>ufo_date &lt;- read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, 
+         col_types = list(
+           &#39;Date / Time&#39; = col_datetime(format = &quot;%m/%d/%y %H:%M&quot;),
+           City = col_character(),
+           State = col_character(),
+           Shape = col_character(),
+           Duration = col_character(),
+           Summary = col_character(),
+           Posted = col_character()
+         ))</code></pre>
+<pre><code>## Warning: 56 parsing failures.
+## row         col                 expected   actual                                                                              file
+## 119 Date / Time date like %m/%d/%y %H:%M 12/1/14  &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
+## 194 Date / Time date like %m/%d/%y %H:%M 11/27/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
+## 236 Date / Time date like %m/%d/%y %H:%M 11/24/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
+## 407 Date / Time date like %m/%d/%y %H:%M 11/15/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
+## 665 Date / Time date like %m/%d/%y %H:%M 10/31/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
+## ... ........... ........................ ........ .................................................................................
+## See problems(...) for more details.</code></pre>
+<pre class="r"><code>ufo_date</code></pre>
+<pre><code>## # A tibble: 8,031 x 7
+##    `Date / Time`       City      State Shape  Duration Summary            Posted
+##    &lt;dttm&gt;              &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt; 
+##  1 2014-12-12 17:30:00 North Wa… PA    Trian… 5 minut… &quot;I heard an extre… &lt;NA&gt;  
+##  2 2014-12-12 12:40:00 Cartersv… GA    Unkno… 3.6 min… &quot;Looking up towar… 12/12…
+##  3 2014-12-12 06:30:00 Isle of … &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of… 12/12…
+##  4 2014-12-12 01:00:00 Miamisbu… OH    Chang… &lt;NA&gt;     &quot;Bright color cha… 12/12…
+##  5 2014-12-12 00:00:00 Spotsylv… VA    Unkno… 1 minute &quot;White then orang… 12/12…
+##  6 2014-12-11 23:25:00 Kenner    LA    Chevr… ~1 minu… &quot;Strange, chevron… 12/12…
+##  7 2014-12-11 23:15:00 Eugene    OR    Disk   2 minut… &quot;Dual orange orbs… 12/12…
+##  8 2014-12-11 20:04:00 Phoenix   AZ    Chevr… 3 minut… &quot;4 Orange Lights … 12/12…
+##  9 2014-12-11 20:00:00 Franklin  NC    Disk   5 minut… &quot;There were 5 or … 12/12…
+## 10 2014-12-11 18:30:00 Longview  WA    Cylin… 10 seco… &quot;Two cylinder sha… 12/12…
+## # … with 8,021 more rows</code></pre>
+<p>Notice even though I was careful in the column specification, there was still issues when parsing this column as a date/time column. The data is still returned, but there are issues. These issues can be viewed using the <code>problems</code> function.</p>
+<pre class="r"><code>problems(ufo_date)</code></pre>
+<pre><code>## # A tibble: 56 x 5
+##      row col      expected         actual file                                  
+##    &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;                                 
+##  1   119 Date / … date like %m/%d… 12/1/… &#39;https://raw.githubusercontent.com/le…
+##  2   194 Date / … date like %m/%d… 11/27… &#39;https://raw.githubusercontent.com/le…
+##  3   236 Date / … date like %m/%d… 11/24… &#39;https://raw.githubusercontent.com/le…
+##  4   407 Date / … date like %m/%d… 11/15… &#39;https://raw.githubusercontent.com/le…
+##  5   665 Date / … date like %m/%d… 10/31… &#39;https://raw.githubusercontent.com/le…
+##  6   797 Date / … date like %m/%d… 10/25… &#39;https://raw.githubusercontent.com/le…
+##  7   946 Date / … date like %m/%d… 10/19… &#39;https://raw.githubusercontent.com/le…
+##  8  1081 Date / … date like %m/%d… 10/14… &#39;https://raw.githubusercontent.com/le…
+##  9  1122 Date / … date like %m/%d… 10/12… &#39;https://raw.githubusercontent.com/le…
+## 10  1123 Date / … date like %m/%d… 10/12… &#39;https://raw.githubusercontent.com/le…
+## # … with 46 more rows</code></pre>
+</div>
+<div id="other-text-formats" class="section level3">
+<h3>Other Text Formats</h3>
+<p>There are other text formats used to read in data. They are listed below with the function used to read in that type. Note, that the function calls are identical to those specified above.</p>
+<ul>
+<li>tsv - tab separated files - <code>read_tsv</code></li>
+<li>fixed width files - <code>read_fwf</code></li>
+<li>white space generally - <code>read_table</code></li>
+<li>delimiter generally - <code>read_delim</code></li>
+</ul>
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>There is a tsv file posted on icon called “lotr_clean.tsv”. Download this and read this data file into R.</li>
+<li>Instead of specifying the path, use the function <code>file.choose()</code>. For example, <code>read_tsv(file.choose())</code>. What does this function use? Would you recommend this to be used in a reproducible document?</li>
+<li>Run the <code>getwd()</code> function from the R console. What does this function return?</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="excel-files" class="section level2">
+<h2>Excel Files</h2>
+<p>Although I commonly use text files (e.g. csv) files, reality is that many people still use Excel for storing of data files. There are good and bad aspects of this, but reading in Excel files may be needed. The <code>readxl</code> package is useful for this task.</p>
+<p>Suppose we wished to read in the Excel file found on the US Census Bureau website related to Education: <a href="https://www.census.gov/support/USACdataDownloads.html" class="uri">https://www.census.gov/support/USACdataDownloads.html</a></p>
+<p>To do this, we can do this directly with the <code>read_excel</code> function with the data already downloaded and posted to the <a href="https://psqf6250.brandonlebeau.org/data/">course website</a>. Note, the <code>read_excel()</code> function does not allow for reading in data from the web, instead the data need to be downloaded to a temp file, then this file is loaded into R. If you downloaded the data, I recommend placing it within a “Data” or “data” folder.</p>
+<pre class="r"><code>tf &lt;- tempfile(fileext = &quot;.xls&quot;)
+curl::curl_download(&quot;https://github.com/lebebr01/psqf-6250-blogdown/blob/main/data/EDU01.xls?raw=true&quot;, tf)
+
+read_excel(tf)</code></pre>
+<pre><code>## # A tibble: 3,198 x 42
+##    Area_name STCOU EDU010187F EDU010187D EDU010187N1 EDU010187N2 EDU010188F
+##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 UNITED S… 00000          0   40024299 0000        0000                 0
+##  2 ALABAMA   01000          0     733735 0000        0000                 0
+##  3 Autauga,… 01001          0       6829 0000        0000                 0
+##  4 Baldwin,… 01003          0      16417 0000        0000                 0
+##  5 Barbour,… 01005          0       5071 0000        0000                 0
+##  6 Bibb, AL  01007          0       3557 0000        0000                 0
+##  7 Blount, … 01009          0       7319 0000        0000                 0
+##  8 Bullock,… 01011          0       2014 0000        0000                 0
+##  9 Butler, … 01013          0       4640 0000        0000                 0
+## 10 Calhoun,… 01015          0      20939 0000        0000                 0
+## # … with 3,188 more rows, and 35 more variables: EDU010188D &lt;dbl&gt;,
+## #   EDU010188N1 &lt;chr&gt;, EDU010188N2 &lt;chr&gt;, EDU010189F &lt;dbl&gt;, EDU010189D &lt;dbl&gt;,
+## #   EDU010189N1 &lt;chr&gt;, EDU010189N2 &lt;chr&gt;, EDU010190F &lt;dbl&gt;, EDU010190D &lt;dbl&gt;,
+## #   EDU010190N1 &lt;chr&gt;, EDU010190N2 &lt;chr&gt;, EDU010191F &lt;dbl&gt;, EDU010191D &lt;dbl&gt;,
+## #   EDU010191N1 &lt;chr&gt;, EDU010191N2 &lt;chr&gt;, EDU010192F &lt;dbl&gt;, EDU010192D &lt;dbl&gt;,
+## #   EDU010192N1 &lt;chr&gt;, EDU010192N2 &lt;chr&gt;, EDU010193F &lt;dbl&gt;, EDU010193D &lt;dbl&gt;,
+## #   EDU010193N1 &lt;chr&gt;, EDU010193N2 &lt;chr&gt;, EDU010194F &lt;dbl&gt;, EDU010194D &lt;dbl&gt;,
+## #   EDU010194N1 &lt;chr&gt;, EDU010194N2 &lt;chr&gt;, EDU010195F &lt;dbl&gt;, EDU010195D &lt;dbl&gt;,
+## #   EDU010195N1 &lt;chr&gt;, EDU010195N2 &lt;chr&gt;, EDU010196F &lt;dbl&gt;, EDU010196D &lt;dbl&gt;,
+## #   EDU010196N1 &lt;chr&gt;, EDU010196N2 &lt;chr&gt;</code></pre>
+<p>By default, the function will read in the first sheet and will treat the first row as the column names. If you wish to read in another sheet, you can use the <code>sheet</code> argument. For example:</p>
+<pre class="r"><code>read_excel(tf, sheet = 2)</code></pre>
+<pre><code>## # A tibble: 3,198 x 42
+##    Area_name STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
+##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 UNITED S… 00000          0   44534459 0000        0000                 0
+##  2 ALABAMA   01000          0     737386 0000        0000                 0
+##  3 Autauga,… 01001          0       8099 0000        0000                 0
+##  4 Baldwin,… 01003          0      21410 0000        0000                 0
+##  5 Barbour,… 01005          0       5100 0000        0000                 0
+##  6 Bibb, AL  01007          0       3717 0000        0000                 0
+##  7 Blount, … 01009          0       7816 0000        0000                 0
+##  8 Bullock,… 01011          0       2010 0000        0000                 0
+##  9 Butler, … 01013          0       4119 0000        0000                 0
+## 10 Calhoun,… 01015          0      19721 0000        0000                 0
+## # … with 3,188 more rows, and 35 more variables: EDU010198D &lt;dbl&gt;,
+## #   EDU010198N1 &lt;chr&gt;, EDU010198N2 &lt;chr&gt;, EDU010199F &lt;dbl&gt;, EDU010199D &lt;dbl&gt;,
+## #   EDU010199N1 &lt;chr&gt;, EDU010199N2 &lt;chr&gt;, EDU010200F &lt;dbl&gt;, EDU010200D &lt;dbl&gt;,
+## #   EDU010200N1 &lt;chr&gt;, EDU010200N2 &lt;chr&gt;, EDU010201F &lt;dbl&gt;, EDU010201D &lt;dbl&gt;,
+## #   EDU010201N1 &lt;chr&gt;, EDU010201N2 &lt;chr&gt;, EDU010202F &lt;dbl&gt;, EDU010202D &lt;dbl&gt;,
+## #   EDU010202N1 &lt;chr&gt;, EDU010202N2 &lt;chr&gt;, EDU015203F &lt;dbl&gt;, EDU015203D &lt;dbl&gt;,
+## #   EDU015203N1 &lt;chr&gt;, EDU015203N2 &lt;chr&gt;, EDU015204F &lt;dbl&gt;, EDU015204D &lt;dbl&gt;,
+## #   EDU015204N1 &lt;chr&gt;, EDU015204N2 &lt;chr&gt;, EDU015205F &lt;dbl&gt;, EDU015205D &lt;dbl&gt;,
+## #   EDU015205N1 &lt;chr&gt;, EDU015205N2 &lt;chr&gt;, EDU015206F &lt;dbl&gt;, EDU015206D &lt;dbl&gt;,
+## #   EDU015206N1 &lt;chr&gt;, EDU015206N2 &lt;chr&gt;</code></pre>
+<pre class="r"><code>read_excel(tf, sheet = &#39;EDU01B&#39;)</code></pre>
+<pre><code>## # A tibble: 3,198 x 42
+##    Area_name STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
+##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 UNITED S… 00000          0   44534459 0000        0000                 0
+##  2 ALABAMA   01000          0     737386 0000        0000                 0
+##  3 Autauga,… 01001          0       8099 0000        0000                 0
+##  4 Baldwin,… 01003          0      21410 0000        0000                 0
+##  5 Barbour,… 01005          0       5100 0000        0000                 0
+##  6 Bibb, AL  01007          0       3717 0000        0000                 0
+##  7 Blount, … 01009          0       7816 0000        0000                 0
+##  8 Bullock,… 01011          0       2010 0000        0000                 0
+##  9 Butler, … 01013          0       4119 0000        0000                 0
+## 10 Calhoun,… 01015          0      19721 0000        0000                 0
+## # … with 3,188 more rows, and 35 more variables: EDU010198D &lt;dbl&gt;,
+## #   EDU010198N1 &lt;chr&gt;, EDU010198N2 &lt;chr&gt;, EDU010199F &lt;dbl&gt;, EDU010199D &lt;dbl&gt;,
+## #   EDU010199N1 &lt;chr&gt;, EDU010199N2 &lt;chr&gt;, EDU010200F &lt;dbl&gt;, EDU010200D &lt;dbl&gt;,
+## #   EDU010200N1 &lt;chr&gt;, EDU010200N2 &lt;chr&gt;, EDU010201F &lt;dbl&gt;, EDU010201D &lt;dbl&gt;,
+## #   EDU010201N1 &lt;chr&gt;, EDU010201N2 &lt;chr&gt;, EDU010202F &lt;dbl&gt;, EDU010202D &lt;dbl&gt;,
+## #   EDU010202N1 &lt;chr&gt;, EDU010202N2 &lt;chr&gt;, EDU015203F &lt;dbl&gt;, EDU015203D &lt;dbl&gt;,
+## #   EDU015203N1 &lt;chr&gt;, EDU015203N2 &lt;chr&gt;, EDU015204F &lt;dbl&gt;, EDU015204D &lt;dbl&gt;,
+## #   EDU015204N1 &lt;chr&gt;, EDU015204N2 &lt;chr&gt;, EDU015205F &lt;dbl&gt;, EDU015205D &lt;dbl&gt;,
+## #   EDU015205N1 &lt;chr&gt;, EDU015205N2 &lt;chr&gt;, EDU015206F &lt;dbl&gt;, EDU015206D &lt;dbl&gt;,
+## #   EDU015206N1 &lt;chr&gt;, EDU015206N2 &lt;chr&gt;</code></pre>
+<p>If there is metadata or no column names, these can be added in the same fashion as discussed above with the <code>read_csv</code> function. Finally, it should be noted, to use these data within R, you would want to save these data to an object within R.</p>
+<pre class="r"><code>edu_data &lt;- read_excel(tf)</code></pre>
+</div>
+<div id="writing-files" class="section level2">
+<h2>Writing Files</h2>
+<p>Most of the <code>read_*</code> functions also come with functions that allow you to write out files as well. I’m only going to cover the <code>write_csv</code> function, however, there are others that may be of use. Similarly to reading in files, the functionality is the same across the <code>write_*</code> functions.</p>
+<p>Suppose we created a new column with the <code>ufo</code> data and wished to save this data to a csv file, this can be accomplished with the following series of commands.</p>
+<pre class="r"><code>ufo_count &lt;- ufo %&gt;%
+  group_by(State) %&gt;%
+  mutate(num_state = n())
+write_csv(ufo_count, path = &#39;path/to/save/file.csv&#39;)</code></pre>
+<p>Notice there are two arguments to the <code>write_csv</code> function, the first argument is the object you wish to save. The second is the path to the location to save the object. You must specify <code>path =</code> otherwise the <code>write_csv</code> function will look for that object in the R session.</p>
+</div>
+<div id="other-data-formats" class="section level2">
+<h2>Other Data Formats</h2>
+<p>There are still other data formats, particularly from proprietary statistical software such as Stata, SAS, or SPSS. To read these files in the <code>haven</code> function would be useful. I leave this as an exercise for you if you have these types of files to read into R.</p>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/projects/" rel="next">R Projects -  RStudio</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/data_restructuring/" rel="prev">Data Restructuring</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 18, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
