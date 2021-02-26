@@ -1,0 +1,1254 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Factors">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/factors/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/factors/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/factors/">
+  <meta property="og:title" content="Factors | PSQF 6250">
+  <meta property="og:description" content="Factors"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-02-26T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-02-26T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Factors | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  <li class=""><a href="/rcode/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
+
+
+
+  <li class="active"><a href="/rcode/factors/">Factors</a></li>
+
+
+
+  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Factors</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>To date I have ignored factor variables and how these are implemented in R. Much of this is due to the greater flexibility of character vectors instead of factors. Also, if using the <code>readr</code> or <code>readxl</code> packages to read in data, the variables are also read in as character strings instead of factors. However, there are situations when factors are useful. Most of these uses are for readability when creating output formats for a report or paper.</p>
+<p>This set of notes will make use of the following three packages:</p>
+<pre class="r"><code>library(tidyverse)
+library(forcats)
+library(fivethirtyeight)</code></pre>
+<div id="uses-for-factors" class="section level2">
+<h2>Uses for Factors</h2>
+<p>To see a few of the benefits of a factor, assume we have a variable that represents the levels of a survey question with five possible responses and we only saw three of those response categories.</p>
+<pre class="r"><code>resp &lt;- c(&#39;Disagree&#39;, &#39;Agree&#39;, &#39;Neutral&#39;)</code></pre>
+<p>This type of variable has a natural order, namely the disagree side of the scale (i.e. strongly disagree) to the agree side of the scale (i.e. strongly agree) with neutral belonging in the middle. However, if we sort this variable, this ordering will not be taken into account with a character string.</p>
+<pre class="r"><code>sort(resp)</code></pre>
+<pre><code>## [1] &quot;Agree&quot;    &quot;Disagree&quot; &quot;Neutral&quot;</code></pre>
+<p>Notice, these are actually in alphabetical order, likely not what we wanted. This can be fixed by defining this variable as a factor with levels of the variable specified.</p>
+<pre class="r"><code>scale_levels &lt;- c(&#39;Strongly Disagree&#39;, &#39;Disagree&#39;, 
+                  &#39;Neutral&#39;, &#39;Agree&#39;, &#39;Strongly Agree&#39;)
+resp_fact &lt;- factor(resp, levels = scale_levels)
+resp_fact</code></pre>
+<pre><code>## [1] Disagree Agree    Neutral 
+## Levels: Strongly Disagree Disagree Neutral Agree Strongly Agree</code></pre>
+<pre class="r"><code>sort(resp_fact)</code></pre>
+<pre><code>## [1] Disagree Neutral  Agree   
+## Levels: Strongly Disagree Disagree Neutral Agree Strongly Agree</code></pre>
+<p>Another benefit, if values that are not found in the levels of the factor variable, these will be replaced with NAs. For example,</p>
+<pre class="r"><code>factor(c(&#39;disagree&#39;, &#39;Agree&#39;, &#39;Strongly Agree&#39;), 
+       levels = scale_levels)</code></pre>
+<pre><code>## [1] &lt;NA&gt;           Agree          Strongly Agree
+## Levels: Strongly Disagree Disagree Neutral Agree Strongly Agree</code></pre>
+<p>We can also explore valid levels of a variables with the <code>levels</code> function.</p>
+<pre class="r"><code>levels(resp_fact)</code></pre>
+<pre><code>## [1] &quot;Strongly Disagree&quot; &quot;Disagree&quot;          &quot;Neutral&quot;          
+## [4] &quot;Agree&quot;             &quot;Strongly Agree&quot;</code></pre>
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>How are factors stored internally by R? To explore this, use the <code>str</code> function on a factor variable and see what it looks like?</li>
+<li>To further this idea from #1, what happens when you do each of the following commands? Why is this happening?</li>
+</ol>
+<pre class="r"><code>as.numeric(resp)
+as.numeric(resp_fact)</code></pre>
+</div>
+</div>
+<div id="common-factor-manipulations" class="section level2">
+<h2>Common Factor Manipulations</h2>
+<p>In addition to setting the levels of the variable, there are two common tasks useful with factors.</p>
+<ol style="list-style-type: decimal">
+<li>Reorder factor levels for plotting or table creation</li>
+<li>Change the levels of the factor (i.e. collapse levels)</li>
+</ol>
+<p>Examples of each of these will be given with the <code>weather_check</code> data from the <code>fivethirtyeight</code> package.</p>
+<pre class="r"><code>weather_check</code></pre>
+<pre><code>## # A tibble: 928 x 9
+##    respondent_id ck_weather weather_source weather_source_… ck_weather_watch
+##            &lt;dbl&gt; &lt;lgl&gt;      &lt;chr&gt;          &lt;chr&gt;            &lt;ord&gt;           
+##  1    3887201482 TRUE       The default w… &lt;NA&gt;             Very likely     
+##  2    3887159451 TRUE       The default w… &lt;NA&gt;             Very likely     
+##  3    3887152228 TRUE       The default w… &lt;NA&gt;             Very likely     
+##  4    3887145426 TRUE       The default w… &lt;NA&gt;             Somewhat likely 
+##  5    3887021873 TRUE       A specific we… Iphone app       Very likely     
+##  6    3886937140 TRUE       A specific we… AccuWeather App  Somewhat likely 
+##  7    3886923931 TRUE       The Weather C… &lt;NA&gt;             Very unlikely   
+##  8    3886913587 TRUE       &lt;NA&gt;           &lt;NA&gt;             &lt;NA&gt;            
+##  9    3886889048 TRUE       The Weather C… &lt;NA&gt;             Very likely     
+## 10    3886848806 TRUE       The default w… &lt;NA&gt;             Very likely     
+## # … with 918 more rows, and 4 more variables: age &lt;fct&gt;, female &lt;lgl&gt;,
+## #   hhold_income &lt;ord&gt;, region &lt;chr&gt;</code></pre>
+<div id="reorder-factor-variables" class="section level3">
+<h3>Reorder Factor Variables</h3>
+<p>To show examples of this operation, suppose we calculated the proportion of respondents that checked the weather daily by region of the country. We could use dplyr for this:</p>
+<pre class="r"><code>prop_check_weather &lt;- weather_check %&gt;%
+  group_by(region) %&gt;%
+  summarise(prop = mean(ck_weather))
+prop_check_weather</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    region              prop
+##  * &lt;chr&gt;              &lt;dbl&gt;
+##  1 East North Central 0.858
+##  2 East South Central 0.927
+##  3 Middle Atlantic    0.885
+##  4 Mountain           0.792
+##  5 New England        0.942
+##  6 Pacific            0.697
+##  7 South Atlantic     0.740
+##  8 West North Central 0.815
+##  9 West South Central 0.904
+## 10 &lt;NA&gt;               0.548</code></pre>
+<p>This would be a bit easier to view if we plotted this data:</p>
+<pre class="r"><code>ggplot(prop_check_weather, aes(prop, region)) + 
+  geom_point()</code></pre>
+<p><img src="/rcode/factors_files/figure-html/prop_weather-1.png" width="672" /></p>
+<p>This plot is difficult to read, primarily due to the way the points are ordered. Showing the regions in alphabetical order makes it more difficult to discern the trend. Instead, we would likely wish to reorder this variable by the ascending order of the proportion that check the weather. We will use the <code>fct_reorder</code> function from the <code>forcats</code> package. Note, I also omit the NA category here.</p>
+<pre class="r"><code>ggplot(na.omit(prop_check_weather), 
+       aes(prop, fct_reorder(region, prop))) + 
+  geom_point()</code></pre>
+<p><img src="/rcode/factors_files/figure-html/prop_weather_reorder-1.png" width="672" /></p>
+<p>Need to be a bit careful with this operation however. For example:</p>
+<pre class="r"><code>weather_check %&gt;%
+  group_by(hhold_income) %&gt;%
+  summarise(prop = mean(ck_weather)) %&gt;%
+  na.omit() %&gt;%
+  ggplot(aes(prop, fct_reorder(hhold_income, prop))) + 
+  geom_point()</code></pre>
+<p><img src="/rcode/factors_files/figure-html/reorder_income-1.png" width="672" /></p>
+<p>Instead, this is the proper way to show this relationship:</p>
+<pre class="r"><code>weather_check %&gt;%
+  group_by(hhold_income) %&gt;%
+  summarise(prop = mean(ck_weather)) %&gt;%
+  na.omit() %&gt;%
+  ggplot(aes(prop, hhold_income)) + 
+  geom_point()</code></pre>
+<p><img src="/rcode/factors_files/figure-html/income-1.png" width="672" /></p>
+<div id="exercises-1" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Using data from the <code>fivethirtyeight</code> package called <code>flying</code>, explore the proportion of respondents that believe the reclining the chair while flying should be eliminated (the variable is recline_eliminate).</li>
+<li>Do these proportions differ by the location?</li>
+<li>Create a graphic that captures this relationship, you may wish to reorder the columns to more appropriately represent the relationship.</li>
+</ol>
+</div>
+</div>
+<div id="rename-factor-levels" class="section level3">
+<h3>Rename Factor Levels</h3>
+<p>These operations are useful to collapse categories or rename levels for publication. The primary function we will use for this operation is <code>fct_recode</code> from the <code>forcats</code> package.</p>
+<p>Again, using the <code>weather_check</code> data, suppose we wished to change the levels of the age variable. The levels currently are:</p>
+<pre class="r"><code>levels(weather_check$age)</code></pre>
+<pre><code>## [1] &quot;18 - 29&quot; &quot;30 - 44&quot; &quot;45 - 59&quot; &quot;60+&quot;</code></pre>
+<p>Suppose we wished to better represent these as words. We can use this with <code>mutate</code> from dplyr combined with <code>fct_recode</code>:</p>
+<pre class="r"><code>weather_check %&gt;%
+  mutate(age_recode = fct_recode(age,
+      &#39;18 to 29&#39; = &#39;18 - 29&#39;,
+      &#39;30 to 44&#39; = &#39;30 - 44&#39;,
+      &#39;45 to 59&#39; = &#39;45 - 59&#39;
+  )) %&gt;%
+  count(age_recode)</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   age_recode     n
+## * &lt;fct&gt;      &lt;int&gt;
+## 1 18 to 29     176
+## 2 30 to 44     204
+## 3 45 to 59     278
+## 4 60+          258
+## 5 &lt;NA&gt;          12</code></pre>
+<p>We could also collapse categories by assigning many levels to the same new level. For example, suppose we wished to collapse the ck_weather_watch variable to unlikely and likely instead of the very unlikely to very likely.</p>
+<pre class="r"><code>levels(weather_check$ck_weather_watch)</code></pre>
+<pre><code>## [1] &quot;Very unlikely&quot;     &quot;Somewhat unlikely&quot; &quot;Somewhat likely&quot;  
+## [4] &quot;Very likely&quot;</code></pre>
+<pre class="r"><code>weather_check %&gt;%
+  mutate(watch_recode = fct_recode(ck_weather_watch,
+         &#39;Unlikely&#39; = &#39;Very unlikely&#39;,
+         &#39;Unlikely&#39; = &#39;Somewhat unlikely&#39;,
+         &#39;Likely&#39; = &#39;Somewhat likely&#39;,
+         &#39;Likely&#39; = &#39;Very likely&#39;
+  )) %&gt;%
+  count(watch_recode)</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   watch_recode     n
+## * &lt;ord&gt;        &lt;int&gt;
+## 1 Unlikely       281
+## 2 Likely         636
+## 3 &lt;NA&gt;            11</code></pre>
+<p>Finally, one last option that may be useful is to lump together categories that are too small to report independently. This functionality is implemented with the function <code>fct_lump</code>. For example, suppose we want to lump the region variable together to have only 5 regions.</p>
+<pre class="r"><code>weather_check %&gt;%
+  mutate(region = fct_lump(region, n = 5)) %&gt;%
+  count(region, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 7 x 2
+##   region                 n
+##   &lt;fct&gt;              &lt;int&gt;
+## 1 Other                219
+## 2 Pacific              185
+## 3 South Atlantic       154
+## 4 East North Central   141
+## 5 Middle Atlantic      104
+## 6 West South Central    94
+## 7 &lt;NA&gt;                  31</code></pre>
+<div id="exercises-2" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Again, using the <code>flying</code> data from the <code>fivethirtyeight</code> package, is there a relationship between the proportion of respondents who have a children under 18 years old and if they believe it is rude to bring a baby on a plane? For this question, collapse the baby variable to two levels, no and yes.</li>
+</ol>
+</div>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/data_joins/" rel="next">Joining Data</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/strings/" rel="prev">Working with Character Strings</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 26, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
