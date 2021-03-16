@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
 
   
 
@@ -320,7 +320,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+  <script src="/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js"></script>
 
   
 
@@ -788,6 +788,10 @@
 
   <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
 
+
+
+  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
+
       
     
 
@@ -841,18 +845,18 @@ library(tidyverse)</code></pre>
 ?congress_age</code></pre>
 <pre class="r"><code>congress_age</code></pre>
 <pre><code>## # A tibble: 18,635 x 13
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1       80 house   M000112  Joseph    Jefferson  Mansfie… &lt;NA&gt;   1861-02-09
-##  2       80 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
-##  3       80 house   S000001  Adolph    Joachim    Sabath   &lt;NA&gt;   1866-04-04
-##  4       80 house   E000023  Charles   Aubrey     Eaton    &lt;NA&gt;   1868-03-29
-##  5       80 house   L000296  William   &lt;NA&gt;       Lewis    &lt;NA&gt;   1868-09-22
-##  6       80 house   G000017  James     A.         Gallagh… &lt;NA&gt;   1869-01-16
-##  7       80 house   W000265  Richard   Joseph     Welch    &lt;NA&gt;   1869-02-13
-##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom    &lt;NA&gt;   1870-03-09
-##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull     &lt;NA&gt;   1870-12-18
-## 10       80 house   G000169  Charles   Laceille   Gifford  &lt;NA&gt;   1871-03-15
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
+##  2       80 house   D000448  Robert    Lee        Doughton  &lt;NA&gt;   1863-11-07
+##  3       80 house   S000001  Adolph    Joachim    Sabath    &lt;NA&gt;   1866-04-04
+##  4       80 house   E000023  Charles   Aubrey     Eaton     &lt;NA&gt;   1868-03-29
+##  5       80 house   L000296  William   &lt;NA&gt;       Lewis     &lt;NA&gt;   1868-09-22
+##  6       80 house   G000017  James     A.         Gallagher &lt;NA&gt;   1869-01-16
+##  7       80 house   W000265  Richard   Joseph     Welch     &lt;NA&gt;   1869-02-13
+##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom     &lt;NA&gt;   1870-03-09
+##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull      &lt;NA&gt;   1870-12-18
+## 10       80 house   G000169  Charles   Laceille   Gifford   &lt;NA&gt;   1871-03-15
 ## # … with 18,625 more rows, and 5 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <div id="using-dplyr-for-data-munging" class="section level2">
@@ -872,18 +876,18 @@ library(tidyverse)</code></pre>
 <p>The <code>filter</code> function selects rows that match a specified condition(s). For example, suppose we wanted to select only the rows in the data that are a part of the 80th congress. The following code will do this action:</p>
 <pre class="r"><code>filter(congress_age, congress == 80)</code></pre>
 <pre><code>## # A tibble: 555 x 13
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1       80 house   M000112  Joseph    Jefferson  Mansfie… &lt;NA&gt;   1861-02-09
-##  2       80 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
-##  3       80 house   S000001  Adolph    Joachim    Sabath   &lt;NA&gt;   1866-04-04
-##  4       80 house   E000023  Charles   Aubrey     Eaton    &lt;NA&gt;   1868-03-29
-##  5       80 house   L000296  William   &lt;NA&gt;       Lewis    &lt;NA&gt;   1868-09-22
-##  6       80 house   G000017  James     A.         Gallagh… &lt;NA&gt;   1869-01-16
-##  7       80 house   W000265  Richard   Joseph     Welch    &lt;NA&gt;   1869-02-13
-##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom    &lt;NA&gt;   1870-03-09
-##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull     &lt;NA&gt;   1870-12-18
-## 10       80 house   G000169  Charles   Laceille   Gifford  &lt;NA&gt;   1871-03-15
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
+##  2       80 house   D000448  Robert    Lee        Doughton  &lt;NA&gt;   1863-11-07
+##  3       80 house   S000001  Adolph    Joachim    Sabath    &lt;NA&gt;   1866-04-04
+##  4       80 house   E000023  Charles   Aubrey     Eaton     &lt;NA&gt;   1868-03-29
+##  5       80 house   L000296  William   &lt;NA&gt;       Lewis     &lt;NA&gt;   1868-09-22
+##  6       80 house   G000017  James     A.         Gallagher &lt;NA&gt;   1869-01-16
+##  7       80 house   W000265  Richard   Joseph     Welch     &lt;NA&gt;   1869-02-13
+##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom     &lt;NA&gt;   1870-03-09
+##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull      &lt;NA&gt;   1870-12-18
+## 10       80 house   G000169  Charles   Laceille   Gifford   &lt;NA&gt;   1871-03-15
 ## # … with 545 more rows, and 5 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <p>Notice from above two things, first, the function returned a new data frame. Therefore, if this subsetted data is to be saved, we need to save it to an object, for example, as follows:</p>
@@ -915,35 +919,35 @@ library(tidyverse)</code></pre>
 <p>Using an example of the OR operator using <code>|</code> to select the 80th and 81st congress:</p>
 <pre class="r"><code>filter(congress_age, congress == 80 | congress == 81)</code></pre>
 <pre><code>## # A tibble: 1,112 x 13
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1       80 house   M000112  Joseph    Jefferson  Mansfie… &lt;NA&gt;   1861-02-09
-##  2       80 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
-##  3       80 house   S000001  Adolph    Joachim    Sabath   &lt;NA&gt;   1866-04-04
-##  4       80 house   E000023  Charles   Aubrey     Eaton    &lt;NA&gt;   1868-03-29
-##  5       80 house   L000296  William   &lt;NA&gt;       Lewis    &lt;NA&gt;   1868-09-22
-##  6       80 house   G000017  James     A.         Gallagh… &lt;NA&gt;   1869-01-16
-##  7       80 house   W000265  Richard   Joseph     Welch    &lt;NA&gt;   1869-02-13
-##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom    &lt;NA&gt;   1870-03-09
-##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull     &lt;NA&gt;   1870-12-18
-## 10       80 house   G000169  Charles   Laceille   Gifford  &lt;NA&gt;   1871-03-15
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
+##  2       80 house   D000448  Robert    Lee        Doughton  &lt;NA&gt;   1863-11-07
+##  3       80 house   S000001  Adolph    Joachim    Sabath    &lt;NA&gt;   1866-04-04
+##  4       80 house   E000023  Charles   Aubrey     Eaton     &lt;NA&gt;   1868-03-29
+##  5       80 house   L000296  William   &lt;NA&gt;       Lewis     &lt;NA&gt;   1868-09-22
+##  6       80 house   G000017  James     A.         Gallagher &lt;NA&gt;   1869-01-16
+##  7       80 house   W000265  Richard   Joseph     Welch     &lt;NA&gt;   1869-02-13
+##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom     &lt;NA&gt;   1870-03-09
+##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull      &lt;NA&gt;   1870-12-18
+## 10       80 house   G000169  Charles   Laceille   Gifford   &lt;NA&gt;   1871-03-15
 ## # … with 1,102 more rows, and 5 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <p>Note that to do the OR operator, you need to name the variable twice. When selecting multiple values in the same variable, a handy shortcut is <code>%in%</code>. The same command can be run with the following shorthand: handy shortcut is <code>%in%</code>. The same command can be run with the following shorthard</p>
 <pre class="r"><code>filter(congress_age, congress %in% c(80, 81))</code></pre>
 <pre><code>## # A tibble: 1,112 x 13
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1       80 house   M000112  Joseph    Jefferson  Mansfie… &lt;NA&gt;   1861-02-09
-##  2       80 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
-##  3       80 house   S000001  Adolph    Joachim    Sabath   &lt;NA&gt;   1866-04-04
-##  4       80 house   E000023  Charles   Aubrey     Eaton    &lt;NA&gt;   1868-03-29
-##  5       80 house   L000296  William   &lt;NA&gt;       Lewis    &lt;NA&gt;   1868-09-22
-##  6       80 house   G000017  James     A.         Gallagh… &lt;NA&gt;   1869-01-16
-##  7       80 house   W000265  Richard   Joseph     Welch    &lt;NA&gt;   1869-02-13
-##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom    &lt;NA&gt;   1870-03-09
-##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull     &lt;NA&gt;   1870-12-18
-## 10       80 house   G000169  Charles   Laceille   Gifford  &lt;NA&gt;   1871-03-15
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
+##  2       80 house   D000448  Robert    Lee        Doughton  &lt;NA&gt;   1863-11-07
+##  3       80 house   S000001  Adolph    Joachim    Sabath    &lt;NA&gt;   1866-04-04
+##  4       80 house   E000023  Charles   Aubrey     Eaton     &lt;NA&gt;   1868-03-29
+##  5       80 house   L000296  William   &lt;NA&gt;       Lewis     &lt;NA&gt;   1868-09-22
+##  6       80 house   G000017  James     A.         Gallagher &lt;NA&gt;   1869-01-16
+##  7       80 house   W000265  Richard   Joseph     Welch     &lt;NA&gt;   1869-02-13
+##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom     &lt;NA&gt;   1870-03-09
+##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull      &lt;NA&gt;   1870-12-18
+## 10       80 house   G000169  Charles   Laceille   Gifford   &lt;NA&gt;   1871-03-15
 ## # … with 1,102 more rows, and 5 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 </div>
@@ -969,18 +973,18 @@ library(tidyverse)</code></pre>
 <p>It is also possible to do not with an AND operator as follows:</p>
 <pre class="r"><code>filter(congress_age, congress == 80 &amp; !chamber == &#39;senate&#39;)</code></pre>
 <pre><code>## # A tibble: 453 x 13
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1       80 house   M000112  Joseph    Jefferson  Mansfie… &lt;NA&gt;   1861-02-09
-##  2       80 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
-##  3       80 house   S000001  Adolph    Joachim    Sabath   &lt;NA&gt;   1866-04-04
-##  4       80 house   E000023  Charles   Aubrey     Eaton    &lt;NA&gt;   1868-03-29
-##  5       80 house   L000296  William   &lt;NA&gt;       Lewis    &lt;NA&gt;   1868-09-22
-##  6       80 house   G000017  James     A.         Gallagh… &lt;NA&gt;   1869-01-16
-##  7       80 house   W000265  Richard   Joseph     Welch    &lt;NA&gt;   1869-02-13
-##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom    &lt;NA&gt;   1870-03-09
-##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull     &lt;NA&gt;   1870-12-18
-## 10       80 house   G000169  Charles   Laceille   Gifford  &lt;NA&gt;   1871-03-15
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
+##  2       80 house   D000448  Robert    Lee        Doughton  &lt;NA&gt;   1863-11-07
+##  3       80 house   S000001  Adolph    Joachim    Sabath    &lt;NA&gt;   1866-04-04
+##  4       80 house   E000023  Charles   Aubrey     Eaton     &lt;NA&gt;   1868-03-29
+##  5       80 house   L000296  William   &lt;NA&gt;       Lewis     &lt;NA&gt;   1868-09-22
+##  6       80 house   G000017  James     A.         Gallagher &lt;NA&gt;   1869-01-16
+##  7       80 house   W000265  Richard   Joseph     Welch     &lt;NA&gt;   1869-02-13
+##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom     &lt;NA&gt;   1870-03-09
+##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull      &lt;NA&gt;   1870-12-18
+## 10       80 house   G000169  Charles   Laceille   Gifford   &lt;NA&gt;   1871-03-15
 ## # … with 443 more rows, and 5 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <div id="exercises" class="section level4">
@@ -1043,18 +1047,18 @@ library(tidyverse)</code></pre>
 <p>More variables can easily be added to the <code>arrange</code> function. Notice from the above two commands that the ordering of the rows is in ascending order, if descending order is desired, the <code>desc</code> function. For example, to order the data starting with the latest congress first:</p>
 <pre class="r"><code>arrange(congress_age, desc(congress))</code></pre>
 <pre><code>## # A tibble: 18,635 x 13
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1      113 house   H000067  Ralph     M.         Hall     &lt;NA&gt;   1923-05-03
-##  2      113 house   D000355  John      D.         Dingell  &lt;NA&gt;   1926-07-08
-##  3      113 house   C000714  John      &lt;NA&gt;       Conyers  Jr.    1929-05-16
-##  4      113 house   S000480  Louise    McIntosh   Slaught… &lt;NA&gt;   1929-08-14
-##  5      113 house   R000053  Charles   B.         Rangel   &lt;NA&gt;   1930-06-11
-##  6      113 house   J000174  Sam       Robert     Johnson  &lt;NA&gt;   1930-10-11
-##  7      113 house   Y000031  C.        W. Bill    Young    &lt;NA&gt;   1930-12-16
-##  8      113 house   C000556  Howard    &lt;NA&gt;       Coble    &lt;NA&gt;   1931-03-18
-##  9      113 house   L000263  Sander    M.         Levin    &lt;NA&gt;   1931-09-06
-## 10      113 house   Y000033  Don       E.         Young    &lt;NA&gt;   1933-06-09
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1      113 house   H000067  Ralph     M.         Hall      &lt;NA&gt;   1923-05-03
+##  2      113 house   D000355  John      D.         Dingell   &lt;NA&gt;   1926-07-08
+##  3      113 house   C000714  John      &lt;NA&gt;       Conyers   Jr.    1929-05-16
+##  4      113 house   S000480  Louise    McIntosh   Slaughter &lt;NA&gt;   1929-08-14
+##  5      113 house   R000053  Charles   B.         Rangel    &lt;NA&gt;   1930-06-11
+##  6      113 house   J000174  Sam       Robert     Johnson   &lt;NA&gt;   1930-10-11
+##  7      113 house   Y000031  C.        W. Bill    Young     &lt;NA&gt;   1930-12-16
+##  8      113 house   C000556  Howard    &lt;NA&gt;       Coble     &lt;NA&gt;   1931-03-18
+##  9      113 house   L000263  Sander    M.         Levin     &lt;NA&gt;   1931-09-06
+## 10      113 house   Y000033  Don       E.         Young     &lt;NA&gt;   1933-06-09
 ## # … with 18,625 more rows, and 5 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 </div>
@@ -1247,18 +1251,18 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
 )</code></pre>
 <pre><code>## # A tibble: 18,635 x 17
 ## # Groups:   congress [34]
-##    congress chamber bioguide firstname middlename lastname suffix birthday  
-##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
-##  1       80 house   M000112  Joseph    Jefferson  Mansfie… &lt;NA&gt;   1861-02-09
-##  2       80 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
-##  3       80 house   S000001  Adolph    Joachim    Sabath   &lt;NA&gt;   1866-04-04
-##  4       80 house   E000023  Charles   Aubrey     Eaton    &lt;NA&gt;   1868-03-29
-##  5       80 house   L000296  William   &lt;NA&gt;       Lewis    &lt;NA&gt;   1868-09-22
-##  6       80 house   G000017  James     A.         Gallagh… &lt;NA&gt;   1869-01-16
-##  7       80 house   W000265  Richard   Joseph     Welch    &lt;NA&gt;   1869-02-13
-##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom    &lt;NA&gt;   1870-03-09
-##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull     &lt;NA&gt;   1870-12-18
-## 10       80 house   G000169  Charles   Laceille   Gifford  &lt;NA&gt;   1871-03-15
+##    congress chamber bioguide firstname middlename lastname  suffix birthday  
+##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
+##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
+##  2       80 house   D000448  Robert    Lee        Doughton  &lt;NA&gt;   1863-11-07
+##  3       80 house   S000001  Adolph    Joachim    Sabath    &lt;NA&gt;   1866-04-04
+##  4       80 house   E000023  Charles   Aubrey     Eaton     &lt;NA&gt;   1868-03-29
+##  5       80 house   L000296  William   &lt;NA&gt;       Lewis     &lt;NA&gt;   1868-09-22
+##  6       80 house   G000017  James     A.         Gallagher &lt;NA&gt;   1869-01-16
+##  7       80 house   W000265  Richard   Joseph     Welch     &lt;NA&gt;   1869-02-13
+##  8       80 house   B000565  Sol       &lt;NA&gt;       Bloom     &lt;NA&gt;   1870-03-09
+##  9       80 house   H000943  Merlin    &lt;NA&gt;       Hull      &lt;NA&gt;   1870-12-18
+## 10       80 house   G000169  Charles   Laceille   Gifford   &lt;NA&gt;   1871-03-15
 ## # … with 18,625 more rows, and 9 more variables: state &lt;chr&gt;, party &lt;chr&gt;,
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;, democrat &lt;dbl&gt;,
 ## #   num_democrat &lt;dbl&gt;, total &lt;int&gt;, prop_democrat &lt;dbl&gt;</code></pre>
@@ -1632,7 +1636,7 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
       
     
     
-    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+    <script src="/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js"></script>
 
     
 

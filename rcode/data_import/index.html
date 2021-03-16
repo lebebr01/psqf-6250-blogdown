@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
+  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
 
   
 
@@ -320,7 +320,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
+  <script src="/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js"></script>
 
   
 
@@ -788,6 +788,10 @@
 
   <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
 
+
+
+  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
+
       
     
 
@@ -1037,18 +1041,18 @@ curl::curl_download(&quot;https://github.com/lebebr01/psqf-6250-blogdown/blob/ma
 
 read_excel(tf)</code></pre>
 <pre><code>## # A tibble: 3,198 x 42
-##    Area_name STCOU EDU010187F EDU010187D EDU010187N1 EDU010187N2 EDU010188F
-##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
-##  1 UNITED S… 00000          0   40024299 0000        0000                 0
-##  2 ALABAMA   01000          0     733735 0000        0000                 0
-##  3 Autauga,… 01001          0       6829 0000        0000                 0
-##  4 Baldwin,… 01003          0      16417 0000        0000                 0
-##  5 Barbour,… 01005          0       5071 0000        0000                 0
-##  6 Bibb, AL  01007          0       3557 0000        0000                 0
-##  7 Blount, … 01009          0       7319 0000        0000                 0
-##  8 Bullock,… 01011          0       2014 0000        0000                 0
-##  9 Butler, … 01013          0       4640 0000        0000                 0
-## 10 Calhoun,… 01015          0      20939 0000        0000                 0
+##    Area_name     STCOU EDU010187F EDU010187D EDU010187N1 EDU010187N2 EDU010188F
+##    &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 UNITED STATES 00000          0   40024299 0000        0000                 0
+##  2 ALABAMA       01000          0     733735 0000        0000                 0
+##  3 Autauga, AL   01001          0       6829 0000        0000                 0
+##  4 Baldwin, AL   01003          0      16417 0000        0000                 0
+##  5 Barbour, AL   01005          0       5071 0000        0000                 0
+##  6 Bibb, AL      01007          0       3557 0000        0000                 0
+##  7 Blount, AL    01009          0       7319 0000        0000                 0
+##  8 Bullock, AL   01011          0       2014 0000        0000                 0
+##  9 Butler, AL    01013          0       4640 0000        0000                 0
+## 10 Calhoun, AL   01015          0      20939 0000        0000                 0
 ## # … with 3,188 more rows, and 35 more variables: EDU010188D &lt;dbl&gt;,
 ## #   EDU010188N1 &lt;chr&gt;, EDU010188N2 &lt;chr&gt;, EDU010189F &lt;dbl&gt;, EDU010189D &lt;dbl&gt;,
 ## #   EDU010189N1 &lt;chr&gt;, EDU010189N2 &lt;chr&gt;, EDU010190F &lt;dbl&gt;, EDU010190D &lt;dbl&gt;,
@@ -1062,18 +1066,18 @@ read_excel(tf)</code></pre>
 <p>By default, the function will read in the first sheet and will treat the first row as the column names. If you wish to read in another sheet, you can use the <code>sheet</code> argument. For example:</p>
 <pre class="r"><code>read_excel(tf, sheet = 2)</code></pre>
 <pre><code>## # A tibble: 3,198 x 42
-##    Area_name STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
-##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
-##  1 UNITED S… 00000          0   44534459 0000        0000                 0
-##  2 ALABAMA   01000          0     737386 0000        0000                 0
-##  3 Autauga,… 01001          0       8099 0000        0000                 0
-##  4 Baldwin,… 01003          0      21410 0000        0000                 0
-##  5 Barbour,… 01005          0       5100 0000        0000                 0
-##  6 Bibb, AL  01007          0       3717 0000        0000                 0
-##  7 Blount, … 01009          0       7816 0000        0000                 0
-##  8 Bullock,… 01011          0       2010 0000        0000                 0
-##  9 Butler, … 01013          0       4119 0000        0000                 0
-## 10 Calhoun,… 01015          0      19721 0000        0000                 0
+##    Area_name     STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
+##    &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 UNITED STATES 00000          0   44534459 0000        0000                 0
+##  2 ALABAMA       01000          0     737386 0000        0000                 0
+##  3 Autauga, AL   01001          0       8099 0000        0000                 0
+##  4 Baldwin, AL   01003          0      21410 0000        0000                 0
+##  5 Barbour, AL   01005          0       5100 0000        0000                 0
+##  6 Bibb, AL      01007          0       3717 0000        0000                 0
+##  7 Blount, AL    01009          0       7816 0000        0000                 0
+##  8 Bullock, AL   01011          0       2010 0000        0000                 0
+##  9 Butler, AL    01013          0       4119 0000        0000                 0
+## 10 Calhoun, AL   01015          0      19721 0000        0000                 0
 ## # … with 3,188 more rows, and 35 more variables: EDU010198D &lt;dbl&gt;,
 ## #   EDU010198N1 &lt;chr&gt;, EDU010198N2 &lt;chr&gt;, EDU010199F &lt;dbl&gt;, EDU010199D &lt;dbl&gt;,
 ## #   EDU010199N1 &lt;chr&gt;, EDU010199N2 &lt;chr&gt;, EDU010200F &lt;dbl&gt;, EDU010200D &lt;dbl&gt;,
@@ -1086,18 +1090,18 @@ read_excel(tf)</code></pre>
 ## #   EDU015206N1 &lt;chr&gt;, EDU015206N2 &lt;chr&gt;</code></pre>
 <pre class="r"><code>read_excel(tf, sheet = &#39;EDU01B&#39;)</code></pre>
 <pre><code>## # A tibble: 3,198 x 42
-##    Area_name STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
-##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
-##  1 UNITED S… 00000          0   44534459 0000        0000                 0
-##  2 ALABAMA   01000          0     737386 0000        0000                 0
-##  3 Autauga,… 01001          0       8099 0000        0000                 0
-##  4 Baldwin,… 01003          0      21410 0000        0000                 0
-##  5 Barbour,… 01005          0       5100 0000        0000                 0
-##  6 Bibb, AL  01007          0       3717 0000        0000                 0
-##  7 Blount, … 01009          0       7816 0000        0000                 0
-##  8 Bullock,… 01011          0       2010 0000        0000                 0
-##  9 Butler, … 01013          0       4119 0000        0000                 0
-## 10 Calhoun,… 01015          0      19721 0000        0000                 0
+##    Area_name     STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
+##    &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 UNITED STATES 00000          0   44534459 0000        0000                 0
+##  2 ALABAMA       01000          0     737386 0000        0000                 0
+##  3 Autauga, AL   01001          0       8099 0000        0000                 0
+##  4 Baldwin, AL   01003          0      21410 0000        0000                 0
+##  5 Barbour, AL   01005          0       5100 0000        0000                 0
+##  6 Bibb, AL      01007          0       3717 0000        0000                 0
+##  7 Blount, AL    01009          0       7816 0000        0000                 0
+##  8 Bullock, AL   01011          0       2010 0000        0000                 0
+##  9 Butler, AL    01013          0       4119 0000        0000                 0
+## 10 Calhoun, AL   01015          0      19721 0000        0000                 0
 ## # … with 3,188 more rows, and 35 more variables: EDU010198D &lt;dbl&gt;,
 ## #   EDU010198N1 &lt;chr&gt;, EDU010198N2 &lt;chr&gt;, EDU010199F &lt;dbl&gt;, EDU010199D &lt;dbl&gt;,
 ## #   EDU010199N1 &lt;chr&gt;, EDU010199N2 &lt;chr&gt;, EDU010200F &lt;dbl&gt;, EDU010200D &lt;dbl&gt;,
@@ -1355,7 +1359,7 @@ write_csv(ufo_count, path = &#39;path/to/save/file.csv&#39;)</code></pre>
       
     
     
-    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
+    <script src="/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js"></script>
 
     
 
