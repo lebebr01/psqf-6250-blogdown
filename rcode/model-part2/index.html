@@ -1,0 +1,1457 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Building Upon Linear Models">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/model-part2/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/model-part2/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/model-part2/">
+  <meta property="og:title" content="Building Upon Linear Models | PSQF 6250">
+  <meta property="og:description" content="Building Upon Linear Models"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-03-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-03-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Building Upon Linear Models | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  <li class=""><a href="/rcode/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
+
+
+
+  <li class=""><a href="/rcode/factors/">Factors</a></li>
+
+
+
+  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
+
+
+
+  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
+
+
+
+  <li class="active"><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
+
+
+
+  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Building Upon Linear Models</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>The last week has focused on building simple linear models with a single predictor. This week will evaluate these models and build them up with more complexity. Particularly, this week will focus on ways to build models with predictors that have more than two categories, alternative ways to code categorical predictors, mixing categorical and quantitative variables, and interactions.</p>
+<p>This section of notes will use the following packages.</p>
+<pre class="r"><code>library(tidyverse)
+library(modelr)
+library(broom)
+library(fivethirtyeight)
+library(forcats)</code></pre>
+<div id="more-than-two-categorical-levels" class="section level2">
+<h2>More than two categorical levels</h2>
+<p>Last week we explored a linear model framework for a two sample t-test (and the homework has you explore fitting a one-sample t-test in a linear model framework). I now want to generalize this idea to more than two categorical levels. It is traditional to think about these types of models as analysis of variance (ANOVA) models, however, the same model can be fitted in a linear model framework as well.</p>
+<p>For this set of notes, we are going to make use of the gss_cat data found in the forcats package. Below are the first few rows of the data:</p>
+<pre class="r"><code>gss_cat</code></pre>
+<pre><code>## # A tibble: 21,483 x 9
+##     year marital     age race  rincome    partyid     relig     denom    tvhours
+##    &lt;int&gt; &lt;fct&gt;     &lt;int&gt; &lt;fct&gt; &lt;fct&gt;      &lt;fct&gt;       &lt;fct&gt;     &lt;fct&gt;      &lt;int&gt;
+##  1  2000 Never ma…    26 White $8000 to … Ind,near r… Protesta… Souther…      12
+##  2  2000 Divorced     48 White $8000 to … Not str re… Protesta… Baptist…      NA
+##  3  2000 Widowed      67 White Not appli… Independent Protesta… No deno…       2
+##  4  2000 Never ma…    39 White Not appli… Ind,near r… Orthodox… Not app…       4
+##  5  2000 Divorced     25 White Not appli… Not str de… None      Not app…       1
+##  6  2000 Married      25 White $20000 - … Strong dem… Protesta… Souther…      NA
+##  7  2000 Never ma…    36 White $25000 or… Not str re… Christian Not app…       3
+##  8  2000 Divorced     44 White $7000 to … Ind,near d… Protesta… Luthera…      NA
+##  9  2000 Married      44 White $25000 or… Not str de… Protesta… Other          0
+## 10  2000 Married      47 White $25000 or… Strong rep… Protesta… Souther…       3
+## # … with 21,473 more rows</code></pre>
+<p>Suppose we were interested in exploring the relationship between the marital status of an individual and how much tv they watch. For example, perhaps married couples watch more tv compared to those that are single or never married. To get an idea of the categories in the marital variable, we could use the <code>count</code> function within dplyr.</p>
+<pre class="r"><code>gss_cat %&gt;%
+  count(marital)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   marital           n
+## * &lt;fct&gt;         &lt;int&gt;
+## 1 No answer        17
+## 2 Never married  5416
+## 3 Separated       743
+## 4 Divorced       3383
+## 5 Widowed        1807
+## 6 Married       10117</code></pre>
+<p>You’ll notice that there a few responses of “No Answer” and we may wish to treat these as missing values. This can be done with the <code>fct_recode</code> function as follows:</p>
+<pre class="r"><code>gss_cat &lt;- gss_cat %&gt;%
+  mutate(marital_miss = fct_recode(marital,
+    NULL = &#39;No answer&#39;
+  ))
+gss_cat %&gt;%
+  count(marital_miss)</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   marital_miss      n
+## * &lt;fct&gt;         &lt;int&gt;
+## 1 Never married  5416
+## 2 Separated       743
+## 3 Divorced       3383
+## 4 Widowed        1807
+## 5 Married       10117
+## 6 &lt;NA&gt;             17</code></pre>
+<p>We can now fit the model to this new data using the <code>lm</code> function.</p>
+<pre class="r"><code>anova_mod &lt;- lm(tvhours ~ marital_miss, data = gss_cat)
+summary(anova_mod)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = tvhours ~ marital_miss, data = gss_cat)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.9120 -1.6504 -0.6504  0.8948 21.3496 
+## 
+## Coefficients:
+##                       Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)            3.10518    0.04679  66.366  &lt; 2e-16 ***
+## marital_missSeparated  0.44444    0.13738   3.235  0.00122 ** 
+## marital_missDivorced  -0.01977    0.07680  -0.257  0.79687    
+## marital_missWidowed    0.80682    0.09352   8.627  &lt; 2e-16 ***
+## marital_missMarried   -0.45475    0.05879  -7.735 1.13e-14 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.561 on 11323 degrees of freedom
+##   (10155 observations deleted due to missingness)
+## Multiple R-squared:  0.02141,    Adjusted R-squared:  0.02107 
+## F-statistic: 61.94 on 4 and 11323 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>To explore what the <code>lm</code> function is doing internally, the design matrix is a natural way to do this.</p>
+<pre class="r"><code>model_matrix(gss_cat, tvhours ~ marital_miss)</code></pre>
+<pre><code>## # A tibble: 11,328 x 5
+##    `(Intercept)` marital_missSeparated marital_missDivorced marital_missWidowed
+##            &lt;dbl&gt;                 &lt;dbl&gt;                &lt;dbl&gt;               &lt;dbl&gt;
+##  1             1                     0                    0                   0
+##  2             1                     0                    0                   1
+##  3             1                     0                    0                   0
+##  4             1                     0                    1                   0
+##  5             1                     0                    0                   0
+##  6             1                     0                    0                   0
+##  7             1                     0                    0                   0
+##  8             1                     0                    0                   0
+##  9             1                     0                    0                   0
+## 10             1                     0                    1                   0
+## # … with 11,318 more rows, and 1 more variable: marital_missMarried &lt;dbl&gt;</code></pre>
+<p>Writing out this model with equations, the model looks like this:
+<span class="math display">\[
+tvhours_{i} = \beta_{0} + \beta_{1} Separated_{i} + \beta_{2} Divorced_{I} + \beta_{3} Widowed_{i} + \beta_{4} Married_{i} + \epsilon_{i}
+\]</span></p>
+<p>If you are more familiar with ANOVA terminology, you can get an ANOVA table using the <code>anova</code> function on the model object.</p>
+<pre class="r"><code>anova(anova_mod)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: tvhours
+##                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## marital_miss     4   1624  406.12  61.941 &lt; 2.2e-16 ***
+## Residuals    11323  74239    6.56                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Here you’ll notice that the F statistic is the same from the <code>lm</code> and <code>anova</code> functions showing that these are equivalent model calls.</p>
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Using the martial_miss variable created above, what are the sample means of the five groups?</li>
+<li>How do these sample means relate back to the parameters estimates shown above?</li>
+<li>How could you visualize these models results? Attempt to create a visualization that captures the model results above.</li>
+</ol>
+</div>
+<div id="adjusting-the-reference-group" class="section level3">
+<h3>Adjusting the reference group</h3>
+<p>It is often of interest to adjust the reference group to make the intercept represent a specific group of interest. There are two approaches to take for this approach. The first I will show is using the forcats package to change the order of the levels of the variable.</p>
+<p>Suppose for example, we wish to make the widowed category the reference group. This is the job of <code>fct_relevel</code> from the forcats package.</p>
+<pre class="r"><code>gss_cat &lt;- gss_cat %&gt;%
+  mutate(marital_m_widow = fct_relevel(
+    marital_miss,
+    &#39;Widowed&#39;
+  ))
+levels(gss_cat$marital_miss)</code></pre>
+<pre><code>## [1] &quot;Never married&quot; &quot;Separated&quot;     &quot;Divorced&quot;      &quot;Widowed&quot;      
+## [5] &quot;Married&quot;</code></pre>
+<pre class="r"><code>levels(gss_cat$marital_m_widow)</code></pre>
+<pre><code>## [1] &quot;Widowed&quot;       &quot;Never married&quot; &quot;Separated&quot;     &quot;Divorced&quot;     
+## [5] &quot;Married&quot;</code></pre>
+<p>You’ll notice that in the new variable, the widowed category was moved to the beginning and the remaining order was not changed. We can now fit a new model with this newly releveled factor variable.</p>
+<pre class="r"><code>summary(lm(tvhours ~ marital_m_widow, data = gss_cat))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = tvhours ~ marital_m_widow, data = gss_cat)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.9120 -1.6504 -0.6504  0.8948 21.3496 
+## 
+## Coefficients:
+##                              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                   3.91200    0.08097  48.313  &lt; 2e-16 ***
+## marital_m_widowNever married -0.80682    0.09352  -8.627  &lt; 2e-16 ***
+## marital_m_widowSeparated     -0.36238    0.15245  -2.377   0.0175 *  
+## marital_m_widowDivorced      -0.82659    0.10132  -8.159 3.75e-16 ***
+## marital_m_widowMarried       -1.26157    0.08845 -14.262  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.561 on 11323 degrees of freedom
+##   (10155 observations deleted due to missingness)
+## Multiple R-squared:  0.02141,    Adjusted R-squared:  0.02107 
+## F-statistic: 61.94 on 4 and 11323 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The second approach to modifying which group represents the reference group would be to create the indicator (dummy) variables manually. The logic follows from the design matrix above, namely that each variable should have a value of 1 if the marital status equals a specific category or 0 otherwise. For example, this can be created as follows:</p>
+<pre class="r"><code>gss_cat &lt;- gss_cat %&gt;%
+  mutate(
+    separated = ifelse(marital_miss == &#39;Separated&#39;, 1, 0),
+    never_married = ifelse(marital_miss == &#39;Never married&#39;, 1, 0),
+    divorced = ifelse(marital_miss == &#39;Divorced&#39;, 1, 0),
+    married = ifelse(marital_miss == &#39;Married&#39;, 1, 0)
+  )
+summary(lm(tvhours ~ separated + never_married + divorced + married, 
+           data = gss_cat))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = tvhours ~ separated + never_married + divorced + 
+##     married, data = gss_cat)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.9120 -1.6504 -0.6504  0.8948 21.3496 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    3.91200    0.08097  48.313  &lt; 2e-16 ***
+## separated     -0.36238    0.15245  -2.377   0.0175 *  
+## never_married -0.80682    0.09352  -8.627  &lt; 2e-16 ***
+## divorced      -0.82659    0.10132  -8.159 3.75e-16 ***
+## married       -1.26157    0.08845 -14.262  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.561 on 11323 degrees of freedom
+##   (10155 observations deleted due to missingness)
+## Multiple R-squared:  0.02141,    Adjusted R-squared:  0.02107 
+## F-statistic: 61.94 on 4 and 11323 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Manually creating the variables has a few advantages, namely that there is a bit more flexibility on how the variables are created, but both approaches lead to the same model.</p>
+<div id="exercises-1" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Combine the ‘Never married’ and ‘Divorced’ categories into one category.</li>
+<li>Fit a new model that combines these two categories. Does the model fit differ from the models shown above? Is this surprising?</li>
+</ol>
+</div>
+</div>
+<div id="post-hoc-tests" class="section level3">
+<h3>Post Hoc Tests</h3>
+<p>From the models fitted above, it may be of interest to conduct post hoc tests that compare all pairwise mean differences, particularly as the tests above are all compared to the reference group. This approach will be explored using the multcomp package and with defining linear contrasts.</p>
+<pre class="r"><code># install.packages(&quot;multcomp&quot;)
+library(multcomp)</code></pre>
+<p>We first need to define linear contrasts based on the levels of the factor variable. For example, using the following model:</p>
+<pre class="r"><code>gss_cat &lt;- gss_cat %&gt;%
+  mutate(marital_m_widow = fct_recode(marital_m_widow,
+           &quot;Never_married&quot; = &quot;Never married&quot;                           
+  ))
+anova_mod &lt;- lm(tvhours ~ marital_m_widow, data = gss_cat)
+levels(gss_cat$marital_m_widow)</code></pre>
+<pre><code>## [1] &quot;Widowed&quot;       &quot;Never_married&quot; &quot;Separated&quot;     &quot;Divorced&quot;     
+## [5] &quot;Married&quot;</code></pre>
+<p>We will use these level values to create linear contrasts that test all pairwise categories.</p>
+<pre class="r"><code>my_contrasts &lt;- c(&quot;Widowed - Never_married = 0&quot;,
+                 &quot;Widowed - Separated = 0&quot;,
+                 &quot;Widowed - Divorced = 0&quot;,
+                 &quot;Widowed - Married = 0&quot;,
+                 &quot;Never_married - Separated = 0&quot;,
+                 &quot;Never_married - Divorced = 0&quot;,
+                 &quot;Never_married - Married = 0&quot;,
+                 &quot;Separated - Divorced = 0&quot;,
+                 &quot;Separated - Married = 0&quot;,
+                 &quot;Divorced - Married = 0&quot;)
+contr_results &lt;- glht(anova_mod, 
+                      linfct = mcp(marital_m_widow = my_contrasts))
+summary(contr_results)</code></pre>
+<pre><code>## 
+##   Simultaneous Tests for General Linear Hypotheses
+## 
+## Multiple Comparisons of Means: User-defined Contrasts
+## 
+## 
+## Fit: lm(formula = tvhours ~ marital_m_widow, data = gss_cat)
+## 
+## Linear Hypotheses:
+##                                Estimate Std. Error t value Pr(&gt;|t|)    
+## Widowed - Never_married == 0    0.80682    0.09352   8.627  &lt; 0.001 ***
+## Widowed - Separated == 0        0.36238    0.15245   2.377  0.11070    
+## Widowed - Divorced == 0         0.82659    0.10132   8.159  &lt; 0.001 ***
+## Widowed - Married == 0          1.26157    0.08845  14.262  &lt; 0.001 ***
+## Never_married - Separated == 0 -0.44444    0.13738  -3.235  0.00950 ** 
+## Never_married - Divorced == 0   0.01977    0.07680   0.257  0.99893    
+## Never_married - Married == 0    0.45475    0.05879   7.735  &lt; 0.001 ***
+## Separated - Divorced == 0       0.46421    0.14280   3.251  0.00896 ** 
+## Separated - Married == 0        0.89919    0.13398   6.711  &lt; 0.001 ***
+## Divorced - Married == 0         0.43498    0.07054   6.166  &lt; 0.001 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## (Adjusted p values reported -- single-step method)</code></pre>
+<p>You can also specify different adjustment methods, such as the Benjamin-Hochberg method.</p>
+<pre class="r"><code>summary(contr_results, test = adjusted(&quot;BH&quot;))</code></pre>
+<pre><code>## 
+##   Simultaneous Tests for General Linear Hypotheses
+## 
+## Multiple Comparisons of Means: User-defined Contrasts
+## 
+## 
+## Fit: lm(formula = tvhours ~ marital_m_widow, data = gss_cat)
+## 
+## Linear Hypotheses:
+##                                Estimate Std. Error t value Pr(&gt;|t|)    
+## Widowed - Never_married == 0    0.80682    0.09352   8.627  &lt; 2e-16 ***
+## Widowed - Separated == 0        0.36238    0.15245   2.377  0.01941 *  
+## Widowed - Divorced == 0         0.82659    0.10132   8.159 1.48e-15 ***
+## Widowed - Married == 0          1.26157    0.08845  14.262  &lt; 2e-16 ***
+## Never_married - Separated == 0 -0.44444    0.13738  -3.235  0.00152 ** 
+## Never_married - Divorced == 0   0.01977    0.07680   0.257  0.79687    
+## Never_married - Married == 0    0.45475    0.05879   7.735 2.78e-14 ***
+## Separated - Divorced == 0       0.46421    0.14280   3.251  0.00152 ** 
+## Separated - Married == 0        0.89919    0.13398   6.711 4.04e-11 ***
+## Divorced - Married == 0         0.43498    0.07054   6.166 1.20e-09 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## (Adjusted p values reported -- BH method)</code></pre>
+<p>Although defining the linear contrasts manually is more flexible, for simple models, the multiple comparisons can be generated a bit more simply.</p>
+<pre class="r"><code>summary(glht(anova_mod, linfct = mcp(marital_m_widow = &quot;Tukey&quot;)), 
+        test = adjusted(&quot;BH&quot;))</code></pre>
+<pre><code>## 
+##   Simultaneous Tests for General Linear Hypotheses
+## 
+## Multiple Comparisons of Means: Tukey Contrasts
+## 
+## 
+## Fit: lm(formula = tvhours ~ marital_m_widow, data = gss_cat)
+## 
+## Linear Hypotheses:
+##                                Estimate Std. Error t value Pr(&gt;|t|)    
+## Never_married - Widowed == 0   -0.80682    0.09352  -8.627  &lt; 2e-16 ***
+## Separated - Widowed == 0       -0.36238    0.15245  -2.377  0.01941 *  
+## Divorced - Widowed == 0        -0.82659    0.10132  -8.159 1.48e-15 ***
+## Married - Widowed == 0         -1.26157    0.08845 -14.262  &lt; 2e-16 ***
+## Separated - Never_married == 0  0.44444    0.13738   3.235  0.00152 ** 
+## Divorced - Never_married == 0  -0.01977    0.07680  -0.257  0.79687    
+## Married - Never_married == 0   -0.45475    0.05879  -7.735 2.78e-14 ***
+## Divorced - Separated == 0      -0.46421    0.14280  -3.251  0.00152 ** 
+## Married - Separated == 0       -0.89919    0.13398  -6.711 4.04e-11 ***
+## Married - Divorced == 0        -0.43498    0.07054  -6.166 1.20e-09 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## (Adjusted p values reported -- BH method)</code></pre>
+<p>You can also generate simultaneous confidence intervals:</p>
+<pre class="r"><code>ci &lt;- confint(summary(glht(anova_mod, linfct = mcp(marital_m_widow = &quot;Tukey&quot;)),
+                test = adjusted(&quot;BH&quot;)))
+ci</code></pre>
+<pre><code>## 
+##   Simultaneous Confidence Intervals
+## 
+## Multiple Comparisons of Means: Tukey Contrasts
+## 
+## 
+## Fit: lm(formula = tvhours ~ marital_m_widow, data = gss_cat)
+## 
+## Quantile = 2.6889
+## 95% family-wise confidence level
+##  
+## 
+## Linear Hypotheses:
+##                                Estimate lwr      upr     
+## Never_married - Widowed == 0   -0.80682 -1.05828 -0.55537
+## Separated - Widowed == 0       -0.36238 -0.77229  0.04753
+## Divorced - Widowed == 0        -0.82659 -1.09902 -0.55417
+## Married - Widowed == 0         -1.26157 -1.49942 -1.02373
+## Separated - Never_married == 0  0.44444  0.07505  0.81383
+## Divorced - Never_married == 0  -0.01977 -0.22626  0.18673
+## Married - Never_married == 0   -0.45475 -0.61284 -0.29666
+## Divorced - Separated == 0      -0.46421 -0.84818 -0.08024
+## Married - Separated == 0       -0.89919 -1.25945 -0.53893
+## Married - Divorced == 0        -0.43498 -0.62466 -0.24530</code></pre>
+<p>These could then be visulized directly.</p>
+<pre class="r"><code>SCI = data.frame(
+  Contrast = 1:nrow(ci$confint),   #Contrast number
+  MD = ci$confint[, 1],      #Mean difference
+  LL = ci$confint[, 2],      #Lower limit
+  UL = ci$confint[, 3],      #Upper limit
+  Sig = c(&quot;Yes&quot;, &quot;No&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &#39;Yes&#39;, &#39;No&#39;, 
+          &#39;Yes&#39;, &#39;Yes&#39;, &#39;Yes&#39;, &#39;Yes&#39;),   #Statistically reliable?
+  Alpha = c(1, .75, 1, 1, 1, .75, 1, 1, 1, 1),     #Transparency value
+  Names = rownames(ci$confint)  # contrast label
+)
+
+# Plot of the simultaneous intervals
+library(ggplot2)
+ggplot(data = SCI, aes(x = Contrast, y = MD, color = Sig)) +
+  geom_point(size = 4) +
+  geom_segment(aes(x = Contrast, xend = Contrast, y = LL, 
+                   yend = UL, alpha = Alpha), lwd = 1.5) +
+  geom_hline(yintercept = 0, lty = &quot;dotted&quot;) +
+  scale_color_manual(values = c(&quot;Black&quot;, &quot;Gold&quot;)) +
+  scale_x_continuous(
+    name = &quot;&quot;,
+    breaks = 1:10,
+    labels = SCI$Names
+  ) +
+  ylab(&quot;Mean Difference&quot;) +
+  coord_flip() +
+  theme_bw() +
+  theme(
+    legend.position = &quot;none&quot;,
+    panel.grid.minor = element_blank(), 
+    panel.grid.major = element_blank() 
+  )</code></pre>
+<p><img src="/rcode/model-part2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="exercises-2" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Fit a model that explores mean differences in tvhours by the party affiliation (partyid variable). Do the means differ?</li>
+<li>Using the post-hoc tests, run post-hoc tests to test all pairwise differences.</li>
+</ol>
+</div>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/model-intro/" rel="next">Model Introduction</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/adv-model/" rel="prev">Advanced Modeling Topics</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Mar 17, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
