@@ -34,10 +34,10 @@
   
     
   
-  <meta name="description" content="Factors and String Manipulations">
+  <meta name="description" content="Models - More than 2 groups">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/content/07-week7/">
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/content/09-week9/">
 
   
 
@@ -263,7 +263,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/content/07-week7/">
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/content/09-week9/">
 
   
   
@@ -278,15 +278,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="PSQF 6250">
-  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/content/07-week7/">
-  <meta property="og:title" content="Week 7 | PSQF 6250">
-  <meta property="og:description" content="Factors and String Manipulations"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/content/09-week9/">
+  <meta property="og:title" content="Week 9 | PSQF 6250">
+  <meta property="og:description" content="Models - More than 2 groups"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
   <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-02-26T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-03-17T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-02-26T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-03-17T00:00:00&#43;00:00">
   
 
   
@@ -305,7 +305,7 @@
 
 
 
-  <title>Week 7 | PSQF 6250</title>
+  <title>Week 9 | PSQF 6250</title>
 
 </head>
 
@@ -766,7 +766,7 @@
 
 
 
-  <li class="active"><a href="/content/07-week7/">Week 7</a></li>
+  <li class=""><a href="/content/07-week7/">Week 7</a></li>
 
 
 
@@ -774,7 +774,7 @@
 
 
 
-  <li class=""><a href="/content/09-week9/">Week 9</a></li>
+  <li class="active"><a href="/content/09-week9/">Week 9</a></li>
 
       
     
@@ -808,11 +808,11 @@
         <div class="docs-article-container">
           
 
-          <h1>Week 7</h1>
+          <h1>Week 9</h1>
 
           <div class="article-style">
             
-<script src="https://psqf6250.brandonlebeau.org/content/07-week7/index_files/header-attrs/header-attrs.js"></script>
+<script src="https://psqf6250.brandonlebeau.org/content/09-week9/index_files/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 
@@ -820,48 +820,36 @@
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This week will get you oriented for working with factor variables in R which can be useful for linear modeling (to come next week). Then the week will also explore how to manipulate character vectors to extract information you may want. As part of this, special functionality for extracting dates will be explored.</p>
+<p>This week will explore how to work and fit models that have more than 2 groups.</p>
 </div>
 <div id="objectives" class="section level2">
 <h2>Objectives</h2>
 <p>After completing this module, students will be able to:</p>
 <ul>
-<li>Identify character and factor data attributes</li>
-<li>Manipulate factor data attributes</li>
-<li>Manipulate character vectors</li>
-<li>Extract dates using the lubridate package</li>
-</ul>
-</div>
-<div id="activities" class="section level2">
-<h2>Activities</h2>
-<ul>
-<li>R for Data Science - chapters <a href="https://r4ds.had.co.nz/factors.html">15</a>, <a href="https://r4ds.had.co.nz/dates-and-times.html">16</a></li>
+<li>Create indicator/dummy variables in R for more than 2 groups</li>
+<li>Interpret parameters from more than 2 groups</li>
 </ul>
 </div>
 <div id="weekly-videos" class="section level2">
 <h2>Weekly Videos</h2>
 <ul>
-<li><p>Intro to Factors
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f0e8abd8-1626-41f2-8b7d-bead7d13dc43&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Factor Manipulations
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3f50812b-e267-475b-b386-a4e78ea84144&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Rename Factor Levels
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=86213b69-150d-4a3b-96ca-d1a2d859696e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Basic Character String Tasks
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=586fd457-ae19-489e-ad52-ac4e012426e3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Introduction to Regular Expressions
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=dda278aa-b0f0-45c9-b9b0-ac4e012789fe&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Regular Expression Functions
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=54abaf26-1190-4897-a261-ac4e012ad403&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Real-world Examples - working with dates
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3a338c17-ef69-4dde-a88c-ac4f00153874&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
+<li><p>More than 2 Groups
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6107d990-7637-464b-aa4a-a936fe96f6be&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
+<li><p>Adjusting the Reference Groups
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=14101000-7ef2-48a1-8dad-8437fed15a1e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
+<li><p>Post Hoc Tests
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8661db1f-77db-4857-9d8b-77f079f0902f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
+<li><p>Interactions
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=beaea968-be69-483e-afd6-4af4d2badf61&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
+<li><p>Visualizing Model Results
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d4936d3f-0740-44a7-ad2a-3bcfc95435cb&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
 </ul>
 </div>
 <div id="r-syntax" class="section level2">
 <h2>R Syntax</h2>
 <ul>
-<li><a href="https://psqf6250.brandonlebeau.org/rcode/factors/">Factors</a></li>
-<li><a href="https://psqf6250.brandonlebeau.org/rcode/strings/">Strings</a></li>
+<li><a href="https://psqf6250.brandonlebeau.org/rcode/model-part2/">Model Part 2</a></li>
+<li><a href="https://psqf6250.brandonlebeau.org/rcode/adv-model/">Advanced Modeling</a></li>
 </ul>
 </div>
 <div id="assignments" class="section level2">
@@ -885,15 +873,9 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/content/06-week6/" rel="next">Week 6</a>
+    <a href="/content/08-week8/" rel="next">Week 8</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/content/08-week8/" rel="prev">Week 8</a>
-  </div>
   
 </div>
 
@@ -902,7 +884,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Feb 26, 2021</p>
+          <p>Last updated on Mar 17, 2021</p>
 
           
 

@@ -521,5 +521,58 @@
 </description>
     </item>
     
+    <item>
+      <title>Week 9</title>
+      <link>https://psqf6250.brandonlebeau.org/content/09-week9/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/09-week9/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/09-week9/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week will explore how to work and fit models that have more than 2 groups.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create indicator/dummy variables in R for more than 2 groups&lt;/li&gt;
+&lt;li&gt;Interpret parameters from more than 2 groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;More than 2 Groups
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6107d990-7637-464b-aa4a-a936fe96f6be&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Adjusting the Reference Groups
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=14101000-7ef2-48a1-8dad-8437fed15a1e&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Post Hoc Tests
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8661db1f-77db-4857-9d8b-77f079f0902f&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Interactions
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=beaea968-be69-483e-afd6-4af4d2badf61&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Visualizing Model Results
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d4936d3f-0740-44a7-ad2a-3bcfc95435cb&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-syntax&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/model-part2/&#34;&gt;Model Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/adv-model/&#34;&gt;Advanced Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come …&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
