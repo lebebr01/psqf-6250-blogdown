@@ -34,11 +34,12 @@
   
     
   
-  <meta name="description" content="Course Project - 25 pts Due May 12th by 11:59 pm
- Project Details The goal of this project is to do an analysis from start to finish. The study can come from data/project you are already working on (for a thesis or project) or you can design a brand new analysis on a topic that you are interested in.">
+  <meta name="description" content="User Created Functions and Bootstrap: 20 pts
+Due: May 7th, 2021 - No penalty for late submissions, but due no later than May 7th.
+For this assignment, you will write your own user functions to perform a bootstrap.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/assignments/project/project/">
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/">
 
   
 
@@ -264,7 +265,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/assignments/project/project/">
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/">
 
   
   
@@ -279,16 +280,17 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="PSQF 6250">
-  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/assignments/project/project/">
-  <meta property="og:title" content="Course Project | PSQF 6250">
-  <meta property="og:description" content="Course Project - 25 pts Due May 12th by 11:59 pm
- Project Details The goal of this project is to do an analysis from start to finish. The study can come from data/project you are already working on (for a thesis or project) or you can design a brand new analysis on a topic that you are interested in."><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/">
+  <meta property="og:title" content="Assignment 5 | PSQF 6250">
+  <meta property="og:description" content="User Created Functions and Bootstrap: 20 pts
+Due: May 7th, 2021 - No penalty for late submissions, but due no later than May 7th.
+For this assignment, you will write your own user functions to perform a bootstrap."><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
   <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-02-19T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-02-19T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-03-29T00:00:00&#43;00:00">
   
 
   
@@ -307,7 +309,7 @@
 
 
 
-  <title>Course Project | PSQF 6250</title>
+  <title>Assignment 5 | PSQF 6250</title>
 
 </head>
 
@@ -774,7 +776,7 @@
 
 
 
-  <li class=""><a href="/assignments/assignment/assignment5/">Assignment 5</a></li>
+  <li class="active"><a href="/assignments/assignment/assignment5/">Assignment 5</a></li>
 
       
         </ul>
@@ -872,7 +874,7 @@
 
 
 
-  <li class="active"><a href="/assignments/project/project/">Course Project</a></li>
+  <li class=""><a href="/assignments/project/project/">Course Project</a></li>
 
       
         </ul>
@@ -915,42 +917,57 @@
         <div class="docs-article-container">
           
 
-          <h1>Course Project</h1>
+          <h1>Assignment 5</h1>
 
           <div class="article-style">
             
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
+<div id="TOC">
 
-<div id="course-project---25-pts" class="section level2">
-<h2>Course Project - <strong>25 pts</strong></h2>
-<p><em>Due May 12th by 11:59 pm</em></p>
 </div>
-<div id="project-details" class="section level1">
-<h1>Project Details</h1>
-<p>The goal of this project is to do an analysis from start to finish. The study can come from data/project you are already working on (for a thesis or project) or you can design a brand new analysis on a topic that you are interested in. For this project, you will find some data you are interested in, analyze the data, and do a short writeup of the methods and results. The main prerequisite is that the analysis should be conducted in R.</p>
-<div id="project-length" class="section level2">
-<h2>Project Length</h2>
-<p>The length of these will likely vary, but I envision this to be in the 3 to 8 page range.</p>
+
+<p><strong>User Created Functions and Bootstrap</strong>: <em>20 pts</em></p>
+<p>Due: <em>May 7th, 2021</em> - No penalty for late submissions, but due no later than <em>May 7th</em>.</p>
+<hr />
+<p>For this assignment, you will write your own user functions to perform a bootstrap. The assignment will guide you through elements to include and functions to look into to create the function for the bootstrap. Note, we have not specifically covered the bootstrap in this course, therefore, if elements are not clear, please reach out for assistance.</p>
+<p>Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a <strong>2 pt</strong> penalty will apply.</p>
+<div id="bootstrap-procedure" class="section level1">
+<h1>Bootstrap Procedure</h1>
+<ol style="list-style-type: decimal">
+<li>First, we treat the sample data as fixed and as the population of interest. For this reason, we hope the original sample data collected is representative of the population of interest.</li>
+<li>Generate a random sample of the same size as the original sample, with replacement, from the sample data.</li>
+<li>Compute a statistic of interest. This could be a statistic (i.e., mean, median) or fit a statistical model.</li>
+<li>Repeat steps 2 and 3 many times.</li>
+<li>Visualize or compute descriptive statistics about the multiple statistics of interest computed from step 3.</li>
+</ol>
 </div>
-<div id="statistical-output" class="section level2">
-<h2>Statistical Output</h2>
-<p>Do <strong>NOT</strong> include raw output from R in the final paper (e.g. do not include output directly from <code>summary()</code>). Rather, include statistics or figures you wish to include in formatted tables or directly in the text. Raw statistical output from R will result in a 10 point grade reduction.</p>
+<div id="code-to-run-prior-to-starting-the-assignment." class="section level1">
+<h1>Code to run prior to starting the assignment.</h1>
+<p>To keep track of the bootstrap procedure, let’s add some IDs to the individual penguins from the <code>penguins</code> data.</p>
+<pre class="r"><code>library(palmerpenguins)
+library(tidyverse)
+
+penguins &lt;- penguins %&gt;%
+  mutate(penguin_id = 1:n())</code></pre>
 </div>
-</div>
-<div id="things-to-include" class="section level1">
-<h1>Things to include</h1>
-<p>Below is a list of things to include in your writeup:</p>
-<ul>
-<li><p>Brief literature review – discuss why this topic interests you and any gaps in the literature. This is not intended to be a true literature review, I’m envisioning a few paragraphs giving a very broad overview, paying more attention to gaps in knowledge.</p></li>
-<li><p>State your research question(s)</p></li>
-<li><p>Plan out the methods to answer the research question(s). Talk about the dependent and independent variables, the analysis you are going to conduct, the sample and population, and hypotheses you are testing.</p></li>
-<li><p>Report descriptive statistics (graphical and/or summary statistics). Talk about the distribution of the variables and interesting observations that came about from a descriptive analysis. For example, there may be discussion of missing data, extreme values that needed to be removed, variation across groups, or descriptive differences in location across groups.</p></li>
-<li><p>Now perform your analysis. Make sure to talk about assumptions and if they were met for the method you performed. Report the results of the test in statistical terms.</p></li>
-<li><p>Include at least one graphic summarizing the results of the inferential method you used to answer the research question.</p></li>
-<li><p>Lastly, discuss the research conclusions. This may include how the results may impact practice, policy, or basic knowledge on the topic generally. Think about any limitations this study may have had and how this study may benefit the knowledge of the topic you are studying.</p></li>
-<li><p>Please include a write up document (e.g. Word, HTML, PDF) and also include your analysis scripts (e.g. R script or Rmd) when uploading the final assignment to ICON.</p></li>
-</ul>
+<div id="questions" class="section level1">
+<h1>Questions</h1>
+<ol style="list-style-type: decimal">
+<li><p>Create a function that generates a random sample, with replacement, from the original data, <code>penguins</code> from the palmerpenguins package. More specifically, create a function that accomplishes step 2 from the bootstrap procedure discussion above. Exploring the <code>sample_n()</code> function may be helpful for this question. For this question, provide the code for the bootstrap function you created and also show the first few rows of the bootstrapped data when you run the function once. The <code>head()</code> function may be helpful to show just the first few rows. <strong>3 pts</strong></p></li>
+<li><p>From a single bootstrap (i.e., using your function from #1), verify that the sampling with replacement is occurring. Use the <code>penguin_id</code> attribute created from the code used prior to starting the assignment to show that sampling with replacement is working properly. What would you expect if sampling with replacement is working? <strong>2 pts</strong></p></li>
+<li><p>Given the function created in #1, let’s add a function argument to this user created function. Add a function argument that allows users to control whether sampling with replacement or without replacement is performed. For this question, the function code is sufficient. <strong>3 pts</strong></p></li>
+<li><p>Verify that the function argument created in #3 is working properly by running the function specifying the argument to do the sampling with and without replacement. Use the <code>penguin_id</code> attribute created from the code used prior to starting the assignment to show that the function argument is working properly. What difference in the output helps to show that the function argument is working properly? <strong>2 pts</strong></p></li>
+<li><p>Add an argument that follows branching logic to implement different statistics to be computed to fulfill step #3 of the bootstrap procedures above. You can use any type of statistics you wish in this step, but to simplify this step, compute the statistics for a single continuous attribute from the <code>penguins</code> data (you can chose the attribute you are most interested in). This would make use of the <code>if()</code> and <code>else()</code> functions discussed in the user written functions portion of the course. The code is sufficient for this question. Note, make sure your function returns the statistic of interest. <strong>3 pts</strong></p></li>
+<li><p>Verify that the branching logic and different statistics are working properly from step #5. Run the function for each branch of the function to confirm that different statistics are being computed. <strong>2 pts</strong></p></li>
+<li><p>Replicate the bootstrap procedure many times using the following general structure:</p></li>
+</ol>
+<pre class="r"><code>map_dbl(1:num_reps, function_name, your_function_arguments)</code></pre>
+<p>where <code>num_reps</code> are the number of bootstrap replications, <code>function_name</code> is the name of your function you created as part of this assignment, and <code>your_function_arguments</code> are the function arguments you may need to pass. You may not need to pass any function arguments to the function above. Note, if your function returns a data frame, you may need to replace the <code>map_dbl()</code> function above with <code>map_dfr()</code>.</p>
+<p>For this question, pick two different number of bootstrap replications and save those two objects. Just the code is sufficient for this question. <strong>1 pt</strong></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Visualize the bootstrap results for both number of bootstrap replications chosen in #7 using a histogram, density curve, violin plot, boxplot, or some other similar visualization to explore the distribution of the bootstrapped statistic. Are there any differences in the two distributions based on the different number of replications chosen? Why may these differences be showing up? Which number of replications would be more defensible in your opinion? <strong>4 pts</strong></li>
+</ol>
 </div>
 
           </div>
@@ -969,7 +986,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/assignments/project/project-proposal/" rel="next">Course Project Proposal</a>
+    <a href="/assignments/assignment/assignment4/" rel="next">Assignment 4</a>
   </div>
   
   
@@ -980,7 +997,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Feb 19, 2021</p>
+          <p>Last updated on Mar 29, 2021</p>
 
           
 

@@ -188,5 +188,126 @@ mean(y)&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
+    <item>
+      <title>Assignment 4</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment4/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment4/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Inferential Statistics with R&lt;/strong&gt;: &lt;em&gt;10 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Due: &lt;em&gt;April 19th, 2021&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 7th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;In this assignment, you will explore research questions from an inferential framework using R. The analyses will be more open ended and will likely contain data preparation steps as well. Please turn in the source file (the .Rmd) file as well as the compiled version (html). Create a new .Rmd file for this assignment. If a question asks for code or there is particular elements of code you’d like to share, you can definitely include those in the final compiled version, but please limit those sections to specific elements rather than long chunks of code. Long chunks of code are best left for the Rmd document.&lt;/p&gt;
+&lt;p&gt;The data for this assignment can be found on GitHub and ICON and is named “cal-fire-9-10-2020”, &lt;a href=&#34;https://github.com/lebebr01/statthink/blob/master/data-raw/cal-fire-9-10-2020.csv&#34;&gt;data on GitHub&lt;/a&gt;. A description of the variables is also provided on ICON. Use this data to explore the questions below. Note, the questions below will guide you through the research questions. You do not need to answer the research questions explicitly, instead you can focus on the specific questions, but keeping the overall research questions in mind may be helpful as you complete the assignment.&lt;/p&gt;
+&lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
+&lt;div id=&#34;research-questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Research Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Is there evidence that the number of fires has increased in more recent years?&lt;/li&gt;
+&lt;li&gt;Is there evidence that the number of acres burned has increased for fires in more recent years?&lt;/li&gt;
+&lt;li&gt;Does month help explain variation in the number of acres burned over and above the year of the fire?&lt;/li&gt;
+&lt;li&gt;When the number of days the fire has burned in added to the model, are year or month the fire started still useful predictors?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Using text processing, create a new variables in the data that represents the year and month the fire started. The code is sufficient for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Explore the number of fires and number of acres the fires have burned related to research questions 1 through 3 above. Is there evidence of differences over years or months? Use specific statistics or figure to support your statements. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Based on your descriptive analysis, are there any data points that are extreme values or outliers that you feel should be removed from this analysis? Discuss briefly, why you feel these values may impact the analysis and should therefore be removed. Be as specific as you can why any values should or should not be removed. If you identify data that are suspect, remove them from further analysis (i.e. use filter to remove the values). &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fit a model to attempt to answer the second and third research questions. Summarize briefly the results from the models with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process. Note, consider carefully the best approach on how to include month and year in your models (i.e., continuous vs factor type variables).
+&lt;em&gt;Note, please do not include the output from the &lt;code&gt;summary()&lt;/code&gt; function in your answer, instead pull out relevant information from the output to include in your description.&lt;/em&gt; &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check assumptions for the models from #4. Does there appear to be problems with meeting statistical assumptions? Provide rationale for why or why not. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a new variable that represents the length of time a fire burned. This can be created by using the &lt;code&gt;difftime()&lt;/code&gt; function within R. Look at the help page to try to figure out how this function can compute differences in two dates. Returning the code for this question is sufficient, but this variable will be used in the next question, so be sure to save it as a new variable to your data. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fit another model to attempt to answer the fourth research question. Summarize briefly the results from the model with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process.&lt;br /&gt;
+&lt;em&gt;Note, please do not include the output from the &lt;code&gt;summary()&lt;/code&gt; function in your answer, instead pull out relevant information from the output to include in your description.&lt;/em&gt; &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Finally, create a graphic that summarizes the results from your final model that you feel fits the data the best (i.e. this could be the model from #4 or #7). Discuss why you picked this model and describe why this figure does a good job of showing the takeaway message. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Turning Tables into Graphics with R&lt;/strong&gt;: &lt;em&gt;10 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Read the article &lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/published/dodhia.pdf&#34;&gt;Let’s Practice What We Preach: Turning Tables Into Graphs&lt;/a&gt;. In this article, Gelman, Pasarica, and Dodhia discuss the benefits of a graph instead of a table to succintly summarize statistical results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find a published table showing descriptive or inferential statistic results. Provide a copy of the table (a screen shot is fine for this purpose). &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Provide a brief (a few sentences) discussion of the message the table is attempting to convey from the original article. Do you feel the table is a good way to convey this information (discuss the strengths and weaknesses of using the table for this purpose) &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Turn the table from #1 above into a publication quality graphic using R. Ensure that this graphic conveys the same purpose as the original table. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a different from the figure created in #3 above, and make an interactive graphic that attempts to convey the same message as the original table. Note, this figure should be an entirely different figure from that in #3. For example, if you created a bar chart in #3, create something other than a bar chart for this question. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Briefly discuss whether you feel the graphs convey the message better or worse than the original table. Use specific examples from the table/graph and recommendations from the article in your discussion. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which figure do you feel does the best job in sharing the original purpose of the table? Be specific in your discussion. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Take the data from the original table, to do this you may need to create an Excel file or use the function &lt;code&gt;data.frame()&lt;/code&gt; to import the data from the original table. Use the &lt;code&gt;kable()&lt;/code&gt; function and &lt;code&gt;kableExtra&lt;/code&gt; package to create a reproducible table that looks as close as possible to the original table. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assignment 5</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;User Created Functions and Bootstrap&lt;/strong&gt;: &lt;em&gt;20 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Due: &lt;em&gt;May 7th, 2021&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 7th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;For this assignment, you will write your own user functions to perform a bootstrap. The assignment will guide you through elements to include and functions to look into to create the function for the bootstrap. Note, we have not specifically covered the bootstrap in this course, therefore, if elements are not clear, please reach out for assistance.&lt;/p&gt;
+&lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
+&lt;div id=&#34;bootstrap-procedure&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bootstrap Procedure&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;First, we treat the sample data as fixed and as the population of interest. For this reason, we hope the original sample data collected is representative of the population of interest.&lt;/li&gt;
+&lt;li&gt;Generate a random sample of the same size as the original sample, with replacement, from the sample data.&lt;/li&gt;
+&lt;li&gt;Compute a statistic of interest. This could be a statistic (i.e., mean, median) or fit a statistical model.&lt;/li&gt;
+&lt;li&gt;Repeat steps 2 and 3 many times.&lt;/li&gt;
+&lt;li&gt;Visualize or compute descriptive statistics about the multiple statistics of interest computed from step 3.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-to-run-prior-to-starting-the-assignment.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code to run prior to starting the assignment.&lt;/h1&gt;
+&lt;p&gt;To keep track of the bootstrap procedure, let’s add some IDs to the individual penguins from the &lt;code&gt;penguins&lt;/code&gt; data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(palmerpenguins)
+library(tidyverse)
+
+penguins &amp;lt;- penguins %&amp;gt;%
+  mutate(penguin_id = 1:n())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Create a function that generates a random sample, with replacement, from the original data, &lt;code&gt;penguins&lt;/code&gt; from the palmerpenguins package. More specifically, create a function that accomplishes step 2 from the bootstrap procedure discussion above. Exploring the &lt;code&gt;sample_n()&lt;/code&gt; function may be helpful for this question. For this question, provide the code for the bootstrap function you created and also show the first few rows of the bootstrapped data when you run the function once. The &lt;code&gt;head()&lt;/code&gt; function may be helpful to show just the first few rows. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From a single bootstrap (i.e., using your function from #1), verify that the sampling with replacement is occurring. Use the &lt;code&gt;penguin_id&lt;/code&gt; attribute created from the code used prior to starting the assignment to show that sampling with replacement is working properly. What would you expect if sampling with replacement is working? &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Given the function created in #1, let’s add a function argument to this user created function. Add a function argument that allows users to control whether sampling with replacement or without replacement is performed. For this question, the function code is sufficient. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Verify that the function argument created in #3 is working properly by running the function specifying the argument to do the sampling with and without replacement. Use the &lt;code&gt;penguin_id&lt;/code&gt; attribute created from the code used prior to starting the assignment to show that the function argument is working properly. What difference in the output helps to show that the function argument is working properly? &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add an argument that follows branching logic to implement different statistics to be computed to fulfill step #3 of the bootstrap procedures above. You can use any type of statistics you wish in this step, but to simplify this step, compute the statistics for a single continuous attribute from the &lt;code&gt;penguins&lt;/code&gt; data (you can chose the attribute you are most interested in). This would make use of the &lt;code&gt;if()&lt;/code&gt; and &lt;code&gt;else()&lt;/code&gt; functions discussed in the user written functions portion of the course. The code is sufficient for this question. Note, make sure your function returns the statistic of interest. &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Verify that the branching logic and different statistics are working properly from step #5. Run the function for each branch of the function to confirm that different statistics are being computed. &lt;strong&gt;2 pts&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Replicate the bootstrap procedure many times using the following general structure:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;map_dbl(1:num_reps, function_name, your_function_arguments)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;code&gt;num_reps&lt;/code&gt; are the number of bootstrap replications, &lt;code&gt;function_name&lt;/code&gt; is the name of your function you created as part of this assignment, and &lt;code&gt;your_function_arguments&lt;/code&gt; are the function arguments you may need to pass. You may not need to pass any function arguments to the function above. Note, if your function returns a data frame, you may need to replace the &lt;code&gt;map_dbl()&lt;/code&gt; function above with &lt;code&gt;map_dfr()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For this question, pick two different number of bootstrap replications and save those two objects. Just the code is sufficient for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Visualize the bootstrap results for both number of bootstrap replications chosen in #7 using a histogram, density curve, violin plot, boxplot, or some other similar visualization to explore the distribution of the bootstrapped statistic. Are there any differences in the two distributions based on the different number of replications chosen? Why may these differences be showing up? Which number of replications would be more defensible in your opinion? &lt;strong&gt;4 pts&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
