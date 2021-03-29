@@ -808,6 +808,14 @@
 
   <li class="active"><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
 
+
+
+  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
+
+
+
+  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
+
       
     
 
@@ -1039,7 +1047,22 @@ summary(afqt_alt2)</code></pre>
 <pre class="r"><code>library(titanic)
 
 titanic &lt;- bind_rows(titanic_test,
-                     titanic_train)</code></pre>
+                     titanic_train)
+head(titanic)</code></pre>
+<pre><code>##   PassengerId Pclass                                         Name    Sex  Age
+## 1         892      3                             Kelly, Mr. James   male 34.5
+## 2         893      3             Wilkes, Mrs. James (Ellen Needs) female 47.0
+## 3         894      2                    Myles, Mr. Thomas Francis   male 62.0
+## 4         895      3                             Wirz, Mr. Albert   male 27.0
+## 5         896      3 Hirvonen, Mrs. Alexander (Helga E Lindqvist) female 22.0
+## 6         897      3                   Svensson, Mr. Johan Cervin   male 14.0
+##   SibSp Parch  Ticket    Fare Cabin Embarked Survived
+## 1     0     0  330911  7.8292              Q       NA
+## 2     1     0  363272  7.0000              S       NA
+## 3     0     0  240276  9.6875              Q       NA
+## 4     0     0  315154  8.6625              S       NA
+## 5     1     1 3101298 12.2875              S       NA
+## 6     0     0    7538  9.2250              S       NA</code></pre>
 <p>Suppose we were interested in fitting a model that predicted whether a passenger survived or not. Using <code>lm</code> is not appropriate as the dependent variable is not continuous, rather it is dichotomous. Using logistic regression is more appropriate here.</p>
 <pre class="r"><code>surv_mod &lt;- glm(Survived ~ factor(Pclass) + Fare + Sex + Age, 
                 data = titanic, 
@@ -1127,6 +1150,12 @@ head(prob_mod, n = 15)</code></pre>
     <a href="/rcode/model-assumptions/" rel="next">Model Assumptions</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/reproducible-tables/" rel="prev">Reproducible Tables</a>
+  </div>
   
 </div>
 
