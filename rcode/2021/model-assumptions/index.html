@@ -1,0 +1,1316 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Model Assumptions">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/2021/model-assumptions/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/2021/model-assumptions/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/2021/model-assumptions/">
+  <meta property="og:title" content="Model Assumptions | PSQF 6250">
+  <meta property="og:description" content="Model Assumptions"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-03-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-03-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Model Assumptions | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/rcode/2021/">R Syntax</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/rcode/2021/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_import/">Data Import</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_joins/">Joining Data</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/factors/">Factors</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/strings/">Working with Character Strings</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-intro/">Model Introduction</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-part2/">Building Upon Linear Models</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/adv-model/">Advanced Modeling Topics</a></li>
+
+
+
+  <li class="active"><a href="/rcode/2021/model-assumptions/">Model Assumptions</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/misc-model/">Miscellaneous Modeling Topics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/reproducible-tables/">Reproducible Tables</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/interactive-graphics/">Interactive Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/user-functions/">User Created Functions</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/rcode/2022/">R Syntax</a>
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Model Assumptions</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>I want to spend a little bit of time talking about model assumptions. These are important and should be checked for any analysis. The following packages will be used for this set of notes.</p>
+<pre class="r"><code>library(modelr)
+library(broom)
+library(forcats)
+library(tidyverse)</code></pre>
+<p>We are also going to use this model from the advanced model section to explore model assumptions.</p>
+<pre class="r"><code>heights2 &lt;- heights %&gt;%
+  mutate(
+    marital_comb = fct_recode(marital,
+          &#39;Other&#39; = &#39;separated&#39;,
+          &#39;Other&#39; = &#39;widowed&#39;
+    )
+  )
+
+afqt_mod &lt;- lm(afqt ~ marital_comb + height, data = heights2)
+summary(afqt_mod)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ marital_comb + height, data = heights2)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -53.150 -22.517  -4.248  22.097  78.355 
+## 
+## Coefficients:
+##                       Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)          -28.99932    5.67144  -5.113 3.25e-07 ***
+## marital_combmarried   16.13531    0.96385  16.741  &lt; 2e-16 ***
+## marital_combOther     -4.63978    1.50160  -3.090  0.00201 ** 
+## marital_combdivorced   6.75490    1.11278   6.070 1.35e-09 ***
+## height                 0.89847    0.08329  10.787  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27.78 on 6739 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.08467,    Adjusted R-squared:  0.08413 
+## F-statistic: 155.8 on 4 and 6739 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div id="plot-function-with-model-object" class="section level2">
+<h2><code>plot</code> function with model object</h2>
+<p>One of the nicest features when model building within R, is that many diagnostic plots are very accessible using the <code>plot</code> function. For example:</p>
+<pre class="r"><code>plot(afqt_mod)</code></pre>
+<p><img src="/rcode/2021/model-assumptions_files/figure-html/diag_plots-1.png" width="672" /><img src="/rcode/2021/model-assumptions_files/figure-html/diag_plots-2.png" width="672" /><img src="/rcode/2021/model-assumptions_files/figure-html/diag_plots-3.png" width="672" /><img src="/rcode/2021/model-assumptions_files/figure-html/diag_plots-4.png" width="672" /></p>
+<p>These plots are shown one at a time in an interactive R session, but allow you to check many common assumptions such as normal residuals, linearity, homogeneity of variance, and even leverage.</p>
+<p>You can see from these figures that there is quite a bit to be desired from our model. First, the residuals are not normally distributed (very heavy tails) and more problematic is that the residuals have a trend to them. This suggests that we are missing an important variable in the model.</p>
+<p>Suppose we add some additional variables to the model keeping the model additive. Note, I am also mean centering many of the continuous variables to ease interpretation slightly.</p>
+<pre class="r"><code>heights2 &lt;- heights2 %&gt;%
+  mutate(income2 = ifelse(income == 0, .001, income),
+         height2 = height - mean(height, na.rm = TRUE),
+         education2 = education - mean(education, na.rm = TRUE),
+         weight2 = weight - mean(weight, na.rm = TRUE),
+         log_income = log(income2))
+afqt_alt &lt;- lm(afqt ~ marital_comb + height2 + education2 + 
+                 log_income + weight2, data = heights2)
+summary(afqt_alt)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ marital_comb + height2 + education2 + log_income + 
+##     weight2, data = heights2)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -80.466 -16.515  -2.036  16.088 101.730 
+## 
+## Coefficients:
+##                       Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)          32.645765   0.717463  45.502  &lt; 2e-16 ***
+## marital_combmarried   9.312248   0.802952  11.598  &lt; 2e-16 ***
+## marital_combOther    -2.537031   1.231340  -2.060   0.0394 *  
+## marital_combdivorced  4.790976   0.913836   5.243 1.63e-07 ***
+## height2               0.781474   0.077526  10.080  &lt; 2e-16 ***
+## education2            5.911616   0.111848  52.854  &lt; 2e-16 ***
+## log_income            0.395176   0.038720  10.206  &lt; 2e-16 ***
+## weight2              -0.027669   0.007074  -3.911 9.27e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 22.57 on 6637 degrees of freedom
+##   (361 observations deleted due to missingness)
+## Multiple R-squared:  0.3969, Adjusted R-squared:  0.3963 
+## F-statistic:   624 on 7 and 6637 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>plot(afqt_alt)</code></pre>
+<p><img src="/rcode/2021/model-assumptions_files/figure-html/diag2-1.png" width="672" /><img src="/rcode/2021/model-assumptions_files/figure-html/diag2-2.png" width="672" /><img src="/rcode/2021/model-assumptions_files/figure-html/diag2-3.png" width="672" /><img src="/rcode/2021/model-assumptions_files/figure-html/diag2-4.png" width="672" /></p>
+<p>We could continue to model this variable by including additional predictors or interactions between our current predictors to attempt to remove this strong trend in the residuals. I’m going to stop here however and move on to another topic.</p>
+</div>
+<div id="exploring-individual-residuals" class="section level2">
+<h2>Exploring individual residuals</h2>
+<p>Evaluating all of the residuals in a single step using the <code>plot</code> function can be useful initially to explore model quality. However, eventually it is useful to explore residuals for specific values to explore why these are large.</p>
+<p>There are a few options to do this, one uses the broom package, the other uses the modelr package. I show both below.</p>
+<pre class="r"><code>aug_afqt &lt;- augment(afqt_alt)
+aug_afqt</code></pre>
+<pre><code>## # A tibble: 6,645 × 13
+##    .rownames  afqt marital_comb height2 education2 log_income weight2 .fitted
+##    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 1          6.84 married       -7.10      -0.218       9.85  -33.3     39.9
+##  2 2         49.4  married        2.90      -3.22       10.5   -32.3     30.2
+##  3 3         99.4  married       -2.10       2.78       11.6     6.70    61.1
+##  4 4         44.0  married       -4.10       0.782      10.6     8.70    47.3
+##  5 5         59.7  married       -1.10       0.782      11.2     1.70    50.1
+##  6 6         98.8  divorced       0.896      4.78       11.5    11.7     70.6
+##  7 7         82.3  married        6.90       2.78       -6.91   36.7     60.0
+##  8 8         50.3  divorced      -3.10      -1.22       11.2   -28.3     33.0
+##  9 9         89.7  divorced       1.90      -1.22       11.0   -26.3     36.8
+## 10 10        96.0  divorced       1.90      -0.218      11.9     5.70    42.2
+## # … with 6,635 more rows, and 5 more variables: .resid &lt;dbl&gt;, .hat &lt;dbl&gt;,
+## #   .sigma &lt;dbl&gt;, .cooksd &lt;dbl&gt;, .std.resid &lt;dbl&gt;</code></pre>
+<pre class="r"><code>height_resid &lt;- heights2 %&gt;%
+  add_residuals(afqt_alt) %&gt;%
+  add_predictions(afqt_alt)
+height_resid</code></pre>
+<pre><code>## # A tibble: 7,006 × 16
+##    income height weight   age marital sex   education  afqt marital_comb income2
+##     &lt;int&gt;  &lt;dbl&gt;  &lt;int&gt; &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt;
+##  1  19000     60    155    53 married fema…        13  6.84 married      1.9 e+4
+##  2  35000     70    156    51 married fema…        10 49.4  married      3.5 e+4
+##  3 105000     65    195    52 married male         16 99.4  married      1.05e+5
+##  4  40000     63    197    54 married fema…        14 44.0  married      4   e+4
+##  5  75000     66    190    49 married male         14 59.7  married      7.5 e+4
+##  6 102000     68    200    49 divorc… fema…        18 98.8  divorced     1.02e+5
+##  7      0     74    225    48 married male         16 82.3  married      1   e-3
+##  8  70000     64    160    54 divorc… fema…        12 50.3  divorced     7   e+4
+##  9  60000     69    162    55 divorc… male         12 89.7  divorced     6   e+4
+## 10 150000     69    194    54 divorc… male         13 96.0  divorced     1.5 e+5
+## # … with 6,996 more rows, and 6 more variables: height2 &lt;dbl&gt;,
+## #   education2 &lt;dbl&gt;, weight2 &lt;dbl&gt;, log_income &lt;dbl&gt;, resid &lt;dbl&gt;, pred &lt;dbl&gt;</code></pre>
+<p>The benefit to the <code>augment</code> function from the broom package is that it includes more information. The main benefit fo the <code>add_residuals</code> function from the modelr pacakge is that it includes all of the original data, not just those variables included in the final model. Therefore if you are fitting a model and want to explore trends in residuals based on other data characteristics not currently in the model, using the <code>add_residuals</code> function would likely be better for this use.</p>
+<div id="filtering-and-plotting-residuals" class="section level3">
+<h3>Filtering and Plotting Residuals</h3>
+<p>Now that we have these in a data frame, we could easily plot or filter residuals to explore cases in which the model is not adequatly fitting the dependent variable. For example, maybe we want to explore residuals greater than 50 in absolute value. This can easily be done with dplyr and the <code>filter</code> function.</p>
+<pre class="r"><code>filter(height_resid, abs(resid) &gt; 50)</code></pre>
+<pre><code>## # A tibble: 113 × 16
+##    income height weight   age marital sex   education  afqt marital_comb income2
+##     &lt;int&gt;  &lt;dbl&gt;  &lt;int&gt; &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt;
+##  1  60000     69    162    55 divorc… male         12  89.7 divorced      6  e+4
+##  2 150000     69    194    54 divorc… male         13  96.0 divorced      1.5e+5
+##  3  45000     69    240    53 married male         12  98.8 married       4.5e+4
+##  4      0     66    195    50 married fema…        14  99.2 married       1  e-3
+##  5  93000     68    182    48 divorc… male         12  86.9 divorced      9.3e+4
+##  6  43000     64    145    51 divorc… fema…        12  94.8 divorced      4.3e+4
+##  7  52000     72    230    52 married male         12  93.1 married       5.2e+4
+##  8  35000     59    165    49 divorc… fema…        12  80.0 divorced      3.5e+4
+##  9  85000     61    140    55 married fema…        18  15.7 married       8.5e+4
+## 10      0     69    186    55 separa… fema…        12  88.8 Other         1  e-3
+## # … with 103 more rows, and 6 more variables: height2 &lt;dbl&gt;, education2 &lt;dbl&gt;,
+## #   weight2 &lt;dbl&gt;, log_income &lt;dbl&gt;, resid &lt;dbl&gt;, pred &lt;dbl&gt;</code></pre>
+<p>You can also plot residuals directly or compared to other predictors.</p>
+<pre class="r"><code>ggplot(height_resid, aes(resid)) + 
+  geom_histogram() + 
+  theme_bw() + 
+  xlab(&quot;Residuals&quot;)</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## Warning: Removed 361 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/rcode/2021/model-assumptions_files/figure-html/hist_resid-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(height_resid, aes(resid, education2)) + 
+  geom_point(size = 3) + 
+  geom_smooth(size = 1, se = FALSE) + 
+  xlab(&quot;Residuals&quot;) + 
+  ylab(&quot;Education (mean centered)&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<pre><code>## Warning: Removed 361 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 361 rows containing missing values (geom_point).</code></pre>
+<p><img src="/rcode/2021/model-assumptions_files/figure-html/residual_predictor-1.png" width="672" /></p>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/2021/adv-model/" rel="next">Advanced Modeling Topics</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/2021/misc-model/" rel="prev">Miscellaneous Modeling Topics</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Mar 17, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

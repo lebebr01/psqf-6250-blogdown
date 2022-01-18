@@ -1,0 +1,1573 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="User Created Functions">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/2021/user-functions/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/2021/user-functions/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/2021/user-functions/">
+  <meta property="og:title" content="User Created Functions | PSQF 6250">
+  <meta property="og:description" content="User Created Functions"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-03-29T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>User Created Functions | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/rcode/2021/">R Syntax</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/rcode/2021/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_import/">Data Import</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_joins/">Joining Data</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/factors/">Factors</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/strings/">Working with Character Strings</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-intro/">Model Introduction</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-part2/">Building Upon Linear Models</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/adv-model/">Advanced Modeling Topics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-assumptions/">Model Assumptions</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/misc-model/">Miscellaneous Modeling Topics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/reproducible-tables/">Reproducible Tables</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/interactive-graphics/">Interactive Graphics</a></li>
+
+
+
+  <li class="active"><a href="/rcode/2021/user-functions/">User Created Functions</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/rcode/2022/">R Syntax</a>
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>User Created Functions</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="when-to-create-a-function" class="section level2">
+<h2>When to create a function</h2>
+<p>Functions can be particularly useful when you are duplicating significant portions of your code. For example, perhaps you want to standardize various quantitative variables by subtracting each variable by the mean and dividing by the standard deviation. Below is the mathematics behind this operation.</p>
+<p><span class="math display">\[
+standardizedvar = \frac{var - mean(var)}{sd(var)}
+\]</span></p>
+<p>Let’s use the midwest data that comes with the tidyverse to explore what code like this would look like.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+## ✓ tibble  3.1.6     ✓ dplyr   1.0.7
+## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
+## ✓ readr   2.1.1     ✓ forcats 0.5.1</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>midwest</code></pre>
+<pre><code>## # A tibble: 437 × 28
+##      PID county  state  area poptotal popdensity popwhite popblack popamerindian
+##    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;         &lt;int&gt;
+##  1   561 ADAMS   IL    0.052    66090      1271.    63917     1702            98
+##  2   562 ALEXAN… IL    0.014    10626       759      7054     3496            19
+##  3   563 BOND    IL    0.022    14991       681.    14477      429            35
+##  4   564 BOONE   IL    0.017    30806      1812.    29344      127            46
+##  5   565 BROWN   IL    0.018     5836       324.     5264      547            14
+##  6   566 BUREAU  IL    0.05     35688       714.    35157       50            65
+##  7   567 CALHOUN IL    0.017     5322       313.     5298        1             8
+##  8   568 CARROLL IL    0.027    16805       622.    16519      111            30
+##  9   569 CASS    IL    0.024    13437       560.    13384       16             8
+## 10   570 CHAMPA… IL    0.058   173025      2983.   146506    16559           331
+## # … with 427 more rows, and 19 more variables: popasian &lt;int&gt;, popother &lt;int&gt;,
+## #   percwhite &lt;dbl&gt;, percblack &lt;dbl&gt;, percamerindan &lt;dbl&gt;, percasian &lt;dbl&gt;,
+## #   percother &lt;dbl&gt;, popadults &lt;int&gt;, perchsd &lt;dbl&gt;, percollege &lt;dbl&gt;,
+## #   percprof &lt;dbl&gt;, poppovertyknown &lt;int&gt;, percpovertyknown &lt;dbl&gt;,
+## #   percbelowpoverty &lt;dbl&gt;, percchildbelowpovert &lt;dbl&gt;, percadultpoverty &lt;dbl&gt;,
+## #   percelderlypoverty &lt;dbl&gt;, inmetro &lt;int&gt;, category &lt;chr&gt;</code></pre>
+<p>Suppose we wanted to standardize using the above equation, for the variables, <code>poptotal</code>, <code>popdensity</code>, <code>popadults</code>, and <code>perccollege</code>. Let’s do the computation for the variable <code>poptotal</code> first.</p>
+<pre class="r"><code>midwest %&gt;%
+  mutate(stand_poptotal = (poptotal - mean(poptotal)) / sd(poptotal)) %&gt;%
+  select(poptotal, stand_poptotal)</code></pre>
+<pre><code>## # A tibble: 437 × 2
+##    poptotal stand_poptotal
+##       &lt;int&gt;          &lt;dbl&gt;
+##  1    66090         -0.101
+##  2    10626         -0.287
+##  3    14991         -0.272
+##  4    30806         -0.219
+##  5     5836         -0.303
+##  6    35688         -0.203
+##  7     5322         -0.305
+##  8    16805         -0.266
+##  9    13437         -0.277
+## 10   173025          0.258
+## # … with 427 more rows</code></pre>
+<p>How would we move alter the code to do the computation for subsequent columns? You could rewrite the code, but I would likely copy and paste the code and adapt the pieces to the new column. Here I did it for the additional three variables.</p>
+<pre class="r"><code>midwest %&gt;%
+  mutate(stand_poptotal = (poptotal - mean(poptotal)) / sd(poptotal),
+         stand_popdensity = (popdensity - mean(popdensity)) / sd(popdensity),
+         stand_popadults = (popadults - mean(popadults)) / sd(popadults),
+         stand_percollege = (percollege - mean(poptotal)) / sd(percollege)) %&gt;%
+  select(poptotal, popdensity, popadults, percollege, 
+         stand_poptotal, stand_popdensity, stand_popadults, stand_percollege)</code></pre>
+<pre><code>## # A tibble: 437 × 8
+##    poptotal popdensity popadults percollege stand_poptotal stand_popdensity
+##       &lt;int&gt;      &lt;dbl&gt;     &lt;int&gt;      &lt;dbl&gt;          &lt;dbl&gt;            &lt;dbl&gt;
+##  1    66090      1271.     43298       19.6         -0.101          -0.238 
+##  2    10626       759       6724       11.2         -0.287          -0.305 
+##  3    14991       681.      9669       17.0         -0.272          -0.315 
+##  4    30806      1812.     19272       17.3         -0.219          -0.168 
+##  5     5836       324.      3979       14.5         -0.303          -0.362 
+##  6    35688       714.     23444       18.9         -0.203          -0.311 
+##  7     5322       313.      3583       11.9         -0.305          -0.363 
+##  8    16805       622.     11323       16.2         -0.266          -0.323 
+##  9    13437       560.      8825       14.1         -0.277          -0.331 
+## 10   173025      2983.     95971       41.3          0.258          -0.0149
+## # … with 427 more rows, and 2 more variables: stand_popadults &lt;dbl&gt;,
+## #   stand_percollege &lt;dbl&gt;</code></pre>
+<p>Explore the code, notice any problems? When I copied and pasted, I missed changing the mean calculation for the <code>percollege</code> variable. This issue can be particularly difficult to debug given that there are no errors in the code. We could save some code duplication by writing our own function. This can save on errors in copy and pasting or errors on data entry. Let’s write a function that implements this, focusing less on function specifics as that will come later.</p>
+<pre class="r"><code>standardize &lt;- function(x) {
+  mean_var &lt;- mean(x)
+  sd_var &lt;- sd(x)
+  
+  (x - mean_var) / sd_var
+}</code></pre>
+<p>We could then use this function, <code>standardize()</code> inside of the <code>mutate()</code> function.</p>
+<pre class="r"><code>midwest %&gt;%
+  mutate(stand_poptotal = standardize(poptotal),
+         stand_popdensity = standardize(popdensity),
+         stand_popadults = standardize(popadults),
+         stand_percollege = standardize(percollege)) %&gt;%
+  select(poptotal, popdensity, popadults, percollege, 
+         stand_poptotal, stand_popdensity, stand_popadults, stand_percollege)</code></pre>
+<pre><code>## # A tibble: 437 × 8
+##    poptotal popdensity popadults percollege stand_poptotal stand_popdensity
+##       &lt;int&gt;      &lt;dbl&gt;     &lt;int&gt;      &lt;dbl&gt;          &lt;dbl&gt;            &lt;dbl&gt;
+##  1    66090      1271.     43298       19.6         -0.101          -0.238 
+##  2    10626       759       6724       11.2         -0.287          -0.305 
+##  3    14991       681.      9669       17.0         -0.272          -0.315 
+##  4    30806      1812.     19272       17.3         -0.219          -0.168 
+##  5     5836       324.      3979       14.5         -0.303          -0.362 
+##  6    35688       714.     23444       18.9         -0.203          -0.311 
+##  7     5322       313.      3583       11.9         -0.305          -0.363 
+##  8    16805       622.     11323       16.2         -0.266          -0.323 
+##  9    13437       560.      8825       14.1         -0.277          -0.331 
+## 10   173025      2983.     95971       41.3          0.258          -0.0149
+## # … with 427 more rows, and 2 more variables: stand_popadults &lt;dbl&gt;,
+## #   stand_percollege &lt;dbl&gt;</code></pre>
+<p>Notice now we remove some, but not all of the duplication. Next week we will explore iteration in more detail that can remove this level of duplication.</p>
+<div id="your-turn" class="section level4">
+<h4>Your Turn</h4>
+<ol style="list-style-type: decimal">
+<li>There is an R function, <code>scale()</code>, that does this standardization. Use this to recreate the standardization above.</li>
+<li>Will the <code>standardize()</code> function above work when there are missing values? How could the function be adapted to work with missing values?</li>
+</ol>
+</div>
+<div id="conditional-summarise-or-mutate-statements" class="section level3">
+<h3>Conditional <code>summarise()</code> or <code>mutate()</code> statements</h3>
+<p>One thing I want to show briefly is if you are attempting to apply a particular function for data verification and there is a function already defined in R, <code>summarise_if()</code> or <code>mutate_if()</code> can be particularly useful. Take an example of wanting to calculate the mean of each numeric column, but the data has a mix of numeric and categorical variables. You could write multiple computations within <code>mutate()</code> or <code>summarise()</code>, but <code>summarise_if()</code> and <code>mutate_if()</code> can be particularly useful. Below is an example of this strategy with the mpg data from dplyr.</p>
+<pre class="r"><code>mpg</code></pre>
+<pre><code>## # A tibble: 234 × 11
+##    manufacturer model      displ  year   cyl trans drv     cty   hwy fl    class
+##    &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+##  1 audi         a4           1.8  1999     4 auto… f        18    29 p     comp…
+##  2 audi         a4           1.8  1999     4 manu… f        21    29 p     comp…
+##  3 audi         a4           2    2008     4 manu… f        20    31 p     comp…
+##  4 audi         a4           2    2008     4 auto… f        21    30 p     comp…
+##  5 audi         a4           2.8  1999     6 auto… f        16    26 p     comp…
+##  6 audi         a4           2.8  1999     6 manu… f        18    26 p     comp…
+##  7 audi         a4           3.1  2008     6 auto… f        18    27 p     comp…
+##  8 audi         a4 quattro   1.8  1999     4 manu… 4        18    26 p     comp…
+##  9 audi         a4 quattro   1.8  1999     4 auto… 4        16    25 p     comp…
+## 10 audi         a4 quattro   2    2008     4 manu… 4        20    28 p     comp…
+## # … with 224 more rows</code></pre>
+<p>Let’s calculate the mean of each numeric column with <code>summarise_if()</code>.</p>
+<pre class="r"><code>summarise_if(mpg, is.numeric, mean, na.rm = TRUE)</code></pre>
+<pre><code>## # A tibble: 1 × 5
+##   displ  year   cyl   cty   hwy
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  3.47 2004.  5.89  16.9  23.4</code></pre>
+<p>The <code>mutate_if()</code> function could be used if these values wanted to be saved to the data. Additional level of detail could be added by using <code>summarise_if()</code> and <code>group_by()</code> in tandem.</p>
+<pre class="r"><code>mpg %&gt;%
+  group_by(manufacturer) %&gt;%
+  summarise_if(is.numeric, mean, na.rm = TRUE)</code></pre>
+<pre><code>## # A tibble: 15 × 6
+##    manufacturer displ  year   cyl   cty   hwy
+##    &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 audi          2.54 2004.  5.22  17.6  26.4
+##  2 chevrolet     5.06 2005.  7.26  15    21.9
+##  3 dodge         4.38 2004.  7.08  13.1  17.9
+##  4 ford          4.54 2003.  7.2   14    19.4
+##  5 honda         1.71 2003   4     24.4  32.6
+##  6 hyundai       2.43 2004.  4.86  18.6  26.9
+##  7 jeep          4.58 2006.  7.25  13.5  17.6
+##  8 land rover    4.3  2004.  8     11.5  16.5
+##  9 lincoln       5.4  2002   8     11.3  17  
+## 10 mercury       4.4  2004.  7     13.2  18  
+## 11 nissan        3.27 2004.  5.54  18.1  24.6
+## 12 pontiac       3.96 2003.  6.4   17    26.4
+## 13 subaru        2.46 2004.  4     19.3  25.6
+## 14 toyota        2.95 2003.  5.12  18.5  24.9
+## 15 volkswagen    2.26 2003.  4.59  20.9  29.2</code></pre>
+<p>These can be great, simple ways to explore the data at a first inspection.</p>
+</div>
+</div>
+<div id="function-basics" class="section level2">
+<h2>Function basics</h2>
+<p>Every function has three basic components, a function name, a function definition (i.e. arguments), and the function specifics/computations or function body. The following code chunk attempts to show these basics.</p>
+<pre class="r"><code>function_name &lt;- function(argument1, argument2) {
+  
+  function_body
+  
+}</code></pre>
+<p>The <code>function()</code> function is used to define a new function. Inside the parentheses of this are where the function arguments are defined. The arguments can contain default values or can be unspecified, more details on this later. The function body is where the details of what the function is going to do is contained. From the previous function we created, the computation to standardize a variable was perfomed within the function body. Finally, the function name is specified just like naming any other object.</p>
+<div id="picking-a-function-name" class="section level3">
+<h3>Picking a Function Name</h3>
+<p>Functions names are an important step to think about for a bit at the beginning. A few general heuristics are useful to keep in mind when thinking about a function name.</p>
+<ol style="list-style-type: decimal">
+<li>Do not use a name from a function already defined within R. For example, avoid things like: <code>mean</code>, <code>c</code>, <code>t.test</code>, etc.</li>
+<li>Create a semi-descriptive name that isn’t too detailed. For example, function names like <code>f</code>, <code>s</code>, <code>tr</code>, etc are not descriptive enough to be useful. Also, better to avoid particularly long names like <code>standardize_variable</code>.</li>
+<li>If you define multiple functions, be consistent in their naming convention. If you use underscores, use them for all of your function names. If you like dots or titleCase be consistent.</li>
+</ol>
+</div>
+<div id="function-arguments" class="section level3">
+<h3>Function Arguments</h3>
+<p>Function arguments need to be named and I would recommend using similar heuristics to picking a function name. The only element that can be ignored is the first, you are able to reuse function arguments across functions. This would actually be encouraged across functions that are similar to ensure that the function arguments work similarly across the function.</p>
+<div id="arguments-with-default-values" class="section level4">
+<h4>Arguments with Default Values</h4>
+<p>Arguments in R can either have default values or can be left without default values. The big distinction to keep in mind when thinking about this is whether it is an argument that users should explicitly specify everytime (i.e. major user argument) or is an argument that users may only change on occasion and there is an obvious default that makes sense. For the former situation, I would only define the argument name with no default compared to the latter I would typically define a default value.</p>
+<p>Consider the <code>standardize()</code> function we defined previously.</p>
+<pre class="r"><code>standardize &lt;- function(x) {
+  mean_var &lt;- mean(x)
+  sd_var &lt;- sd(x)
+  
+  (x - mean_var) / sd_var
+}</code></pre>
+<p>Notice that the function argument, <code>x</code> here is just named it does not have a default value. This was the case where this argument was specified to be the variable to be standardized, therefore having a default value did not make sense. The first function arguments are commonly do not have default values.</p>
+<p>In a “Your Turn” section earlier, it was asked if this function would work with missing data. The short answer, is it would not, because the mean and sd would not be able to be calculated with missing values. For example, using the <code>nycflights13</code> package used earlier, we could show that when missing data are present, the function breaks (i.e. produces NA values).</p>
+<pre class="r"><code>library(nycflights13)
+
+flights %&gt;%
+  mutate(stand_arr_delay = standardize(arr_delay)) %&gt;%
+  select(arr_delay, stand_arr_delay)</code></pre>
+<pre><code>## # A tibble: 336,776 × 2
+##    arr_delay stand_arr_delay
+##        &lt;dbl&gt;           &lt;dbl&gt;
+##  1        11              NA
+##  2        20              NA
+##  3        33              NA
+##  4       -18              NA
+##  5       -25              NA
+##  6        12              NA
+##  7        19              NA
+##  8       -14              NA
+##  9        -8              NA
+## 10         8              NA
+## # … with 336,766 more rows</code></pre>
+<p>We could adapt this to include another function argument, that deals with how missing data should be handled.</p>
+<pre class="r"><code>standardize &lt;- function(x, na.rm = TRUE) {
+  mean_var &lt;- mean(x, na.rm = na.rm)
+  sd_var &lt;- sd(x, na.rm = na.rm)
+  
+  (x - mean_var) / sd_var
+}
+
+flights %&gt;%
+  mutate(stand_arr_delay = standardize(arr_delay)) %&gt;%
+  select(arr_delay, stand_arr_delay)</code></pre>
+<pre><code>## # A tibble: 336,776 × 2
+##    arr_delay stand_arr_delay
+##        &lt;dbl&gt;           &lt;dbl&gt;
+##  1        11          0.0920
+##  2        20          0.294 
+##  3        33          0.585 
+##  4       -18         -0.558 
+##  5       -25         -0.715 
+##  6        12          0.114 
+##  7        19          0.271 
+##  8       -14         -0.468 
+##  9        -8         -0.334 
+## 10         8          0.0247
+## # … with 336,766 more rows</code></pre>
+<p>This function can now handle missing values through the argument, <code>na.rm</code>, which defaults to the value of <code>TRUE</code> and since the default value is <code>TRUE</code>, the missing data are automatically removed when computing the mean and sd. We could change the default value explicitly when we call the function.</p>
+<pre class="r"><code>flights %&gt;%
+  mutate(stand_arr_delay = standardize(arr_delay, na.rm = FALSE)) %&gt;%
+  select(arr_delay, stand_arr_delay)</code></pre>
+<pre><code>## # A tibble: 336,776 × 2
+##    arr_delay stand_arr_delay
+##        &lt;dbl&gt;           &lt;dbl&gt;
+##  1        11              NA
+##  2        20              NA
+##  3        33              NA
+##  4       -18              NA
+##  5       -25              NA
+##  6        12              NA
+##  7        19              NA
+##  8       -14              NA
+##  9        -8              NA
+## 10         8              NA
+## # … with 336,766 more rows</code></pre>
+<p>Note here I used the same argument name, <code>na.rm</code>, as is found within the mean and sd functions by default. This was to ensure that they are familiar to many users already comfortable with these function names.</p>
+<p>Function arguments can also be specified as text strings, that will be discussed in more detail in the next section.</p>
+</div>
+</div>
+</div>
+<div id="conditional-functions" class="section level2">
+<h2>Conditional Functions</h2>
+<p>Conditional branching in functions are common, particularly when the functions attempt to do a few different things based on what the input values are. The general format for creating functions that use conditional logic are as follows:</p>
+<pre class="r"><code>if(some_condition) {
+  # do something
+} else {
+  # do something else
+}</code></pre>
+<p>This is an example of a branch with two different computations. For example, we could create a function that first calculates the skewness of a variable, if it is skewed returns the median otherwise computes the mean.</p>
+<pre class="r"><code>library(e1071)
+mean_median &lt;- function(variable, na.rm = TRUE) {
+  var_skew &lt;- skewness(variable, na.rm = na.rm)
+  
+  if(abs(var_skew) &gt; 2) {
+    descriptive &lt;- median(variable, na.rm = na.rm)
+  } else {
+    descriptive &lt;- mean(variable, na.rm = na.rm)
+  }
+  data.frame(skewness = var_skew, 
+             descriptive = descriptive)
+}</code></pre>
+<p>We could then use this function to calculate the statistic of interest for a few different variables.</p>
+<pre class="r"><code>mean_median(flights$arr_delay)</code></pre>
+<pre><code>##   skewness descriptive
+## 1 3.716783          -5</code></pre>
+<pre class="r"><code>mean_median(gss_cat$tvhours)</code></pre>
+<pre><code>##   skewness descriptive
+## 1 2.915875           2</code></pre>
+<pre class="r"><code>mean_median(diamonds$price)</code></pre>
+<pre><code>##   skewness descriptive
+## 1 1.618305      3932.8</code></pre>
+<p>Note here, that you need to name the variable explicitly, you can’t just do the following:</p>
+<pre class="r"><code>mean_median(arr_delay)</code></pre>
+<p>This is happening because the function is unable to find the variable, <code>arr_delay</code> as it does not know to look in the flights data. To rectify this you need to use the <code>$</code> notation shown above or other ways of telling the function which data to use to find the correct variable (e.g., <code>with()</code> would also be an option).</p>
+<div id="conditionals-based-on-function-arguments" class="section level4">
+<h4>Conditionals based on function arguments</h4>
+<p>You can also control flow of a function based on the arguments. For example, we could rewrite the <code>mean_median()</code> function to include another argument that lets users specify whether they want the mean or median computed rather than basing this decision on the skewness. This may look as follows.</p>
+<pre class="r"><code>mean_median_arg &lt;- function(variable, statistic = &#39;mean&#39;, na.rm = TRUE,
+                            skewness = FALSE) {
+  
+  if(statistic == &#39;mean&#39;) {
+    descriptive &lt;- mean(variable, na.rm = na.rm)
+  } else {
+    descriptive &lt;- median(variable, na.rm = na.rm)
+  }
+  
+  if(skewness) {
+    skewness_stat &lt;- skewness(variable, na.rm = na.rm)
+  } else {
+    skewness_stat &lt;- NA
+  }
+  data.frame(skewness_stat, descriptive)
+}</code></pre>
+<p>This function can now be tested using the variables we defined before:</p>
+<pre class="r"><code>mean_median_arg(flights$arr_delay)</code></pre>
+<pre><code>##   skewness_stat descriptive
+## 1            NA    6.895377</code></pre>
+<p>Notice by default, the skewness is not calculated as it is set to <code>FALSE</code> by default. The skewness could be returned by setting <code>skewness = TRUE</code>. The mean is also calculated by default, due to the default value of setting <code>statistic = 'mean'</code>. If we wanted the median instead, we can add this argument.</p>
+<pre class="r"><code>mean_median_arg(flights$arr_delay, statistic = &#39;median&#39;, skewness = TRUE)</code></pre>
+<pre><code>##   skewness_stat descriptive
+## 1      3.716783          -5</code></pre>
+<p>Note, the way the function was written, specifying anything other than <code>statistic = 'mean'</code> would compute the median.</p>
+<pre class="r"><code>mean_median_arg(flights$arr_delay, statistic = &#39;anything&#39;, skewness = TRUE)</code></pre>
+<pre><code>##   skewness_stat descriptive
+## 1      3.716783          -5</code></pre>
+<p>This behavior is not ideal, but may be okay for simple functions. If it would be a problem, some additional structure inside the function to test for the specific arguments that are possible could be defined and an error could be returned if the arguments specified are not appropriate.</p>
+</div>
+<div id="larger-conditional-branching" class="section level3">
+<h3>Larger conditional branching</h3>
+<p>Conditinoal branching can take on more than two levels as well. The general structure using nested if statements would look like the following.</p>
+<pre class="r"><code>if(some_condition) {
+  # do something computationally
+} else if (another_condition) {
+  # do another computation
+} else if (yet_another_condition) {
+  # do yet another computation
+} else {
+  # final computation
+}</code></pre>
+<p>In the example above, there are four different paths that the function can take depending on the function input. Commonly, this behavior would use a function argument defined as a character string to navigate through the different branches.</p>
+<p>For example, explore the following function.</p>
+<pre class="r"><code>desc_stats &lt;- function(variable, 
+                       statistic = c(&#39;sd&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;quantile&#39;)) {
+  
+  if(statistic == &#39;sd&#39;) {
+    sd(variable, na.rm = TRUE)
+  } else if(statistic == &#39;mean&#39;) {
+    mean(variable, na.rm = TRUE)
+  } else if(statistic == &#39;median&#39;) {
+    median(variable, na.rm = TRUE)
+  } else {
+    quantile(variable, na.rm = TRUE)
+  }
+}</code></pre>
+<p>We can then see what is returned for this function with different arguments.</p>
+<pre class="r"><code>desc_stats(flights$arr_delay, statistic = &#39;sd&#39;)</code></pre>
+<pre><code>## [1] 44.63329</code></pre>
+<pre class="r"><code>desc_stats(flights$arr_delay, statistic = &#39;mean&#39;)</code></pre>
+<pre><code>## [1] 6.895377</code></pre>
+<pre class="r"><code>desc_stats(flights$arr_delay, statistic = &#39;median&#39;)</code></pre>
+<pre><code>## [1] -5</code></pre>
+<pre class="r"><code>desc_stats(flights$arr_delay, statistic = &#39;quantile&#39;)</code></pre>
+<pre><code>##   0%  25%  50%  75% 100% 
+##  -86  -17   -5   14 1272</code></pre>
+<p>Note, when defined this way, the statistic argument must always be specified, but when including the argument values in the function definition, the function can be more specific.</p>
+<div id="using-switch-function" class="section level4">
+<h4>Using <code>switch()</code> function</h4>
+<p>This behavior can make functions difficult to read and debug, therefore using the <code>switch()</code> function can be a nice alternative if there are many different values for a function and each just calls a single function. We can redefine the previous function using <code>switch()</code>. For the <code>switch()</code> function, the argument name is passed as the first argument and subsequent arguments to <code>switch()</code> are function calls based on the text of the arguments (shown before the equal sign) followed by the function or computation to perform.</p>
+<pre class="r"><code>desc_stats_sw &lt;- function(variable, 
+                          statistic = c(&#39;sd&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;quantile&#39;)) {
+  
+  switch(statistic,
+         sd = sd(variable, na.rm = TRUE),
+         mean = mean(variable, na.rm = TRUE),
+         median = median(variable, na.rm = TRUE),
+         quantile = quantile(variable, na.rm = TRUE),
+         stop(&quot;Unknown statistics argument&quot;))
+}</code></pre>
+<p>Then to test the function.</p>
+<pre class="r"><code>desc_stats_sw(flights$arr_delay, statistic = &#39;sd&#39;)</code></pre>
+<pre><code>## [1] 44.63329</code></pre>
+<pre class="r"><code>desc_stats_sw(flights$arr_delay, statistic = &#39;mean&#39;)</code></pre>
+<pre><code>## [1] 6.895377</code></pre>
+<pre class="r"><code>desc_stats_sw(flights$arr_delay, statistic = &#39;median&#39;)</code></pre>
+<pre><code>## [1] -5</code></pre>
+<pre class="r"><code>desc_stats_sw(flights$arr_delay, statistic = &#39;quantile&#39;)</code></pre>
+<pre><code>##   0%  25%  50%  75% 100% 
+##  -86  -17   -5   14 1272</code></pre>
+<pre class="r"><code>desc_stats_sw(flights$arr_delay, statistic = &#39;variance&#39;)</code></pre>
+<pre><code>## Error in desc_stats_sw(flights$arr_delay, statistic = &quot;variance&quot;): Unknown statistics argument</code></pre>
+<p>Notice that now I also flagged the function to throw an error if an argument name does not match the <code>statistic</code> argument definition.</p>
+</div>
+</div>
+</div>
+<div id="thinking-about-returned-values" class="section level2">
+<h2>Thinking about Returned Values</h2>
+<p>I only want to touch briefly on return values. These are commonly found at the end of the function and I usually just print them out to the console. Here I show the first function, <code>standardize()</code> for reference. Notice that the last line of the function is the resulting statistic being printed. That is, the <code>(x - mean_var) / sd_var</code> was not saved to an object therefore would print directly to the console. This is the return value for the function.</p>
+<pre class="r"><code>standardize &lt;- function(x) {
+  mean_var &lt;- mean(x)
+  sd_var &lt;- sd(x)
+  
+  (x - mean_var) / sd_var
+}</code></pre>
+<div id="the-return-function" class="section level3">
+<h3>The <code>return()</code> function</h3>
+<p>The <code>return()</code> function is useful to be explicit about the value that is returned from the function. I use it when I have more than one returned value that occur at different points in the function definition. If the value I return is the last line of code, I don’t explicitly use return, however if there is another value earlier in the function that gets returned, I’m more likely to use <code>return()</code>.</p>
+<p>Here is an example of what explicit return functions would look like using a function we have already used and defined.</p>
+<pre class="r"><code>desc_stats &lt;- function(variable, 
+                       statistic = c(&#39;sd&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;quantile&#39;)) {
+  
+  if(statistic == &#39;sd&#39;) {
+    return(sd(variable, na.rm = TRUE))
+  } else if(statistic == &#39;mean&#39;) {
+    return(mean(variable, na.rm = TRUE))
+  } else if(statistic == &#39;median&#39;) {
+    return(median(variable, na.rm = TRUE))
+  } else {
+    return(quantile(variable, na.rm = TRUE))
+  }
+}</code></pre>
+<p>The function would behave the same as before, just now the values that could be returned are wrapped in the <code>return()</code> function. I leave it to you to test the function to ensure that the values are indeed the same.</p>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/2021/interactive-graphics/" rel="next">Interactive Graphics</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Mar 29, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

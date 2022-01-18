@@ -1,0 +1,1654 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Advanced Modeling Topics">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/rcode/2021/adv-model/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/2021/adv-model/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="PSQF 6250">
+  <meta property="og:url" content="https://psqf6250.brandonlebeau.org/rcode/2021/adv-model/">
+  <meta property="og:title" content="Advanced Modeling Topics | PSQF 6250">
+  <meta property="og:description" content="Advanced Modeling Topics"><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-03-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-03-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Advanced Modeling Topics | PSQF 6250</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">PSQF 6250</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#logistics"><span>Logistics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/rcode/"><span>R Code</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignments/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#people"><span>People</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
+      
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/rcode/">R Syntax</a></li>
+    
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/rcode/2021/">R Syntax</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/rcode/2021/graphics/">Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/r-basics/">R Basics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/ggplot2_extensions/">ggplot2 extensions</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/graphics-tips/">Graphics Tips</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_munging/">Data Manipulation</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/r_scripts/">R Scripts</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/eda/">Exploratory Data Analysis</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/projects/">R Projects -  RStudio</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_import/">Data Import</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_restructuring/">Data Restructuring</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/data_joins/">Joining Data</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/factors/">Factors</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/strings/">Working with Character Strings</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-intro/">Model Introduction</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-part2/">Building Upon Linear Models</a></li>
+
+
+
+  <li class="active"><a href="/rcode/2021/adv-model/">Advanced Modeling Topics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/model-assumptions/">Model Assumptions</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/misc-model/">Miscellaneous Modeling Topics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/reproducible-tables/">Reproducible Tables</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/interactive-graphics/">Interactive Graphics</a></li>
+
+
+
+  <li class=""><a href="/rcode/2021/user-functions/">User Created Functions</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/rcode/2022/">R Syntax</a>
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Advanced Modeling Topics</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>This section of notes will use the following packages.</p>
+<pre class="r"><code>library(modelr)
+library(broom)
+library(forcats)
+library(stringr)
+library(tidyverse)</code></pre>
+<div id="interactions" class="section level2">
+<h2>Interactions</h2>
+<p>Interactions are an important modeling concept that can greatly increase model fit, prediction accuracy, and explained variance. Interactions can be difficult to interpret, however, we will explore them in more detail here with particular attention to graphical displays of interactions and also exploring the design matrix for how interactions are included in the model fitting procedure.</p>
+<p>We will use the <code>heights</code> data from the modelr package to explore interactions. The primary interactions that we will explore are between two (or more) categorical predictors and also the interaction between a categorical predictor and a continuous predictor. Interpretations are similar between two continuous predictors as well.</p>
+<p>Here are the first few rows of the data:</p>
+<pre class="r"><code>heights</code></pre>
+<pre><code>## # A tibble: 7,006 × 8
+##    income height weight   age marital  sex    education  afqt
+##     &lt;int&gt;  &lt;dbl&gt;  &lt;int&gt; &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;      &lt;int&gt; &lt;dbl&gt;
+##  1  19000     60    155    53 married  female        13  6.84
+##  2  35000     70    156    51 married  female        10 49.4 
+##  3 105000     65    195    52 married  male          16 99.4 
+##  4  40000     63    197    54 married  female        14 44.0 
+##  5  75000     66    190    49 married  male          14 59.7 
+##  6 102000     68    200    49 divorced female        18 98.8 
+##  7      0     74    225    48 married  male          16 82.3 
+##  8  70000     64    160    54 divorced female        12 50.3 
+##  9  60000     69    162    55 divorced male          12 89.7 
+## 10 150000     69    194    54 divorced male          13 96.0 
+## # … with 6,996 more rows</code></pre>
+<p>Suppose we were interested in exploring the relationship between sex and afqt (armed forces qualifications test, in percentiles) and if this relationship is moderated by marital status. First, it may be useful to get a baseline to see the relationship between sex and afqt.</p>
+<pre class="r"><code>afqt_sex &lt;- lm(afqt ~ sex, data = heights)
+summary(afqt_sex)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ sex, data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -41.876 -26.034  -4.429  24.046  59.406 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  41.8760     0.5093  82.221   &lt;2e-16 ***
+## sexfemale    -1.2824     0.7074  -1.813   0.0699 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 29.03 on 6742 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.0004872,  Adjusted R-squared:  0.000339 
+## F-statistic: 3.287 on 1 and 6742 DF,  p-value: 0.06989</code></pre>
+<p>Notice that there is a small effect, which is not significant if using an alpha value of 0.05. Also, notice the extremely small r-square value here, this is actually a good finding, we would hope there would be no statistical differences between males and females on this qualifications test. Now lets start adding in marital status. We can do this as follows (Note, I have combined separated and widowed into a single category due to relatively small sample sizes):</p>
+<pre class="r"><code>heights &lt;- heights %&gt;%
+  mutate(
+    marital_comb = fct_recode(marital,
+          &#39;Other&#39; = &#39;separated&#39;,
+          &#39;Other&#39; = &#39;widowed&#39;
+    )
+  )
+afqt_sex_marital &lt;- lm(afqt ~ sex + marital_comb, data = heights)
+summary(afqt_sex_marital)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ sex + marital_comb, data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -47.957 -23.174  -4.386  22.389  74.002 
+## 
+## Coefficients:
+##                      Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)           31.7982     0.9093  34.970  &lt; 2e-16 ***
+## sexfemale             -0.6819     0.6869  -0.993 0.320829    
+## marital_combmarried   16.1587     0.9727  16.611  &lt; 2e-16 ***
+## marital_combOther     -5.5953     1.5186  -3.685 0.000231 ***
+## marital_combdivorced   6.2811     1.1232   5.592 2.33e-08 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 28.02 on 6739 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.069,  Adjusted R-squared:  0.06845 
+## F-statistic: 124.9 on 4 and 6739 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>This model only contains what are often referred to as main effects. Namely, these are only the additive effects of sex and marital variables. To get a sense as to what the design matrix looks like, we can use <code>model_matrix</code>.</p>
+<pre class="r"><code>model_matrix(heights, afqt ~ sex + marital_comb)</code></pre>
+<pre><code>## # A tibble: 6,744 × 5
+##    `(Intercept)` sexfemale marital_combmarried marital_combOth… marital_combdiv…
+##            &lt;dbl&gt;     &lt;dbl&gt;               &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1             1         1                   1                0                0
+##  2             1         1                   1                0                0
+##  3             1         0                   1                0                0
+##  4             1         1                   1                0                0
+##  5             1         0                   1                0                0
+##  6             1         1                   0                0                1
+##  7             1         0                   1                0                0
+##  8             1         1                   0                0                1
+##  9             1         0                   0                0                1
+## 10             1         0                   0                0                1
+## # … with 6,734 more rows</code></pre>
+<p>To add the interaction between the two variables (multiplicative effects), we can add one additional term to the <code>lm</code> function call.</p>
+<pre class="r"><code>interact_mod &lt;- lm(afqt ~ sex + marital_comb + sex:marital_comb, data = heights)
+summary(interact_mod)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ sex + marital_comb + sex:marital_comb, data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -47.981 -22.978  -4.336  22.488  75.275 
+## 
+## Coefficients:
+##                                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                     31.4205     1.1536  27.237  &lt; 2e-16 ***
+## sexfemale                        0.1564     1.7184   0.091    0.928    
+## marital_combmarried             16.5603     1.3273  12.477  &lt; 2e-16 ***
+## marital_combOther               -2.5872     2.4677  -1.048    0.294    
+## marital_combdivorced             6.2796     1.5814   3.971 7.24e-05 ***
+## sexfemale:marital_combmarried   -0.8856     1.9516  -0.454    0.650    
+## sexfemale:marital_combOther     -4.7414     3.1645  -1.498    0.134    
+## sexfemale:marital_combdivorced  -0.1494     2.2535  -0.066    0.947    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 28.02 on 6736 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.06936,    Adjusted R-squared:  0.0684 
+## F-statistic: 71.72 on 7 and 6736 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>There is also an <code>anova</code> function that gives more traditional anova and sum of squares information.</p>
+<pre class="r"><code>anova(interact_mod)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: afqt
+##                    Df  Sum Sq Mean Sq  F value  Pr(&gt;F)    
+## sex                 1    2769    2769   3.5267 0.06043 .  
+## marital_comb        3  389378  129793 165.3055 &lt; 2e-16 ***
+## sex:marital_comb    3    2058     686   0.8738 0.45380    
+## Residuals        6736 5288896     785                     
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>In this model, there are not actually any significant results for the interaction, but lets explore the design matrix to see exactly what is happening.</p>
+<pre class="r"><code>model_matrix(heights, afqt ~ sex + marital_comb + sex:marital_comb)</code></pre>
+<pre><code>## # A tibble: 6,744 × 8
+##    `(Intercept)` sexfemale marital_combmarried marital_combOth… marital_combdiv…
+##            &lt;dbl&gt;     &lt;dbl&gt;               &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1             1         1                   1                0                0
+##  2             1         1                   1                0                0
+##  3             1         0                   1                0                0
+##  4             1         1                   1                0                0
+##  5             1         0                   1                0                0
+##  6             1         1                   0                0                1
+##  7             1         0                   1                0                0
+##  8             1         1                   0                0                1
+##  9             1         0                   0                0                1
+## 10             1         0                   0                0                1
+## # … with 6,734 more rows, and 3 more variables:
+## #   sexfemale:marital_combmarried &lt;dbl&gt;, sexfemale:marital_combOther &lt;dbl&gt;,
+## #   sexfemale:marital_combdivorced &lt;dbl&gt;</code></pre>
+<p>This model specifically adds columns that literally are multiplications of other columns in the design matrix. This is why interactions are often depicted with the symbol “x”, e.g. marital x sex. R uses <code>:</code> as interactions. The interaction model can also be specified in an alternate more compact formula:</p>
+<pre class="r"><code>summary(lm(afqt ~ sex * marital_comb, data = heights))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ sex * marital_comb, data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -47.981 -22.978  -4.336  22.488  75.275 
+## 
+## Coefficients:
+##                                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                     31.4205     1.1536  27.237  &lt; 2e-16 ***
+## sexfemale                        0.1564     1.7184   0.091    0.928    
+## marital_combmarried             16.5603     1.3273  12.477  &lt; 2e-16 ***
+## marital_combOther               -2.5872     2.4677  -1.048    0.294    
+## marital_combdivorced             6.2796     1.5814   3.971 7.24e-05 ***
+## sexfemale:marital_combmarried   -0.8856     1.9516  -0.454    0.650    
+## sexfemale:marital_combOther     -4.7414     3.1645  -1.498    0.134    
+## sexfemale:marital_combdivorced  -0.1494     2.2535  -0.066    0.947    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 28.02 on 6736 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.06936,    Adjusted R-squared:  0.0684 
+## F-statistic: 71.72 on 7 and 6736 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Using the gss_cat data from the forcats package, fit a model that predicts age with marital status, partyid, and the interaction between the two.</li>
+<li>How well does this model fit?</li>
+<li>How is the intercept interpreted here?</li>
+<li>Do the results change when collapsing the partyid variable into the following three categories:
+<ul>
+<li>Republican</li>
+<li>Democrat</li>
+<li>Other</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="visualize-model-results" class="section level2">
+<h2>Visualize Model Results</h2>
+<p>When exploring model results, visualizing the model results is often more useful than looking at a table of coefficients. In addition, if the model is simply attempting to predict means (ANOVA), plotting often simply involves computing means for the different categories. This section will also explore how best to visualize interactions.</p>
+<p>If we simply would like to show the main effects from the model above predicting Armed Forces Qualifiactions Test Score with marital status and sex, we could calculate the means of these groups.</p>
+<pre class="r"><code>marital_means &lt;- heights %&gt;%
+  group_by(marital_comb) %&gt;%
+  summarise(avg_afqt = mean(afqt, na.rm = TRUE),
+            sd_afqt = sd(afqt, na.rm = TRUE), 
+            n = n()) %&gt;%
+  mutate(se_mean = sd_afqt/sqrt(n), 
+         group = &#39;Marital&#39;, 
+         levels = marital_comb) %&gt;%
+  ungroup() %&gt;%
+  dplyr::select(-marital_comb)
+sex_means &lt;- heights %&gt;%
+  group_by(sex) %&gt;%
+  summarise(avg_afqt = mean(afqt, na.rm = TRUE),
+            sd_afqt = sd(afqt, na.rm = TRUE), 
+            n = n()) %&gt;%
+  mutate(se_mean = sd_afqt/sqrt(n),
+         group = &#39;Sex&#39;, 
+         levels = sex) %&gt;%
+  ungroup() %&gt;%
+  dplyr::select(-sex)
+comb_means &lt;- bind_rows(marital_means, sex_means)
+comb_means</code></pre>
+<pre><code>## # A tibble: 6 × 6
+##   avg_afqt sd_afqt     n se_mean group   levels  
+##      &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;fct&gt;   
+## 1     31.5    27.7  1124   0.828 Marital single  
+## 2     47.6    29.1  3806   0.472 Marital married 
+## 3     25.7    24.1   527   1.05  Marital Other   
+## 4     37.7    26.6  1549   0.676 Marital divorced
+## 5     41.9    29.8  3402   0.511 Sex     male    
+## 6     40.6    28.3  3604   0.472 Sex     female</code></pre>
+<p>The effects can now be shown in a figure.</p>
+<pre class="r"><code>ggplot(comb_means, aes(avg_afqt, fct_reorder(levels, avg_afqt))) + 
+  geom_point(size = 3) + 
+  facet_grid(group ~ ., scales = &#39;free&#39;, space = &#39;free&#39;) + 
+  ylab(&quot;Groups&quot;) + 
+  xlab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/mean_fig-1.png" width="672" /></p>
+<p>Since we computed standard errors, we could also add error bars using <code>geom_errorbarh</code>.</p>
+<pre class="r"><code>ggplot(comb_means, aes(avg_afqt, fct_reorder(levels, avg_afqt))) + 
+  geom_point(size = 3) + 
+  geom_errorbarh(aes(xmin = avg_afqt - se_mean*2, xmax = avg_afqt + se_mean*2),
+                 height = 0) + 
+  facet_grid(group ~ ., scales = &#39;free&#39;, space = &#39;free&#39;) +
+  ylab(&quot;Groups&quot;) + 
+  xlab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/pointrange-1.png" width="672" /></p>
+<p>Plotting the interaction happens in a similar fashion. Namely, we will now calculate means by using both variables in a single <code>group_by</code> statement.</p>
+<pre class="r"><code>int_means &lt;- heights %&gt;%
+  group_by(marital_comb, sex) %&gt;%
+  summarise(avg_afqt = mean(afqt, na.rm = TRUE),
+            sd_afqt = sd(afqt, na.rm = TRUE), 
+            n = n()) %&gt;%
+  mutate(se_mean = sd_afqt/sqrt(n))</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;marital_comb&#39;. You can override using the `.groups` argument.</code></pre>
+<pre class="r"><code>int_means</code></pre>
+<pre><code>## # A tibble: 8 × 6
+## # Groups:   marital_comb [4]
+##   marital_comb sex    avg_afqt sd_afqt     n se_mean
+##   &lt;fct&gt;        &lt;fct&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
+## 1 single       male       31.4    28.2   624   1.13 
+## 2 single       female     31.6    27.3   500   1.22 
+## 3 married      male       48.0    29.8  1905   0.683
+## 4 married      female     47.3    28.5  1901   0.653
+## 5 Other        male       28.8    25.7   177   1.93 
+## 6 Other        female     24.2    23.1   350   1.24 
+## 7 divorced     male       37.7    27.7   696   1.05 
+## 8 divorced     female     37.7    25.7   853   0.879</code></pre>
+<p>These means should now match the last model from the previous lecture. We can now plot these directly.</p>
+<pre class="r"><code>ggplot(int_means, aes(avg_afqt, fct_reorder(marital_comb, avg_afqt), 
+                      shape = sex, linetype = sex, group = sex)) + 
+  geom_point(size = 3) + 
+  geom_line(size = 1) + 
+  ylab(&quot;Groups&quot;) + 
+  xlab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/int_plot-1.png" width="672" /></p>
+<p>Standard error bars can be shown here, but may complicate the figure too much.</p>
+<pre class="r"><code>ggplot(int_means, aes(avg_afqt, fct_reorder(marital_comb, avg_afqt), 
+                      shape = sex, linetype = sex, group = sex)) + 
+  geom_point(size = 3) + 
+  geom_line(size = 1) + 
+  geom_errorbarh(aes(xmin = avg_afqt - se_mean * 2, xmax = avg_afqt + se_mean * 2), 
+                 height = 0) +
+  ylab(&quot;Groups&quot;) + 
+  xlab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  theme_bw()</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/se_int-1.png" width="672" /></p>
+<div id="exercises-1" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Using the gss_cat data from the forcats package, fit a model that predicts age with marital status, partyid, and the interaction between the two.</li>
+<li>Create a figure that explores the interaction between the two variables.</li>
+<li>Add a third variable to the model, race. Include this as a main effect, plus interacting with the other variables.</li>
+</ol>
+</div>
+</div>
+<div id="interaction-between-continuous-and-categorical-predictors" class="section level2">
+<h2>Interaction between continuous and categorical predictors</h2>
+<p>Using again the heights data, suppose we wished to again predict the Armed Forces Qualifications Test score (afqt) with marital status and height. This can be done with the linear model.</p>
+<pre class="r"><code>summary(lm(afqt ~ marital_comb + height, data = heights))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ marital_comb + height, data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -53.150 -22.517  -4.248  22.097  78.355 
+## 
+## Coefficients:
+##                       Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)          -28.99932    5.67144  -5.113 3.25e-07 ***
+## marital_combmarried   16.13531    0.96385  16.741  &lt; 2e-16 ***
+## marital_combOther     -4.63978    1.50160  -3.090  0.00201 ** 
+## marital_combdivorced   6.75490    1.11278   6.070 1.35e-09 ***
+## height                 0.89847    0.08329  10.787  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27.78 on 6739 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.08467,    Adjusted R-squared:  0.08413 
+## F-statistic: 155.8 on 4 and 6739 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>You’ll notice here that the intercept is negative. Why is this negative? You can most easily see this by looking at a figure of the data. Note, here I am simply showing the dependent and the height variable ignoring the marital status, however, this will have a slightly different slope than the one above (Try it).</p>
+<pre class="r"><code>ggplot(heights, aes(x = height, y = afqt)) + 
+  geom_jitter(size = 2) + 
+  geom_abline(intercept = -26.02, slope = 1.002, size = 1, color = &#39;blue&#39;) + 
+  coord_cartesian(xlim = c(0, 90), ylim = c(-30, 105)) +
+  ylab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  xlab(&quot;Height&quot;) +
+  theme_bw()</code></pre>
+<pre><code>## Warning: Removed 262 rows containing missing values (geom_point).</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/trend-1.png" width="672" /></p>
+<p>It may be better to mean center the height variable.</p>
+<pre class="r"><code>summary(lm(afqt ~ marital_comb + I(height - mean(heights$height)), data = heights))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ marital_comb + I(height - mean(heights$height)), 
+##     data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -53.150 -22.517  -4.248  22.097  78.355 
+## 
+## Coefficients:
+##                                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                      31.29186    0.84798   36.90  &lt; 2e-16 ***
+## marital_combmarried              16.13531    0.96385   16.74  &lt; 2e-16 ***
+## marital_combOther                -4.63978    1.50160   -3.09  0.00201 ** 
+## marital_combdivorced              6.75490    1.11278    6.07 1.35e-09 ***
+## I(height - mean(heights$height))  0.89847    0.08329   10.79  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27.78 on 6739 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.08467,    Adjusted R-squared:  0.08413 
+## F-statistic: 155.8 on 4 and 6739 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Notice that the mean effects do not change, but rather just the location of the intercept. This is a traditional analysis of covariance model.</p>
+<p>Interactions are simple to add now, they follow the same syntax as the categorical predictors from above. For example, if we wanted to add an interaction between height and marital status, we could do this as follows.</p>
+<pre class="r"><code>summary(lm(afqt ~ marital_comb + I(height - mean(heights$height)) + 
+             marital_comb:I(height - mean(heights$height)), 
+           data = heights))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ marital_comb + I(height - mean(heights$height)) + 
+##     marital_comb:I(height - mean(heights$height)), data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -53.768 -22.664  -4.183  21.972  78.762 
+## 
+## Coefficients:
+##                                                       Estimate Std. Error
+## (Intercept)                                           31.32214    0.84911
+## marital_combmarried                                   16.08587    0.96531
+## marital_combOther                                     -4.58940    1.53070
+## marital_combdivorced                                   6.66304    1.11478
+## I(height - mean(heights$height))                       0.76180    0.20923
+## marital_combmarried:I(height - mean(heights$height))   0.22912    0.23745
+## marital_combOther:I(height - mean(heights$height))     0.21641    0.37137
+## marital_combdivorced:I(height - mean(heights$height)) -0.02469    0.27510
+##                                                       t value Pr(&gt;|t|)    
+## (Intercept)                                            36.888  &lt; 2e-16 ***
+## marital_combmarried                                    16.664  &lt; 2e-16 ***
+## marital_combOther                                      -2.998 0.002725 ** 
+## marital_combdivorced                                    5.977 2.39e-09 ***
+## I(height - mean(heights$height))                        3.641 0.000274 ***
+## marital_combmarried:I(height - mean(heights$height))    0.965 0.334624    
+## marital_combOther:I(height - mean(heights$height))      0.583 0.560092    
+## marital_combdivorced:I(height - mean(heights$height))  -0.090 0.928481    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27.79 on 6736 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.08494,    Adjusted R-squared:  0.08399 
+## F-statistic: 89.32 on 7 and 6736 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>or</p>
+<pre class="r"><code>summary(lm(afqt ~ marital_comb * I(height - mean(heights$height)), data = heights))</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = afqt ~ marital_comb * I(height - mean(heights$height)), 
+##     data = heights)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -53.768 -22.664  -4.183  21.972  78.762 
+## 
+## Coefficients:
+##                                                       Estimate Std. Error
+## (Intercept)                                           31.32214    0.84911
+## marital_combmarried                                   16.08587    0.96531
+## marital_combOther                                     -4.58940    1.53070
+## marital_combdivorced                                   6.66304    1.11478
+## I(height - mean(heights$height))                       0.76180    0.20923
+## marital_combmarried:I(height - mean(heights$height))   0.22912    0.23745
+## marital_combOther:I(height - mean(heights$height))     0.21641    0.37137
+## marital_combdivorced:I(height - mean(heights$height)) -0.02469    0.27510
+##                                                       t value Pr(&gt;|t|)    
+## (Intercept)                                            36.888  &lt; 2e-16 ***
+## marital_combmarried                                    16.664  &lt; 2e-16 ***
+## marital_combOther                                      -2.998 0.002725 ** 
+## marital_combdivorced                                    5.977 2.39e-09 ***
+## I(height - mean(heights$height))                        3.641 0.000274 ***
+## marital_combmarried:I(height - mean(heights$height))    0.965 0.334624    
+## marital_combOther:I(height - mean(heights$height))      0.583 0.560092    
+## marital_combdivorced:I(height - mean(heights$height))  -0.090 0.928481    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27.79 on 6736 degrees of freedom
+##   (262 observations deleted due to missingness)
+## Multiple R-squared:  0.08494,    Adjusted R-squared:  0.08399 
+## F-statistic: 89.32 on 7 and 6736 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>What do these coefficients mean however? This is best explained with a picture.</p>
+<pre class="r"><code>model_summary &lt;- augment(lm(afqt ~ marital_comb * I(height - mean(heights$height)), 
+                            data = heights))
+model_summary &lt;- rename(model_summary, &#39;height_center&#39; = `I(height - mean(heights$height))`)
+model_summary</code></pre>
+<pre><code>## # A tibble: 6,744 × 9
+##    .rownames  afqt marital_comb height_center .fitted     .hat .sigma    .cooksd
+##    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt;             &lt;I&lt;dbl&gt;&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+##  1 1          6.84 married             -7.10     40.4 0.00115    27.8    2.09e-4
+##  2 2         49.4  married              2.90     50.3 0.000390   27.8    4.39e-8
+##  3 3         99.4  married             -2.10     45.3 0.000360   27.8    1.70e-4
+##  4 4         44.0  married             -4.10     43.3 0.000576   27.8    4.33e-8
+##  5 5         59.7  married             -1.10     46.3 0.000301   27.8    8.70e-6
+##  6 6         98.8  divorced             0.896    38.6 0.000737   27.8    4.33e-4
+##  7 7         82.3  married              6.90     54.2 0.00100    27.8    1.28e-4
+##  8 8         50.3  divorced            -3.10     35.7 0.000976   27.8    3.37e-5
+##  9 9         89.7  divorced             1.90     39.4 0.000884   27.8    3.63e-4
+## 10 10        96.0  divorced             1.90     39.4 0.000884   27.8    4.59e-4
+## # … with 6,734 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
+<pre class="r"><code>ggplot(model_summary, aes(height_center, afqt)) + 
+  geom_jitter(alpha = .1) + 
+  geom_line(aes(x = height_center, y = .fitted, color = marital_comb),
+            size = 2) + 
+  ylab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  xlab(&quot;Height&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/augment-1.png" width="672" /></p>
+<p>The figure for the traditional ANCOVA model initially explored would look like:</p>
+<pre class="r"><code>model_summary &lt;- augment(lm(afqt ~ marital_comb + I(height - mean(heights$height)), 
+                            data = heights))
+model_summary &lt;- rename(model_summary, &#39;height_center&#39; = `I(height - mean(heights$height))`)
+model_summary</code></pre>
+<pre><code>## # A tibble: 6,744 × 9
+##    .rownames  afqt marital_comb height_center .fitted     .hat .sigma    .cooksd
+##    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt;             &lt;I&lt;dbl&gt;&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+##  1 1          6.84 married             -7.10     41.0 0.000753   27.8    2.29e-4
+##  2 2         49.4  married              2.90     50.0 0.000337   27.8    2.99e-8
+##  3 3         99.4  married             -2.10     45.5 0.000320   27.8    2.41e-4
+##  4 4         44.0  married             -4.10     43.7 0.000439   27.8    9.09e-9
+##  5 5         59.7  married             -1.10     46.4 0.000288   27.8    1.31e-5
+##  6 6         98.8  divorced             0.896    38.9 0.000684   27.8    6.38e-4
+##  7 7         82.3  married              6.90     53.6 0.000674   27.8    1.44e-4
+##  8 8         50.3  divorced            -3.10     35.3 0.000736   27.8    4.31e-5
+##  9 9         89.7  divorced             1.90     39.7 0.000716   27.8    4.63e-4
+## 10 10        96.0  divorced             1.90     39.7 0.000716   27.8    5.88e-4
+## # … with 6,734 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
+<pre class="r"><code>ggplot(model_summary, aes(height_center, afqt)) + 
+  geom_jitter(alpha = .1) + 
+  geom_line(aes(x = height_center, y = .fitted, color = marital_comb),
+            size = 2) + 
+  ylab(&quot;Average Armed Forces Qualification Score&quot;) + 
+  xlab(&quot;Height&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/rcode/2021/adv-model_files/figure-html/ancova_figure-1.png" width="672" /></p>
+<div id="exercises-2" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Using the gss_cat data from the forcats package, fit a model that predicts age with marital status, tvhours, and the interaction between the two.</li>
+<li>Interpret the parameter estimates from this model? Is there evidence that the interaction is adding to the model?</li>
+<li>Create a figure that explores the interaction between the two variables.</li>
+<li>Fit another model that predicts age with marital status, party affiliation, and tvhours (main effects) as well as the interaction between marital status and tvhours and party afilliation and tvhours (two second order interactions).</li>
+<li>Interpret the effects for this model.</li>
+</ol>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/rcode/2021/model-part2/" rel="next">Building Upon Linear Models</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/rcode/2021/model-assumptions/" rel="prev">Model Assumptions</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Mar 17, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
