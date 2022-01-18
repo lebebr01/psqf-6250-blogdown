@@ -19,7 +19,7 @@
       <guid>https://psqf6250.brandonlebeau.org/content/00-getting-started/</guid>
       <description>&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Review the syllabus&lt;/li&gt;
+&lt;li&gt;Review the &lt;a href=&#34;https://psqf6250.brandonlebeau.org/syllabus/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syllabus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Review the schedule&lt;/li&gt;
 &lt;li&gt;Install R (or use the RStudio Cloud link) - &lt;a href=&#34;https://notebooks.hpc.uiowa.edu/psqf62500exw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio Cloud&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Optionally, install RSTudio&lt;/li&gt;
