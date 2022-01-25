@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/">
 
@@ -754,71 +754,7 @@
 
 
 
-  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
-
-
-
   <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
-
-
-
-  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
-
-
-
-  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
-
-
-
-  <li class=""><a href="/rcode/factors/">Factors</a></li>
-
-
-
-  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
 
       
     
@@ -883,7 +819,7 @@
 library(ggplot2)
 
 penguins</code></pre>
-<pre><code>## # A tibble: 344 x 8
+<pre><code>## # A tibble: 344 × 8
 ##    species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
 ##    &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
 ##  1 Adelie  Torgersen           39.1          18.7               181        3750
@@ -904,20 +840,20 @@ ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_point(size = 4) + 
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/length-depth-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/length-depth-1.png" width="672" /></p>
 <p>Suppose we wished to add the species to this figure. More specifically, we want to add the species information to the points in the figure to label which points below to each penguin species. There are a few ways we could do this, we could do this by color, shape, or both.</p>
 <pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
   geom_point(size = 4, aes(color = species, shape = species)) + 
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/penguin-color-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/penguin-color-1.png" width="672" /></p>
 <p>Another potential option would be to add the text labels directly to the figure and not use color. Adding text to a figure is typically done with the <code>geom_text()</code> function.</p>
 <pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
   geom_point(size = 4, aes(shape = species)) + 
   geom_text(aes(label = species)) +
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/text-labels-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/text-labels-1.png" width="672" /></p>
 <p>Notice how the text labels overlap and the word is centered with the data point? This makes the plot unusable. We could fiddle with some settings to the <code>geom_text()</code> function, but the <em>ggrepel</em> package helps to fix this issue for us without having to guess and test. The primary difference in the code below is to use <code>geom_text_repel()</code> instead of <code>geom_text()</code>. Note, I shrunk the data point slightly in the following figure.</p>
 <pre class="r"><code>library(ggrepel)
 
@@ -926,7 +862,7 @@ ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_text_repel(aes(label = species)) +
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggrepel-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/ggrepel-1.png" width="672" /></p>
 <p>This isn’t actually better, but you can see the points were moved away. The issue here is that there are too many text labels to show in a single plot. I’m going to plot only 30 points, 10 from each species.</p>
 <pre class="r"><code>library(dplyr)
 set.seed(100)
@@ -939,7 +875,7 @@ penguins %&gt;%
   geom_text_repel(aes(label = species)) +
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggrepel-one-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/ggrepel-one-1.png" width="672" /></p>
 <p>To see exactly what was done, I’m going to generate the same figure using <code>geom_text()</code>.</p>
 <pre class="r"><code>set.seed(100)
 
@@ -951,7 +887,7 @@ penguins %&gt;%
   geom_text(aes(label = species)) +
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/text-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/text-1.png" width="672" /></p>
 <div id="geom_label_repel" class="section level3">
 <h3><code>geom_label_repel()</code></h3>
 <p>The <em>ggrepel</em> package only has two functions, the first we saw, <code>geom_text_repel()</code>. The second is <code>geom_label_repel()</code>. This works the same as <code>geom_text_repel()</code>, but creates a box around the text attribute.</p>
@@ -965,7 +901,7 @@ penguins %&gt;%
   geom_label_repel(aes(label = species)) +
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/label-repel-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/label-repel-1.png" width="672" /></p>
 </div>
 <div id="ggforce" class="section level3">
 <h3><em>ggforce</em></h3>
@@ -975,7 +911,7 @@ penguins %&gt;%
   geom_text_repel(aes(label = species)) +
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggrepel-toomany-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/ggrepel-toomany-1.png" width="672" /></p>
 <p>Way too many text labels and for this example, there would be too many duplicate text labels. Since there are only three species, other ways of showing the text and groups would be helpful. <em>ggforce</em> helps with this problem using a series of functions that enclose data within different shapes. These functions are <code>geom_mark_rect()</code>, <code>geom_mark_circle()</code>, <code>geom_mark_ellipse()</code>, and <code>geom_mark_hull()</code> for rectangle, circle, ellipse, and hulls respectively. For an example, let’s try <code>geom_mark_ellipse()</code> instead of the text labels.</p>
 <pre class="r"><code>library(ggforce)
 library(tidyr)
@@ -987,7 +923,7 @@ ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_point(size = 3, aes(shape = species)) + 
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggforce-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/ggforce-1.png" width="672" /></p>
 <p>To take this one step further, we can add a text label to this figure by setting a label aesthetic to <code>geom_mark_ellipse()</code>.</p>
 <pre class="r"><code>penguins %&gt;%
   drop_na(flipper_length_mm, bill_length_mm) %&gt;%
@@ -997,14 +933,14 @@ ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) +
   scale_x_continuous(&quot;Penguin Flipper Length (in mm)&quot;) +
   scale_y_continuous(&quot;Penguin Bill Length (in mm)&quot;, 
                      limits = c(25, 70))</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/ggforce-label-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/ggforce-label-1.png" width="672" /></p>
 <p>Another cool feature of <em>ggforce</em> is the ability to use something called facet zoom. Essentially, this will create a zoomed in element of a portion of your figure. For example, suppose we wanted to zoom in on the Gentoo penguins to explore their relationship between bill length and flipper length. This creates a picture in picture plotting effect.</p>
 <pre class="r"><code>ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
   geom_point(size = 3, aes(shape = species, color = species)) + 
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;) + 
   facet_zoom(x = species == &#39;Gentoo&#39;)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/facet-zoom-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/facet-zoom-1.png" width="672" /></p>
 </div>
 </div>
 <div id="patchwork" class="section level1">
@@ -1018,18 +954,18 @@ ggplot(., aes(x = flipper_length_mm, y = bill_length_mm)) +
   ylab(&quot;Penguin Bill Length (in mm)&quot;)
 
 p1 </code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-plots-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork-plots-1.png" width="672" /></p>
 <pre class="r"><code>p2 &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm)) + 
   geom_point(size = 4, aes(color = species, shape = species)) + 
   xlab(&quot;Penguin Flipper Length (in mm)&quot;) +
   ylab(&quot;Penguin Bill Depth (in mm)&quot;)
 p2</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork2-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork2-1.png" width="672" /></p>
 <p>Now, we will start by using the <code>+</code> operator to combine plots.</p>
 <pre class="r"><code>library(patchwork)
 
 p1 + p2</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-combine-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork-combine-1.png" width="672" /></p>
 <p>As you can see, the plots are combined directly as generated. In the above example, we’d likely want to only have one legend instead of two. We can do this by modifying the first figure to remove the legend.</p>
 <pre class="r"><code>p1 &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + 
   geom_point(size = 4, aes(color = species, shape = species)) + 
@@ -1038,12 +974,12 @@ p1 + p2</code></pre>
   theme(legend.position = &#39;none&#39;)
 
 p1 </code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/no-legend-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/no-legend-1.png" width="672" /></p>
 <pre class="r"><code>p1 + p2</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/combine-nolegend-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/combine-nolegend-1.png" width="672" /></p>
 <p>We can use the <code>/</code> operator to stack plots into multiple rows.</p>
 <pre class="r"><code>p1 / p2</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-ontop-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork-ontop-1.png" width="672" /></p>
 <p>The <code>+</code> operator has one issue with it, it tries to keep things in a square grid, similar to how <code>facet_wrap()</code> works. For more advanced layout, the <code>|</code> operator separates columns whereas we saw above that the <code>/</code> operator will stack plots. Combined with parentheses, you can get more advanced layouts. First, let’s add one more figure.</p>
 <pre class="r"><code>p3 &lt;- ggplot(drop_na(penguins, sex), 
              aes(x = sex, y = body_mass_g)) + 
@@ -1053,14 +989,14 @@ p1 </code></pre>
   theme(legend.position = &#39;none&#39;)
 
 p3</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patch-box-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patch-box-1.png" width="672" /></p>
 <pre class="r"><code>p3 | (p1 / p2)</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-combined-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork-combined-1.png" width="672" /></p>
 <p>Note, without parentheses, the figures may not turn out as you want.</p>
 <pre class="r"><code>p1 | p2 / p3</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-error-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork-error-1.png" width="672" /></p>
 <pre class="r"><code>(p1 + p2) / p3</code></pre>
-<p><img src="/rcode/ggplot2_extensions_files/figure-html/patchwork-correct-1.png" width="672" /></p>
+<p><img src="/rcode/2021/ggplot2_extensions_files/figure-html/patchwork-correct-1.png" width="672" /></p>
 </div>
 
           </div>

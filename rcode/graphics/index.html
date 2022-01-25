@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/graphics/">
 
@@ -754,71 +754,7 @@
 
 
 
-  <li class=""><a href="/rcode/data_munging/">Data Manipulation</a></li>
-
-
-
   <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
-
-
-
-  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
-
-
-
-  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
-
-
-
-  <li class=""><a href="/rcode/factors/">Factors</a></li>
-
-
-
-  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
 
       
     
@@ -867,7 +803,7 @@
 <pre class="r"><code>library(tidyverse)</code></pre>
 <p>Suppose we were interested in exploring the question: How does population density influence the percentage of the population with at least a college degree? Let’s explore these data closer.</p>
 <pre class="r"><code>midwest</code></pre>
-<pre><code>## # A tibble: 437 x 28
+<pre><code>## # A tibble: 437 × 28
 ##      PID county  state  area poptotal popdensity popwhite popblack popamerindian
 ##    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;         &lt;int&gt;
 ##  1   561 ADAMS   IL    0.052    66090      1271.    63917     1702            98
@@ -892,7 +828,7 @@
 <p>To plot these two variables from the <code>midwest</code> data, we will use the function <code>ggplot</code> and <code>geom_point</code> to add a layer of points. We will treat <code>popdensity</code> as the x variable and <code>percollege</code> as the y variable.</p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_point(mapping = aes(x = popdensity, y = percollege))</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/plot1-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/plot1-1.png" width="672" /></p>
 <div id="examples" class="section level3">
 <h3>Examples</h3>
 <ol style="list-style-type: decimal">
@@ -908,7 +844,7 @@
 <p>Aesthetics are a way to explore more complex interactions within the data. Particularly, from the above example, lets add in the state variable to the plot via an aesthetic.</p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_point(mapping = aes(x = popdensity, y = percollege, color = state))</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/aesthetic-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/aesthetic-1.png" width="672" /></p>
 <p>As you can see, we simply colored the points by the state they belong in. Does there appear to be a trend?</p>
 <div id="examples-1" class="section level3">
 <h3>Examples</h3>
@@ -923,10 +859,10 @@
 <p>Above, we specified a variable to an aesthetic, which is a common use of aesthetics. However, the aesthetics can also be assigned globally. Here are two examples using the first scatterplot created.</p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_point(mapping = aes(x = popdensity, y = percollege), color = &#39;pink&#39;)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/global_aes-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/global_aes-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_point(mapping = aes(x = popdensity, y = percollege), shape = 15)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/global_aes2-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/global_aes2-1.png" width="672" /></p>
 <p>These two plots changed the aesthetics for all of the points. Notice, the suttle difference between the code for these plots and that for the plot above. The placement of the aesthetic is crucial, if it is within the parentheses for <code>aes()</code> then it should be assigned a variable. If it is outside, as in the last two examples, it will define the aesthetic for all the data.</p>
 <div id="examples-2" class="section level3">
 <h3>Examples</h3>
@@ -945,12 +881,12 @@
 <pre class="r"><code>ggplot(data = midwest) +
   geom_point(mapping = aes(x = popdensity, y = percollege)) + 
   facet_grid(. ~ state)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/facets-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/facets-1.png" width="672" /></p>
 <p>You can also use <code>facet_wrap</code>.</p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_point(mapping = aes(x = popdensity, y = percollege)) + 
   facet_wrap(~ state)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/facet_wrap-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/facet_wrap-1.png" width="672" /></p>
 <div id="examples-3" class="section level3">
 <h3>Examples</h3>
 <ol style="list-style-type: decimal">
@@ -963,18 +899,18 @@
 <p><code>ggplot2</code> uses a grammar of graphics which makes it easy to switch different plot types (called geoms) once you are comfortable with the basic syntax. For example, how does the following plot differ from the scatterplot first generated above? What is similar?</p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_smooth(mapping = aes(x = popdensity, y = percollege))</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/smooth-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/smooth-1.png" width="672" /></p>
 <p>We can also do this plot by states</p>
 <pre class="r"><code>ggplot(data = midwest) +
   geom_smooth(mapping = aes(x = popdensity, y = percollege, linetype = state), 
               se = FALSE)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/smooth_states-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/smooth_states-1.png" width="672" /></p>
 <p>What about the code above gave me the different lines for each state? Note, I also removed the standard error shading from the plot as well.</p>
 <div id="examples-4" class="section level3">
 <h3>Examples</h3>
 <ol style="list-style-type: decimal">
 <li>It is possible to combine geoms, which we will do next, but try it first. Try to recreate this plot.
-<img src="/rcode/graphics_files/figure-html/combine-1.png" width="672" /></li>
+<img src="/rcode/2021/graphics_files/figure-html/combine-1.png" width="672" /></li>
 </ol>
 </div>
 </div>
@@ -985,18 +921,18 @@
   geom_point(aes(x = popdensity, y = percollege, color = state)) +
   geom_smooth(mapping = aes(x = popdensity, y = percollege, color = state), 
               se = FALSE)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/combine_geoms-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/combine_geoms-1.png" width="672" /></p>
 <p>A couple points about combining geoms, first, the order matters. In the above example, we called <code>geom_point</code> first, then <code>geom_smooth</code>. When plotting these data, the points will then be plotted first followed by the lines. Try flipping the order of the two geoms to see how the plot differs.</p>
 <p>We can also simplify this code to not duplicate typing:</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
   geom_point() +
   geom_smooth(se = FALSE)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/two_geoms-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/two_geoms-1.png" width="672" /></p>
 <div id="examples-5" class="section level3">
 <h3>Examples</h3>
 <ol style="list-style-type: decimal">
 <li>Can you recreate the following figure?
-<img src="/rcode/graphics_files/figure-html/differ_aes-1.png" width="672" /></li>
+<img src="/rcode/2021/graphics_files/figure-html/differ_aes-1.png" width="672" /></li>
 </ol>
 </div>
 </div>
@@ -1008,35 +944,35 @@
 <p>The introduction to plotting has been with two variables, but lets take a step back and focus on one variable with a bar chart.</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
   geom_bar()</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/bar-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/bar-1.png" width="672" /></p>
 <p>You can also easily add aesthetics this base plot as shown before.</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
   geom_bar(aes(fill = factor(inmetro)))</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/bar_fill-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/bar_fill-1.png" width="672" /></p>
 <p>A few additions can help interpretation of this plot:</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
   geom_bar(aes(fill = factor(inmetro)), position = &#39;fill&#39;)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/bar_fill2-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/bar_fill2-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = state)) + 
   geom_bar(aes(fill = factor(inmetro)), position = &#39;dodge&#39;)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>It is also possible to do a histrogram of a quantitative variable:</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity)) + 
   geom_histogram()</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/histogram-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/histogram-1.png" width="672" /></p>
 <p>You can adjust the binwidth directly:</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity)) + 
   geom_histogram(binwidth = 1000)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/binwidth-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/binwidth-1.png" width="672" /></p>
 </div>
 <div id="examples-6" class="section level3">
 <h3>Examples</h3>
 <ol style="list-style-type: decimal">
 <li><p>With more than two groups, histograms are difficult to interpret due to overlap. Instead, use the <code>geom_density</code> to create a density plot for <code>popdensity</code> for each state. The final plot should look similar to this:
-<img src="/rcode/graphics_files/figure-html/density-1.png" width="672" /></p></li>
+<img src="/rcode/2021/graphics_files/figure-html/density-1.png" width="672" /></p></li>
 <li><p>Using <code>geom_boxplot</code>, create boxplots with <code>popdensity</code> as the y variable and <code>state</code> as the x variable. Bonus: facet this plot by the variable <code>inmetro</code>.
-<img src="/rcode/graphics_files/figure-html/boxplot-1.png" width="672" /></p></li>
+<img src="/rcode/2021/graphics_files/figure-html/boxplot-1.png" width="672" /></p></li>
 </ol>
 </div>
 </div>
@@ -1051,21 +987,21 @@
   geom_point() + 
   scale_x_continuous(&quot;Population Density&quot;) + 
   scale_y_continuous(&quot;Percent College Graduates&quot;)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/axes_labels-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/axes_labels-1.png" width="672" /></p>
 <p>To change the legend title, the <code>scale_color_discrete</code> command can be used to adjust the color aesthetic and the variable is discrete.</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
   geom_point() + 
   scale_x_continuous(&quot;Population Density&quot;) + 
   scale_y_continuous(&quot;Percent College Graduates&quot;) + 
   scale_color_discrete(&quot;State&quot;)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/aes_labels-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/aes_labels-1.png" width="672" /></p>
 <p>we can also alter the breaks showing on the x-axis.</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
   geom_point() + 
   scale_x_continuous(&quot;Population Density&quot;, breaks = seq(0, 80000, 20000)) + 
   scale_y_continuous(&quot;Percent College Graduates&quot;) + 
   scale_color_discrete(&quot;State&quot;)</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/breaks_x-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/breaks_x-1.png" width="672" /></p>
 </div>
 </div>
 <div id="zoom-in-on-plot" class="section level2">
@@ -1077,7 +1013,7 @@
   scale_y_continuous(&quot;Percent College Graduates&quot;) + 
   scale_color_discrete(&quot;State&quot;) + 
   coord_cartesian(xlim = c(0, 15000))</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/zoom-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/zoom-1.png" width="672" /></p>
 <p>Note: This can also be achieved using the <code>xlim</code> argument to <code>scale_x_continuous</code> above, however this will cause some points to not be plotted. In this case it would not be a huge deal, however, if we plotted the smooth lines from before you can see the difference.</p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
   geom_point() + 
@@ -1086,7 +1022,7 @@
   scale_y_continuous(&quot;Percent College Graduates&quot;) + 
   scale_color_discrete(&quot;State&quot;) + 
   coord_cartesian(xlim = c(0, 15000))</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/zoom2-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/zoom2-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = midwest, mapping = aes(x = popdensity, y = percollege, color = state)) +
   geom_point() + 
   geom_smooth(se = FALSE) +
@@ -1095,7 +1031,7 @@
   scale_color_discrete(&quot;State&quot;)</code></pre>
 <pre><code>## Warning: Removed 16 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 16 rows containing missing values (geom_point).</code></pre>
-<p><img src="/rcode/graphics_files/figure-html/zoom3-1.png" width="672" /></p>
+<p><img src="/rcode/2021/graphics_files/figure-html/zoom3-1.png" width="672" /></p>
 </div>
 
           </div>
