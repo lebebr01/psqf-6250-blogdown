@@ -17,21 +17,32 @@
       <link>https://psqf6250.brandonlebeau.org/content/00-getting-started/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://psqf6250.brandonlebeau.org/content/00-getting-started/</guid>
-      <description>&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/00-getting-started/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;getting-started&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Started&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Review the &lt;a href=&#34;https://psqf6250.brandonlebeau.org/syllabus/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syllabus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Review the syllabus&lt;/li&gt;
 &lt;li&gt;Review the schedule&lt;/li&gt;
-&lt;li&gt;Install R (or use the RStudio Cloud link) - &lt;a href=&#34;https://notebooks.hpc.uiowa.edu/psqf62500exw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install R (or use the RStudio Cloud link) - &lt;a href=&#34;https://notebooks.hpc.uiowa.edu/psqf62500exw&#34;&gt;RStudio Cloud&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Optionally, install RSTudio&lt;/li&gt;
+&lt;li&gt;Optionally, complete the &lt;a href=&#34;https://forms.office.com/Pages/ResponsePage.aspx?id=lUXEG7qaw0-47HuUpVhv3F6BhfUHbvpKq3g5-YqONptUM09TWExZSDlWWTIwOFhERlM2TVRDT1RZQy4u&#34;&gt;course survey&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Weekly Videos&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Course Overview&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Course Overview
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=fe8f66c5-3c0c-455c-9bfc-acbb012df228&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Course Logistics
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=9d7ab154-e4c5-4591-96a7-acbc0165cf3c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=def9f5f8-1c93-4fcc-bbe1-ae21005a4c47&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;captions=false&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
-&lt;ul&gt;
-&lt;li&gt;Course Logistics&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -92,9 +103,19 @@
       <link>https://psqf6250.brandonlebeau.org/content/02-week2/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://psqf6250.brandonlebeau.org/content/02-week2/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/content/02-week2/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This week will explore data visualization using ggplot2 in R.&lt;/p&gt;
-&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objectives&lt;/h2&gt;
 &lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Classify different figure types by their usage&lt;/li&gt;
@@ -102,39 +123,89 @@
 &lt;li&gt;Evaluate if the figure is appropriate for a given research question&lt;/li&gt;
 &lt;li&gt;Create new figures&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;activities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Read R for Data Science Textbook - &lt;a href=&#34;https://r4ds.had.co.nz/introduction.html&#34;&gt;chapters 1 – 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Introduction to Graphics with R
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7b28ead3-bf45-4dc5-9a53-b3136b352bb1&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Adding Aesthetics
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=e7e34813-e60f-4565-a9bd-b524aad6667a&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;More geoms
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1742de3c-1324-4807-88cf-d482da9f51a4&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plot Customization
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3a7f5303-6a16-4413-887b-7270684cb598&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R Basics
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5bb9fae9-197f-4ac0-b42f-5f79a4d902a3&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Installing and Loading R Packages
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=9e553d54-f4e3-4d13-a2bd-acc5010f6fa4&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-syntax&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics/&#34;&gt;Graphics Syntax&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/r-basics/&#34;&gt;R Basics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://uiowa.instructure.com/courses/160427/quizzes/242627&#34;&gt;Quiz 1&lt;/a&gt; - Due February 7th, 2021&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 3</title>
+      <link>https://psqf6250.brandonlebeau.org/content/03-week3/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/03-week3/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The following week the course will continue discussing data visualization using ggplot2 by exploring a handful of useful extension packages that allows new functionality to be implemented. In addition to the new extension packages, some graphical creation tips will be shared.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Engage with the ggplot2 extension packages&lt;/li&gt;
+&lt;li&gt;Create new figures using the ggplot2 extension packages&lt;/li&gt;
+&lt;li&gt;Evaluate and implement appropriate data visualization standards&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;activities&#34;&gt;Activities&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Read R for Data Science Textbook - &lt;a href=&#34;https://r4ds.had.co.nz/introduction.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chapters 1 &amp;ndash; 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fundamentals of Data Visualization - &lt;a href=&#34;https://clauswilke.com/dataviz/proportional-ink.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chapters 17 &amp;ndash; 26&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Introduction to Graphics with R&lt;/li&gt;
+&lt;li&gt;ggrepel&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7b28ead3-bf45-4dc5-9a53-b3136b352bb1&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0743a168-dd6e-4f9a-aa28-ac3000188697&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
 &lt;ul&gt;
-&lt;li&gt;Adding Aesthetics&lt;/li&gt;
+&lt;li&gt;ggforce&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=e7e34813-e60f-4565-a9bd-b524aad6667a&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=97eb6cbd-ff10-4905-97f6-ac30001ca5a7&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
 &lt;ul&gt;
-&lt;li&gt;More geoms&lt;/li&gt;
+&lt;li&gt;patchwork&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1742de3c-1324-4807-88cf-d482da9f51a4&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=9cd7cdaf-dc31-4d60-9b9d-ac30001fed89&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
 &lt;ul&gt;
-&lt;li&gt;Plot Customization&lt;/li&gt;
+&lt;li&gt;Graphics Tips&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3a7f5303-6a16-4413-887b-7270684cb598&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
-&lt;ul&gt;
-&lt;li&gt;R Basics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5bb9fae9-197f-4ac0-b42f-5f79a4d902a3&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8acace65-abcc-4c5a-ad86-ac330112ba2b&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
 &lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Graphics Syntax&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/r-basics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/ggplot2_extensions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ggplot2 extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/graphics-tips/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Basics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://uiowa.instructure.com/courses/160427/quizzes/242627&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Quiz 1&lt;/a&gt; - Due January 30th, 2022&lt;/li&gt;
+&lt;li&gt;Quiz 2 - To come &amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
