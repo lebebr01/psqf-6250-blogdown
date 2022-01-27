@@ -26,7 +26,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Course Overview&lt;/li&gt;
+&lt;li&gt;Course Overview
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/LiaaXMzxTOw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://youtu.be/LiaaXMzxTOw&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LiaaXMzxTOw&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;ul&gt;
