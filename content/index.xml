@@ -181,7 +181,7 @@
     <item>
       <title>Week 4</title>
       <link>https://psqf6250.brandonlebeau.org/content/04-week4/</link>
-      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://psqf6250.brandonlebeau.org/content/04-week4/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This week the course will turn to skills that are often not covered much in a statistics course, working with data to create new variables, arrange data, select columns, or filter data. These will make use of the dplyr package from the tidyverse to explore verbs to manipulate data.&lt;/p&gt;
@@ -231,7 +231,9 @@
 &lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/r_scripts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Basics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
-&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/assignments/assignment/assignment1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Assignment 1&lt;/a&gt; - Due around February 13th&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
