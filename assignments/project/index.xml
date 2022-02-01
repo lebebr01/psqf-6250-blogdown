@@ -12,5 +12,68 @@
       <link>https://psqf6250.brandonlebeau.org/assignments/project/</link>
     </image>
     
+    <item>
+      <title>Course Project Proposal</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/project/project-proposal/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/project/project-proposal/</guid>
+      <description>&lt;h2 id=&#34;course-project-proposal---5-pts&#34;&gt;Course Project Proposal - &lt;strong&gt;5 pts&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Due April 3rd, by 11:59 pm&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A short, one page at most, description of the project you intend to complete for this course. This project proposal should include the following aspects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brief discussion of the data used&lt;/li&gt;
+&lt;li&gt;Statement of research question(s) to explore&lt;/li&gt;
+&lt;li&gt;The type of model used&lt;/li&gt;
+&lt;li&gt;Rationale for the model (i.e. why will this model help answer the research questions?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although not necessary, it is encouraged to discuss your project with the instructor prior to submission.&lt;/p&gt;
+&lt;p&gt;Please also reference the &lt;a href=&#34;https://psqf6250.brandonlebeau.org/assignments/project/project/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project requirements&lt;/a&gt; as you plan the project proposal.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Course Project</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/project/project/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/project/project/</guid>
+      <description>&lt;h2 id=&#34;course-project---25-pts&#34;&gt;Course Project - &lt;strong&gt;25 pts&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Due May 12th by 11:59 pm&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;project-details&#34;&gt;Project Details&lt;/h1&gt;
+&lt;p&gt;The goal of this project is to do an analysis from start to finish. The study can come from data/project you are already working on (for a thesis or project) or you can design a brand new analysis on a topic that you are interested in. For this project, you will find some data you are interested in, analyze the data, and do a short write-up of the methods and results. The main prerequisite is that the analysis should be conducted in R.&lt;/p&gt;
+&lt;h2 id=&#34;project-length&#34;&gt;Project Length&lt;/h2&gt;
+&lt;p&gt;The length of these will likely vary, but I envision this to be in the 3 to 8 page range.&lt;/p&gt;
+&lt;h2 id=&#34;statistical-output&#34;&gt;Statistical Output&lt;/h2&gt;
+&lt;p&gt;Do &lt;strong&gt;NOT&lt;/strong&gt; include raw output from R in the final paper (e.g. do not include output directly from &lt;code&gt;summary()&lt;/code&gt;). Rather, include statistics or figures you wish to include in formatted tables or directly in the text. Raw statistical output from R will result in a 10 point grade reduction.&lt;/p&gt;
+&lt;h1 id=&#34;things-to-include&#34;&gt;Things to include&lt;/h1&gt;
+&lt;p&gt;Below is a list of things to include in your write-up:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Brief literature review &amp;ndash; discuss why this topic interests you and any gaps in the literature. This is not intended to be a true literature review, I&amp;rsquo;m envisioning a few paragraphs giving a very broad overview, paying more attention to gaps in knowledge.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;State your research question(s)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plan out the methods to answer the research question(s). Talk about the dependent and independent variables, the analysis you are going to conduct, the sample and population, and hypotheses you are testing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Report descriptive statistics (graphical and/or summary statistics).  Talk about the distribution of the variables and interesting observations that came about from a descriptive analysis. For example, there may be discussion of missing data, extreme values that needed to be removed, variation across groups, or descriptive differences in location across groups.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now perform your analysis. Make sure to talk about assumptions and if they were met for the method you performed. Report the results of the test in statistical terms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Include at least one graphic summarizing the results of the inferential method you used to answer the research question.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lastly, discuss the research conclusions. This may include how the results may impact practice, policy, or basic knowledge on the topic generally. Think about any limitations this study may have had and how this study may benefit the knowledge of the topic you are studying.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Please include a write up document (e.g. Word, HTML, PDF) and also include your analysis scripts (e.g. R script or Rmd) when uploading the final assignment to ICON.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
