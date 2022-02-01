@@ -756,42 +756,6 @@
 
   <li class="active"><a href="/content/04-week4/">Week 4</a></li>
 
-
-
-  <li class=""><a href="/content/05-week5/">Week 5</a></li>
-
-
-
-  <li class=""><a href="/content/06-week6/">Week 6</a></li>
-
-
-
-  <li class=""><a href="/content/07-week7/">Week 7</a></li>
-
-
-
-  <li class=""><a href="/content/08-week8/">Week 8</a></li>
-
-
-
-  <li class=""><a href="/content/09-week9/">Week 9</a></li>
-
-
-
-  <li class=""><a href="/content/10-week10/">Week 10</a></li>
-
-
-
-  <li class=""><a href="/content/11-week11/">Week 11</a></li>
-
-
-
-  <li class=""><a href="/content/12-week12/">Week 12</a></li>
-
-
-
-  <li class=""><a href="/content/13-week13/">Week 13</a></li>
-
       
     
 
@@ -811,7 +775,16 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#weekly-videos">Weekly Videos</a></li>
+    <li><a href="#r-syntax">R Syntax</a></li>
+    <li><a href="#assignments">Assignments</a></li>
+  </ul>
+</nav>
 
       
     </div>
@@ -827,62 +800,55 @@
           <h1>Week 4</h1>
 
           <div class="article-style">
-            
-<script src="https://psqf6250.brandonlebeau.org/content/04-week4/index_files/header-attrs/header-attrs.js"></script>
-
-<div id="TOC">
-
-</div>
-
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
+            <h2 id="introduction">Introduction</h2>
 <p>This week the course will turn to skills that are often not covered much in a statistics course, working with data to create new variables, arrange data, select columns, or filter data. These will make use of the dplyr package from the tidyverse to explore verbs to manipulate data.</p>
-</div>
-<div id="objectives" class="section level2">
-<h2>Objectives</h2>
+<h2 id="objectives">Objectives</h2>
 <p>After completing this module, students will be able to:</p>
 <ul>
 <li>Explore benefits of script based analyses</li>
 <li>Create new data attributes</li>
 <li>Evaluate dplyr code for data manipulation</li>
 </ul>
-</div>
-<div id="activities" class="section level2">
-<h2>Activities</h2>
+<h2 id="activities">Activities</h2>
 <ul>
-<li>R for Data Science - <a href="https://r4ds.had.co.nz/transform.html">chapters 5 – 6</a></li>
+<li>R for Data Science - <a href="https://r4ds.had.co.nz/transform.html" target="_blank" rel="noopener">chapters 5 &ndash; 6</a></li>
 </ul>
-</div>
-<div id="weekly-videos" class="section level2">
-<h2>Weekly Videos</h2>
+<h2 id="weekly-videos">Weekly Videos</h2>
 <ul>
-<li><p>Data Munging Introduction
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a6e3aaa0-f9ae-4263-9916-02eb5e71069a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Arranging Data
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=e7bab4c5-d407-4455-8e64-bf7344786912&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Selecting Columns of Data
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4241645d-6afb-478d-add0-0c65606d41fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Add Variables to Data
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5e4e43bb-193d-487e-89eb-88f7bda5b69c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Summarise Data
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=37717e59-e140-4ea3-91b0-85689161dffd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>Chaining Commands Together
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a4540e74-2046-4237-a12c-9972b6fa4ef3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
-<li><p>R Scripts
-<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=deb9726a-5b28-4050-8b0a-ea25ceb9fcff&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></p></li>
+<li>Data Munging Introduction</li>
 </ul>
-</div>
-<div id="r-syntax" class="section level2">
-<h2>R Syntax</h2>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a6e3aaa0-f9ae-4263-9916-02eb5e71069a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 <ul>
-<li><a href="https://psqf6250.brandonlebeau.org/rcode/data_munging/">ggplot2 extensions</a></li>
-<li><a href="https://psqf6250.brandonlebeau.org/rcode/r_scripts/">R Basics</a></li>
+<li>Arranging Data</li>
 </ul>
-</div>
-<div id="assignments" class="section level2">
-<h2>Assignments</h2>
-<p>To come …</p>
-</div>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=e7bab4c5-d407-4455-8e64-bf7344786912&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<ul>
+<li>Selecting Columns of Data</li>
+</ul>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4241645d-6afb-478d-add0-0c65606d41fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<ul>
+<li>Add Variables to Data</li>
+</ul>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5e4e43bb-193d-487e-89eb-88f7bda5b69c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<ul>
+<li>Summarise Data</li>
+</ul>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=37717e59-e140-4ea3-91b0-85689161dffd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<ul>
+<li>Chaining Commands Together</li>
+</ul>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a4540e74-2046-4237-a12c-9972b6fa4ef3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<ul>
+<li>R Scripts</li>
+</ul>
+<iframe src="https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=deb9726a-5b28-4050-8b0a-ea25ceb9fcff&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<h2 id="r-syntax">R Syntax</h2>
+<ul>
+<li><a href="https://psqf6250.brandonlebeau.org/rcode/data_munging/" target="_blank" rel="noopener">ggplot2 extensions</a></li>
+<li><a href="https://psqf6250.brandonlebeau.org/rcode/r_scripts/" target="_blank" rel="noopener">R Basics</a></li>
+</ul>
+<h2 id="assignments">Assignments</h2>
+<p>To come &hellip;</p>
 
           </div>
 
@@ -903,12 +869,6 @@
     <a href="/content/03-week3/" rel="next">Week 3</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/content/05-week5/" rel="prev">Week 5</a>
-  </div>
   
 </div>
 

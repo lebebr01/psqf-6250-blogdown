@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/data_munging/">
 
@@ -760,66 +760,6 @@
 
   <li class=""><a href="/rcode/r_scripts/">R Scripts</a></li>
 
-
-
-  <li class=""><a href="/rcode/eda/">Exploratory Data Analysis</a></li>
-
-
-
-  <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
-
-
-
-  <li class=""><a href="/rcode/factors/">Factors</a></li>
-
-
-
-  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -872,7 +812,7 @@ library(tidyverse)</code></pre>
 <pre class="r"><code>View(congress_age)
 ?congress_age</code></pre>
 <pre class="r"><code>congress_age</code></pre>
-<pre><code>## # A tibble: 18,635 x 13
+<pre><code>## # A tibble: 18,635 × 13
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -903,7 +843,7 @@ library(tidyverse)</code></pre>
 <h2>Examples with <code>filter()</code></h2>
 <p>The <code>filter</code> function selects rows that match a specified condition(s). For example, suppose we wanted to select only the rows in the data that are a part of the 80th congress. The following code will do this action:</p>
 <pre class="r"><code>filter(congress_age, congress == 80)</code></pre>
-<pre><code>## # A tibble: 555 x 13
+<pre><code>## # A tibble: 555 × 13
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -928,7 +868,7 @@ library(tidyverse)</code></pre>
 <h3>Combining Logical Operations</h3>
 <p>The <code>filter</code> function becomes much more useful with more complex operations. For example, suppose we were interested in selecting the rows that belong to the 80th senate.</p>
 <pre class="r"><code>filter(congress_age, congress == 80, chamber == &#39;senate&#39;)</code></pre>
-<pre><code>## # A tibble: 102 x 13
+<pre><code>## # A tibble: 102 × 13
 ##    congress chamber bioguide firstname middlename lastname suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 senate  C000133  Arthur    &lt;NA&gt;       Capper   &lt;NA&gt;   1865-07-14
@@ -946,7 +886,7 @@ library(tidyverse)</code></pre>
 <p>By default, the <code>filter</code> function uses AND when combining multiple arguments. Therefore, the above command returned only the 102 rows belonging to senators from the 80th congress. The figure on <a href="https://r4ds.had.co.nz/transform.html#logical-operators">section 5.2.2</a> of R for Data Science shows all the possible boolean operators.</p>
 <p>Using an example of the OR operator using <code>|</code> to select the 80th and 81st congress:</p>
 <pre class="r"><code>filter(congress_age, congress == 80 | congress == 81)</code></pre>
-<pre><code>## # A tibble: 1,112 x 13
+<pre><code>## # A tibble: 1,112 × 13
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -963,7 +903,7 @@ library(tidyverse)</code></pre>
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <p>Note that to do the OR operator, you need to name the variable twice. When selecting multiple values in the same variable, a handy shortcut is <code>%in%</code>. The same command can be run with the following shorthand: handy shortcut is <code>%in%</code>. The same command can be run with the following shorthard</p>
 <pre class="r"><code>filter(congress_age, congress %in% c(80, 81))</code></pre>
-<pre><code>## # A tibble: 1,112 x 13
+<pre><code>## # A tibble: 1,112 × 13
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -983,7 +923,7 @@ library(tidyverse)</code></pre>
 <h3>Not Operator</h3>
 <p>Another useful operator that deserves a bit more discussion is the not operator, <code>!</code>. For example, suppose we wanted to omit the 80th congress:</p>
 <pre class="r"><code>filter(congress_age, congress != 80)</code></pre>
-<pre><code>## # A tibble: 18,080 x 13
+<pre><code>## # A tibble: 18,080 × 13
 ##    congress chamber bioguide firstname middlename lastname suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
 ##  1       81 house   D000448  Robert    Lee        Doughton &lt;NA&gt;   1863-11-07
@@ -1000,7 +940,7 @@ library(tidyverse)</code></pre>
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <p>It is also possible to do not with an AND operator as follows:</p>
 <pre class="r"><code>filter(congress_age, congress == 80 &amp; !chamber == &#39;senate&#39;)</code></pre>
-<pre><code>## # A tibble: 453 x 13
+<pre><code>## # A tibble: 453 × 13
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -1040,7 +980,7 @@ library(tidyverse)</code></pre>
 <h2>Examples with <code>arrange()</code></h2>
 <p>The <code>arrange</code> function is used for ordering rows in the data. For example, suppose we wanted to order the rows in the congress data by the state the members of congress lived in. This can be done using the <code>arrange</code> function as follows:</p>
 <pre class="r"><code>arrange(congress_age, state)</code></pre>
-<pre><code>## # A tibble: 18,635 x 13
+<pre><code>## # A tibble: 18,635 × 13
 ##    congress chamber bioguide firstname middlename lastname suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   B000201  Edward    Lewis      Bartlett &lt;NA&gt;   1904-04-20
@@ -1057,7 +997,7 @@ library(tidyverse)</code></pre>
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <p>Similar to the filter function, additional arguments can be added to add more layers to the ordering. For example, if we were interested in ordering the rows by state and then by party affiliation.</p>
 <pre class="r"><code>arrange(congress_age, state, party)</code></pre>
-<pre><code>## # A tibble: 18,635 x 13
+<pre><code>## # A tibble: 18,635 × 13
 ##    congress chamber bioguide firstname middlename lastname suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   B000201  Edward    Lewis      Bartlett &lt;NA&gt;   1904-04-20
@@ -1074,7 +1014,7 @@ library(tidyverse)</code></pre>
 ## #   incumbent &lt;lgl&gt;, termstart &lt;date&gt;, age &lt;dbl&gt;</code></pre>
 <p>More variables can easily be added to the <code>arrange</code> function. Notice from the above two commands that the ordering of the rows is in ascending order, if descending order is desired, the <code>desc</code> function. For example, to order the data starting with the latest congress first:</p>
 <pre class="r"><code>arrange(congress_age, desc(congress))</code></pre>
-<pre><code>## # A tibble: 18,635 x 13
+<pre><code>## # A tibble: 18,635 × 13
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1      113 house   H000067  Ralph     M.         Hall      &lt;NA&gt;   1923-05-03
@@ -1094,7 +1034,7 @@ library(tidyverse)</code></pre>
 <h2>Examples with <code>select()</code></h2>
 <p>The <code>select</code> function is used to select columns (i.e. variables) from the data but keep all the rows. For example, maybe we only needed the congress number, the chamber, the party affiliation, and the age of the members of congress. We can reduce the data to just these variables using <code>select</code>.</p>
 <pre class="r"><code>select(congress_age, congress, chamber, party, age)</code></pre>
-<pre><code>## # A tibble: 18,635 x 4
+<pre><code>## # A tibble: 18,635 × 4
 ##    congress chamber party   age
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;
 ##  1       80 house   D      85.9
@@ -1117,7 +1057,7 @@ library(tidyverse)</code></pre>
 - <code>num_range()</code></p>
 <p>These helper functions can be useful for selecting many variables that match a specific pattern. For example, suppose we were interested in selecting all the name variables, this can be accomplished using the <code>contains</code> function as follows:</p>
 <pre class="r"><code>select(congress_age, contains(&#39;name&#39;))</code></pre>
-<pre><code>## # A tibble: 18,635 x 3
+<pre><code>## # A tibble: 18,635 × 3
 ##    firstname middlename lastname 
 ##    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;    
 ##  1 Joseph    Jefferson  Mansfield
@@ -1133,7 +1073,7 @@ library(tidyverse)</code></pre>
 ## # … with 18,625 more rows</code></pre>
 <p>Another useful shorthand to select multiple columns in succession is the <code>:</code> operator. For example, suppose we wanted to select all the variables between congress and bithday.</p>
 <pre class="r"><code>select(congress_age, congress:birthday)</code></pre>
-<pre><code>## # A tibble: 18,635 x 8
+<pre><code>## # A tibble: 18,635 × 8
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph    Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -1151,7 +1091,7 @@ library(tidyverse)</code></pre>
 <h3>Rename variables</h3>
 <p>The select function does allow you to rename variables, however, using the select function to rename variables is not usually advised as you may end up missing a variable that you wish to keep during the renaming operation. Instead, using the <code>rename</code> function is better practice.</p>
 <pre class="r"><code>rename(congress_age, first_name = firstname, last_name = lastname)</code></pre>
-<pre><code>## # A tibble: 18,635 x 13
+<pre><code>## # A tibble: 18,635 × 13
 ##    congress chamber bioguide first_name middlename last_name suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
 ##  1       80 house   M000112  Joseph     Jefferson  Mansfield &lt;NA&gt;   1861-02-09
@@ -1187,7 +1127,7 @@ mutate(congress_red,
        democrat = ifelse(party == &#39;D&#39;, 1, 0),
        num_democrat = sum(democrat)
        )</code></pre>
-<pre><code>## # A tibble: 18,635 x 6
+<pre><code>## # A tibble: 18,635 × 6
 ##    congress chamber state party democrat num_democrat
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt;        &lt;dbl&gt;
 ##  1       80 house   TX    D            1        10290
@@ -1225,7 +1165,7 @@ mutate(congress_red,
 summarise(congress_2, 
           num_democrat = sum(democrat)
           )</code></pre>
-<pre><code>## # A tibble: 1 x 1
+<pre><code>## # A tibble: 1 × 1
 ##   num_democrat
 ##          &lt;dbl&gt;
 ## 1        10290</code></pre>
@@ -1238,9 +1178,9 @@ summarise(congress_grp,
           total = n(),
           prop_democrat = num_democrat / total
 )</code></pre>
-<pre><code>## # A tibble: 34 x 4
+<pre><code>## # A tibble: 34 × 4
 ##    congress num_democrat total prop_democrat
-##  *    &lt;int&gt;        &lt;dbl&gt; &lt;int&gt;         &lt;dbl&gt;
+##       &lt;int&gt;        &lt;dbl&gt; &lt;int&gt;         &lt;dbl&gt;
 ##  1       80          247   555         0.445
 ##  2       81          330   557         0.592
 ##  3       82          292   555         0.526
@@ -1277,7 +1217,7 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
        total = n(),
        prop_democrat = num_democrat / total
 )</code></pre>
-<pre><code>## # A tibble: 18,635 x 17
+<pre><code>## # A tibble: 18,635 × 17
 ## # Groups:   congress [34]
 ##    congress chamber bioguide firstname middlename lastname  suffix birthday  
 ##       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;date&gt;    
@@ -1302,9 +1242,9 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
           youngest = min(age),
           oldest = max(age)
 )</code></pre>
-<pre><code>## # A tibble: 34 x 3
+<pre><code>## # A tibble: 34 × 3
 ##    congress youngest oldest
-##  *    &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+##       &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;
 ##  1       80     25.9   85.9
 ##  2       81     27.2   85.2
 ##  3       82     27.9   87.2
@@ -1321,7 +1261,7 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
           youngest = first(age),
           oldest = last(age)
 )</code></pre>
-<pre><code>## # A tibble: 34 x 3
+<pre><code>## # A tibble: 34 × 3
 ##    congress youngest oldest
 ##       &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;
 ##  1       80     25.9   85.9
@@ -1365,7 +1305,7 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
   prop_democrat = num_democrat / total
 )</code></pre>
 <pre><code>## `summarise()` has grouped output by &#39;congress&#39;. You can override using the `.groups` argument.</code></pre>
-<pre><code>## # A tibble: 28 x 5
+<pre><code>## # A tibble: 28 × 5
 ## # Groups:   congress [14]
 ##    congress chamber num_democrat total prop_democrat
 ##       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;int&gt;         &lt;dbl&gt;
@@ -1391,7 +1331,7 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
     prop_democrat = num_democrat / total
   )</code></pre>
 <pre><code>## `summarise()` has grouped output by &#39;congress&#39;. You can override using the `.groups` argument.</code></pre>
-<pre><code>## # A tibble: 28 x 5
+<pre><code>## # A tibble: 28 × 5
 ## # Groups:   congress [14]
 ##    congress chamber num_democrat total prop_democrat
 ##       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;int&gt;         &lt;dbl&gt;

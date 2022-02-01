@@ -26,11 +26,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Course Overview
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/LiaaXMzxTOw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://youtu.be/LiaaXMzxTOw&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Course Overview&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LiaaXMzxTOw&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;ul&gt;
@@ -179,6 +175,63 @@
 &lt;ul&gt;
 &lt;li&gt;Quiz 2 - To come &amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 4</title>
+      <link>https://psqf6250.brandonlebeau.org/content/04-week4/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/04-week4/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week the course will turn to skills that are often not covered much in a statistics course, working with data to create new variables, arrange data, select columns, or filter data. These will make use of the dplyr package from the tidyverse to explore verbs to manipulate data.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore benefits of script based analyses&lt;/li&gt;
+&lt;li&gt;Create new data attributes&lt;/li&gt;
+&lt;li&gt;Evaluate dplyr code for data manipulation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;activities&#34;&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R for Data Science - &lt;a href=&#34;https://r4ds.had.co.nz/transform.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chapters 5 &amp;ndash; 6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Munging Introduction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a6e3aaa0-f9ae-4263-9916-02eb5e71069a&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Arranging Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=e7bab4c5-d407-4455-8e64-bf7344786912&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecting Columns of Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4241645d-6afb-478d-add0-0c65606d41fd&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Variables to Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5e4e43bb-193d-487e-89eb-88f7bda5b69c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Summarise Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=37717e59-e140-4ea3-91b0-85689161dffd&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Chaining Commands Together&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a4540e74-2046-4237-a12c-9972b6fa4ef3&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;R Scripts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=deb9726a-5b28-4050-8b0a-ea25ceb9fcff&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_munging/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ggplot2 extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/r_scripts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Basics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
