@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/eda/">
 
@@ -768,58 +768,6 @@
 
   <li class=""><a href="/rcode/projects/">R Projects -  RStudio</a></li>
 
-
-
-  <li class=""><a href="/rcode/data_import/">Data Import</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_restructuring/">Data Restructuring</a></li>
-
-
-
-  <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
-
-
-
-  <li class=""><a href="/rcode/factors/">Factors</a></li>
-
-
-
-  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -868,7 +816,7 @@
 library(tidyverse)</code></pre>
 <p>We will use a few different data sets, but the one we are going to start with is the <code>flights</code> data from the <code>nycflights13</code> package. Below is the first 10 rows of the data.</p>
 <pre class="r"><code>flights</code></pre>
-<pre><code>## # A tibble: 336,776 x 19
+<pre><code>## # A tibble: 336,776 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1      517            515         2      830            819
@@ -949,7 +897,7 @@ library(tidyverse)</code></pre>
 <p>This summary can be a bit difficult to digest at first, but can give some useful insight into the variables, including the amount of missing data for each variable.</p>
 <p>You can dive into looking at specific rows that are missing with the <code>filter</code> command and the <code>is.na</code> function. An example pulling out rows with a missing dep_time values is illustrated:</p>
 <pre class="r"><code>filter(flights, is.na(dep_time))</code></pre>
-<pre><code>## # A tibble: 8,255 x 19
+<pre><code>## # A tibble: 8,255 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1       NA           1630        NA       NA           1815
@@ -967,7 +915,7 @@ library(tidyverse)</code></pre>
 ## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 <p>We can also build more complex operations to look at data that is missing for one variable, but not another. For instance, if you look at the summary information above, you may notice there are more missing values for the arr_delay variable compared to the arr_time variable. To look at these values you can use the following command:</p>
 <pre class="r"><code>filter(flights, is.na(arr_delay) &amp; !is.na(arr_time))</code></pre>
-<pre><code>## # A tibble: 717 x 19
+<pre><code>## # A tibble: 717 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1     1525           1530        -5     1934           1805
@@ -1024,9 +972,9 @@ library(tidyverse)</code></pre>
 <p>These counts could be calculated manually with the use of dplyr using the <code>count</code> function. The <code>count</code> function basically creates a frequency table. More complex tables can be created by passing additional variables to the <code>count</code> function.</p>
 <pre class="r"><code>flights %&gt;%
   count(month)</code></pre>
-<pre><code>## # A tibble: 12 x 2
+<pre><code>## # A tibble: 12 × 2
 ##    month     n
-##  * &lt;int&gt; &lt;int&gt;
+##    &lt;int&gt; &lt;int&gt;
 ##  1     1 27004
 ##  2     2 24951
 ##  3     3 28834
@@ -1076,9 +1024,9 @@ library(tidyverse)</code></pre>
 <p>You can also calculate the counts plotted in the histograms and frequency polygons using the <code>count</code> as with qualitative variables. We just now need to use the <code>cut_width</code> function to specify bins.</p>
 <pre class="r"><code>flights %&gt;%
   count(cut_width(distance, 100))</code></pre>
-<pre><code>## # A tibble: 28 x 2
+<pre><code>## # A tibble: 28 × 2
 ##    `cut_width(distance, 100)`     n
-##  * &lt;fct&gt;                      &lt;int&gt;
+##    &lt;fct&gt;                      &lt;int&gt;
 ##  1 [-50,50]                       1
 ##  2 (50,150]                    2514
 ##  3 (150,250]                  36839
@@ -1099,7 +1047,7 @@ library(tidyverse)</code></pre>
     min_dist = min(distance, na.rm = TRUE),
     max_dist = max(distance, na.rm = TRUE)
   )</code></pre>
-<pre><code>## # A tibble: 1 x 4
+<pre><code>## # A tibble: 1 × 4
 ##   var_dist sd_dist min_dist max_dist
 ##      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
 ## 1  537631.    733.       17     4983</code></pre>
@@ -1243,7 +1191,7 @@ flights %&gt;%
 <pre class="r"><code>flights %&gt;%
   filter(distance &gt; 3000) %&gt;%
   arrange(distance)</code></pre>
-<pre><code>## # A tibble: 715 x 19
+<pre><code>## # A tibble: 715 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     7     6     1629           1615        14     1954           1953
@@ -1273,7 +1221,7 @@ flights %&gt;%
     avg_arrdelay = mean(arr_delay, na.rm = TRUE),
     med_arrdelay = median(arr_delay, na.rm = TRUE)
   )</code></pre>
-<pre><code>## # A tibble: 1 x 2
+<pre><code>## # A tibble: 1 × 2
 ##   avg_arrdelay med_arrdelay
 ##          &lt;dbl&gt;        &lt;dbl&gt;
 ## 1         6.90           -5</code></pre>

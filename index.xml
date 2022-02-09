@@ -5,7 +5,7 @@
     <link>https://psqf6250.brandonlebeau.org/</link>
       <atom:link href="https://psqf6250.brandonlebeau.org/index.xml" rel="self" type="application/rss+xml" />
     <description>PSQF 6250</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg</url>
       <title>PSQF 6250</title>
@@ -1370,7 +1370,8 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
   total = n(),
   prop_democrat = num_democrat / total
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;congress&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;congress&amp;#39;. You can override using the
+## `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 28 × 5
 ## # Groups:   congress [14]
 ##    congress chamber num_democrat total prop_democrat
@@ -1396,7 +1397,8 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
     total = n(),
     prop_democrat = num_democrat / total
   )&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;congress&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;congress&amp;#39;. You can override using the
+## `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 28 × 5
 ## # Groups:   congress [14]
 ##    congress chamber num_democrat total prop_democrat
@@ -1444,6 +1446,56 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
     </item>
     
     <item>
+      <title>Week 5</title>
+      <link>https://psqf6250.brandonlebeau.org/content/05-week5/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/05-week5/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This module will give some tools to use when performing exploratory data analysis, a framework that helps you to better understand your data prior to doing any more formal analysis.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluate exploratory figures&lt;/li&gt;
+&lt;li&gt;Define exploratory data analysis&lt;/li&gt;
+&lt;li&gt;Interpret exploratory data analysis output&lt;/li&gt;
+&lt;li&gt;Create exploratory data analysis code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;activities&#34;&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R for Data Science - &lt;a href=&#34;https://r4ds.had.co.nz/exploratory-data-analysis.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chapter 7&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;EDA - Missing Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a1f1af26-3448-4d3f-8c28-9a028401b314&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;EDA - Variation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d87528ef-0d74-4b94-b115-093bbd6d1ef6&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;EDA - Covariation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=90b4f216-e064-489a-8b8a-7c3bd0d5e048&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;EDA - Rare/Common Cases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=519d03cf-6ac8-4003-8484-ed0d8e97b43c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;R Projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c9526abc-b9eb-4730-859b-2b5894b777f2&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/eda/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Exploratory Data Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/projects/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Projects - RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>R Scripts</title>
       <link>https://psqf6250.brandonlebeau.org/rcode/r_scripts/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
@@ -1459,6 +1511,486 @@ ggplot(num_dem, aes(x = congress, y = prop_democrat)) +
 &lt;p&gt;To create an R script with RStudio, the short cut is CTRL/CMD + SHIFT + N. You can also create a new script by going to File &amp;gt; New File &amp;gt; R Script. Both of these commands will open up a blank script window.&lt;/p&gt;
 &lt;p&gt;In this script window, I would recommend loading any R packages first at the top of the file. Then proceed with the analysis. Commands can be sent to the console using CRTL/CMD + ENTER. By default RStudio will run any commands that span more than one line with a single CRTL/CMD + ENTER call.&lt;/p&gt;
 &lt;p&gt;For more details about R Scripts, the R for Data Science text has detail with screenshots in &lt;a href=&#34;http://r4ds.had.co.nz/workflow-scripts.html&#34;&gt;Chapter 6&lt;/a&gt;. I recommend trying to create a simple script and sending these commands from the script to the console to be run with R.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploratory Data Analysis</title>
+      <link>https://psqf6250.brandonlebeau.org/rcode/eda/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/rcode/eda/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Exploratory data analysis (EDA) is an important step in exploring and understanding your data. In addition, EDA does not suffer from problems with inferential statistics related to multiple (correlated) models on the same data. Instead, EDA is a great way to visualize, summarize, and prod your data without any consequences.&lt;/p&gt;
+&lt;p&gt;For this set of notes, we are going to use the following packages:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We will use a few different data sets, but the one we are going to start with is the &lt;code&gt;flights&lt;/code&gt; data from the &lt;code&gt;nycflights13&lt;/code&gt; package. Below is the first 10 rows of the data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 336,776 × 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      542            540         2      923            850
+##  4  2013     1     1      544            545        -1     1004           1022
+##  5  2013     1     1      554            600        -6      812            837
+##  6  2013     1     1      554            558        -4      740            728
+##  7  2013     1     1      555            600        -5      913            854
+##  8  2013     1     1      557            600        -3      709            723
+##  9  2013     1     1      557            600        -3      838            846
+## 10  2013     1     1      558            600        -2      753            745
+## # … with 336,766 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This data contains information on all flights that departed from the three airports in NYC in 2013. As you can see, the data has a total of 336776 rows and 19. For additional information use &lt;code&gt;?flights&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;exploratory-data-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exploratory Data Analysis&lt;/h2&gt;
+&lt;p&gt;The general process for proceeding with exploratory data analysis as summarized in the R for Data Science text are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Ask questions about your data&lt;/li&gt;
+&lt;li&gt;Search for answers&lt;/li&gt;
+&lt;li&gt;Refine or ask new questions about the data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There are no bad questions when performing EDA, but some common questions worth exploring are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Missing Data&lt;/li&gt;
+&lt;li&gt;Variation&lt;/li&gt;
+&lt;li&gt;Covariation&lt;/li&gt;
+&lt;li&gt;Rare cases&lt;/li&gt;
+&lt;li&gt;Common cases&lt;/li&gt;
+&lt;li&gt;Distributions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;missing-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Missing Data&lt;/h3&gt;
+&lt;p&gt;A first step in exploring the data is to explore if there are any missing data present in the data (likely). This is not an easy step, but determining the amount of missing data and, if possible, why these values are missing are important first steps. One quick way to get a view of this information for the entire data is to use the &lt;code&gt;summary&lt;/code&gt; command. An example is given with the &lt;code&gt;flights&lt;/code&gt; data below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(flights)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       year          month             day           dep_time    sched_dep_time
+##  Min.   :2013   Min.   : 1.000   Min.   : 1.00   Min.   :   1   Min.   : 106  
+##  1st Qu.:2013   1st Qu.: 4.000   1st Qu.: 8.00   1st Qu.: 907   1st Qu.: 906  
+##  Median :2013   Median : 7.000   Median :16.00   Median :1401   Median :1359  
+##  Mean   :2013   Mean   : 6.549   Mean   :15.71   Mean   :1349   Mean   :1344  
+##  3rd Qu.:2013   3rd Qu.:10.000   3rd Qu.:23.00   3rd Qu.:1744   3rd Qu.:1729  
+##  Max.   :2013   Max.   :12.000   Max.   :31.00   Max.   :2400   Max.   :2359  
+##                                                  NA&amp;#39;s   :8255                 
+##    dep_delay          arr_time    sched_arr_time   arr_delay       
+##  Min.   : -43.00   Min.   :   1   Min.   :   1   Min.   : -86.000  
+##  1st Qu.:  -5.00   1st Qu.:1104   1st Qu.:1124   1st Qu.: -17.000  
+##  Median :  -2.00   Median :1535   Median :1556   Median :  -5.000  
+##  Mean   :  12.64   Mean   :1502   Mean   :1536   Mean   :   6.895  
+##  3rd Qu.:  11.00   3rd Qu.:1940   3rd Qu.:1945   3rd Qu.:  14.000  
+##  Max.   :1301.00   Max.   :2400   Max.   :2359   Max.   :1272.000  
+##  NA&amp;#39;s   :8255      NA&amp;#39;s   :8713                  NA&amp;#39;s   :9430      
+##    carrier              flight       tailnum             origin         
+##  Length:336776      Min.   :   1   Length:336776      Length:336776     
+##  Class :character   1st Qu.: 553   Class :character   Class :character  
+##  Mode  :character   Median :1496   Mode  :character   Mode  :character  
+##                     Mean   :1972                                        
+##                     3rd Qu.:3465                                        
+##                     Max.   :8500                                        
+##                                                                         
+##      dest              air_time        distance         hour      
+##  Length:336776      Min.   : 20.0   Min.   :  17   Min.   : 1.00  
+##  Class :character   1st Qu.: 82.0   1st Qu.: 502   1st Qu.: 9.00  
+##  Mode  :character   Median :129.0   Median : 872   Median :13.00  
+##                     Mean   :150.7   Mean   :1040   Mean   :13.18  
+##                     3rd Qu.:192.0   3rd Qu.:1389   3rd Qu.:17.00  
+##                     Max.   :695.0   Max.   :4983   Max.   :23.00  
+##                     NA&amp;#39;s   :9430                                  
+##      minute        time_hour                  
+##  Min.   : 0.00   Min.   :2013-01-01 05:00:00  
+##  1st Qu.: 8.00   1st Qu.:2013-04-04 13:00:00  
+##  Median :29.00   Median :2013-07-03 10:00:00  
+##  Mean   :26.23   Mean   :2013-07-03 05:22:54  
+##  3rd Qu.:44.00   3rd Qu.:2013-10-01 07:00:00  
+##  Max.   :59.00   Max.   :2013-12-31 23:00:00  
+## &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This summary can be a bit difficult to digest at first, but can give some useful insight into the variables, including the amount of missing data for each variable.&lt;/p&gt;
+&lt;p&gt;You can dive into looking at specific rows that are missing with the &lt;code&gt;filter&lt;/code&gt; command and the &lt;code&gt;is.na&lt;/code&gt; function. An example pulling out rows with a missing dep_time values is illustrated:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, is.na(dep_time))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 8,255 × 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1       NA           1630        NA       NA           1815
+##  2  2013     1     1       NA           1935        NA       NA           2240
+##  3  2013     1     1       NA           1500        NA       NA           1825
+##  4  2013     1     1       NA            600        NA       NA            901
+##  5  2013     1     2       NA           1540        NA       NA           1747
+##  6  2013     1     2       NA           1620        NA       NA           1746
+##  7  2013     1     2       NA           1355        NA       NA           1459
+##  8  2013     1     2       NA           1420        NA       NA           1644
+##  9  2013     1     2       NA           1321        NA       NA           1536
+## 10  2013     1     2       NA           1545        NA       NA           1910
+## # … with 8,245 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;,
+## #   carrier &amp;lt;chr&amp;gt;, flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;,
+## #   air_time &amp;lt;dbl&amp;gt;, distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can also build more complex operations to look at data that is missing for one variable, but not another. For instance, if you look at the summary information above, you may notice there are more missing values for the arr_delay variable compared to the arr_time variable. To look at these values you can use the following command:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(flights, is.na(arr_delay) &amp;amp; !is.na(arr_time))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 717 × 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     1     1     1525           1530        -5     1934           1805
+##  2  2013     1     1     1528           1459        29     2002           1647
+##  3  2013     1     1     1740           1745        -5     2158           2020
+##  4  2013     1     1     1807           1738        29     2251           2103
+##  5  2013     1     1     1939           1840        59       29           2151
+##  6  2013     1     1     1952           1930        22     2358           2207
+##  7  2013     1     2      905            822        43     1313           1045
+##  8  2013     1     2     1125            925       120     1445           1146
+##  9  2013     1     2     1848           1840         8     2333           2151
+## 10  2013     1     2     1849           1724        85     2235           1938
+## # … with 707 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;, carrier &amp;lt;chr&amp;gt;,
+## #   flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;, air_time &amp;lt;dbl&amp;gt;,
+## #   distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This may actually be a data error, as there is an arr_time value, a scheduled_arr_time value, but no arr_delay value. This could then be calculated manually to reduce the number of missing values with this variable.&lt;/p&gt;
+&lt;div id=&#34;viewing-missing-data-graphically&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Viewing missing data graphically&lt;/h4&gt;
+&lt;p&gt;It may be useful to view missing data graphically. This may be useful to see if there are specific trends in the data in relation to the missing values. A few ways to plot these data may be useful.&lt;/p&gt;
+&lt;p&gt;First, it is always a good rule to explore missing data in relation to other variables in the data. If there is evidence that another variable is influencing whether a value is missing, additional statistical controls are needed to adjust for these concerns.&lt;/p&gt;
+&lt;p&gt;For example, we could explore if the scheduled arrival time is related to whether the actual arrival flight time is missing.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  mutate(
+    miss_arrival = is.na(arr_time)
+  ) %&amp;gt;%
+  ggplot(mapping = aes(sched_arr_time)) + 
+  geom_freqpoly(aes(color = miss_arrival)) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/arrival_missing-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice that the count metric masks much of what is being visualized here as there are many more flights that arrived compared to those with missing times. To adjust this, we simply need to change the y-axis from counts to density.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  mutate(
+    miss_arrival = is.na(arr_time)
+  ) %&amp;gt;%
+  ggplot(mapping = aes(x = sched_arr_time, y = ..density..)) + 
+  geom_freqpoly(aes(color = miss_arrival)) +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/miss_density-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The two curves are now standardized so that the area under each curve equals 1, which in turn makes comparison between the two groups easier.&lt;/p&gt;
+&lt;p&gt;One other special note, for EDA internally, there is no need to spend much time worrying about formatting of the graphics. However, if this plot above would be included in a report or manuscript, this figure would need additional polish to be included.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Variation&lt;/h3&gt;
+&lt;p&gt;Another common EDA question is related to variation. Variation is important for statistics, without variation there is no need to do statistics. The best way to explore variation of any type of variable is through visulization. This section will be broken into two sub areas, one that explores qualitative and another that explores quantitative.&lt;/p&gt;
+&lt;div id=&#34;qualitative-variables&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Qualitative Variables&lt;/h4&gt;
+&lt;p&gt;Bar graphs (frequency tables) are commonly used to explore variation in qualitative variables. For example, if we wished to explore the number of flights that took off for each month of the year from NYC:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(factor(month))) + 
+  geom_bar() + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/count_flights-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;One special note about the above code, I used the &lt;code&gt;factor()&lt;/code&gt; function so that ggplot specifically added all the values of the variable to the x-axis. By default since the month variable is being treated as an integer (a number), it would not show all the values for month.&lt;/p&gt;
+&lt;p&gt;These counts could be calculated manually with the use of dplyr using the &lt;code&gt;count&lt;/code&gt; function. The &lt;code&gt;count&lt;/code&gt; function basically creates a frequency table. More complex tables can be created by passing additional variables to the &lt;code&gt;count&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  count(month)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 12 × 2
+##    month     n
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;
+##  1     1 27004
+##  2     2 24951
+##  3     3 28834
+##  4     4 28330
+##  5     5 28796
+##  6     6 28243
+##  7     7 29425
+##  8     8 29327
+##  9     9 27574
+## 10    10 28889
+## 11    11 27268
+## 12    12 28135&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exercises&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Copy the code from the bar graph above, but instead of wrapping the month variable in factor, try it without it. What is different? Extra, using the &lt;code&gt;scale_x_continuous&lt;/code&gt; function, can you manually add each of the 12 numeric month values to the plot?&lt;/li&gt;
+&lt;li&gt;Using dplyr, manually calculate the number of flights that took off for every day of every month. In other words, how many flights took off everyday of the year. Which day had the most flights?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;quantitative-variables&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Quantitative Variables&lt;/h4&gt;
+&lt;p&gt;Histrograms, frequency polygons, or density curves are three common options to explore variation with quantitative variables. Within the flights data, suppose we were interested in exploring the variation in the distance traveled, this could easily be done with a histrogram.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_histogram() + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_hist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We could also use a frequency polygon:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_freqpoly() + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_freqpoly-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We could also use a density curve:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_density() + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_density-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When exploring the variation for a single variable overall, I tend to use histograms. However, when attempting to see if the variation changes across values of a categorical variable, histograms are difficult as the groups likely overlap. These are instances when using the frequency polygon or density curves are useful. Here are examples of both when exploring variation differences by month.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_freqpoly(aes(color = factor(month))) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_month-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_density(aes(color = factor(month))) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_month-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can also calculate the counts plotted in the histograms and frequency polygons using the &lt;code&gt;count&lt;/code&gt; as with qualitative variables. We just now need to use the &lt;code&gt;cut_width&lt;/code&gt; function to specify bins.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  count(cut_width(distance, 100))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 28 × 2
+##    `cut_width(distance, 100)`     n
+##    &amp;lt;fct&amp;gt;                      &amp;lt;int&amp;gt;
+##  1 [-50,50]                       1
+##  2 (50,150]                    2514
+##  3 (150,250]                  36839
+##  4 (250,350]                  18442
+##  5 (350,450]                  15233
+##  6 (450,550]                  29149
+##  7 (550,650]                  11688
+##  8 (650,750]                  33482
+##  9 (750,850]                  19482
+## 10 (850,950]                  19644
+## # … with 18 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note, these counts may differ from above as the binwidth was not specifically stated when creating the histrogram or frequency polygon.&lt;/p&gt;
+&lt;p&gt;It may also be useful to calculate the variance, standard deviation, or the range. These can be calculated using the &lt;code&gt;summarize&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  summarize(
+    var_dist = var(distance, na.rm = TRUE),
+    sd_dist = sd(distance, na.rm = TRUE),
+    min_dist = min(distance, na.rm = TRUE),
+    max_dist = max(distance, na.rm = TRUE)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 4
+##   var_dist sd_dist min_dist max_dist
+##      &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1  537631.    733.       17     4983&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You could pair this with the &lt;code&gt;group_by&lt;/code&gt; function to calculate these values for different groups (e.g. by month).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exercises&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Explore variation in the air_time variable.&lt;/li&gt;
+&lt;li&gt;Does the variation in the air_time variable differ by month?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;distributions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Distributions&lt;/h3&gt;
+&lt;p&gt;Exploring distributions for variables is a very similar process to exploring the variation, the question is just different. Most often we are interested in exploring if the shape of the distribution is approximately normal. This will become more interesting when we start fitting models to explore potential assumption violations in the residuals. We leave these discussions until then.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;covariation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Covariation&lt;/h3&gt;
+&lt;p&gt;Covariation is the process of comparing how two (or more) variables are related. The most common method for exploring covariation is through scatterplots. However, these are most natural for two continuous variables. Other plots are useful for a mixture of variable types or for two qualitative variables. We will explore each in turn.&lt;/p&gt;
+&lt;div id=&#34;two-qualitative-variables&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Two Qualitative Variables&lt;/h4&gt;
+&lt;p&gt;Covariation in two qualitative variables is more difficult to view visually due to the restricted possible values in each variable. Suppose for example, we wished to explore covariation in the origin of the flight and the carrier.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(origin, carrier)) + 
+  geom_count()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/carrier_origin-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This plot is okay, however, I think a more useful plot is to use a tile plot to explore these differences with color.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  count(origin, carrier) %&amp;gt;%
+  ggplot(aes(origin, carrier)) + 
+  geom_tile(aes(fill = n)) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/origin_carrier_tile-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note, that holes mean missing values (i.e. no flights from that airport from that carrier).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exercises&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Explore the covariation between the month and day variables. Note, these are treated as continuous in the data, but in reality they are likely best represented as qualitative.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;two-quantitative-variables&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Two Quantitative Variables&lt;/h4&gt;
+&lt;p&gt;Scatterplots are useful for two quantitative variables. Suppose for example that we wish to explore the relationship between the air_time variable and the arr_delay variable. This could be done with a scatterplot.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_point() + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/quant_cov-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;One problem with the plot above, is overplotting. There are two fixes for this, one is to use transparent points using the &lt;code&gt;alpha&lt;/code&gt; argument to the &lt;code&gt;geom_point&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_point(alpha = .05) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/transparency-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another approach that will simplify the exploration is to use boxplots. This will involve grouping the air_time variable into “bins.”&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(x = air_time, y = arr_delay)) + 
+  geom_boxplot(aes(group = cut_width(air_time, 50))) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing missing values (stat_boxplot).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/boxplot_twoquant-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Even another more sophisticated graphic is to do the quantitative alternative to &lt;code&gt;geom_tile&lt;/code&gt;. Note, the code below uses the hexbin package, but a similar function is &lt;code&gt;geom_bin2d&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;hexbin&amp;quot;)
+library(hexbin)
+ggplot(flights, aes(x = air_time, y = arr_delay)) + 
+  geom_hex()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing non-finite values (stat_binhex).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/hex_twoquant-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-a-third-variable&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Adding a Third Variable&lt;/h4&gt;
+&lt;p&gt;Adding a third variable is often useful, but can be difficult to think about procedurally. The type of plot that is useful depends on the type the third variable is. For example, if the third variable is also quantitative, the visualization is more difficult, however, if the third variable is qualitative, there are two main options. These will be explored in more detail below.&lt;/p&gt;
+&lt;p&gt;The main two approaches for adding a third variable when it is qualitative is to use a different color/shape for the values of this variable or to facet the plot. Suppose we wished to explore the covariation between the following three variables: air_time, arr_delay, and origin. The two different options are shown below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_hex() + 
+  facet_grid(. ~ origin) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing non-finite values (stat_binhex).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/three_vars-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(air_time, arr_delay)) + 
+  geom_point(aes(color = origin), alpha = .05) + 
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/three_vars-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Plotting three quantitative variables commonly involves binning one one the variables to turn it into an ordinal variable with different levels. For example, see the example with two variables and the boxplot, a similar approach could be used to facet by this third variable. Below is a simple example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(x = air_time, y = arr_delay)) + 
+  geom_hex() + 
+  theme_bw() + 
+  facet_wrap(~ cut_width(dep_time, 250))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 9430 rows containing non-finite values (stat_binhex).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/three_quant-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;one-quantitative-one-qualitative&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;One Quantitative, One Qualitative&lt;/h4&gt;
+&lt;p&gt;This was actually already discussed in the discussion of variation by exploring differences in variation for different levels of a qualitative variable (see above). If the variation differs by groups, there is then evidence of covariation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;correlations&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Correlations&lt;/h4&gt;
+&lt;p&gt;It is also useful to calculate and visualize raw correlations. To calculate raw correlations (assuming only quantitative variables), the &lt;code&gt;cor&lt;/code&gt; function is useful.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  select(air_time, arr_delay, dep_time) %&amp;gt;%
+  cor(use = &amp;#39;pairwise.complete.obs&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##              air_time   arr_delay    dep_time
+## air_time   1.00000000 -0.03529709 -0.01461948
+## arr_delay -0.03529709  1.00000000  0.23230573
+## dep_time  -0.01461948  0.23230573  1.00000000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To visualize a correlation matrix, the GGally package is useful. Note, the &lt;code&gt;ggpairs&lt;/code&gt; function can take some time to run.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.package(&amp;quot;GGally&amp;quot;)
+library(GGally)
+flights %&amp;gt;%
+  select(air_time, arr_delay, dep_time) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  sample_n(1000) %&amp;gt;%
+  ggpairs()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/ggally-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-3&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exercises&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Explore covariation in the dep_delay and arr_delay variables. What type of relationship, if any, appears to be present?&lt;/li&gt;
+&lt;li&gt;Explore the relationship between dep_delay, arr_delay, and origin. What type of relationship is present. Does the relationship between dep_delay and arr_delay differ by origin?&lt;/li&gt;
+&lt;li&gt;Finally, calculate the correlation matrix for dep_delay, arr_delay, and dep_time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rarecommon-cases&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rare/Common Cases&lt;/h3&gt;
+&lt;p&gt;The last question of use to explore when performing EDA is looking for the presence of rare or common cases. In other words, an exploration of any outliers and the central tendency of the distribution.&lt;/p&gt;
+&lt;p&gt;When we explored variation in the distance variable earlier, there may have been extreme values we’d want to explore in more detail.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_histogram() +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_extreme-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice the large distance value, to get a better view of how many there are here, we can use &lt;code&gt;coord_cartesian&lt;/code&gt; to zoom in.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(distance)) + 
+  geom_histogram() + 
+  theme_bw() + 
+  coord_cartesian(ylim = c(0, 5000))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/distance_coord-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note, that in the above plot, &lt;code&gt;coord_cartesian&lt;/code&gt; does not remove any points, simply changes the coordinates that are plotted. We could also pull these out using filter as well.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  filter(distance &amp;gt; 3000) %&amp;gt;%
+  arrange(distance)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 715 × 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1  2013     7     6     1629           1615        14     1954           1953
+##  2  2013     7    13     1618           1615         3     1955           1953
+##  3  2013     7    20     1618           1615         3     2003           1953
+##  4  2013     7    27     1617           1615         2     1906           1953
+##  5  2013     8     3     1615           1615         0     2003           1953
+##  6  2013     8    10     1613           1615        -2     1922           1953
+##  7  2013     8    17     1740           1625        75     2042           2003
+##  8  2013     8    24     1633           1625         8     1959           2003
+##  9  2013     1     1     1344           1344         0     2005           1944
+## 10  2013     1     2     1344           1344         0     1940           1944
+## # … with 705 more rows, and 11 more variables: arr_delay &amp;lt;dbl&amp;gt;, carrier &amp;lt;chr&amp;gt;,
+## #   flight &amp;lt;int&amp;gt;, tailnum &amp;lt;chr&amp;gt;, origin &amp;lt;chr&amp;gt;, dest &amp;lt;chr&amp;gt;, air_time &amp;lt;dbl&amp;gt;,
+## #   distance &amp;lt;dbl&amp;gt;, hour &amp;lt;dbl&amp;gt;, minute &amp;lt;dbl&amp;gt;, time_hour &amp;lt;dttm&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;measures-of-central-tendency&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Measures of Central Tendency&lt;/h4&gt;
+&lt;p&gt;Exploring measures of central tendency or simply common values/repeated of common values can also be important.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(flights, aes(arr_time)) +
+  geom_histogram(binwidth = 50) +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 8713 rows containing non-finite values (stat_bin).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://psqf6250.brandonlebeau.org/rcode/eda_files/figure-html/common_values-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Measures of central tendency can be directly calculated using the &lt;code&gt;summarise&lt;/code&gt; function. For example, exploring central tendency of the arr_delay variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights %&amp;gt;%
+  summarise(
+    avg_arrdelay = mean(arr_delay, na.rm = TRUE),
+    med_arrdelay = median(arr_delay, na.rm = TRUE)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 2
+##   avg_arrdelay med_arrdelay
+##          &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;
+## 1         6.90           -5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More interesting computations can be performed by using adding in the &lt;code&gt;group_by&lt;/code&gt; function.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercises-4&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exercises&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Using the &lt;code&gt;txhousing&lt;/code&gt; data, explore rare/common cases in the median sale price for the following 3 cities: Austin, Dallas, and Houston.&lt;/li&gt;
+&lt;li&gt;Using the data from #1, explore measures of central tendency in the median sale price of these three cities. How have these changed over time (year)?&lt;/li&gt;
+&lt;li&gt;Create an effective visualization that explores differences in the median sale price over time for these three cities.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Projects -  RStudio</title>
+      <link>https://psqf6250.brandonlebeau.org/rcode/projects/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/rcode/projects/</guid>
+      <description>
+&lt;script src=&#34;https://psqf6250.brandonlebeau.org/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;I want to talk briefly about RStudio projects. These are a great way to structure each individual project. Chapter 8 in the R for Data Science text will provide a more thorough discussion of RStudio projects: &lt;a href=&#34;http://r4ds.had.co.nz/workflow-projects.html&#34; class=&#34;uri&#34;&gt;http://r4ds.had.co.nz/workflow-projects.html&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;working-directory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Working Directory&lt;/h2&gt;
+&lt;p&gt;As we move into reading in data files, the idea of a working directory will become even more important. RStudio projects makes this discussion much easier as the root of the project directory is treated as the working directory. The nice aspect of this is that all paths to data files are in reference to this root project directory (more on this coming soon).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;project-structure&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Project Structure&lt;/h2&gt;
+&lt;p&gt;The last aspect I want to share is a common project directory structure. Everyone can have slightly different versions, but I want to share what I have come to commonly use. The following structure is how I tend to structure most or my projects.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://psqf6250.brandonlebeau.org/img/project_structure.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Project Structure&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Another way to visualize this structure is as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Project Root:
+&lt;ul&gt;
+&lt;li&gt;Data&lt;/li&gt;
+&lt;li&gt;example&lt;/li&gt;
+&lt;li&gt;paper&lt;/li&gt;
+&lt;li&gt;R&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     
