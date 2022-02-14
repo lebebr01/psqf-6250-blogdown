@@ -287,5 +287,47 @@
 </description>
     </item>
     
+    <item>
+      <title>Week 6</title>
+      <link>https://psqf6250.brandonlebeau.org/content/06-week6/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/06-week6/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week will cover functionality to import, restructure, and join data in the tidyverse. These are common tasks to perform to get the data into the appropriate format for data analysis.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define different data join methods&lt;/li&gt;
+&lt;li&gt;Define different data formats&lt;/li&gt;
+&lt;li&gt;Create join and import code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;activities&#34;&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R for Data Science - chapters &lt;a href=&#34;https://r4ds.had.co.nz/data-import.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;11&lt;/a&gt;, &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;12&lt;/a&gt;, &lt;a href=&#34;https://r4ds.had.co.nz/relational-data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;13&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Import&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c9cc4c0e-37d1-4208-a556-0583ea211aed&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Restructuring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=69c0ea96-9df6-47d2-af66-ac41011854fd&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Joining Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=db5ee513-28ef-4b1d-b042-59fb42bd4608&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_import/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_restructuring/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Restructuring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/data_joins/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Joins&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

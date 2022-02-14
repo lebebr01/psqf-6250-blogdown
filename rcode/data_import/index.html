@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/data_import/">
 
@@ -780,46 +780,6 @@
 
   <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
 
-
-
-  <li class=""><a href="/rcode/factors/">Factors</a></li>
-
-
-
-  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -872,64 +832,56 @@ library(readxl)</code></pre>
 <p>Through the use of the <code>readr</code> package, we are going to read in flat text files. In many cases, these text files are saved as csv files. The csv stands for comma separated values files meaning that columns in the data are separated by columns. As a side note, this is the most common way that I save data and read in data. The nice aspect of csv files is that if needed, they can be opened in programs like Excel for viewing, but are still just text files which are simple and lightweight.</p>
 <p>To read in a csv file, we are going to use the <code>read_csv</code> function from the <code>readr</code> package. We are going to read in some UFO data (the data can be found on the <a href="https://psqf6250.brandonlebeau.org/data/">course website</a>). The code below is going to read the data directly from the GitHub where the data are currently being stored.</p>
 <pre class="r"><code>ufo &lt;- read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;)</code></pre>
-<pre><code>## 
+<pre><code>## Rows: 8031 Columns: 7
 ## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   `Date / Time` = col_character(),
-##   City = col_character(),
-##   State = col_character(),
-##   Shape = col_character(),
-##   Duration = col_character(),
-##   Summary = col_character(),
-##   Posted = col_character()
-## )</code></pre>
+## Delimiter: &quot;,&quot;
+## chr (7): Date / Time, City, State, Shape, Duration, Summary, Posted
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <p>A special note here, if you downloaded the data, I recommend putting the downloaded data within an RStudio project in a folder named “Data” or “data”. The updated code (not run here), would look like (assuming the data are in the “data” folder within an RStudio project):</p>
 <pre class="r"><code>ufo &lt;- read_csv(&#39;data/ufo.csv&#39;)</code></pre>
 <p>Note again, similar to dplyr, when saving the data to an object, it will not be printed. We can now view the first 10 rows by typing the object name.</p>
 <pre class="r"><code>ufo</code></pre>
-<pre><code>## # A tibble: 8,031 x 7
-##    `Date / Time`  City       State Shape  Duration Summary                Posted
-##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
-##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
-##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
-##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
-##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
-##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
-##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
-##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
-##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
-##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
-## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+<pre><code>## # A tibble: 8,031 × 7
+##    `Date / Time`  City                     State Shape   Duration Summary Posted
+##    &lt;chr&gt;          &lt;chr&gt;                    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wales              PA    Triang… 5 minut… &quot;I hea… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersville             GA    Unknown 3.6 min… &quot;Looki… 12/12…
+##  3 12/12/14 06:30 Isle of Man (UK/England) &lt;NA&gt;  Light   2 secon… &quot;Over … 12/12…
+##  4 12/12/14 01:00 Miamisburg               OH    Changi… &lt;NA&gt;     &quot;Brigh… 12/12…
+##  5 12/12/14 00:00 Spotsylvania             VA    Unknown 1 minute &quot;White… 12/12…
+##  6 12/11/14 23:25 Kenner                   LA    Chevron ~1 minu… &quot;Stran… 12/12…
+##  7 12/11/14 23:15 Eugene                   OR    Disk    2 minut… &quot;Dual … 12/12…
+##  8 12/11/14 20:04 Phoenix                  AZ    Chevron 3 minut… &quot;4 Ora… 12/12…
+##  9 12/11/14 20:00 Franklin                 NC    Disk    5 minut… &quot;There… 12/12…
+## 10 12/11/14 18:30 Longview                 WA    Cylind… 10 seco… &quot;Two c… 12/12…
 ## # … with 8,021 more rows</code></pre>
 <p>By default, the <code>read_csv</code> function uses the first row of the data file as the names of the variables. To override this behavior, set <code>col_names = FALSE</code> or better yet, specify the names with the <code>col_names</code> argument. In addition, if the file has header metadata, rows of the data can be skipped with the <code>skip</code> argument. For example, reading in the same data as above, but skipping the first row and specifying the names manually would look as follows:</p>
 <pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, skip = 1, 
          col_names = c(&#39;Date/Time&#39;, &#39;City&#39;, &#39;State&#39;, 
                        &#39;Shape&#39;, &#39;Duration&#39;, &#39;Summary&#39;,
                        &#39;Posted&#39;))</code></pre>
-<pre><code>## 
+<pre><code>## Rows: 8031 Columns: 7
 ## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   `Date/Time` = col_character(),
-##   City = col_character(),
-##   State = col_character(),
-##   Shape = col_character(),
-##   Duration = col_character(),
-##   Summary = col_character(),
-##   Posted = col_character()
-## )</code></pre>
-<pre><code>## # A tibble: 8,031 x 7
-##    `Date/Time`  City       State Shape  Duration  Summary                 Posted
-##    &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt; 
-##  1 12/12/14 17… North Wal… PA    Trian… 5 minutes &quot;I heard an extremely … &lt;NA&gt;  
-##  2 12/12/14 12… Cartersvi… GA    Unkno… 3.6 minu… &quot;Looking up towards th… 12/12…
-##  3 12/12/14 06… Isle of M… &lt;NA&gt;  Light  2 seconds &quot;Over the Isle of Man,… 12/12…
-##  4 12/12/14 01… Miamisburg OH    Chang… &lt;NA&gt;      &quot;Bright color changing… 12/12…
-##  5 12/12/14 00… Spotsylva… VA    Unkno… 1 minute  &quot;White then orange orb… 12/12…
-##  6 12/11/14 23… Kenner     LA    Chevr… ~1 minute &quot;Strange, chevron-shap… 12/12…
-##  7 12/11/14 23… Eugene     OR    Disk   2 minutes &quot;Dual orange orbs in E… 12/12…
-##  8 12/11/14 20… Phoenix    AZ    Chevr… 3 minutes &quot;4 Orange Lights Spott… 12/12…
-##  9 12/11/14 20… Franklin   NC    Disk   5 minutes &quot;There were 5 or 6 lig… 12/12…
-## 10 12/11/14 18… Longview   WA    Cylin… 10 secon… &quot;Two cylinder shaped o… 12/12…
+## Delimiter: &quot;,&quot;
+## chr (7): Date/Time, City, State, Shape, Duration, Summary, Posted
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre><code>## # A tibble: 8,031 × 7
+##    `Date/Time`    City                     State Shape   Duration Summary Posted
+##    &lt;chr&gt;          &lt;chr&gt;                    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wales              PA    Triang… 5 minut… &quot;I hea… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersville             GA    Unknown 3.6 min… &quot;Looki… 12/12…
+##  3 12/12/14 06:30 Isle of Man (UK/England) &lt;NA&gt;  Light   2 secon… &quot;Over … 12/12…
+##  4 12/12/14 01:00 Miamisburg               OH    Changi… &lt;NA&gt;     &quot;Brigh… 12/12…
+##  5 12/12/14 00:00 Spotsylvania             VA    Unknown 1 minute &quot;White… 12/12…
+##  6 12/11/14 23:25 Kenner                   LA    Chevron ~1 minu… &quot;Stran… 12/12…
+##  7 12/11/14 23:15 Eugene                   OR    Disk    2 minut… &quot;Dual … 12/12…
+##  8 12/11/14 20:04 Phoenix                  AZ    Chevron 3 minut… &quot;4 Ora… 12/12…
+##  9 12/11/14 20:00 Franklin                 NC    Disk    5 minut… &quot;There… 12/12…
+## 10 12/11/14 18:30 Longview                 WA    Cylind… 10 seco… &quot;Two c… 12/12…
 ## # … with 8,021 more rows</code></pre>
 <div id="manually-specifying-column-types" class="section level3">
 <h3>Manually Specifying Column Types</h3>
@@ -945,36 +897,36 @@ library(readxl)</code></pre>
            Summary = col_character(),
            Posted = col_character()
          ))</code></pre>
-<pre><code>## # A tibble: 8,031 x 7
-##    `Date / Time`  City       State Shape  Duration Summary                Posted
-##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
-##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
-##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
-##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
-##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
-##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
-##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
-##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
-##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
-##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
-## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+<pre><code>## # A tibble: 8,031 × 7
+##    `Date / Time`  City                     State Shape   Duration Summary Posted
+##    &lt;chr&gt;          &lt;chr&gt;                    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wales              PA    Triang… 5 minut… &quot;I hea… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersville             GA    Unknown 3.6 min… &quot;Looki… 12/12…
+##  3 12/12/14 06:30 Isle of Man (UK/England) &lt;NA&gt;  Light   2 secon… &quot;Over … 12/12…
+##  4 12/12/14 01:00 Miamisburg               OH    Changi… &lt;NA&gt;     &quot;Brigh… 12/12…
+##  5 12/12/14 00:00 Spotsylvania             VA    Unknown 1 minute &quot;White… 12/12…
+##  6 12/11/14 23:25 Kenner                   LA    Chevron ~1 minu… &quot;Stran… 12/12…
+##  7 12/11/14 23:15 Eugene                   OR    Disk    2 minut… &quot;Dual … 12/12…
+##  8 12/11/14 20:04 Phoenix                  AZ    Chevron 3 minut… &quot;4 Ora… 12/12…
+##  9 12/11/14 20:00 Franklin                 NC    Disk    5 minut… &quot;There… 12/12…
+## 10 12/11/14 18:30 Longview                 WA    Cylind… 10 seco… &quot;Two c… 12/12…
 ## # … with 8,021 more rows</code></pre>
 <p>As all variables are being read in as characters, there is a simple shortcut to use.</p>
 <pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, 
          col_types = c(&#39;ccccccc&#39;))</code></pre>
-<pre><code>## # A tibble: 8,031 x 7
-##    `Date / Time`  City       State Shape  Duration Summary                Posted
-##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
-##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
-##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
-##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
-##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
-##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
-##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
-##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
-##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
-##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
-## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+<pre><code>## # A tibble: 8,031 × 7
+##    `Date / Time`  City                     State Shape   Duration Summary Posted
+##    &lt;chr&gt;          &lt;chr&gt;                    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wales              PA    Triang… 5 minut… &quot;I hea… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersville             GA    Unknown 3.6 min… &quot;Looki… 12/12…
+##  3 12/12/14 06:30 Isle of Man (UK/England) &lt;NA&gt;  Light   2 secon… &quot;Over … 12/12…
+##  4 12/12/14 01:00 Miamisburg               OH    Changi… &lt;NA&gt;     &quot;Brigh… 12/12…
+##  5 12/12/14 00:00 Spotsylvania             VA    Unknown 1 minute &quot;White… 12/12…
+##  6 12/11/14 23:25 Kenner                   LA    Chevron ~1 minu… &quot;Stran… 12/12…
+##  7 12/11/14 23:15 Eugene                   OR    Disk    2 minut… &quot;Dual … 12/12…
+##  8 12/11/14 20:04 Phoenix                  AZ    Chevron 3 minut… &quot;4 Ora… 12/12…
+##  9 12/11/14 20:00 Franklin                 NC    Disk    5 minut… &quot;There… 12/12…
+## 10 12/11/14 18:30 Longview                 WA    Cylind… 10 seco… &quot;Two c… 12/12…
 ## # … with 8,021 more rows</code></pre>
 <p>To show the reason the more verbose is useful, suppose we wished to convert the ‘Data/Time’ variable to the correct type, a date time variable.</p>
 <pre class="r"><code>read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&quot;, 
@@ -999,45 +951,37 @@ library(readxl)</code></pre>
            Summary = col_character(),
            Posted = col_character()
          ))</code></pre>
-<pre><code>## Warning: 56 parsing failures.
-## row         col                 expected   actual                                                                              file
-## 119 Date / Time date like %m/%d/%y %H:%M 12/1/14  &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
-## 194 Date / Time date like %m/%d/%y %H:%M 11/27/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
-## 236 Date / Time date like %m/%d/%y %H:%M 11/24/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
-## 407 Date / Time date like %m/%d/%y %H:%M 11/15/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
-## 665 Date / Time date like %m/%d/%y %H:%M 10/31/14 &#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;
-## ... ........... ........................ ........ .................................................................................
-## See problems(...) for more details.</code></pre>
+<pre><code>## Warning: One or more parsing issues, see `problems()` for details</code></pre>
 <pre class="r"><code>ufo_date</code></pre>
-<pre><code>## # A tibble: 8,031 x 7
-##    `Date / Time`       City      State Shape  Duration Summary            Posted
-##    &lt;dttm&gt;              &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt; 
-##  1 2014-12-12 17:30:00 North Wa… PA    Trian… 5 minut… &quot;I heard an extre… &lt;NA&gt;  
-##  2 2014-12-12 12:40:00 Cartersv… GA    Unkno… 3.6 min… &quot;Looking up towar… 12/12…
-##  3 2014-12-12 06:30:00 Isle of … &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of… 12/12…
-##  4 2014-12-12 01:00:00 Miamisbu… OH    Chang… &lt;NA&gt;     &quot;Bright color cha… 12/12…
-##  5 2014-12-12 00:00:00 Spotsylv… VA    Unkno… 1 minute &quot;White then orang… 12/12…
-##  6 2014-12-11 23:25:00 Kenner    LA    Chevr… ~1 minu… &quot;Strange, chevron… 12/12…
-##  7 2014-12-11 23:15:00 Eugene    OR    Disk   2 minut… &quot;Dual orange orbs… 12/12…
-##  8 2014-12-11 20:04:00 Phoenix   AZ    Chevr… 3 minut… &quot;4 Orange Lights … 12/12…
-##  9 2014-12-11 20:00:00 Franklin  NC    Disk   5 minut… &quot;There were 5 or … 12/12…
-## 10 2014-12-11 18:30:00 Longview  WA    Cylin… 10 seco… &quot;Two cylinder sha… 12/12…
+<pre><code>## # A tibble: 8,031 × 7
+##    `Date / Time`       City                  State Shape Duration Summary Posted
+##    &lt;dttm&gt;              &lt;chr&gt;                 &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; 
+##  1 2014-12-12 17:30:00 North Wales           PA    Tria… 5 minut… &quot;I hea… &lt;NA&gt;  
+##  2 2014-12-12 12:40:00 Cartersville          GA    Unkn… 3.6 min… &quot;Looki… 12/12…
+##  3 2014-12-12 06:30:00 Isle of Man (UK/Engl… &lt;NA&gt;  Light 2 secon… &quot;Over … 12/12…
+##  4 2014-12-12 01:00:00 Miamisburg            OH    Chan… &lt;NA&gt;     &quot;Brigh… 12/12…
+##  5 2014-12-12 00:00:00 Spotsylvania          VA    Unkn… 1 minute &quot;White… 12/12…
+##  6 2014-12-11 23:25:00 Kenner                LA    Chev… ~1 minu… &quot;Stran… 12/12…
+##  7 2014-12-11 23:15:00 Eugene                OR    Disk  2 minut… &quot;Dual … 12/12…
+##  8 2014-12-11 20:04:00 Phoenix               AZ    Chev… 3 minut… &quot;4 Ora… 12/12…
+##  9 2014-12-11 20:00:00 Franklin              NC    Disk  5 minut… &quot;There… 12/12…
+## 10 2014-12-11 18:30:00 Longview              WA    Cyli… 10 seco… &quot;Two c… 12/12…
 ## # … with 8,021 more rows</code></pre>
 <p>Notice even though I was careful in the column specification, there was still issues when parsing this column as a date/time column. The data is still returned, but there are issues. These issues can be viewed using the <code>problems</code> function.</p>
 <pre class="r"><code>problems(ufo_date)</code></pre>
-<pre><code>## # A tibble: 56 x 5
-##      row col      expected         actual file                                  
-##    &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;                                 
-##  1   119 Date / … date like %m/%d… 12/1/… &#39;https://raw.githubusercontent.com/le…
-##  2   194 Date / … date like %m/%d… 11/27… &#39;https://raw.githubusercontent.com/le…
-##  3   236 Date / … date like %m/%d… 11/24… &#39;https://raw.githubusercontent.com/le…
-##  4   407 Date / … date like %m/%d… 11/15… &#39;https://raw.githubusercontent.com/le…
-##  5   665 Date / … date like %m/%d… 10/31… &#39;https://raw.githubusercontent.com/le…
-##  6   797 Date / … date like %m/%d… 10/25… &#39;https://raw.githubusercontent.com/le…
-##  7   946 Date / … date like %m/%d… 10/19… &#39;https://raw.githubusercontent.com/le…
-##  8  1081 Date / … date like %m/%d… 10/14… &#39;https://raw.githubusercontent.com/le…
-##  9  1122 Date / … date like %m/%d… 10/12… &#39;https://raw.githubusercontent.com/le…
-## 10  1123 Date / … date like %m/%d… 10/12… &#39;https://raw.githubusercontent.com/le…
+<pre><code>## # A tibble: 56 × 5
+##      row   col expected                 actual   file 
+##    &lt;int&gt; &lt;int&gt; &lt;chr&gt;                    &lt;chr&gt;    &lt;chr&gt;
+##  1   120     1 date like %m/%d/%y %H:%M 12/1/14  &quot;&quot;   
+##  2   195     1 date like %m/%d/%y %H:%M 11/27/14 &quot;&quot;   
+##  3   237     1 date like %m/%d/%y %H:%M 11/24/14 &quot;&quot;   
+##  4   408     1 date like %m/%d/%y %H:%M 11/15/14 &quot;&quot;   
+##  5   666     1 date like %m/%d/%y %H:%M 10/31/14 &quot;&quot;   
+##  6   798     1 date like %m/%d/%y %H:%M 10/25/14 &quot;&quot;   
+##  7   947     1 date like %m/%d/%y %H:%M 10/19/14 &quot;&quot;   
+##  8  1082     1 date like %m/%d/%y %H:%M 10/14/14 &quot;&quot;   
+##  9  1123     1 date like %m/%d/%y %H:%M 10/12/14 &quot;&quot;   
+## 10  1124     1 date like %m/%d/%y %H:%M 10/12/14 &quot;&quot;   
 ## # … with 46 more rows</code></pre>
 </div>
 <div id="other-text-formats" class="section level3">
@@ -1068,7 +1012,7 @@ library(readxl)</code></pre>
 curl::curl_download(&quot;https://github.com/lebebr01/psqf-6250-blogdown/blob/main/data/EDU01.xls?raw=true&quot;, tf)
 
 read_excel(tf)</code></pre>
-<pre><code>## # A tibble: 3,198 x 42
+<pre><code>## # A tibble: 3,198 × 42
 ##    Area_name     STCOU EDU010187F EDU010187D EDU010187N1 EDU010187N2 EDU010188F
 ##    &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
 ##  1 UNITED STATES 00000          0   40024299 0000        0000                 0
@@ -1087,13 +1031,10 @@ read_excel(tf)</code></pre>
 ## #   EDU010190N1 &lt;chr&gt;, EDU010190N2 &lt;chr&gt;, EDU010191F &lt;dbl&gt;, EDU010191D &lt;dbl&gt;,
 ## #   EDU010191N1 &lt;chr&gt;, EDU010191N2 &lt;chr&gt;, EDU010192F &lt;dbl&gt;, EDU010192D &lt;dbl&gt;,
 ## #   EDU010192N1 &lt;chr&gt;, EDU010192N2 &lt;chr&gt;, EDU010193F &lt;dbl&gt;, EDU010193D &lt;dbl&gt;,
-## #   EDU010193N1 &lt;chr&gt;, EDU010193N2 &lt;chr&gt;, EDU010194F &lt;dbl&gt;, EDU010194D &lt;dbl&gt;,
-## #   EDU010194N1 &lt;chr&gt;, EDU010194N2 &lt;chr&gt;, EDU010195F &lt;dbl&gt;, EDU010195D &lt;dbl&gt;,
-## #   EDU010195N1 &lt;chr&gt;, EDU010195N2 &lt;chr&gt;, EDU010196F &lt;dbl&gt;, EDU010196D &lt;dbl&gt;,
-## #   EDU010196N1 &lt;chr&gt;, EDU010196N2 &lt;chr&gt;</code></pre>
+## #   EDU010193N1 &lt;chr&gt;, EDU010193N2 &lt;chr&gt;, EDU010194F &lt;dbl&gt;, EDU010194D &lt;dbl&gt;, …</code></pre>
 <p>By default, the function will read in the first sheet and will treat the first row as the column names. If you wish to read in another sheet, you can use the <code>sheet</code> argument. For example:</p>
 <pre class="r"><code>read_excel(tf, sheet = 2)</code></pre>
-<pre><code>## # A tibble: 3,198 x 42
+<pre><code>## # A tibble: 3,198 × 42
 ##    Area_name     STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
 ##    &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
 ##  1 UNITED STATES 00000          0   44534459 0000        0000                 0
@@ -1112,12 +1053,9 @@ read_excel(tf)</code></pre>
 ## #   EDU010200N1 &lt;chr&gt;, EDU010200N2 &lt;chr&gt;, EDU010201F &lt;dbl&gt;, EDU010201D &lt;dbl&gt;,
 ## #   EDU010201N1 &lt;chr&gt;, EDU010201N2 &lt;chr&gt;, EDU010202F &lt;dbl&gt;, EDU010202D &lt;dbl&gt;,
 ## #   EDU010202N1 &lt;chr&gt;, EDU010202N2 &lt;chr&gt;, EDU015203F &lt;dbl&gt;, EDU015203D &lt;dbl&gt;,
-## #   EDU015203N1 &lt;chr&gt;, EDU015203N2 &lt;chr&gt;, EDU015204F &lt;dbl&gt;, EDU015204D &lt;dbl&gt;,
-## #   EDU015204N1 &lt;chr&gt;, EDU015204N2 &lt;chr&gt;, EDU015205F &lt;dbl&gt;, EDU015205D &lt;dbl&gt;,
-## #   EDU015205N1 &lt;chr&gt;, EDU015205N2 &lt;chr&gt;, EDU015206F &lt;dbl&gt;, EDU015206D &lt;dbl&gt;,
-## #   EDU015206N1 &lt;chr&gt;, EDU015206N2 &lt;chr&gt;</code></pre>
+## #   EDU015203N1 &lt;chr&gt;, EDU015203N2 &lt;chr&gt;, EDU015204F &lt;dbl&gt;, EDU015204D &lt;dbl&gt;, …</code></pre>
 <pre class="r"><code>read_excel(tf, sheet = &#39;EDU01B&#39;)</code></pre>
-<pre><code>## # A tibble: 3,198 x 42
+<pre><code>## # A tibble: 3,198 × 42
 ##    Area_name     STCOU EDU010197F EDU010197D EDU010197N1 EDU010197N2 EDU010198F
 ##    &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
 ##  1 UNITED STATES 00000          0   44534459 0000        0000                 0
@@ -1136,10 +1074,7 @@ read_excel(tf)</code></pre>
 ## #   EDU010200N1 &lt;chr&gt;, EDU010200N2 &lt;chr&gt;, EDU010201F &lt;dbl&gt;, EDU010201D &lt;dbl&gt;,
 ## #   EDU010201N1 &lt;chr&gt;, EDU010201N2 &lt;chr&gt;, EDU010202F &lt;dbl&gt;, EDU010202D &lt;dbl&gt;,
 ## #   EDU010202N1 &lt;chr&gt;, EDU010202N2 &lt;chr&gt;, EDU015203F &lt;dbl&gt;, EDU015203D &lt;dbl&gt;,
-## #   EDU015203N1 &lt;chr&gt;, EDU015203N2 &lt;chr&gt;, EDU015204F &lt;dbl&gt;, EDU015204D &lt;dbl&gt;,
-## #   EDU015204N1 &lt;chr&gt;, EDU015204N2 &lt;chr&gt;, EDU015205F &lt;dbl&gt;, EDU015205D &lt;dbl&gt;,
-## #   EDU015205N1 &lt;chr&gt;, EDU015205N2 &lt;chr&gt;, EDU015206F &lt;dbl&gt;, EDU015206D &lt;dbl&gt;,
-## #   EDU015206N1 &lt;chr&gt;, EDU015206N2 &lt;chr&gt;</code></pre>
+## #   EDU015203N1 &lt;chr&gt;, EDU015203N2 &lt;chr&gt;, EDU015204F &lt;dbl&gt;, EDU015204D &lt;dbl&gt;, …</code></pre>
 <p>If there is metadata or no column names, these can be added in the same fashion as discussed above with the <code>read_csv</code> function. Finally, it should be noted, to use these data within R, you would want to save these data to an object within R.</p>
 <pre class="r"><code>edu_data &lt;- read_excel(tf)</code></pre>
 </div>

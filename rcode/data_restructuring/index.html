@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/data_restructuring/">
 
@@ -780,46 +780,6 @@
 
   <li class=""><a href="/rcode/data_joins/">Joining Data</a></li>
 
-
-
-  <li class=""><a href="/rcode/factors/">Factors</a></li>
-
-
-
-  <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -865,31 +825,27 @@
 <p>Data restructuring is often a useful tool to have. By data restructuring, I mean transforming data from long to wide format or vice versa. For the most part, long format is much easier to use when plotting and computing summary statistics. A related topic, called tidy data, can be read about in more detail here: <a href="http://www.jstatsoft.org/v59/i10/paper" class="uri">http://www.jstatsoft.org/v59/i10/paper</a>.</p>
 <p>The data we are going to use for this section of notes is called “LongitudinalEx.csv” and can be found on the <a href="https://psqf6250.brandonlebeau.org/data/">course website</a>. The data are loaded directly from the web, but these could be loaded from a downloaded data file (see )</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-## ✓ tibble  3.1.0     ✓ dplyr   1.0.4
-## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
-## ✓ readr   1.4.0     ✓ forcats 0.5.1</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+## ✓ tibble  3.1.6     ✓ dplyr   1.0.7
+## ✓ tidyr   1.2.0     ✓ stringr 1.4.0
+## ✓ readr   2.1.2     ✓ forcats 0.5.1</code></pre>
 <pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>long_data &lt;- read_csv(&quot;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/LongitudinalEx.csv&quot;)</code></pre>
-<pre><code>## 
-## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   id = col_double(),
-##   wave = col_double(),
-##   agegrp = col_double(),
-##   age = col_double(),
-##   piat = col_double(),
-##   agegrp.c = col_double(),
-##   age.c = col_double()
-## )</code></pre>
+<pre><code>## Rows: 27 Columns: 7</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## dbl (7): id, wave, agegrp, age, piat, agegrp.c, age.c
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <div id="longstacked-data" class="section level2">
 <h2>Long/Stacked Data</h2>
 <p>The data read in above is in a format that is commonly referred to as long or stacked data.</p>
 <pre class="r"><code>long_data</code></pre>
-<pre><code>## # A tibble: 27 x 7
+<pre><code>## # A tibble: 27 × 7
 ##       id  wave agegrp   age  piat agegrp.c  age.c
 ##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
 ##  1     4     1    6.5  6       18        0 -0.5  
@@ -919,7 +875,7 @@
   pivot_longer(agegrp:age.c, names_to = &#39;variable&#39;, values_to = &#39;value&#39;) %&gt;%
   unite(var_wave, variable, wave)
 extra_long </code></pre>
-<pre><code>## # A tibble: 135 x 3
+<pre><code>## # A tibble: 135 × 3
 ##       id var_wave   value
 ##    &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
 ##  1     4 agegrp_1     6.5
@@ -941,7 +897,7 @@ extra_long </code></pre>
 <pre class="r"><code>wide &lt;- extra_long %&gt;% 
   pivot_wider(names_from = var_wave, values_from = value)
 wide</code></pre>
-<pre><code>## # A tibble: 9 x 16
+<pre><code>## # A tibble: 9 × 16
 ##      id agegrp_1 age_1 piat_1 agegrp.c_1 age.c_1 agegrp_2 age_2 piat_2
 ##   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
 ## 1     4      6.5  6        18          0  -0.5        8.5  8.5      31
@@ -967,7 +923,7 @@ wide</code></pre>
            sep = &quot;_&quot;) %&gt;%
   arrange(id, wave) %&gt;%
   pivot_wider(names_from = variable, values_from = value)</code></pre>
-<pre><code>## # A tibble: 27 x 7
+<pre><code>## # A tibble: 27 × 7
 ##       id wave  agegrp   age  piat agegrp.c  age.c
 ##    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
 ##  1     4 1        6.5  6       18        0 -0.5  
@@ -986,7 +942,7 @@ wide</code></pre>
   pivot_longer(agegrp:age.c, names_to = &#39;variable&#39;, values_to = &#39;value&#39;) %&gt;%
   unite(var_wave, variable, wave) %&gt;%
   pivot_wider(names_from = var_wave, values_from = value)</code></pre>
-<pre><code>## # A tibble: 9 x 16
+<pre><code>## # A tibble: 9 × 16
 ##      id agegrp_1 age_1 piat_1 agegrp.c_1 age.c_1 agegrp_2 age_2 piat_2
 ##   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
 ## 1     4      6.5  6        18          0  -0.5        8.5  8.5      31
