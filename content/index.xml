@@ -329,5 +329,63 @@
 </description>
     </item>
     
+    <item>
+      <title>Week 7</title>
+      <link>https://psqf6250.brandonlebeau.org/content/07-week7/</link>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/07-week7/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week will get you oriented for working with factor variables in R which can be useful for linear modeling (to come next week). Then the week will also explore how to manipulate character vectors to extract information you may want. As part of this, special functionality for extracting dates will be explored.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identify character and factor data attributes&lt;/li&gt;
+&lt;li&gt;Manipulate factor data attributes&lt;/li&gt;
+&lt;li&gt;Manipulate character vectors&lt;/li&gt;
+&lt;li&gt;Extract dates using the lubridate package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;activities&#34;&gt;Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;R for Data Science - chapters &lt;a href=&#34;https://r4ds.had.co.nz/factors.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;15&lt;/a&gt;, &lt;a href=&#34;https://r4ds.had.co.nz/dates-and-times.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;16&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro to Factors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f0e8abd8-1626-41f2-8b7d-bead7d13dc43&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Factor Manipulations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3f50812b-e267-475b-b386-a4e78ea84144&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Rename Factor Levels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=86213b69-150d-4a3b-96ca-d1a2d859696e&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic Character String Tasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=586fd457-ae19-489e-ad52-ac4e012426e3&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Regular Expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=dda278aa-b0f0-45c9-b9b0-ac4e012789fe&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Regular Expression Functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=54abaf26-1190-4897-a261-ac4e012ad403&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-world Examples - working with dates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3a338c17-ef69-4dde-a88c-ac4f00153874&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/factors/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Factors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/strings/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Strings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
