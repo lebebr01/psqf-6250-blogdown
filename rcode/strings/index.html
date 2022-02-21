@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/strings/">
 
@@ -788,38 +788,6 @@
 
   <li class="active"><a href="/rcode/strings/">Working with Character Strings</a></li>
 
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -1048,31 +1016,27 @@ x</code></pre>
 <h2>Real World Example</h2>
 <p>To give a sense of some real world applications of regular expressions, I’m going to use the “ufo.csv” data we used once previously.</p>
 <pre class="r"><code>ufo &lt;- read_csv(&#39;https://raw.githubusercontent.com/lebebr01/psqf-6250-blogdown/main/data/ufo.csv&#39;)</code></pre>
-<pre><code>## 
+<pre><code>## Rows: 8031 Columns: 7
 ## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   `Date / Time` = col_character(),
-##   City = col_character(),
-##   State = col_character(),
-##   Shape = col_character(),
-##   Duration = col_character(),
-##   Summary = col_character(),
-##   Posted = col_character()
-## )</code></pre>
+## Delimiter: &quot;,&quot;
+## chr (7): Date / Time, City, State, Shape, Duration, Summary, Posted
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>ufo</code></pre>
-<pre><code>## # A tibble: 8,031 x 7
-##    `Date / Time`  City       State Shape  Duration Summary                Posted
-##    &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt; 
-##  1 12/12/14 17:30 North Wal… PA    Trian… 5 minut… &quot;I heard an extremely… &lt;NA&gt;  
-##  2 12/12/14 12:40 Cartersvi… GA    Unkno… 3.6 min… &quot;Looking up towards t… 12/12…
-##  3 12/12/14 06:30 Isle of M… &lt;NA&gt;  Light  2 secon… &quot;Over the Isle of Man… 12/12…
-##  4 12/12/14 01:00 Miamisburg OH    Chang… &lt;NA&gt;     &quot;Bright color changin… 12/12…
-##  5 12/12/14 00:00 Spotsylva… VA    Unkno… 1 minute &quot;White then orange or… 12/12…
-##  6 12/11/14 23:25 Kenner     LA    Chevr… ~1 minu… &quot;Strange, chevron-sha… 12/12…
-##  7 12/11/14 23:15 Eugene     OR    Disk   2 minut… &quot;Dual orange orbs in … 12/12…
-##  8 12/11/14 20:04 Phoenix    AZ    Chevr… 3 minut… &quot;4 Orange Lights Spot… 12/12…
-##  9 12/11/14 20:00 Franklin   NC    Disk   5 minut… &quot;There were 5 or 6 li… 12/12…
-## 10 12/11/14 18:30 Longview   WA    Cylin… 10 seco… &quot;Two cylinder shaped … 12/12…
+<pre><code>## # A tibble: 8,031 × 7
+##    `Date / Time`  City                     State Shape   Duration Summary Posted
+##    &lt;chr&gt;          &lt;chr&gt;                    &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt; 
+##  1 12/12/14 17:30 North Wales              PA    Triang… 5 minut… &quot;I hea… &lt;NA&gt;  
+##  2 12/12/14 12:40 Cartersville             GA    Unknown 3.6 min… &quot;Looki… 12/12…
+##  3 12/12/14 06:30 Isle of Man (UK/England) &lt;NA&gt;  Light   2 secon… &quot;Over … 12/12…
+##  4 12/12/14 01:00 Miamisburg               OH    Changi… &lt;NA&gt;     &quot;Brigh… 12/12…
+##  5 12/12/14 00:00 Spotsylvania             VA    Unknown 1 minute &quot;White… 12/12…
+##  6 12/11/14 23:25 Kenner                   LA    Chevron ~1 minu… &quot;Stran… 12/12…
+##  7 12/11/14 23:15 Eugene                   OR    Disk    2 minut… &quot;Dual … 12/12…
+##  8 12/11/14 20:04 Phoenix                  AZ    Chevron 3 minut… &quot;4 Ora… 12/12…
+##  9 12/11/14 20:00 Franklin                 NC    Disk    5 minut… &quot;There… 12/12…
+## 10 12/11/14 18:30 Longview                 WA    Cylind… 10 seco… &quot;Two c… 12/12…
 ## # … with 8,021 more rows</code></pre>
 <p>A few things may be of interest here. First, we may wish to add columns that split the Duration variable into a time and metric variables.</p>
 <pre class="r"><code>ufo_duration &lt;- str_split(ufo$Duration, &#39; &#39;, simplify = TRUE)
@@ -43941,19 +43905,19 @@ cbind(ufo, ufo_duration)</code></pre>
   mutate(
     num_colors = str_count(Summary, &#39;white|green|red|blue|orange|purple|yellow&#39;)
   )</code></pre>
-<pre><code>## # A tibble: 8,031 x 8
-##    `Date / Time`  City     State Shape Duration Summary        Posted num_colors
-##    &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt;       &lt;int&gt;
-##  1 12/12/14 17:30 North W… PA    Tria… 5 minut… &quot;I heard an e… &lt;NA&gt;            1
-##  2 12/12/14 12:40 Carters… GA    Unkn… 3.6 min… &quot;Looking up t… 12/12…          3
-##  3 12/12/14 06:30 Isle of… &lt;NA&gt;  Light 2 secon… &quot;Over the Isl… 12/12…          0
-##  4 12/12/14 01:00 Miamisb… OH    Chan… &lt;NA&gt;     &quot;Bright color… 12/12…          0
-##  5 12/12/14 00:00 Spotsyl… VA    Unkn… 1 minute &quot;White then o… 12/12…          1
-##  6 12/11/14 23:25 Kenner   LA    Chev… ~1 minu… &quot;Strange, che… 12/12…          0
-##  7 12/11/14 23:15 Eugene   OR    Disk  2 minut… &quot;Dual orange … 12/12…          1
-##  8 12/11/14 20:04 Phoenix  AZ    Chev… 3 minut… &quot;4 Orange Lig… 12/12…          0
-##  9 12/11/14 20:00 Franklin NC    Disk  5 minut… &quot;There were 5… 12/12…          2
-## 10 12/11/14 18:30 Longview WA    Cyli… 10 seco… &quot;Two cylinder… 12/12…          0
+<pre><code>## # A tibble: 8,031 × 8
+##    `Date / Time`  City            State Shape Duration Summary Posted num_colors
+##    &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;       &lt;int&gt;
+##  1 12/12/14 17:30 North Wales     PA    Tria… 5 minut… &quot;I hea… &lt;NA&gt;            1
+##  2 12/12/14 12:40 Cartersville    GA    Unkn… 3.6 min… &quot;Looki… 12/12…          3
+##  3 12/12/14 06:30 Isle of Man (U… &lt;NA&gt;  Light 2 secon… &quot;Over … 12/12…          0
+##  4 12/12/14 01:00 Miamisburg      OH    Chan… &lt;NA&gt;     &quot;Brigh… 12/12…          0
+##  5 12/12/14 00:00 Spotsylvania    VA    Unkn… 1 minute &quot;White… 12/12…          1
+##  6 12/11/14 23:25 Kenner          LA    Chev… ~1 minu… &quot;Stran… 12/12…          0
+##  7 12/11/14 23:15 Eugene          OR    Disk  2 minut… &quot;Dual … 12/12…          1
+##  8 12/11/14 20:04 Phoenix         AZ    Chev… 3 minut… &quot;4 Ora… 12/12…          0
+##  9 12/11/14 20:00 Franklin        NC    Disk  5 minut… &quot;There… 12/12…          2
+## 10 12/11/14 18:30 Longview        WA    Cyli… 10 seco… &quot;Two c… 12/12…          0
 ## # … with 8,021 more rows</code></pre>
 </div>
 <div id="an-easier-way-to-manipulate-dates" class="section level2">
@@ -43979,19 +43943,19 @@ library(lubridate)</code></pre>
   mutate(converted_date = mdy_hm(`Date / Time`))</code></pre>
 <pre><code>## Warning: 56 failed to parse.</code></pre>
 <pre class="r"><code>ufo</code></pre>
-<pre><code>## # A tibble: 8,031 x 8
-##    `Date / Time`  City  State Shape Duration Summary  Posted converted_date     
-##    &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;  &lt;dttm&gt;             
-##  1 12/12/14 17:30 Nort… PA    Tria… 5 minut… &quot;I hear… &lt;NA&gt;   2014-12-12 17:30:00
-##  2 12/12/14 12:40 Cart… GA    Unkn… 3.6 min… &quot;Lookin… 12/12… 2014-12-12 12:40:00
-##  3 12/12/14 06:30 Isle… &lt;NA&gt;  Light 2 secon… &quot;Over t… 12/12… 2014-12-12 06:30:00
-##  4 12/12/14 01:00 Miam… OH    Chan… &lt;NA&gt;     &quot;Bright… 12/12… 2014-12-12 01:00:00
-##  5 12/12/14 00:00 Spot… VA    Unkn… 1 minute &quot;White … 12/12… 2014-12-12 00:00:00
-##  6 12/11/14 23:25 Kenn… LA    Chev… ~1 minu… &quot;Strang… 12/12… 2014-12-11 23:25:00
-##  7 12/11/14 23:15 Euge… OR    Disk  2 minut… &quot;Dual o… 12/12… 2014-12-11 23:15:00
-##  8 12/11/14 20:04 Phoe… AZ    Chev… 3 minut… &quot;4 Oran… 12/12… 2014-12-11 20:04:00
-##  9 12/11/14 20:00 Fran… NC    Disk  5 minut… &quot;There … 12/12… 2014-12-11 20:00:00
-## 10 12/11/14 18:30 Long… WA    Cyli… 10 seco… &quot;Two cy… 12/12… 2014-12-11 18:30:00
+<pre><code>## # A tibble: 8,031 × 8
+##    `Date / Time`  City   State Shape Duration Summary Posted converted_date     
+##    &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;  &lt;dttm&gt;             
+##  1 12/12/14 17:30 North… PA    Tria… 5 minut… &quot;I hea… &lt;NA&gt;   2014-12-12 17:30:00
+##  2 12/12/14 12:40 Carte… GA    Unkn… 3.6 min… &quot;Looki… 12/12… 2014-12-12 12:40:00
+##  3 12/12/14 06:30 Isle … &lt;NA&gt;  Light 2 secon… &quot;Over … 12/12… 2014-12-12 06:30:00
+##  4 12/12/14 01:00 Miami… OH    Chan… &lt;NA&gt;     &quot;Brigh… 12/12… 2014-12-12 01:00:00
+##  5 12/12/14 00:00 Spots… VA    Unkn… 1 minute &quot;White… 12/12… 2014-12-12 00:00:00
+##  6 12/11/14 23:25 Kenner LA    Chev… ~1 minu… &quot;Stran… 12/12… 2014-12-11 23:25:00
+##  7 12/11/14 23:15 Eugene OR    Disk  2 minut… &quot;Dual … 12/12… 2014-12-11 23:15:00
+##  8 12/11/14 20:04 Phoen… AZ    Chev… 3 minut… &quot;4 Ora… 12/12… 2014-12-11 20:04:00
+##  9 12/11/14 20:00 Frank… NC    Disk  5 minut… &quot;There… 12/12… 2014-12-11 20:00:00
+## 10 12/11/14 18:30 Longv… WA    Cyli… 10 seco… &quot;Two c… 12/12… 2014-12-11 18:30:00
 ## # … with 8,021 more rows</code></pre>
 <p>The resulting output has the converted_date added to the original table. Note, we did get some warning messages, these basically say that there were some dates that could not be converted properly, these are likely due to missing data or different patterns in the conversion. We would want to inspect these in more detail to understand why those 56 date/times failed to parse.</p>
 <p>Once the dates are now in a date/time format, we can now use additional functions from lubridate to pull out specific elements of the date or time. For example, we could use <code>year()</code>, <code>month()</code>, <code>day()</code> to extract the year, month or day from each element. There are also similar functions, <code>hour()</code>, <code>minute()</code>, and <code>second()</code>. These are shown in use below.</p>
@@ -44007,19 +43971,19 @@ library(lubridate)</code></pre>
     month_label = month(converted_date, label = TRUE, abbr = FALSE),
     wday = wday(converted_date, label = TRUE, abbr = FALSE)
   )</code></pre>
-<pre><code>## # A tibble: 8,031 x 17
-##    `Date / Time` City  State Shape Duration Summary Posted converted_date     
-##    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;  &lt;dttm&gt;             
-##  1 12/12/14 17:… Nort… PA    Tria… 5 minut… &quot;I hea… &lt;NA&gt;   2014-12-12 17:30:00
-##  2 12/12/14 12:… Cart… GA    Unkn… 3.6 min… &quot;Looki… 12/12… 2014-12-12 12:40:00
-##  3 12/12/14 06:… Isle… &lt;NA&gt;  Light 2 secon… &quot;Over … 12/12… 2014-12-12 06:30:00
-##  4 12/12/14 01:… Miam… OH    Chan… &lt;NA&gt;     &quot;Brigh… 12/12… 2014-12-12 01:00:00
-##  5 12/12/14 00:… Spot… VA    Unkn… 1 minute &quot;White… 12/12… 2014-12-12 00:00:00
-##  6 12/11/14 23:… Kenn… LA    Chev… ~1 minu… &quot;Stran… 12/12… 2014-12-11 23:25:00
-##  7 12/11/14 23:… Euge… OR    Disk  2 minut… &quot;Dual … 12/12… 2014-12-11 23:15:00
-##  8 12/11/14 20:… Phoe… AZ    Chev… 3 minut… &quot;4 Ora… 12/12… 2014-12-11 20:04:00
-##  9 12/11/14 20:… Fran… NC    Disk  5 minut… &quot;There… 12/12… 2014-12-11 20:00:00
-## 10 12/11/14 18:… Long… WA    Cyli… 10 seco… &quot;Two c… 12/12… 2014-12-11 18:30:00
+<pre><code>## # A tibble: 8,031 × 17
+##    `Date / Time`  City   State Shape Duration Summary Posted converted_date     
+##    &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;  &lt;dttm&gt;             
+##  1 12/12/14 17:30 North… PA    Tria… 5 minut… &quot;I hea… &lt;NA&gt;   2014-12-12 17:30:00
+##  2 12/12/14 12:40 Carte… GA    Unkn… 3.6 min… &quot;Looki… 12/12… 2014-12-12 12:40:00
+##  3 12/12/14 06:30 Isle … &lt;NA&gt;  Light 2 secon… &quot;Over … 12/12… 2014-12-12 06:30:00
+##  4 12/12/14 01:00 Miami… OH    Chan… &lt;NA&gt;     &quot;Brigh… 12/12… 2014-12-12 01:00:00
+##  5 12/12/14 00:00 Spots… VA    Unkn… 1 minute &quot;White… 12/12… 2014-12-12 00:00:00
+##  6 12/11/14 23:25 Kenner LA    Chev… ~1 minu… &quot;Stran… 12/12… 2014-12-11 23:25:00
+##  7 12/11/14 23:15 Eugene OR    Disk  2 minut… &quot;Dual … 12/12… 2014-12-11 23:15:00
+##  8 12/11/14 20:04 Phoen… AZ    Chev… 3 minut… &quot;4 Ora… 12/12… 2014-12-11 20:04:00
+##  9 12/11/14 20:00 Frank… NC    Disk  5 minut… &quot;There… 12/12… 2014-12-11 20:00:00
+## 10 12/11/14 18:30 Longv… WA    Cyli… 10 seco… &quot;Two c… 12/12… 2014-12-11 18:30:00
 ## # … with 8,021 more rows, and 9 more variables: year &lt;dbl&gt;, month &lt;dbl&gt;,
 ## #   day &lt;int&gt;, hour &lt;int&gt;, minute &lt;int&gt;, month_label_abbr &lt;ord&gt;,
 ## #   wday_abbr &lt;ord&gt;, month_label &lt;ord&gt;, wday &lt;ord&gt;</code></pre>
@@ -44044,12 +44008,6 @@ library(lubridate)</code></pre>
     <a href="/rcode/factors/" rel="next">Factors</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/rcode/model-intro/" rel="prev">Model Introduction</a>
-  </div>
   
 </div>
 

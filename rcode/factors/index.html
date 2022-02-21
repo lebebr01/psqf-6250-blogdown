@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/factors/">
 
@@ -788,38 +788,6 @@
 
   <li class=""><a href="/rcode/strings/">Working with Character Strings</a></li>
 
-
-
-  <li class=""><a href="/rcode/model-intro/">Model Introduction</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -912,7 +880,7 @@ as.numeric(resp_fact)</code></pre>
 </ol>
 <p>Examples of each of these will be given with the <code>weather_check</code> data from the <code>fivethirtyeight</code> package.</p>
 <pre class="r"><code>weather_check</code></pre>
-<pre><code>## # A tibble: 928 x 9
+<pre><code>## # A tibble: 928 × 9
 ##    respondent_id ck_weather weather_source     weather_source_… ck_weather_watch
 ##            &lt;dbl&gt; &lt;lgl&gt;      &lt;chr&gt;              &lt;chr&gt;            &lt;ord&gt;           
 ##  1    3887201482 TRUE       The default weath… &lt;NA&gt;             Very likely     
@@ -934,9 +902,9 @@ as.numeric(resp_fact)</code></pre>
   group_by(region) %&gt;%
   summarise(prop = mean(ck_weather))
 prop_check_weather</code></pre>
-<pre><code>## # A tibble: 10 x 2
+<pre><code>## # A tibble: 10 × 2
 ##    region              prop
-##  * &lt;chr&gt;              &lt;dbl&gt;
+##    &lt;chr&gt;              &lt;dbl&gt;
 ##  1 East North Central 0.858
 ##  2 East South Central 0.927
 ##  3 Middle Atlantic    0.885
@@ -995,9 +963,9 @@ prop_check_weather</code></pre>
       &#39;45 to 59&#39; = &#39;45 - 59&#39;
   )) %&gt;%
   count(age_recode)</code></pre>
-<pre><code>## # A tibble: 5 x 2
+<pre><code>## # A tibble: 5 × 2
 ##   age_recode     n
-## * &lt;fct&gt;      &lt;int&gt;
+##   &lt;fct&gt;      &lt;int&gt;
 ## 1 18 to 29     176
 ## 2 30 to 44     204
 ## 3 45 to 59     278
@@ -1015,9 +983,9 @@ prop_check_weather</code></pre>
          &#39;Likely&#39; = &#39;Very likely&#39;
   )) %&gt;%
   count(watch_recode)</code></pre>
-<pre><code>## # A tibble: 3 x 2
+<pre><code>## # A tibble: 3 × 2
 ##   watch_recode     n
-## * &lt;ord&gt;        &lt;int&gt;
+##   &lt;ord&gt;        &lt;int&gt;
 ## 1 Unlikely       281
 ## 2 Likely         636
 ## 3 &lt;NA&gt;            11</code></pre>
@@ -1025,7 +993,7 @@ prop_check_weather</code></pre>
 <pre class="r"><code>weather_check %&gt;%
   mutate(region = fct_lump(region, n = 5)) %&gt;%
   count(region, sort = TRUE)</code></pre>
-<pre><code>## # A tibble: 7 x 2
+<pre><code>## # A tibble: 7 × 2
 ##   region                 n
 ##   &lt;fct&gt;              &lt;int&gt;
 ## 1 Other                219
