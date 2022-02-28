@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/model-intro/">
 
@@ -284,9 +284,9 @@
   <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-03-16T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-02-28T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-03-16T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-02-28T00:00:00&#43;00:00">
   
 
   
@@ -792,34 +792,6 @@
 
   <li class="active"><a href="/rcode/model-intro/">Model Introduction</a></li>
 
-
-
-  <li class=""><a href="/rcode/model-part2/">Building Upon Linear Models</a></li>
-
-
-
-  <li class=""><a href="/rcode/adv-model/">Advanced Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/model-assumptions/">Model Assumptions</a></li>
-
-
-
-  <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
-
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -862,7 +834,7 @@
 
 </div>
 
-<p>This section of the notes is going to introduce you into the world of models in R. For the most part, we are going to stick with simple linear models and build up the various models using one function <code>lm</code>. The <code>lm</code> function is an extremely powerful function that can accomodate many different models in a single framework.</p>
+<p>This section of the notes is going to introduce you into the world of models in R. For the most part, we are going to stick with simple linear models and build up the various models using one function <code>lm</code>. The <code>lm</code> function is an extremely powerful function that can accommodate many different models in a single framework.</p>
 <p>This section of notes is going to make use of four R packages:</p>
 <pre class="r"><code>library(tidyverse)
 library(modelr)
@@ -873,7 +845,7 @@ library(fivethirtyeight)</code></pre>
 <h2>Simple Linear Regression</h2>
 <p>First we need some data. We are going to explore the data from the <code>fivethirtyeight</code> package called <code>fandango</code>. Here are the first few rows:</p>
 <pre class="r"><code>fandango</code></pre>
-<pre><code>## # A tibble: 146 x 23
+<pre><code>## # A tibble: 146 × 23
 ##    film    year rottentomatoes rottentomatoes_… metacritic metacritic_user  imdb
 ##    &lt;chr&gt;  &lt;dbl&gt;          &lt;int&gt;            &lt;int&gt;      &lt;int&gt;           &lt;dbl&gt; &lt;dbl&gt;
 ##  1 Aveng…  2015             74               86         66             7.1   7.8
@@ -938,7 +910,7 @@ library(fivethirtyeight)</code></pre>
 ## Multiple R-squared:  0.9165, Adjusted R-squared:  0.916 
 ## F-statistic:  1581 on 1 and 144 DF,  p-value: &lt; 2.2e-16</code></pre>
 <pre class="r"><code>tidy(meta_mod)</code></pre>
-<pre><code>## # A tibble: 2 x 5
+<pre><code>## # A tibble: 2 × 5
 ##   term           estimate std.error statistic  p.value
 ##   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
 ## 1 (Intercept)      21.1      1.06        20.0 2.36e-43
@@ -946,7 +918,7 @@ library(fivethirtyeight)</code></pre>
 <p>With the broom package, the results are reported in a tidier framework. We will see additional useful functions using the broom package later on.</p>
 <p>You can also directly request confidence intervals with the <code>tidy</code> function:</p>
 <pre class="r"><code>tidy(meta_mod, conf.int = TRUE)</code></pre>
-<pre><code>## # A tibble: 2 x 7
+<pre><code>## # A tibble: 2 × 7
 ##   term           estimate std.error statistic  p.value conf.low conf.high
 ##   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
 ## 1 (Intercept)      21.1      1.06        20.0 2.36e-43   19.0      23.2  
@@ -964,7 +936,7 @@ library(fivethirtyeight)</code></pre>
 <h3>Workings Behind <code>lm</code> function</h3>
 <p>To see what the <code>lm</code> function is doing behind the scenes, we will use the <code>model_matrix</code> function from the modelr package. For example, from the model above:</p>
 <pre class="r"><code>model_matrix(fandango, metacritic ~ rottentomatoes)</code></pre>
-<pre><code>## # A tibble: 146 x 2
+<pre><code>## # A tibble: 146 × 2
 ##    `(Intercept)` rottentomatoes
 ##            &lt;dbl&gt;          &lt;dbl&gt;
 ##  1             1             74
@@ -980,7 +952,7 @@ library(fivethirtyeight)</code></pre>
 ## # … with 136 more rows</code></pre>
 <p>This is often referred to as the design matrix in statistics text books and is one of the matrices that are used by <code>lm</code> to calculate the estimated parameters from above. Notice that is automatically included the intercept, normally this is of interest, if it is not, we can omit it directly by including a <code>-1</code> in the formula. For example:</p>
 <pre class="r"><code>model_matrix(fandango, metacritic ~ rottentomatoes - 1)</code></pre>
-<pre><code>## # A tibble: 146 x 1
+<pre><code>## # A tibble: 146 × 1
 ##    rottentomatoes
 ##             &lt;dbl&gt;
 ##  1             74
@@ -995,7 +967,7 @@ library(fivethirtyeight)</code></pre>
 ## 10             89
 ## # … with 136 more rows</code></pre>
 <pre class="r"><code>tidy(lm(metacritic ~ rottentomatoes - 1, data = fandango))</code></pre>
-<pre><code>## # A tibble: 1 x 5
+<pre><code>## # A tibble: 1 × 5
 ##   term           estimate std.error statistic   p.value
 ##   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
 ## 1 rottentomatoes    0.898    0.0134      67.3 3.14e-111</code></pre>
@@ -1012,7 +984,7 @@ library(fivethirtyeight)</code></pre>
   select(film, year, rottentomatoes, metacritic) %&gt;%
   gather(group, rating, rottentomatoes, metacritic)
 meta_rotten</code></pre>
-<pre><code>## # A tibble: 292 x 4
+<pre><code>## # A tibble: 292 × 4
 ##    film                     year group          rating
 ##    &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt;
 ##  1 Avengers: Age of Ultron  2015 rottentomatoes     74
@@ -1028,7 +1000,7 @@ meta_rotten</code></pre>
 ## # … with 282 more rows</code></pre>
 <p>Now we can work with this data to answer the question from above. More specifically, our dependent variable will be the rating variable and the independent variable will be the group (categorical) variable. This can be fitted within a linear model as follows:</p>
 <pre class="r"><code>tidy(lm(rating ~ factor(group), data = meta_rotten))</code></pre>
-<pre><code>## # A tibble: 2 x 5
+<pre><code>## # A tibble: 2 × 5
 ##   term                        estimate std.error statistic  p.value
 ##   &lt;chr&gt;                          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
 ## 1 (Intercept)                    58.8       2.10    28.0   2.50e-84
@@ -1036,7 +1008,7 @@ meta_rotten</code></pre>
 <p>To see exactly what is happening, <code>model_matrix</code> may be useful. First I am going to arrange the data by the films in alphabetical order.</p>
 <pre class="r"><code>meta_rotten %&gt;%
   arrange(film)</code></pre>
-<pre><code>## # A tibble: 292 x 4
+<pre><code>## # A tibble: 292 × 4
 ##    film                 year group          rating
 ##    &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt;
 ##  1 &#39;71                  2015 rottentomatoes     97
@@ -1053,7 +1025,7 @@ meta_rotten</code></pre>
 <pre class="r"><code>meta_rotten %&gt;%
   arrange(film) %&gt;%
   model_matrix(rating ~ factor(group))</code></pre>
-<pre><code>## # A tibble: 292 x 2
+<pre><code>## # A tibble: 292 × 2
 ##    `(Intercept)` `factor(group)rottentomatoes`
 ##            &lt;dbl&gt;                         &lt;dbl&gt;
 ##  1             1                             1
@@ -1075,7 +1047,7 @@ meta_rotten</code></pre>
 ## 
 ## data:  rating by factor(group)
 ## t = -0.68638, df = 290, p-value = 0.493
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group metacritic and group rottentomatoes is not equal to 0
 ## 95 percent confidence interval:
 ##  -7.893918  3.811726
 ## sample estimates:
@@ -1113,7 +1085,7 @@ meta_rotten</code></pre>
 ## F-statistic: 0.4711 on 1 and 290 DF,  p-value: 0.493</code></pre>
 <p>The unfortunate part of this is the fact that these are more difficult to pull out of the table programmatically (i.e. in a reproducible workflow). This is where the broom package helps with the use of the <code>glance</code> function.</p>
 <pre class="r"><code>glance(lm(rating ~ factor(group), data = meta_rotten))</code></pre>
-<pre><code>## # A tibble: 1 x 12
+<pre><code>## # A tibble: 1 × 12
 ##   r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
 ##       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1   0.00162      -0.00182  25.4     0.471   0.493     1 -1358. 2722. 2733.
@@ -1122,7 +1094,7 @@ meta_rotten</code></pre>
 <p>Another useful function from the broom package is <code>augment</code>. This function will add additional information to the original data such as residuals, fitted (predicted) values, and other diagnostic statistics.</p>
 <pre class="r"><code>diagnostic &lt;- augment(lm(rating ~ factor(group), data = meta_rotten))
 diagnostic</code></pre>
-<pre><code>## # A tibble: 292 x 7
+<pre><code>## # A tibble: 292 × 7
 ##    rating `factor(group)` .fitted    .hat .sigma   .cooksd .std.resid
 ##     &lt;int&gt; &lt;fct&gt;             &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
 ##  1     74 rottentomatoes     60.8 0.00685   25.4 0.000930      0.519 
@@ -1153,7 +1125,7 @@ diagnostic</code></pre>
 <p>For example, to add the residuals to the original data:</p>
 <pre class="r"><code>meta_rotten %&gt;%
   add_residuals(lm(rating ~ factor(group), data = meta_rotten))</code></pre>
-<pre><code>## # A tibble: 292 x 5
+<pre><code>## # A tibble: 292 × 5
 ##    film                     year group          rating  resid
 ##    &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt;  &lt;dbl&gt;
 ##  1 Avengers: Age of Ultron  2015 rottentomatoes     74  13.2 
@@ -1197,12 +1169,6 @@ diagnostic</code></pre>
   </div>
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/rcode/model-part2/" rel="prev">Building Upon Linear Models</a>
-  </div>
-  
 </div>
 
           </div>
@@ -1210,7 +1176,7 @@ diagnostic</code></pre>
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Mar 16, 2021</p>
+          <p>Last updated on Feb 28, 2022</p>
 
           
 
