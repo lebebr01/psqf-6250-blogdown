@@ -34,9 +34,9 @@
   
     
   
-  <meta name="description" content="Inferential Statistics with R: 10 pts
-Due: April 19th, 2021 - No penalty for late submissions, but due no later than May 7th.
-In this assignment, you will explore research questions from an inferential framework using R.">
+  <meta name="description" content="Inferential Statistics with R: 6 pts
+Due around April 10th, 2022 - No penalty for late submissions, but due no later than May 8th.
+ In this assignment, you will explore research questions from an inferential framework using R.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment4/">
@@ -282,15 +282,15 @@ In this assignment, you will explore research questions from an inferential fram
   <meta property="og:site_name" content="PSQF 6250">
   <meta property="og:url" content="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment4/">
   <meta property="og:title" content="Assignment 4 | PSQF 6250">
-  <meta property="og:description" content="Inferential Statistics with R: 10 pts
-Due: April 19th, 2021 - No penalty for late submissions, but due no later than May 7th.
-In this assignment, you will explore research questions from an inferential framework using R."><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="og:description" content="Inferential Statistics with R: 6 pts
+Due around April 10th, 2022 - No penalty for late submissions, but due no later than May 8th.
+ In this assignment, you will explore research questions from an inferential framework using R."><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
   <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-03-14T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-03-29T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-03-14T00:00:00&#43;00:00">
   
 
   
@@ -774,10 +774,6 @@ In this assignment, you will explore research questions from an inferential fram
 
   <li class="active"><a href="/assignments/assignment/assignment4/">Assignment 4</a></li>
 
-
-
-  <li class=""><a href="/assignments/assignment/assignment5/">Assignment 5</a></li>
-
       
         </ul>
       
@@ -807,6 +803,10 @@ In this assignment, you will explore research questions from an inferential fram
       
 
 
+  <li class=""><a href="/assignments/quizzes/quiz1/">Quiz 1</a></li>
+
+
+
   <li class=""><a href="/assignments/quizzes/quiz2/">Quiz 2</a></li>
 
 
@@ -820,26 +820,6 @@ In this assignment, you will explore research questions from an inferential fram
 
 
   <li class=""><a href="/assignments/quizzes/quiz5/">Quiz 5</a></li>
-
-
-
-  <li class=""><a href="/assignments/quizzes/quiz6/">Quiz 6</a></li>
-
-
-
-  <li class=""><a href="/assignments/quizzes/quiz7/">Quiz 7</a></li>
-
-
-
-  <li class=""><a href="/assignments/quizzes/quiz8/">Quiz 8</a></li>
-
-
-
-  <li class=""><a href="/assignments/quizzes/quiz9/">Quiz 9</a></li>
-
-
-
-  <li class=""><a href="/assignments/quizzes/quiz10/">Quiz 10</a></li>
 
       
         </ul>
@@ -865,6 +845,21 @@ In this assignment, you will explore research questions from an inferential fram
       <div class="docs-toc-item">
         <a class="docs-toc-link " href="/assignments/project/">Project</a>
     
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/assignments/project/project-proposal/">Course Project Proposal</a></li>
+
+
+
+  <li class=""><a href="/assignments/project/project/">Course Project</a></li>
+
+      
+        </ul>
+      
+    
 
     
       </div>
@@ -889,7 +884,7 @@ In this assignment, you will explore research questions from an inferential fram
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents"></nav>
 
       
     </div>
@@ -905,62 +900,75 @@ In this assignment, you will explore research questions from an inferential fram
           <h1>Assignment 4</h1>
 
           <div class="article-style">
-            
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-<div id="TOC">
-
-</div>
-
-<p><strong>Inferential Statistics with R</strong>: <em>10 pts</em></p>
-<p>Due: <em>April 19th, 2021</em> - No penalty for late submissions, but due no later than <em>May 7th</em>.</p>
-<hr />
-<p>In this assignment, you will explore research questions from an inferential framework using R. The analyses will be more open ended and will likely contain data preparation steps as well. Please turn in the source file (the .Rmd) file as well as the compiled version (html). Create a new .Rmd file for this assignment. If a question asks for code or there is particular elements of code you’d like to share, you can definitely include those in the final compiled version, but please limit those sections to specific elements rather than long chunks of code. Long chunks of code are best left for the Rmd document.</p>
-<p>The data for this assignment can be found on GitHub and ICON and is named “cal-fire-9-10-2020”, <a href="https://github.com/lebebr01/statthink/blob/master/data-raw/cal-fire-9-10-2020.csv">data on GitHub</a>. A description of the variables is also provided on ICON. Use this data to explore the questions below. Note, the questions below will guide you through the research questions. You do not need to answer the research questions explicitly, instead you can focus on the specific questions, but keeping the overall research questions in mind may be helpful as you complete the assignment.</p>
+            <p><strong>Inferential Statistics with R</strong>: <em>6 pts</em></p>
+<p>Due around <em>April 10th, 2022</em> - No penalty for late submissions, but due no later than <em>May 8th</em>.</p>
+<hr>
+<p>In this assignment, you will explore research questions from an inferential framework using R. The analyses will be more open ended and will likely contain data preparation steps as well. Please turn in the source file (the .Rmd) file as well as the compiled version (html). Create a new .Rmd file for this assignment. If a question asks for code or there is particular elements of code you&rsquo;d like to share, you can definitely include those in the final compiled version, but please limit those sections to specific elements rather than long chunks of code. Long chunks of code are best left for the Rmd document.</p>
+<p>The data for this assignment can be found on GitHub and ICON and is named &ldquo;cal-fire-9-10-2020&rdquo;, <a href="https://github.com/lebebr01/statthink/blob/master/data-raw/cal-fire-9-10-2020.csv" target="_blank" rel="noopener">data on GitHub</a>. A description of the variables is also provided on ICON. Use this data to explore the questions below. Note, the questions below will guide you through the research questions. You do not need to answer the research questions explicitly, instead you can focus on the specific questions, but keeping the overall research questions in mind may be helpful as you complete the assignment.</p>
 <p>Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a <strong>2 pt</strong> penalty will apply.</p>
-<div id="research-questions" class="section level1">
-<h1>Research Questions</h1>
-<ol style="list-style-type: decimal">
-<li>Is there evidence that the number of fires has increased in more recent years?</li>
+<h1 id="research-questions">Research Questions</h1>
+<ol>
 <li>Is there evidence that the number of acres burned has increased for fires in more recent years?</li>
 <li>Does month help explain variation in the number of acres burned over and above the year of the fire?</li>
 <li>When the number of days the fire has burned in added to the model, are year or month the fire started still useful predictors?</li>
 </ol>
-</div>
-<div id="questions" class="section level1">
-<h1>Questions</h1>
-<ol style="list-style-type: decimal">
-<li><p>Using text processing, create a new variables in the data that represents the year and month the fire started. The code is sufficient for this question. <strong>1 pt</strong></p></li>
-<li><p>Explore the number of fires and number of acres the fires have burned related to research questions 1 through 3 above. Is there evidence of differences over years or months? Use specific statistics or figure to support your statements. <strong>2 pts</strong></p></li>
-<li><p>Based on your descriptive analysis, are there any data points that are extreme values or outliers that you feel should be removed from this analysis? Discuss briefly, why you feel these values may impact the analysis and should therefore be removed. Be as specific as you can why any values should or should not be removed. If you identify data that are suspect, remove them from further analysis (i.e. use filter to remove the values). <strong>1 pt</strong></p></li>
-<li><p>Fit a model to attempt to answer the second and third research questions. Summarize briefly the results from the models with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process. Note, consider carefully the best approach on how to include month and year in your models (i.e., continuous vs factor type variables).
-<em>Note, please do not include the output from the <code>summary()</code> function in your answer, instead pull out relevant information from the output to include in your description.</em> <strong>2 pts</strong></p></li>
-<li><p>Check assumptions for the models from #4. Does there appear to be problems with meeting statistical assumptions? Provide rationale for why or why not. <strong>1 pt</strong></p></li>
-<li><p>Create a new variable that represents the length of time a fire burned. This can be created by using the <code>difftime()</code> function within R. Look at the help page to try to figure out how this function can compute differences in two dates. Returning the code for this question is sufficient, but this variable will be used in the next question, so be sure to save it as a new variable to your data. <strong>1 pt</strong></p></li>
-<li><p>Fit another model to attempt to answer the fourth research question. Summarize briefly the results from the model with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process.<br />
-<em>Note, please do not include the output from the <code>summary()</code> function in your answer, instead pull out relevant information from the output to include in your description.</em> <strong>1 pt</strong></p></li>
-<li><p>Finally, create a graphic that summarizes the results from your final model that you feel fits the data the best (i.e. this could be the model from #4 or #7). Discuss why you picked this model and describe why this figure does a good job of showing the takeaway message. <strong>1 pt</strong></p></li>
+<h1 id="questions">Questions</h1>
+<ol>
+<li>
+<p>Using text processing, create three new variables in the data that represents:</p>
+<ul>
+<li>the year the fire started</li>
+<li>the month the fire started</li>
+<li>Create a new variable that represents the length of time a fire burned. This can be created by using the <code>difftime()</code> function within R. Look at the help page to try to figure out how this function can compute differences in two dates.<br>
+The code is sufficient for this question. <strong>1 pt</strong></li>
+</ul>
+</li>
+<li>
+<p>Are there any data points that are extreme values or outliers that you feel should be removed from this analysis? Discuss briefly, why you feel these values may impact the analysis and should therefore be removed. Be as specific as you can why any values should or should not be removed. If you identify data that are suspect, remove them from further analysis (i.e. use filter to remove the values). <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Fit two competing models to attempt to answer the 1st and 2nd research questions. Summarize briefly the results from the models with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process. Note, consider carefully the best approach on how to include month and year in your models (i.e., continuous vs factor type variables).  <strong>1 pt</strong></p>
+<ul>
+<li><strong>Which model fits best or do you feel is the best model?</strong></li>
+<li><em>Note, please do not include the output from the <code>summary()</code> function in your answer, instead pull out relevant information from the output to include in your description.</em></li>
+</ul>
+</li>
+<li>
+<p>Check assumptions for the models from #3. Does there appear to be problems with meeting statistical assumptions? Provide rationale for why or why not. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Fit another model to attempt to answer the third research question. Summarize briefly the results from the model with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process. <strong>1 pt</strong></p>
+<ul>
+<li><em>Note, please do not include the output from the <code>summary()</code> function in your answer, instead pull out relevant information from the output to include in your description.</em></li>
+</ul>
+</li>
+<li>
+<p>Finally, create a graphic that summarizes the results from your final model that you feel fits the data the best (i.e. this could be the model from #4 or #7). Discuss why you picked this model and describe why this figure does a good job of showing the takeaway message. <strong>1 pt</strong></p>
+</li>
 </ol>
-<hr />
-<p><strong>Turning Tables into Graphics with R</strong>: <em>10 pts</em></p>
-<p>Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a <strong>2 pt</strong> penalty will apply.</p>
-</div>
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>Read the article <a href="http://www.stat.columbia.edu/~gelman/research/published/dodhia.pdf">Let’s Practice What We Preach: Turning Tables Into Graphs</a>. In this article, Gelman, Pasarica, and Dodhia discuss the benefits of a graph instead of a table to succintly summarize statistical results.</p>
-</div>
-<div id="questions-1" class="section level1">
-<h1>Questions</h1>
-<ol style="list-style-type: decimal">
-<li><p>Find a published table showing descriptive or inferential statistic results. Provide a copy of the table (a screen shot is fine for this purpose). <strong>1 pt</strong></p></li>
-<li><p>Provide a brief (a few sentences) discussion of the message the table is attempting to convey from the original article. Do you feel the table is a good way to convey this information (discuss the strengths and weaknesses of using the table for this purpose) <strong>1 pt</strong></p></li>
-<li><p>Turn the table from #1 above into a publication quality graphic using R. Ensure that this graphic conveys the same purpose as the original table. <strong>2 pts</strong></p></li>
-<li><p>Create a different from the figure created in #3 above, and make an interactive graphic that attempts to convey the same message as the original table. Note, this figure should be an entirely different figure from that in #3. For example, if you created a bar chart in #3, create something other than a bar chart for this question. <strong>2 pts</strong></p></li>
-<li><p>Briefly discuss whether you feel the graphs convey the message better or worse than the original table. Use specific examples from the table/graph and recommendations from the article in your discussion. <strong>1 pt</strong></p></li>
-<li><p>Which figure do you feel does the best job in sharing the original purpose of the table? Be specific in your discussion. <strong>1 pt</strong></p></li>
-<li><p>Take the data from the original table, to do this you may need to create an Excel file or use the function <code>data.frame()</code> to import the data from the original table. Use the <code>kable()</code> function and <code>kableExtra</code> package to create a reproducible table that looks as close as possible to the original table. <strong>2 pts</strong></p></li>
+<hr>
+<p><strong>Turning Tables into Graphics with R</strong>: <em>4 pts</em></p>
+<p>Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a <strong>1 pt</strong> penalty will apply.</p>
+<h1 id="introduction">Introduction</h1>
+<p>Read the article <a href="http://www.stat.columbia.edu/~gelman/research/published/dodhia.pdf" target="_blank" rel="noopener">Let&rsquo;s Practice What We Preach: Turning Tables Into Graphs</a>. In this article, Gelman, Pasarica, and Dodhia discuss the benefits of a graph instead of a table to succintly summarize statistical results.</p>
+<h1 id="questions-1">Questions</h1>
+<ol>
+<li>
+<p>Find a published table showing descriptive or inferential statistic results. Provide a copy of the table (a screen shot is fine for this purpose).</p>
+</li>
+<li>
+<p>Turn the table from #1 above into a publication quality graphic using R. Ensure that this graphic conveys the same purpose as the original table. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Create a different from the figure created in #3 above, and make an interactive graphic that attempts to convey the same message as the original table. Note, this figure should be an entirely different figure from that in #3. For example, if you created a bar chart in #3, create something other than a bar chart for this question. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Briefly discuss whether you feel the graphs convey the message better or worse than the original table. Use specific examples from the table/graph and recommendations from the article in your discussion. Which figure do you feel does the best job in sharing the original purpose of the table? Be specific in your discussion. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Take the data from the original table, to do this you may need to create an Excel file or use the function <code>data.frame()</code> to import the data from the original table. Use the <code>kable()</code> function and <code>kableExtra</code> package to create a reproducible table that looks as close as possible to the original table. <strong>1 pt</strong></p>
+</li>
 </ol>
-</div>
 
           </div>
 
@@ -982,12 +990,6 @@ In this assignment, you will explore research questions from an inferential fram
   </div>
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/assignments/assignment/assignment5/" rel="prev">Assignment 5</a>
-  </div>
-  
 </div>
 
           </div>
@@ -995,7 +997,7 @@ In this assignment, you will explore research questions from an inferential fram
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Mar 29, 2021</p>
+          <p>Last updated on Mar 14, 2022</p>
 
           
 

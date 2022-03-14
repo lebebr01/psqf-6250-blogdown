@@ -190,5 +190,82 @@ mean(y)&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
+    <item>
+      <title>Assignment 4</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment4/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment4/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Inferential Statistics with R&lt;/strong&gt;: &lt;em&gt;6 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Due around &lt;em&gt;April 10th, 2022&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 8th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In this assignment, you will explore research questions from an inferential framework using R. The analyses will be more open ended and will likely contain data preparation steps as well. Please turn in the source file (the .Rmd) file as well as the compiled version (html). Create a new .Rmd file for this assignment. If a question asks for code or there is particular elements of code you&amp;rsquo;d like to share, you can definitely include those in the final compiled version, but please limit those sections to specific elements rather than long chunks of code. Long chunks of code are best left for the Rmd document.&lt;/p&gt;
+&lt;p&gt;The data for this assignment can be found on GitHub and ICON and is named &amp;ldquo;cal-fire-9-10-2020&amp;rdquo;, &lt;a href=&#34;https://github.com/lebebr01/statthink/blob/master/data-raw/cal-fire-9-10-2020.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data on GitHub&lt;/a&gt;. A description of the variables is also provided on ICON. Use this data to explore the questions below. Note, the questions below will guide you through the research questions. You do not need to answer the research questions explicitly, instead you can focus on the specific questions, but keeping the overall research questions in mind may be helpful as you complete the assignment.&lt;/p&gt;
+&lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
+&lt;h1 id=&#34;research-questions&#34;&gt;Research Questions&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Is there evidence that the number of acres burned has increased for fires in more recent years?&lt;/li&gt;
+&lt;li&gt;Does month help explain variation in the number of acres burned over and above the year of the fire?&lt;/li&gt;
+&lt;li&gt;When the number of days the fire has burned in added to the model, are year or month the fire started still useful predictors?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Using text processing, create three new variables in the data that represents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the year the fire started&lt;/li&gt;
+&lt;li&gt;the month the fire started&lt;/li&gt;
+&lt;li&gt;Create a new variable that represents the length of time a fire burned. This can be created by using the &lt;code&gt;difftime()&lt;/code&gt; function within R. Look at the help page to try to figure out how this function can compute differences in two dates.&lt;br&gt;
+The code is sufficient for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Are there any data points that are extreme values or outliers that you feel should be removed from this analysis? Discuss briefly, why you feel these values may impact the analysis and should therefore be removed. Be as specific as you can why any values should or should not be removed. If you identify data that are suspect, remove them from further analysis (i.e. use filter to remove the values). &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fit two competing models to attempt to answer the 1st and 2nd research questions. Summarize briefly the results from the models with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process. Note, consider carefully the best approach on how to include month and year in your models (i.e., continuous vs factor type variables).  &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Which model fits best or do you feel is the best model?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Note, please do not include the output from the &lt;code&gt;summary()&lt;/code&gt; function in your answer, instead pull out relevant information from the output to include in your description.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check assumptions for the models from #3. Does there appear to be problems with meeting statistical assumptions? Provide rationale for why or why not. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fit another model to attempt to answer the third research question. Summarize briefly the results from the model with particular attention to answering the research question so that non-statistics/data science individuals could use the answer for their planning or decision making process. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note, please do not include the output from the &lt;code&gt;summary()&lt;/code&gt; function in your answer, instead pull out relevant information from the output to include in your description.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Finally, create a graphic that summarizes the results from your final model that you feel fits the data the best (i.e. this could be the model from #4 or #7). Discuss why you picked this model and describe why this figure does a good job of showing the takeaway message. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Turning Tables into Graphics with R&lt;/strong&gt;: &lt;em&gt;4 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;1 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Read the article &lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/published/dodhia.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Let&amp;rsquo;s Practice What We Preach: Turning Tables Into Graphs&lt;/a&gt;. In this article, Gelman, Pasarica, and Dodhia discuss the benefits of a graph instead of a table to succintly summarize statistical results.&lt;/p&gt;
+&lt;h1 id=&#34;questions-1&#34;&gt;Questions&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Find a published table showing descriptive or inferential statistic results. Provide a copy of the table (a screen shot is fine for this purpose).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Turn the table from #1 above into a publication quality graphic using R. Ensure that this graphic conveys the same purpose as the original table. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a different from the figure created in #3 above, and make an interactive graphic that attempts to convey the same message as the original table. Note, this figure should be an entirely different figure from that in #3. For example, if you created a bar chart in #3, create something other than a bar chart for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Briefly discuss whether you feel the graphs convey the message better or worse than the original table. Use specific examples from the table/graph and recommendations from the article in your discussion. Which figure do you feel does the best job in sharing the original purpose of the table? Be specific in your discussion. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take the data from the original table, to do this you may need to create an Excel file or use the function &lt;code&gt;data.frame()&lt;/code&gt; to import the data from the original table. Use the &lt;code&gt;kable()&lt;/code&gt; function and &lt;code&gt;kableExtra&lt;/code&gt; package to create a reproducible table that looks as close as possible to the original table. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
