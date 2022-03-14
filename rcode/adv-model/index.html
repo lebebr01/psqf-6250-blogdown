@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/adv-model/">
 
@@ -808,18 +808,6 @@
 
   <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
 
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -874,7 +862,7 @@ library(tidyverse)</code></pre>
 <p>We will use the <code>heights</code> data from the modelr package to explore interactions. The primary interactions that we will explore are between two (or more) categorical predictors and also the interaction between a categorical predictor and a continuous predictor. Interpretations are similar between two continuous predictors as well.</p>
 <p>Here are the first few rows of the data:</p>
 <pre class="r"><code>heights</code></pre>
-<pre><code>## # A tibble: 7,006 x 8
+<pre><code>## # A tibble: 7,006 × 8
 ##    income height weight   age marital  sex    education  afqt
 ##     &lt;int&gt;  &lt;dbl&gt;  &lt;int&gt; &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;      &lt;int&gt; &lt;dbl&gt;
 ##  1  19000     60    155    53 married  female        13  6.84
@@ -944,19 +932,19 @@ summary(afqt_sex_marital)</code></pre>
 ## F-statistic: 124.9 on 4 and 6739 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>This model only contains what are often referred to as main effects. Namely, these are only the additive effects of sex and marital variables. To get a sense as to what the design matrix looks like, we can use <code>model_matrix</code>.</p>
 <pre class="r"><code>model_matrix(heights, afqt ~ sex + marital_comb)</code></pre>
-<pre><code>## # A tibble: 6,744 x 5
-##    `(Intercept)` sexfemale marital_combmarri… marital_combOth… marital_combdivo…
-##            &lt;dbl&gt;     &lt;dbl&gt;              &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;
-##  1             1         1                  1                0                 0
-##  2             1         1                  1                0                 0
-##  3             1         0                  1                0                 0
-##  4             1         1                  1                0                 0
-##  5             1         0                  1                0                 0
-##  6             1         1                  0                0                 1
-##  7             1         0                  1                0                 0
-##  8             1         1                  0                0                 1
-##  9             1         0                  0                0                 1
-## 10             1         0                  0                0                 1
+<pre><code>## # A tibble: 6,744 × 5
+##    `(Intercept)` sexfemale marital_combmarried marital_combOth… marital_combdiv…
+##            &lt;dbl&gt;     &lt;dbl&gt;               &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1             1         1                   1                0                0
+##  2             1         1                   1                0                0
+##  3             1         0                   1                0                0
+##  4             1         1                   1                0                0
+##  5             1         0                   1                0                0
+##  6             1         1                   0                0                1
+##  7             1         0                   1                0                0
+##  8             1         1                   0                0                1
+##  9             1         0                   0                0                1
+## 10             1         0                   0                0                1
 ## # … with 6,734 more rows</code></pre>
 <p>To add the interaction between the two variables (multiplicative effects), we can add one additional term to the <code>lm</code> function call.</p>
 <pre class="r"><code>interact_mod &lt;- lm(afqt ~ sex + marital_comb + sex:marital_comb, data = heights)
@@ -1000,22 +988,22 @@ summary(interact_mod)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p>In this model, there are not actually any significant results for the interaction, but lets explore the design matrix to see exactly what is happening.</p>
 <pre class="r"><code>model_matrix(heights, afqt ~ sex + marital_comb + sex:marital_comb)</code></pre>
-<pre><code>## # A tibble: 6,744 x 8
-##    `(Intercept)` sexfemale marital_combmarri… marital_combOth… marital_combdivo…
-##            &lt;dbl&gt;     &lt;dbl&gt;              &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;
-##  1             1         1                  1                0                 0
-##  2             1         1                  1                0                 0
-##  3             1         0                  1                0                 0
-##  4             1         1                  1                0                 0
-##  5             1         0                  1                0                 0
-##  6             1         1                  0                0                 1
-##  7             1         0                  1                0                 0
-##  8             1         1                  0                0                 1
-##  9             1         0                  0                0                 1
-## 10             1         0                  0                0                 1
+<pre><code>## # A tibble: 6,744 × 8
+##    `(Intercept)` sexfemale marital_combmarried marital_combOth… marital_combdiv…
+##            &lt;dbl&gt;     &lt;dbl&gt;               &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1             1         1                   1                0                0
+##  2             1         1                   1                0                0
+##  3             1         0                   1                0                0
+##  4             1         1                   1                0                0
+##  5             1         0                   1                0                0
+##  6             1         1                   0                0                1
+##  7             1         0                   1                0                0
+##  8             1         1                   0                0                1
+##  9             1         0                   0                0                1
+## 10             1         0                   0                0                1
 ## # … with 6,734 more rows, and 3 more variables:
-## #   sexfemale:marital_combmarried &lt;dbl&gt;, sexfemale:marital_combOther &lt;dbl&gt;,
-## #   sexfemale:marital_combdivorced &lt;dbl&gt;</code></pre>
+## #   `sexfemale:marital_combmarried` &lt;dbl&gt;, `sexfemale:marital_combOther` &lt;dbl&gt;,
+## #   `sexfemale:marital_combdivorced` &lt;dbl&gt;</code></pre>
 <p>This model specifically adds columns that literally are multiplications of other columns in the design matrix. This is why interactions are often depicted with the symbol “x”, e.g. marital x sex. R uses <code>:</code> as interactions. The interaction model can also be specified in an alternate more compact formula:</p>
 <pre class="r"><code>summary(lm(afqt ~ sex * marital_comb, data = heights))</code></pre>
 <pre><code>## 
@@ -1084,7 +1072,7 @@ sex_means &lt;- heights %&gt;%
   dplyr::select(-sex)
 comb_means &lt;- bind_rows(marital_means, sex_means)
 comb_means</code></pre>
-<pre><code>## # A tibble: 6 x 6
+<pre><code>## # A tibble: 6 × 6
 ##   avg_afqt sd_afqt     n se_mean group   levels  
 ##      &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;fct&gt;   
 ## 1     31.5    27.7  1124   0.828 Marital single  
@@ -1118,9 +1106,10 @@ comb_means</code></pre>
             sd_afqt = sd(afqt, na.rm = TRUE), 
             n = n()) %&gt;%
   mutate(se_mean = sd_afqt/sqrt(n))</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;marital_comb&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;marital_comb&#39;. You can override using the
+## `.groups` argument.</code></pre>
 <pre class="r"><code>int_means</code></pre>
-<pre><code>## # A tibble: 8 x 6
+<pre><code>## # A tibble: 8 × 6
 ## # Groups:   marital_comb [4]
 ##   marital_comb sex    avg_afqt sd_afqt     n se_mean
 ##   &lt;fct&gt;        &lt;fct&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
@@ -1304,7 +1293,7 @@ comb_means</code></pre>
                             data = heights))
 model_summary &lt;- rename(model_summary, &#39;height_center&#39; = `I(height - mean(heights$height))`)
 model_summary</code></pre>
-<pre><code>## # A tibble: 6,744 x 9
+<pre><code>## # A tibble: 6,744 × 9
 ##    .rownames  afqt marital_comb height_center .fitted     .hat .sigma    .cooksd
 ##    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt;             &lt;I&lt;dbl&gt;&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
 ##  1 1          6.84 married             -7.10     40.4 0.00115    27.8    2.09e-4
@@ -1331,7 +1320,7 @@ model_summary</code></pre>
                             data = heights))
 model_summary &lt;- rename(model_summary, &#39;height_center&#39; = `I(height - mean(heights$height))`)
 model_summary</code></pre>
-<pre><code>## # A tibble: 6,744 x 9
+<pre><code>## # A tibble: 6,744 × 9
 ##    .rownames  afqt marital_comb height_center .fitted     .hat .sigma    .cooksd
 ##    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt;             &lt;I&lt;dbl&gt;&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
 ##  1 1          6.84 married             -7.10     41.0 0.000753   27.8    2.29e-4

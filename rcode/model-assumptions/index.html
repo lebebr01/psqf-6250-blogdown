@@ -239,7 +239,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.2a5f61e11ca83c1781264fc4703f4117.css">
+  <link rel="stylesheet" href="/css/wowchemy.3aad675291f323c3cd47ae187f0bf0d6.css">
 
   
 
@@ -260,8 +260,8 @@
   <link rel="manifest" href="/index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://psqf6250.brandonlebeau.org/rcode/model-assumptions/">
 
@@ -808,18 +808,6 @@
 
   <li class=""><a href="/rcode/misc-model/">Miscellaneous Modeling Topics</a></li>
 
-
-
-  <li class=""><a href="/rcode/reproducible-tables/">Reproducible Tables</a></li>
-
-
-
-  <li class=""><a href="/rcode/interactive-graphics/">Interactive Graphics</a></li>
-
-
-
-  <li class=""><a href="/rcode/user-functions/">User Created Functions</a></li>
-
       
     
 
@@ -953,7 +941,7 @@ summary(afqt_alt)</code></pre>
 <p>There are a few options to do this, one uses the broom package, the other uses the modelr package. I show both below.</p>
 <pre class="r"><code>aug_afqt &lt;- augment(afqt_alt)
 aug_afqt</code></pre>
-<pre><code>## # A tibble: 6,645 x 13
+<pre><code>## # A tibble: 6,645 × 13
 ##    .rownames  afqt marital_comb height2 education2 log_income weight2 .fitted
 ##    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
 ##  1 1          6.84 married       -7.10      -0.218       9.85  -33.3     39.9
@@ -972,19 +960,19 @@ aug_afqt</code></pre>
   add_residuals(afqt_alt) %&gt;%
   add_predictions(afqt_alt)
 height_resid</code></pre>
-<pre><code>## # A tibble: 7,006 x 16
+<pre><code>## # A tibble: 7,006 × 16
 ##    income height weight   age marital sex   education  afqt marital_comb income2
 ##     &lt;int&gt;  &lt;dbl&gt;  &lt;int&gt; &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt;
-##  1  19000     60    155    53 married fema…        13  6.84 married      1.90e+4
-##  2  35000     70    156    51 married fema…        10 49.4  married      3.50e+4
+##  1  19000     60    155    53 married fema…        13  6.84 married      1.9 e+4
+##  2  35000     70    156    51 married fema…        10 49.4  married      3.5 e+4
 ##  3 105000     65    195    52 married male         16 99.4  married      1.05e+5
-##  4  40000     63    197    54 married fema…        14 44.0  married      4.00e+4
-##  5  75000     66    190    49 married male         14 59.7  married      7.50e+4
+##  4  40000     63    197    54 married fema…        14 44.0  married      4   e+4
+##  5  75000     66    190    49 married male         14 59.7  married      7.5 e+4
 ##  6 102000     68    200    49 divorc… fema…        18 98.8  divorced     1.02e+5
-##  7      0     74    225    48 married male         16 82.3  married      1.00e-3
-##  8  70000     64    160    54 divorc… fema…        12 50.3  divorced     7.00e+4
-##  9  60000     69    162    55 divorc… male         12 89.7  divorced     6.00e+4
-## 10 150000     69    194    54 divorc… male         13 96.0  divorced     1.50e+5
+##  7      0     74    225    48 married male         16 82.3  married      1   e-3
+##  8  70000     64    160    54 divorc… fema…        12 50.3  divorced     7   e+4
+##  9  60000     69    162    55 divorc… male         12 89.7  divorced     6   e+4
+## 10 150000     69    194    54 divorc… male         13 96.0  divorced     1.5 e+5
 ## # … with 6,996 more rows, and 6 more variables: height2 &lt;dbl&gt;,
 ## #   education2 &lt;dbl&gt;, weight2 &lt;dbl&gt;, log_income &lt;dbl&gt;, resid &lt;dbl&gt;, pred &lt;dbl&gt;</code></pre>
 <p>The benefit to the <code>augment</code> function from the broom package is that it includes more information. The main benefit fo the <code>add_residuals</code> function from the modelr pacakge is that it includes all of the original data, not just those variables included in the final model. Therefore if you are fitting a model and want to explore trends in residuals based on other data characteristics not currently in the model, using the <code>add_residuals</code> function would likely be better for this use.</p>
@@ -992,19 +980,19 @@ height_resid</code></pre>
 <h3>Filtering and Plotting Residuals</h3>
 <p>Now that we have these in a data frame, we could easily plot or filter residuals to explore cases in which the model is not adequatly fitting the dependent variable. For example, maybe we want to explore residuals greater than 50 in absolute value. This can easily be done with dplyr and the <code>filter</code> function.</p>
 <pre class="r"><code>filter(height_resid, abs(resid) &gt; 50)</code></pre>
-<pre><code>## # A tibble: 113 x 16
+<pre><code>## # A tibble: 113 × 16
 ##    income height weight   age marital sex   education  afqt marital_comb income2
 ##     &lt;int&gt;  &lt;dbl&gt;  &lt;int&gt; &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt;
-##  1  60000     69    162    55 divorc… male         12  89.7 divorced     6.00e+4
-##  2 150000     69    194    54 divorc… male         13  96.0 divorced     1.50e+5
-##  3  45000     69    240    53 married male         12  98.8 married      4.50e+4
-##  4      0     66    195    50 married fema…        14  99.2 married      1.00e-3
-##  5  93000     68    182    48 divorc… male         12  86.9 divorced     9.30e+4
-##  6  43000     64    145    51 divorc… fema…        12  94.8 divorced     4.30e+4
-##  7  52000     72    230    52 married male         12  93.1 married      5.20e+4
-##  8  35000     59    165    49 divorc… fema…        12  80.0 divorced     3.50e+4
-##  9  85000     61    140    55 married fema…        18  15.7 married      8.50e+4
-## 10      0     69    186    55 separa… fema…        12  88.8 Other        1.00e-3
+##  1  60000     69    162    55 divorc… male         12  89.7 divorced      6  e+4
+##  2 150000     69    194    54 divorc… male         13  96.0 divorced      1.5e+5
+##  3  45000     69    240    53 married male         12  98.8 married       4.5e+4
+##  4      0     66    195    50 married fema…        14  99.2 married       1  e-3
+##  5  93000     68    182    48 divorc… male         12  86.9 divorced      9.3e+4
+##  6  43000     64    145    51 divorc… fema…        12  94.8 divorced      4.3e+4
+##  7  52000     72    230    52 married male         12  93.1 married       5.2e+4
+##  8  35000     59    165    49 divorc… fema…        12  80.0 divorced      3.5e+4
+##  9  85000     61    140    55 married fema…        18  15.7 married       8.5e+4
+## 10      0     69    186    55 separa… fema…        12  88.8 Other         1  e-3
 ## # … with 103 more rows, and 6 more variables: height2 &lt;dbl&gt;, education2 &lt;dbl&gt;,
 ## #   weight2 &lt;dbl&gt;, log_income &lt;dbl&gt;, resid &lt;dbl&gt;, pred &lt;dbl&gt;</code></pre>
 <p>You can also plot residuals directly or compared to other predictors.</p>
