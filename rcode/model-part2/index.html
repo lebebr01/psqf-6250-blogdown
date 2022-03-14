@@ -1088,13 +1088,13 @@ summary(contr_results)</code></pre>
 ## Linear Hypotheses:
 ##                                Estimate Std. Error t value Pr(&gt;|t|)    
 ## Widowed - Never_married == 0    0.80682    0.09352   8.627  &lt; 0.001 ***
-## Widowed - Separated == 0        0.36238    0.15245   2.377  0.11069    
+## Widowed - Separated == 0        0.36238    0.15245   2.377  0.11084    
 ## Widowed - Divorced == 0         0.82659    0.10132   8.159  &lt; 0.001 ***
 ## Widowed - Married == 0          1.26157    0.08845  14.262  &lt; 0.001 ***
-## Never_married - Separated == 0 -0.44444    0.13738  -3.235  0.00947 ** 
+## Never_married - Separated == 0 -0.44444    0.13738  -3.235  0.00960 ** 
 ## Never_married - Divorced == 0   0.01977    0.07680   0.257  0.99893    
 ## Never_married - Married == 0    0.45475    0.05879   7.735  &lt; 0.001 ***
-## Separated - Divorced == 0       0.46421    0.14280   3.251  0.00899 ** 
+## Separated - Divorced == 0       0.46421    0.14280   3.251  0.00896 ** 
 ## Separated - Married == 0        0.89919    0.13398   6.711  &lt; 0.001 ***
 ## Divorced - Married == 0         0.43498    0.07054   6.166  &lt; 0.001 ***
 ## ---
@@ -1163,22 +1163,22 @@ ci</code></pre>
 ## 
 ## Fit: lm(formula = tvhours ~ marital_m_widow, data = gss_cat)
 ## 
-## Quantile = 2.6887
+## Quantile = 2.69
 ## 95% family-wise confidence level
 ##  
 ## 
 ## Linear Hypotheses:
 ##                                Estimate lwr      upr     
-## Never_married - Widowed == 0   -0.80682 -1.05827 -0.55538
-## Separated - Widowed == 0       -0.36238 -0.77226  0.04750
-## Divorced - Widowed == 0        -0.82659 -1.09900 -0.55418
-## Married - Widowed == 0         -1.26157 -1.49940 -1.02375
-## Separated - Never_married == 0  0.44444  0.07508  0.81381
-## Divorced - Never_married == 0  -0.01977 -0.22625  0.18671
-## Married - Never_married == 0   -0.45475 -0.61283 -0.29667
-## Divorced - Separated == 0      -0.46421 -0.84816 -0.08027
-## Married - Separated == 0       -0.89919 -1.25943 -0.53896
-## Married - Divorced == 0        -0.43498 -0.62465 -0.24532</code></pre>
+## Never_married - Widowed == 0   -0.80682 -1.05839 -0.55526
+## Separated - Widowed == 0       -0.36238 -0.77246  0.04769
+## Divorced - Widowed == 0        -0.82659 -1.09913 -0.55406
+## Married - Widowed == 0         -1.26157 -1.49951 -1.02363
+## Separated - Never_married == 0  0.44444  0.07490  0.81398
+## Divorced - Never_married == 0  -0.01977 -0.22635  0.18681
+## Married - Never_married == 0   -0.45475 -0.61291 -0.29659
+## Divorced - Separated == 0      -0.46421 -0.84834 -0.08009
+## Married - Separated == 0       -0.89919 -1.25960 -0.53879
+## Married - Divorced == 0        -0.43498 -0.62474 -0.24523</code></pre>
 <p>These could then be visulized directly.</p>
 <pre class="r"><code>SCI = data.frame(
   Contrast = 1:nrow(ci$confint),   #Contrast number
