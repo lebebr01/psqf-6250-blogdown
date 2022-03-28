@@ -514,5 +514,125 @@
 </description>
     </item>
     
+    <item>
+      <title>Week 11</title>
+      <link>https://psqf6250.brandonlebeau.org/content/11-week11/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/11-week11/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week will focus on reproducible tables. The focus will be on functionality built into R to incorporate reproducible tables in an R markdown document to help ensure the analysis is reproducible.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identify table elements&lt;/li&gt;
+&lt;li&gt;Create reproducible tables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Reproducible Tables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=59581b8e-2f08-484e-8094-aa0a0113ff42&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Formatting Table with &lt;code&gt;kableExtra&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=b3dad5b8-469b-42a1-a41d-aa0a01198e60&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Column, Row, and Cell Formatting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6aaa9c0f-dc53-4aa3-8dce-aa0a011df04c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Grouping Columns or Rows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4df08b63-2afc-46dc-a817-aa0a01234bca&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/reproducible-tables/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Reproducible Tables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 12</title>
+      <link>https://psqf6250.brandonlebeau.org/content/12-week12/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/12-week12/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week will move to interactive graphics, a way to change how users interact with the output you create.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identify utility of interactive graphics&lt;/li&gt;
+&lt;li&gt;Create plotly interactive figures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Interactive Graphics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1b61520c-b323-45e6-84a8-aa14013cda8b&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating &lt;code&gt;plotly&lt;/code&gt; Figures from Scratch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=474cc4a6-0376-42a6-8677-aa140144a078&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating Subplots with &lt;code&gt;plotly&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3214c630-33e6-46a5-86eb-aa1501097368&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Other Interactive Frameworks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=327564e8-8b45-4a01-8c4d-aa15010f6500&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/interactive-graphics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Interactive Graphics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 13</title>
+      <link>https://psqf6250.brandonlebeau.org/content/13-week13/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/content/13-week13/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This week turns to learning the basics of creating your own functions within R. Part of the power of R is that it is a fully functional programming language that can be used to extend R&amp;rsquo;s functionality. This week will give you some basics to create your own functions.&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;After completing this module, students will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define user written functions&lt;/li&gt;
+&lt;li&gt;Define function conditional logic&lt;/li&gt;
+&lt;li&gt;Define function inputs and returned values&lt;/li&gt;
+&lt;li&gt;Identify need for user written functions&lt;/li&gt;
+&lt;li&gt;Create user written functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;weekly-videos&#34;&gt;Weekly Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Custom User Functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7a31bd67-b084-421c-965e-aa1f00fe4052&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Function Basics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=13d30b5b-e8fd-4182-b213-aa1f01038429&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Conditional Logic in Functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0bf0fd61-4a31-471f-bc82-aa1f010d5d12&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;Returned Values from Functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://uicapture.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5a107262-c415-4ab5-a6e7-aa1f01125e82&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all&#34; height=&#34;405&#34; width=&#34;720&#34; style=&#34;border: 1px solid #464646;&#34; allowfullscreen allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;r-syntax&#34;&gt;R Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psqf6250.brandonlebeau.org/rcode/user-functions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;User Created Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;p&gt;To come &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
