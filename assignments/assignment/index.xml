@@ -276,6 +276,7 @@ The code is sufficient for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/
 &lt;p&gt;Due: &lt;em&gt;May 8th, 2022&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 8th&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;For this assignment, you will write your own user functions to perform a bootstrap. The assignment will guide you through elements to include and functions to look into to create the function for the bootstrap. Note, we have not specifically covered the bootstrap in this course, therefore, if elements are not clear, please reach out for assistance.&lt;/p&gt;
+&lt;p&gt;Please turn in the source file (the .Rmd) file as well as the compiled version (html). Create a new .Rmd file for this assignment. If a question asks for code or there is particular elements of code you&amp;rsquo;d like to share, you can definitely include those in the final compiled version, but please limit those sections to specific elements rather than long chunks of code. Long chunks of code are best left for the Rmd document. Assignments will be uploaded to ICON.&lt;/p&gt;
 &lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
 &lt;h1 id=&#34;bootstrap-procedure&#34;&gt;Bootstrap Procedure&lt;/h1&gt;
 &lt;ol&gt;
