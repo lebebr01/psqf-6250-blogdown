@@ -267,5 +267,65 @@ The code is sufficient for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/
 </description>
     </item>
     
+    <item>
+      <title>Assignment 5</title>
+      <link>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;User Created Functions and Bootstrap&lt;/strong&gt;: &lt;em&gt;10 pts&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Due: &lt;em&gt;May 8th, 2022&lt;/em&gt; - No penalty for late submissions, but due no later than &lt;em&gt;May 8th&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;For this assignment, you will write your own user functions to perform a bootstrap. The assignment will guide you through elements to include and functions to look into to create the function for the bootstrap. Note, we have not specifically covered the bootstrap in this course, therefore, if elements are not clear, please reach out for assistance.&lt;/p&gt;
+&lt;p&gt;Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a &lt;strong&gt;2 pt&lt;/strong&gt; penalty will apply.&lt;/p&gt;
+&lt;h1 id=&#34;bootstrap-procedure&#34;&gt;Bootstrap Procedure&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;First, we treat the sample data as fixed and as the population of interest. For this reason, we hope the original sample data collected is representative of the population of interest.&lt;/li&gt;
+&lt;li&gt;Generate a random sample of the same size as the original sample, with replacement, from the sample data.&lt;/li&gt;
+&lt;li&gt;Compute a statistic of interest. This could be a statistic (i.e., mean, median) or fit a statistical model.&lt;/li&gt;
+&lt;li&gt;Repeat steps 2 and 3 many times.&lt;/li&gt;
+&lt;li&gt;Visualize or compute descriptive statistics about the multiple statistics of interest computed from step 3.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;code-to-run-prior-to-starting-the-assignment&#34;&gt;Code to run prior to starting the assignment.&lt;/h1&gt;
+&lt;p&gt;To keep track of the bootstrap procedure, let&amp;rsquo;s add some IDs to the individual penguins from the &lt;code&gt;penguins&lt;/code&gt; data.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;library(palmerpenguins)
+library(tidyverse)
+
+penguins &amp;lt;- penguins %&amp;gt;%
+  mutate(penguin_id = 1:n())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create a function that generates a random sample, with replacement, from the original data, &lt;code&gt;penguins&lt;/code&gt; from the palmerpenguins package. More specifically, create a function that accomplishes step 2 from the bootstrap procedure discussion above. Exploring the &lt;code&gt;sample_n()&lt;/code&gt; function may be helpful for this question. For this question, provide the code for the bootstrap function you created and also show the first few rows of the bootstrapped data when you run the function once. The &lt;code&gt;head()&lt;/code&gt; function may be helpful to show just the first few rows. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;From a single bootstrap (i.e., using your function from #1), verify that the sampling with replacement is occurring. Use the &lt;code&gt;penguin_id&lt;/code&gt; attribute created from the code used prior to starting the assignment to show that sampling with replacement is working properly. What would you expect if sampling with replacement is working? &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Given the function created in #1, let&amp;rsquo;s add a function argument to the function. Add a function argument that allows users to control whether sampling with replacement or without replacement is performed. For this question, the function code is sufficient. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify that the function argument created in #3 is working properly by running the function specifying the argument to do the sampling with and without replacement. Use the &lt;code&gt;penguin_id&lt;/code&gt; attribute created from the code used prior to starting the assignment to show that the function argument is working properly. What difference in the output helps to show that the function argument is working properly? &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add an argument that follows branching logic to implement different statistics to be computed to fulfill step #3 of the bootstrap procedures above. You can use any type of statistics you wish in this step, but to simplify this step, compute the statistics for a single continuous attribute from the &lt;code&gt;penguins&lt;/code&gt; data (you can chose the attribute you are most interested in). This would make use of the &lt;code&gt;if()&lt;/code&gt; and &lt;code&gt;else()&lt;/code&gt; functions discussed in the user written functions portion of the course. The code is sufficient for this question. Note, make sure your function returns the statistic of interest. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify that the branching logic and different statistics are working properly from step #5. Run the function for each branch of the function to confirm that different statistics are being computed. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Replicate the bootstrap procedure many times using the following general structure:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;map_dbl(1:num_reps, function_name, your_function_arguments)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;code&gt;num_reps&lt;/code&gt; are the number of bootstrap replications, &lt;code&gt;function_name&lt;/code&gt; is the name of your function you created as part of this assignment, and &lt;code&gt;your_function_arguments&lt;/code&gt; are the function arguments you may need to pass. You may not need to pass any function arguments to the function above. Note, if your function returns a data frame, you may need to replace the &lt;code&gt;map_dbl()&lt;/code&gt; function above with &lt;code&gt;map_dfr()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For this question, pick two different number of bootstrap replications and save those two objects. Just the code is sufficient for this question. &lt;strong&gt;1 pt&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Visualize the bootstrap results for both number of bootstrap replications chosen in #7 using a histogram, density curve, violin plot, boxplot, or some other similar visualization to explore the distribution of the bootstrapped statistic. Are there any differences in the two distributions based on the different number of replications chosen? Why may these differences be showing up? Which number of replications would be more defensible in your opinion? &lt;strong&gt;3 pts&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

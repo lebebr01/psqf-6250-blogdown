@@ -34,9 +34,9 @@
   
     
   
-  <meta name="description" content="User Created Functions and Bootstrap: 20 pts
-Due: May 7th, 2021 - No penalty for late submissions, but due no later than May 7th.
-For this assignment, you will write your own user functions to perform a bootstrap.">
+  <meta name="description" content="User Created Functions and Bootstrap: 10 pts
+Due: May 8th, 2022 - No penalty for late submissions, but due no later than May 8th.
+ For this assignment, you will write your own user functions to perform a bootstrap.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/">
@@ -282,15 +282,15 @@ For this assignment, you will write your own user functions to perform a bootstr
   <meta property="og:site_name" content="PSQF 6250">
   <meta property="og:url" content="https://psqf6250.brandonlebeau.org/assignments/assignment/assignment5/">
   <meta property="og:title" content="Assignment 5 | PSQF 6250">
-  <meta property="og:description" content="User Created Functions and Bootstrap: 20 pts
-Due: May 7th, 2021 - No penalty for late submissions, but due no later than May 7th.
-For this assignment, you will write your own user functions to perform a bootstrap."><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
+  <meta property="og:description" content="User Created Functions and Bootstrap: 10 pts
+Due: May 8th, 2022 - No penalty for late submissions, but due no later than May 8th.
+ For this assignment, you will write your own user functions to perform a bootstrap."><meta property="og:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg">
   <meta property="twitter:image" content="https://psqf6250.brandonlebeau.org/media/blue-balloon.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-04-20T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-03-29T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-04-20T00:00:00&#43;00:00">
   
 
   
@@ -807,6 +807,10 @@ For this assignment, you will write your own user functions to perform a bootstr
       
 
 
+  <li class=""><a href="/assignments/quizzes/quiz1/">Quiz 1</a></li>
+
+
+
   <li class=""><a href="/assignments/quizzes/quiz2/">Quiz 2</a></li>
 
 
@@ -837,10 +841,6 @@ For this assignment, you will write your own user functions to perform a bootstr
 
   <li class=""><a href="/assignments/quizzes/quiz9/">Quiz 9</a></li>
 
-
-
-  <li class=""><a href="/assignments/quizzes/quiz10/">Quiz 10</a></li>
-
       
         </ul>
       
@@ -864,6 +864,21 @@ For this assignment, you will write your own user functions to perform a bootstr
     
       <div class="docs-toc-item">
         <a class="docs-toc-link " href="/assignments/project/">Project</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/assignments/project/project-proposal/">Course Project Proposal</a></li>
+
+
+
+  <li class=""><a href="/assignments/project/project/">Course Project</a></li>
+
+      
+        </ul>
+      
     
 
     
@@ -889,7 +904,7 @@ For this assignment, you will write your own user functions to perform a bootstr
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents"></nav>
 
       
     </div>
@@ -905,55 +920,58 @@ For this assignment, you will write your own user functions to perform a bootstr
           <h1>Assignment 5</h1>
 
           <div class="article-style">
-            
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-<div id="TOC">
-
-</div>
-
-<p><strong>User Created Functions and Bootstrap</strong>: <em>20 pts</em></p>
-<p>Due: <em>May 7th, 2021</em> - No penalty for late submissions, but due no later than <em>May 7th</em>.</p>
-<hr />
+            <p><strong>User Created Functions and Bootstrap</strong>: <em>10 pts</em></p>
+<p>Due: <em>May 8th, 2022</em> - No penalty for late submissions, but due no later than <em>May 8th</em>.</p>
+<hr>
 <p>For this assignment, you will write your own user functions to perform a bootstrap. The assignment will guide you through elements to include and functions to look into to create the function for the bootstrap. Note, we have not specifically covered the bootstrap in this course, therefore, if elements are not clear, please reach out for assistance.</p>
 <p>Any graphics you create should be of high quality, this includes formatting of axes, axes labels, etc. If none of the graphics are of high quality, a <strong>2 pt</strong> penalty will apply.</p>
-<div id="bootstrap-procedure" class="section level1">
-<h1>Bootstrap Procedure</h1>
-<ol style="list-style-type: decimal">
+<h1 id="bootstrap-procedure">Bootstrap Procedure</h1>
+<ol>
 <li>First, we treat the sample data as fixed and as the population of interest. For this reason, we hope the original sample data collected is representative of the population of interest.</li>
 <li>Generate a random sample of the same size as the original sample, with replacement, from the sample data.</li>
 <li>Compute a statistic of interest. This could be a statistic (i.e., mean, median) or fit a statistical model.</li>
 <li>Repeat steps 2 and 3 many times.</li>
 <li>Visualize or compute descriptive statistics about the multiple statistics of interest computed from step 3.</li>
 </ol>
-</div>
-<div id="code-to-run-prior-to-starting-the-assignment." class="section level1">
-<h1>Code to run prior to starting the assignment.</h1>
-<p>To keep track of the bootstrap procedure, let’s add some IDs to the individual penguins from the <code>penguins</code> data.</p>
-<pre class="r"><code>library(palmerpenguins)
+<h1 id="code-to-run-prior-to-starting-the-assignment">Code to run prior to starting the assignment.</h1>
+<p>To keep track of the bootstrap procedure, let&rsquo;s add some IDs to the individual penguins from the <code>penguins</code> data.</p>
+<pre><code class="language-{r">library(palmerpenguins)
 library(tidyverse)
 
 penguins &lt;- penguins %&gt;%
-  mutate(penguin_id = 1:n())</code></pre>
-</div>
-<div id="questions" class="section level1">
-<h1>Questions</h1>
-<ol style="list-style-type: decimal">
-<li><p>Create a function that generates a random sample, with replacement, from the original data, <code>penguins</code> from the palmerpenguins package. More specifically, create a function that accomplishes step 2 from the bootstrap procedure discussion above. Exploring the <code>sample_n()</code> function may be helpful for this question. For this question, provide the code for the bootstrap function you created and also show the first few rows of the bootstrapped data when you run the function once. The <code>head()</code> function may be helpful to show just the first few rows. <strong>3 pts</strong></p></li>
-<li><p>From a single bootstrap (i.e., using your function from #1), verify that the sampling with replacement is occurring. Use the <code>penguin_id</code> attribute created from the code used prior to starting the assignment to show that sampling with replacement is working properly. What would you expect if sampling with replacement is working? <strong>2 pts</strong></p></li>
-<li><p>Given the function created in #1, let’s add a function argument to this user created function. Add a function argument that allows users to control whether sampling with replacement or without replacement is performed. For this question, the function code is sufficient. <strong>3 pts</strong></p></li>
-<li><p>Verify that the function argument created in #3 is working properly by running the function specifying the argument to do the sampling with and without replacement. Use the <code>penguin_id</code> attribute created from the code used prior to starting the assignment to show that the function argument is working properly. What difference in the output helps to show that the function argument is working properly? <strong>2 pts</strong></p></li>
-<li><p>Add an argument that follows branching logic to implement different statistics to be computed to fulfill step #3 of the bootstrap procedures above. You can use any type of statistics you wish in this step, but to simplify this step, compute the statistics for a single continuous attribute from the <code>penguins</code> data (you can chose the attribute you are most interested in). This would make use of the <code>if()</code> and <code>else()</code> functions discussed in the user written functions portion of the course. The code is sufficient for this question. Note, make sure your function returns the statistic of interest. <strong>3 pts</strong></p></li>
-<li><p>Verify that the branching logic and different statistics are working properly from step #5. Run the function for each branch of the function to confirm that different statistics are being computed. <strong>2 pts</strong></p></li>
-<li><p>Replicate the bootstrap procedure many times using the following general structure:</p></li>
+  mutate(penguin_id = 1:n())
+</code></pre>
+<h1 id="questions">Questions</h1>
+<ol>
+<li>
+<p>Create a function that generates a random sample, with replacement, from the original data, <code>penguins</code> from the palmerpenguins package. More specifically, create a function that accomplishes step 2 from the bootstrap procedure discussion above. Exploring the <code>sample_n()</code> function may be helpful for this question. For this question, provide the code for the bootstrap function you created and also show the first few rows of the bootstrapped data when you run the function once. The <code>head()</code> function may be helpful to show just the first few rows. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>From a single bootstrap (i.e., using your function from #1), verify that the sampling with replacement is occurring. Use the <code>penguin_id</code> attribute created from the code used prior to starting the assignment to show that sampling with replacement is working properly. What would you expect if sampling with replacement is working? <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Given the function created in #1, let&rsquo;s add a function argument to the function. Add a function argument that allows users to control whether sampling with replacement or without replacement is performed. For this question, the function code is sufficient. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Verify that the function argument created in #3 is working properly by running the function specifying the argument to do the sampling with and without replacement. Use the <code>penguin_id</code> attribute created from the code used prior to starting the assignment to show that the function argument is working properly. What difference in the output helps to show that the function argument is working properly? <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Add an argument that follows branching logic to implement different statistics to be computed to fulfill step #3 of the bootstrap procedures above. You can use any type of statistics you wish in this step, but to simplify this step, compute the statistics for a single continuous attribute from the <code>penguins</code> data (you can chose the attribute you are most interested in). This would make use of the <code>if()</code> and <code>else()</code> functions discussed in the user written functions portion of the course. The code is sufficient for this question. Note, make sure your function returns the statistic of interest. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Verify that the branching logic and different statistics are working properly from step #5. Run the function for each branch of the function to confirm that different statistics are being computed. <strong>1 pt</strong></p>
+</li>
+<li>
+<p>Replicate the bootstrap procedure many times using the following general structure:</p>
+</li>
 </ol>
-<pre class="r"><code>map_dbl(1:num_reps, function_name, your_function_arguments)</code></pre>
+<pre><code class="language-{r">map_dbl(1:num_reps, function_name, your_function_arguments)
+</code></pre>
 <p>where <code>num_reps</code> are the number of bootstrap replications, <code>function_name</code> is the name of your function you created as part of this assignment, and <code>your_function_arguments</code> are the function arguments you may need to pass. You may not need to pass any function arguments to the function above. Note, if your function returns a data frame, you may need to replace the <code>map_dbl()</code> function above with <code>map_dfr()</code>.</p>
 <p>For this question, pick two different number of bootstrap replications and save those two objects. Just the code is sufficient for this question. <strong>1 pt</strong></p>
-<ol start="8" style="list-style-type: decimal">
-<li>Visualize the bootstrap results for both number of bootstrap replications chosen in #7 using a histogram, density curve, violin plot, boxplot, or some other similar visualization to explore the distribution of the bootstrapped statistic. Are there any differences in the two distributions based on the different number of replications chosen? Why may these differences be showing up? Which number of replications would be more defensible in your opinion? <strong>4 pts</strong></li>
+<ol start="8">
+<li>Visualize the bootstrap results for both number of bootstrap replications chosen in #7 using a histogram, density curve, violin plot, boxplot, or some other similar visualization to explore the distribution of the bootstrapped statistic. Are there any differences in the two distributions based on the different number of replications chosen? Why may these differences be showing up? Which number of replications would be more defensible in your opinion? <strong>3 pts</strong></li>
 </ol>
-</div>
 
           </div>
 
@@ -982,7 +1000,7 @@ penguins &lt;- penguins %&gt;%
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Mar 29, 2021</p>
+          <p>Last updated on Apr 20, 2021</p>
 
           
 
